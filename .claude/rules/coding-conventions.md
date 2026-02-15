@@ -1,6 +1,6 @@
 # Coding Conventions
 
-General code style and patterns.
+Code style and patterns for davidhamel.co (Astro + React islands).
 
 ---
 
@@ -11,24 +11,20 @@ General code style and patterns.
 - Use explicit return types on functions
 - No `any` - use `unknown` if type is truly unknown
 
-## React/Next.js
+## Astro
 
-- Server Components by default
-- `"use client"` only when needed (hooks, browser APIs)
-- Co-locate components with routes when page-specific
-- Use Server Actions for mutations, not API routes
+- Use `.astro` files for all static pages and components
+- Use `.tsx` React components ONLY for interactive islands (forms, embeds)
+- Always specify client directives on React islands: `client:load`, `client:visible`, or `client:only="react"`
+- Use Astro Content Collections for blog posts (type-safe frontmatter)
+- Prefer Astro's built-in `<Image>` component for optimized images
 
 ## Styling
 
 - TailwindCSS utility classes only
-- Custom components in `src/components/ui/`
-- Design system colors defined in `tailwind.config.ts`
-
-## Database
-
-- Use migrations for all schema changes
-- Soft deletes where applicable
-- Timestamps on all tables (createdAt, updatedAt)
+- Custom components in `src/components/`
+- Brand colors defined in `tailwind.config.mjs`
+- Colors: teal `#0A6E6E`, navy `#1A1A2E`, coral `#E07A5F`, seafoam `#B8D8D8`
 
 ## UI Components
 
@@ -37,21 +33,36 @@ Before creating any UI component, check if shadcn/ui has it:
 npx shadcn@latest add [component]
 ```
 Never build custom buttons, inputs, dialogs, cards, etc. when shadcn/ui provides them.
+Use as React islands with appropriate `client:` directive.
 
 ## File Organization
 
 ```
 src/
-├── app/                    # Next.js App Router pages
-│   └── [route]/
-│       ├── page.tsx        # Page component
-│       ├── actions.ts      # Server Actions
-│       └── components/     # Page-specific components
+├── layouts/
+│   ├── BaseLayout.astro           # HTML shell, meta tags, nav, footer
+│   └── BlogPostLayout.astro       # Blog post template
+├── pages/
+│   ├── index.astro                # Homepage
+│   ├── about.astro
+│   ├── coaching.astro
+│   ├── services.astro             # Product & Build Services
+│   ├── adventures.astro
+│   ├── contact.astro
+│   └── blog/
+│       ├── index.astro            # Blog listing
+│       └── [...slug].astro        # Dynamic blog post route
+├── content/
+│   ├── config.ts                  # Astro content collections schema
+│   └── blog/                      # MDX blog posts
 ├── components/
-│   ├── ui/                 # shadcn/ui components
-│   └── [feature]/          # Feature-specific shared components
-├── lib/
-│   ├── db/                 # Database utilities
-│   └── utils/              # Shared utilities
-└── types/                  # TypeScript types
+│   ├── Nav.astro                  # Site navigation
+│   ├── Footer.astro               # Site footer
+│   ├── BlogCard.astro             # Blog post preview card
+│   ├── NewsletterSignup.tsx       # React island — Resend integration
+│   └── CalendlyEmbed.tsx          # React island — Calendly widget
+├── styles/
+│   └── global.css                 # Tailwind imports + CSS custom properties
+└── lib/
+    └── utils.ts                   # Utility functions
 ```

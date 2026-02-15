@@ -4,31 +4,6 @@ Battle-tested patterns that prevent common bugs.
 
 ---
 
-## Next.js 15+ Async Params
-
-```typescript
-// CORRECT: Await params in Next.js 15+
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
-}
-
-// CORRECT: Await searchParams too
-export default async function Page({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
-  const { page } = await searchParams
-}
-```
-
-## Server Actions for Mutations
-
-```typescript
-// CORRECT: Use Server Actions, not API routes
-'use server'
-export async function createItem(formData: FormData) {
-  // ... mutation logic
-  revalidatePath('/items')
-}
-```
-
 ## No Timeouts
 
 **NEVER add `setTimeout`, `delay`, or artificial waits** unless explicitly requested by the user. These create race conditions and hide real bugs. If something needs time, use proper event handling or state management.
@@ -58,18 +33,54 @@ const schema = z.object({
   name: z.string().min(1).max(100),
   email: z.string().email(),
 })
+```
 
-export async function createUser(formData: FormData) {
-  'use server'
-  const validated = schema.parse(Object.fromEntries(formData))
-  // Safe to use validated data
-}
+## Astro Content Collections
+
+```typescript
+// CORRECT: Use Astro Content Collections for type-safe content
+import { defineCollection, z } from 'astro:content'
+
+const blog = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    publishDate: z.date(),
+    pillar: z.enum([
+      'expat-money-mastery',
+      'systems-and-money',
+      'building-alba',
+      'freedom-by-design',
+      'practitioners-edge',
+    ]),
+    tags: z.array(z.string()).default([]),
+    draft: z.boolean().default(false),
+  }),
+})
+```
+
+## React Islands in Astro
+
+```astro
+---
+// CORRECT: Import React component and use client directive
+import NewsletterSignup from '../components/NewsletterSignup.tsx'
+---
+
+<!-- client:load — loads immediately (above the fold, critical interactivity) -->
+<NewsletterSignup client:load />
+
+<!-- client:visible — loads when scrolled into view (below the fold) -->
+<CalendlyEmbed client:visible />
+
+<!-- client:only="react" — never SSR, client-only (browser APIs needed) -->
+<AnalyticsWidget client:only="react" />
 ```
 
 ## Security Essentials
 
 - Environment variables for all secrets (never commit `.env`)
-- No secrets in client-side code (`NEXT_PUBLIC_` prefix = client-visible)
-- Parameterized database queries (ORMs handle this)
+- No secrets in client-side code (`PUBLIC_` prefix in Astro = client-visible)
 - Sanitize user content before display
 - Error messages don't leak internals
