@@ -46,9 +46,20 @@ src/
 │   ├── index.astro                # Homepage
 │   ├── about.astro
 │   ├── coaching.astro
-│   ├── services.astro             # Product & Build Services
+│   ├── services.astro             # Product & Build Services (sells)
 │   ├── adventures.astro
 │   ├── contact.astro
+│   ├── projects/
+│   │   ├── index.astro            # Portfolio grid (proves)
+│   │   ├── alba-wealth.astro
+│   │   ├── ziggma.astro
+│   │   ├── derisk.astro
+│   │   ├── digital-partners.astro
+│   │   ├── porsche-digital-lab.astro
+│   │   ├── buena.astro
+│   │   ├── carly.astro
+│   │   ├── impactive.astro
+│   │   └── rootlocaly.astro
 │   └── blog/
 │       ├── index.astro            # Blog listing
 │       └── [...slug].astro        # Dynamic blog post route
@@ -59,6 +70,7 @@ src/
 │   ├── Nav.astro                  # Site navigation
 │   ├── Footer.astro               # Site footer
 │   ├── BlogCard.astro             # Blog post preview card
+│   ├── ProjectCard.astro          # Project preview card
 │   ├── NewsletterSignup.tsx       # React island — Resend integration
 │   └── CalendlyEmbed.tsx          # React island — Calendly widget
 ├── styles/

@@ -159,9 +159,19 @@ pnpm add -D vercel
 - Don't set up the marketing agent or shortcuts (Phase 3)
 - Don't create empty placeholder directories for future features
 - Don't build all pages — just the homepage + base layout
+- Don't build project pages yet (Phase 2 — 9 project pages under /projects/)
 - Don't integrate Resend yet (Phase 2)
 - Don't set up Umami yet (need account first)
 - Don't worry about the domain (will be configured later)
+
+## Phase 2 Scope Note: /projects
+
+Phase 2 includes building 9 individual project pages under /projects/:
+- Alba Wealth, Ziggma, DeRisk, Digital Partners (own ventures)
+- Porsche Digital Lab, Buena, Carly, Impactive (consulting engagements)
+- Rootlocaly (own build / side project)
+Plus the /projects/index.astro portfolio grid page.
+The /services page links to these as proof points; /about tells the full career narrative.
 
 ## Design Reference
 

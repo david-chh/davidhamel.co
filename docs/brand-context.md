@@ -133,28 +133,53 @@ No formal logo for v1. Use "David Hamel" in the primary heading font as the bran
 ### Pages
 
 ```
-/ .................. Homepage (2-track hero, latest posts, "currently" section)
-/about ............. Origin story, career timeline, values
+/ .................. Homepage (2-track hero, selected work, latest posts, newsletter)
+/about ............. Origin story, full career narrative, values
 /coaching .......... Financial coaching services, 3-step process, Calendly CTA
-/services .......... Product & Build Services — fractional CPO, product strategy, app/website builds, portfolio
+/services .......... Product & Build Services — sells (fractional CPO, builds, differentiators)
+/projects .......... Portfolio grid — proves the positioning
+/projects/[slug] ... Individual project pages (case-study-like)
 /blog .............. Blog listing (filterable by content pillar)
 /blog/[slug] ....... Individual blog posts (MDX)
 /adventures ........ Photo gallery — surf, dive, travel (placeholder for v1)
 /contact ........... Calendly embed, newsletter signup, direct email
 ```
 
+### Information Architecture: /services sells, /projects proves
+
+The `/services` page focuses on **what David offers and why to hire him**. The `/projects` page provides the **evidence** — each project has its own page with case-study-like content. Services links to relevant projects as proof points.
+
+The `/about` page tells the **full career story** chronologically — all projects appear here as narrative, including those without dedicated pages (Cormo Energy, Rootlocaly, ABN Amro).
+
 ### Key Pages Detail
 
-**Homepage:** Hero with headline + two paths (coaching / product & build services). "Who I am" block with headshot. Latest 2–3 blog posts. "Currently" section (what I'm building, where I am). Newsletter signup CTA.
+**Homepage:** Hero with headline + two paths (coaching / product & build services). "Who I am" block with headshot. Selected work highlights (3–4 project cards linking to /projects/*). Latest 2–3 blog posts. Newsletter signup CTA.
 
 **Coaching:** What I offer (scoped to pre-§34h language). Who it's for. 3-step process: Understand → Plan → Implement. Differentiation (fee-only, expat perspective, AI tools). Link to Alba Wealth. CTA: Book free 30-min consultation.
 
-**Services (Product & Build Services):** Three-tier offering on one page:
+**Services (Product & Build Services):** Service-focused page — what, who, why:
 1. **Fractional CPO / Product Strategy** — For startups and scaleups that need senior product leadership without a full-time hire. Strategy, roadmapping, team coaching.
-2. **App & Website Builds** — Full-service development of small apps, websites, and landing pages using AI-native tooling (Claude Code). Fast delivery, high quality, productized pricing. One-time build fee + optional monthly retainer for maintenance, updates, and iteration.
-3. **Own Ventures** — Portfolio of David's own products: Alba Wealth (primary), Ziggma ($2B+ linked assets), DeRisk (NBIM/Barings), Digital Partners, Rootlocaly.
-Past client work: Porsche Digital Lab, Buena/HomeHT, Impactive, Carly.
-CTA: "Let's talk about your project" (Calendly or contact form).
+2. **App & Website Builds** — Full-service development using AI-native tooling (Claude Code). Fast delivery, high quality, productized pricing. One-time build fee + optional monthly retainer.
+3. **Differentiators** — Product + code in one person, AI-native 3-5x speed, transparent pricing, ongoing relationship, portfolio proof.
+Selected project references link to /projects/* pages. CTA: "Let's talk about your project" (Calendly or contact form).
+
+**Projects (Portfolio):** Grid/list overview of all projects. Each project has its own page:
+
+| Project | Type | Page |
+|---------|------|------|
+| Alba Wealth | Own venture (primary, active) | /projects/alba-wealth |
+| Ziggma | Own venture | /projects/ziggma |
+| DeRisk | Own venture | /projects/derisk |
+| Digital Partners | Own venture (first business) | /projects/digital-partners |
+| Porsche Digital Lab | Consulting (via Digital Partners) | /projects/porsche-digital-lab |
+| Buena/HomeHT | Consulting | /projects/buena |
+| Carly | Consulting | /projects/carly |
+| Impactive | Consulting | /projects/impactive |
+| Rootlocaly | Own build (side project) | /projects/rootlocaly |
+
+Projects mentioned in About narrative only (no dedicated page): Cormo Energy (early-stage solar idea), ABN Amro (internship, origin story).
+
+**About:** Personal story (expat journey, 15+ countries). Full career narrative connecting all projects chronologically: Digital Partners → Porsche → Ziggma → DeRisk → Carly → Impactive → Cormo Energy → Buena → Alba Wealth. ABN Amro as brief origin mention. Values and "what I believe" section. CTAs to /coaching or /services.
 
 **Adventures:** Photo grid, minimal text. Categories: Surf, Dive, Travel. Can launch sparse and fill as photos are organized.
 
@@ -176,9 +201,20 @@ davidhamel.co/
 │   │   ├── index.astro                # Homepage
 │   │   ├── about.astro
 │   │   ├── coaching.astro
-│   │   ├── services.astro
+│   │   ├── services.astro             # Product & Build Services (sells)
 │   │   ├── adventures.astro
 │   │   ├── contact.astro
+│   │   ├── projects/
+│   │   │   ├── index.astro            # Portfolio grid (proves)
+│   │   │   ├── alba-wealth.astro
+│   │   │   ├── ziggma.astro
+│   │   │   ├── derisk.astro
+│   │   │   ├── digital-partners.astro
+│   │   │   ├── porsche-digital-lab.astro
+│   │   │   ├── buena.astro
+│   │   │   ├── carly.astro
+│   │   │   ├── impactive.astro
+│   │   │   └── rootlocaly.astro
 │   │   └── blog/
 │   │       ├── index.astro            # Blog listing
 │   │       └── [...slug].astro        # Dynamic blog post route
@@ -285,10 +321,14 @@ pnpm format       # Prettier format
 - Implement color palette and typography in Tailwind config
 
 ### Phase 2: Website Build (Week 3–4)
-- Build homepage (2-track hero, blog cards, currently section)
-- Build About page (origin story, career timeline)
+- Build homepage (2-track hero, selected work highlights, blog cards, newsletter CTA)
+- Build About page (origin story, full career narrative, values)
 - Build Coaching page (services, process, Calendly embed)
-- Build Services page (Product & Build Services — three tiers + portfolio)
+- Build Services page (Product & Build Services — sells: tiers + differentiators, links to /projects)
+- Build Projects portfolio grid (/projects) and 9 individual project pages:
+  - Own ventures: Alba Wealth, Ziggma, DeRisk, Digital Partners
+  - Consulting: Porsche Digital Lab, Buena, Carly, Impactive
+  - Own build: Rootlocaly
 - Build Blog infrastructure (listing, MDX post template, content collections)
 - Build Contact page (Calendly, newsletter signup via Resend)
 - Build Adventures page (photo grid, placeholder-ready)
@@ -321,17 +361,23 @@ pnpm format       # Prettier format
 
 ## Reference: Career Timeline
 
-| Period | Role | Company | Key Detail |
-|--------|------|---------|------------|
-| 2014–2015 | M&A Banking Intern | ABN Amro, Amsterdam | Financial analysis foundation |
-| 2015–2017 | Economics Studies | RSM (Cum Laude) + EDHEC exchange | BSc/MSc Economics & Business |
-| 2017–2019 | Product Manager | Porsche Digital Lab, Berlin | Digital product innovation |
-| 2019–2020 | Co-founder / CPO | Ziggma (Fintech) | 10k+ users, $2B+ linked assets |
-| 2020–2021 | CPO | DeRisk (Fintech) | NBIM/Barings as prototyping clients |
-| 2021–2022 | Product Consultant | Carly / Impactive | Mobility + impact venture consulting |
-| 2022–2023 | Head of Product | Buena / HomeHT, Berlin | Proptech product leadership |
-| 2023–2024 | Relocation & Foundation | Portugal | Financial advisory transition |
-| 2024–present | Founder | Alba Wealth | Independent coaching + AI planning tool |
+**Important:** Everything except ABN Amro was self-employed, freelance, or consulting — never full-time employment.
+
+| Period | Role | Company | Type | Key Detail |
+|--------|------|---------|------|------------|
+| 2014–2015 | M&A Banking Intern | ABN Amro, Amsterdam | Internship (only non-freelance role) | Financial analysis foundation |
+| 2015–2017 | Economics Studies | RSM (Cum Laude) + EDHEC exchange | Education | BSc/MSc Economics & Business |
+| ~2017–2019 | Founder/CEO | Digital Partners | Own venture (first business) | IoT/Industry 4.0 B2B marketplace → consulting |
+| 2017–2019 | Product Manager | Porsche Digital Lab, Berlin | Freelance/consulting (via Digital Partners) | Digital product innovation |
+| 2019–2020 | Co-founder / CPO | Ziggma (Fintech) | Own venture | 10k+ users, $2B+ linked assets |
+| 2020–2021 | CPO | DeRisk (Fintech) | Own venture | NBIM/Barings as prototyping clients |
+| 2021–2022 | Product Consultant | Carly | Freelance/consulting | Mobility venture consulting |
+| 2021–2022 | Product Consultant | Impactive | Freelance/consulting | Impact venture consulting |
+| ~2022 | Founder | Cormo Energy | Own venture (inactive) | Solar energy B2B platform, German market |
+| 2022–2023 | Head of Product | Buena / HomeHT, Berlin | Freelance/consulting | Proptech product leadership |
+| 2023–2024 | Relocation & Foundation | Portugal | — | Financial coaching transition |
+| 2024–present | Founder | Alba Wealth | Own venture (primary, active) | Independent coaching + AI planning tool |
+| Recent | Builder | Rootlocaly | Own build (side project) | Vibe coding learning project |
 
 **Safe to reference in marketing:** ABN Amro, Porsche/Porsche Digital Lab, Buena/HomeHT.
 **Context-only (not endorsements):** NBIM, Barings were DeRisk prototyping clients.
