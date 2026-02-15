@@ -38,8 +38,8 @@ Full-service development of small apps, websites, and landing pages using AI-nat
 **3. Own Ventures (Portfolio)**
 David's own products — demonstrates the "practitioner who builds" positioning:
 - Alba Wealth (primary) — AI-powered financial planning
-- Ziggma — portfolio management, 10k+ users, $2B+ linked assets
-- DeRisk — institutional risk analytics (NBIM/Barings)
+- Ziggma — portfolio management, 35k users, €10k MRR, €1.5bn linked assets
+- DeRisk — institutional risk analytics (NBIM/Barings/CCLA, >€1.5tn AUM)
 - Digital Partners, Rootlocaly
 
 ## Differentiators for Build Services

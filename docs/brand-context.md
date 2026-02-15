@@ -165,21 +165,21 @@ Selected project references link to /projects/* pages. CTA: "Let's talk about yo
 
 **Projects (Portfolio):** Grid/list overview of all projects. Each project has its own page:
 
-| Project | Type | Page |
-|---------|------|------|
-| Alba Wealth | Own venture (primary, active) | /projects/alba-wealth |
-| Ziggma | Own venture | /projects/ziggma |
-| DeRisk | Own venture | /projects/derisk |
-| Digital Partners | Own venture (first business) | /projects/digital-partners |
-| Porsche Digital Lab | Consulting (via Digital Partners) | /projects/porsche-digital-lab |
-| Buena/HomeHT | Consulting | /projects/buena |
-| Carly | Consulting | /projects/carly |
-| Impactive | Consulting | /projects/impactive |
-| Rootlocaly | Own build (side project) | /projects/rootlocaly |
+| Project | Type | Period | Page |
+|---------|------|--------|------|
+| Alba Wealth (Stealth Startup) | Own venture (primary, active) | Jan 2025–present | /projects/alba-wealth |
+| Ziggma | Own venture (Co-Founder & COO) | Feb 2023–Nov 2024 | /projects/ziggma |
+| DeRisk | Own venture (Co-Founder & CEO) | Apr 2021–Feb 2022 | /projects/derisk |
+| Digital Partners | Own venture (first business, Co-Founder & CEO) | Dec 2015–Jun 2022 | /projects/digital-partners |
+| Porsche Digital Lab | Contract (via Digital Partners) | May–Aug 2018 | /projects/porsche-digital-lab |
+| Buena (Home HT GmbH) | Contract | Jul–Sep 2020 | /projects/buena |
+| Carly (Carly Connected Car) | Contract | Feb–Apr 2020 | /projects/carly |
+| Impactive Tech | Contract (Venture Consultant) | Jul–Dec 2023 | /projects/impactive |
+| Rootlocaly | Own build (side project) | Recent | /projects/rootlocaly |
 
-Projects mentioned in About narrative only (no dedicated page): Cormo Energy (early-stage solar idea), ABN Amro (internship, origin story).
+Projects mentioned in About narrative only (no dedicated page): Cormo Energy (early-stage solar idea), Antler EIR program (Oct–Dec 2021), ABN Amro internship (origin story), ISM eCompany (student job).
 
-**About:** Personal story (expat journey, 15+ countries). Full career narrative connecting all projects chronologically: Digital Partners → Porsche → Ziggma → DeRisk → Carly → Impactive → Cormo Energy → Buena → Alba Wealth. ABN Amro as brief origin mention. Values and "what I believe" section. CTAs to /coaching or /services.
+**About:** Personal story (expat journey, 15+ countries). Full career narrative connecting all projects chronologically: Digital Partners (2015–2022, with Porsche/Carly/Buena contracts during) → Antler EIR → DeRisk → Ziggma (with Impactive contract during) → Alba Wealth. ABN Amro as brief origin mention. Values and "what I believe" section. CTAs to /coaching or /services.
 
 **Adventures:** Photo grid, minimal text. Categories: Surf, Dive, Travel. Can launch sparse and fill as photos are organized.
 
@@ -361,26 +361,30 @@ pnpm format       # Prettier format
 
 ## Reference: Career Timeline
 
-**Important:** Everything except ABN Amro was self-employed, freelance, or consulting — never full-time employment.
+**Important:** Everything except ABN Amro (internship) and ISM eCompany (student part-time) was self-employed, freelance, or consulting — never full-time employment.
+
+**Note:** Digital Partners ran from Dec 2015 – Jun 2022 as David's primary company. Porsche, Buena, and Carly were short contract engagements executed **during** the Digital Partners period. Dates overlap intentionally.
 
 | Period | Role | Company | Type | Key Detail |
 |--------|------|---------|------|------------|
-| 2014–2015 | M&A Banking Intern | ABN Amro, Amsterdam | Internship (only non-freelance role) | Financial analysis foundation |
-| 2015–2017 | Economics Studies | RSM (Cum Laude) + EDHEC exchange | Education | BSc/MSc Economics & Business |
-| ~2017–2019 | Founder/CEO | Digital Partners | Own venture (first business) | IoT/Industry 4.0 B2B marketplace → consulting |
-| 2017–2019 | Product Manager | Porsche Digital Lab, Berlin | Freelance/consulting (via Digital Partners) | Digital product innovation |
-| 2019–2020 | Co-founder / CPO | Ziggma (Fintech) | Own venture | 10k+ users, $2B+ linked assets |
-| 2020–2021 | CPO | DeRisk (Fintech) | Own venture | NBIM/Barings as prototyping clients |
-| 2021–2022 | Product Consultant | Carly | Freelance/consulting | Mobility venture consulting |
-| 2021–2022 | Product Consultant | Impactive | Freelance/consulting | Impact venture consulting |
-| ~2022 | Founder | Cormo Energy | Own venture (inactive) | Solar energy B2B platform, German market |
-| 2022–2023 | Head of Product | Buena / HomeHT, Berlin | Freelance/consulting | Proptech product leadership |
-| 2023–2024 | Relocation & Foundation | Portugal | — | Financial coaching transition |
-| 2024–present | Founder | Alba Wealth | Own venture (primary, active) | Independent coaching + AI planning tool |
+| Feb 2013 – Sep 2013 | Business Development DACH | ISM eCompany, Rotterdam | Part-time (student) | Dutch e-commerce, DACH market entry |
+| Aug 2011 – Aug 2014 | BSc International Business | RSM, Erasmus University | Education | GPA 8.0/10, exchange at SMU Singapore |
+| Aug 2014 – Dec 2015 | MSc Finance & Investments | RSM (Cum Laude) + EDHEC exchange | Education | GPA 8.4/10, exchange at EDHEC Nice |
+| Mar 2015 – Jun 2015 | Commodities Trade Finance | ABN AMRO Bank, Amsterdam | Internship | Financial & political risk analysis |
+| Dec 2015 – Jun 2022 | Co-Founder & CEO | DigitalPartners.io, Berlin + SF | Own venture (first business) | Digital strategy consulting, corporate venturing, IT/IoT. 27 projects for Viessmann, Porsche, Körber. Team of 7 engineers + 3 consulting partners |
+| May 2018 – Aug 2018 | Product Owner | Porsche Digital Lab, Berlin | Contract (via Digital Partners) | Blockchain app for classic car owners. Scaled prototype to full versions, secured €6.5M funding. Hired/managed team of 12 |
+| Feb 2020 – Apr 2020 | Product Manager | Carly Connected Car (Carly Solutions GmbH), Munich | Contract | Car diagnostics e-commerce. Built web funnel improving purchase conversion by 25%. Created agile product org, Analytics & BI setup |
+| Jul 2020 – Sep 2020 | Senior Product Manager | Buena GmbH (Home HT GmbH), Berlin | Contract | Online marketplace for tenants/landlords. Automated contract generation from <5% to 100%. Agile processes for team of 9 |
+| Oct 2021 – Dec 2021 | Entrepreneur in Residence | Antler, Berlin | Program | Ideating, learning and building with founder community |
+| Apr 2021 – Feb 2022 | Co-Founder & CEO | DeRisk (DeRisk.earth), London/Berlin | Own venture | SaaS for asset managers — portfolio relationships & systemic risks. Piloted with NBIM, Barings, CCLA (>€1.5tn AUM) |
+| Feb 2023 – Dec 2024 | Co-Founder & COO | Ziggma (Ziggma.com), Berlin | Own venture | Portfolio management SaaS for retail investors. 35k users, €10k MRR, €1.5bn linked assets |
+| Jul 2023 – Dec 2023 | Venture Consultant | Impactive Tech (Impactive.pro), London | Contract | Strategy & business development for asset management stewardship/shareholder engagement SaaS |
+| ~2022 | Founder | Cormo Energy | Own venture (inactive) | Solar energy B2B platform for commercial customers, German market |
+| Jan 2025 – present | Co-Founder | Stealth Startup / Alba Wealth, Berlin + London | Own venture (primary, active) | AI agents for financial services. Financial planning coaching + AI-powered planning tool |
 | Recent | Builder | Rootlocaly | Own build (side project) | Vibe coding learning project |
 
 **Safe to reference in marketing:** ABN Amro, Porsche/Porsche Digital Lab, Buena/HomeHT.
-**Context-only (not endorsements):** NBIM, Barings were DeRisk prototyping clients.
+**Context-only (not endorsements):** NBIM, Barings, CCLA were DeRisk prototyping clients.
 
 ---
 

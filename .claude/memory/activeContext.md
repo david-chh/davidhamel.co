@@ -43,9 +43,23 @@
   - **Own ventures:** Alba Wealth, Ziggma, DeRisk, Digital Partners
   - **Consulting:** Porsche Digital Lab, Buena, Carly, Impactive
   - **Own build:** Rootlocaly
-- Projects in About narrative only (no page): Cormo Energy, ABN Amro
-- Updated career timeline in brand-context.md with correct types
+- Projects in About narrative only (no page): Cormo Energy, Antler EIR, ABN Amro, ISM eCompany
 - Updated all docs: brand-context.md (IA, project structure, career timeline, phases), coding-conventions.md (file organization), kickoff-brief.md (Phase 2 scope note)
+
+### Career Timeline Corrections (from CV + LinkedIn)
+- Cross-referenced David's CV (Nov 2025) and LinkedIn profile against project docs
+- Major corrections to dates, roles, and stats:
+  - Digital Partners ran Dec 2015–Jun 2022 (much longer than previously documented)
+  - Porsche, Buena, Carly were short contracts **during** Digital Partners period
+  - Ziggma: Co-Founder & COO (not CPO), Feb 2023–Dec 2024, 35k users/€1.5bn linked (not 10k/$2B)
+  - DeRisk: Co-Founder & CEO (not CPO), Apr 2021–Feb 2022, added CCLA to client list
+  - Porsche: Product Owner (not PM), May–Aug 2018 only (4 months)
+  - Buena: Senior PM (not Head of Product), Jul–Sep 2020 (not 2022–2023)
+  - Impactive: Jul–Dec 2023, company = Impactive Tech
+  - Added: Antler EIR (Oct–Dec 2021), ISM eCompany (Feb–Sep 2013), Stealth Startup (Jan 2025–present = Alba)
+- Updated brand-context.md career timeline, project table, and About narrative
+- Updated brand-assets-additions.md Ziggma stats
+- Updated Notion Brand Assets page: career timeline, bios, venture stats
 
 ## Key Decisions
 
