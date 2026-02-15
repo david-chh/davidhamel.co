@@ -45,6 +45,7 @@ David does NOT yet hold the §34h GewO license. See `docs/brand-context.md` for 
 |-------|------|
 | **Brand & Visual Identity** | `docs/brand-context.md` |
 | **Marketing Infrastructure** | `docs/marketing-infrastructure.md` |
+| **Information Architecture** | `docs/information-architecture.md` |
 | **Kickoff Brief** | `docs/kickoff-brief.md` |
 | **Coding Conventions** | `.claude/rules/coding-conventions.md` |
 | **Technical Patterns** | `.claude/rules/technical-patterns.md` |
