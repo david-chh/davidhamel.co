@@ -1,0 +1,150 @@
+---
+import {
+  getLangFromUrl,
+  useTranslations,
+  getLocalizedPath,
+} from "@/i18n/utils";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import MobileNav from "./MobileNav.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const navLinks = [
+  { label: t("nav.about"), href: getLocalizedPath("/about", lang) },
+  { label: t("nav.projects"), href: getLocalizedPath("/projects", lang) },
+  { label: t("nav.blog"), href: getLocalizedPath("/blog", lang) },
+  { label: t("nav.adventures"), href: getLocalizedPath("/adventures", lang) },
+];
+
+const servicesLinks = [
+  {
+    label: t("nav.services.coaching"),
+    href: getLocalizedPath("/coaching", lang),
+  },
+  { label: t("nav.services.build"), href: getLocalizedPath("/services", lang) },
+];
+---
+
+<header
+  class="sticky top-0 z-50 w-full bg-white border-b border-navy-100"
+  id="site-nav"
+>
+  <div class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10">
+    <div class="flex h-16 items-center justify-between lg:h-[72px]">
+      <!-- Logo -->
+      <a
+        href={getLocalizedPath("/", lang)}
+        class="text-lg font-semibold text-navy-900 hover:text-teal-600 transition-colors duration-100"
+      >
+        David Hamel
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav
+        class="hidden lg:flex items-center gap-1"
+        aria-label="Main navigation"
+      >
+        {
+          navLinks.map((link, i) =>
+            i === 0 ? (
+              /* About link */
+              <a
+                href={link.href}
+                class="px-3 py-2 text-[15px] font-medium text-navy-700 hover:text-teal-600 transition-colors duration-100 rounded-lg"
+              >
+                {link.label}
+              </a>
+            ) : i === 1 ? (
+              /* Insert Services dropdown before Projects */
+              <>
+                <div class="relative group">
+                  <button
+                    class="px-3 py-2 text-[15px] font-medium text-navy-700 hover:text-teal-600 transition-colors duration-100 rounded-lg inline-flex items-center gap-1"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    {t("nav.services")}
+                    <svg
+                      class="w-4 h-4 transition-transform group-hover:rotate-180"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+                    <div class="w-60 bg-white border border-navy-100 rounded-xl shadow-dropdown p-2">
+                      {servicesLinks.map((slink) => (
+                        <a
+                          href={slink.href}
+                          class="block px-4 py-3 text-[15px] text-navy-700 hover:text-teal-600 hover:bg-navy-50 rounded-lg transition-colors duration-100"
+                        >
+                          {slink.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href={link.href}
+                  class="px-3 py-2 text-[15px] font-medium text-navy-700 hover:text-teal-600 transition-colors duration-100 rounded-lg"
+                >
+                  {link.label}
+                </a>
+              </>
+            ) : (
+              <a
+                href={link.href}
+                class="px-3 py-2 text-[15px] font-medium text-navy-700 hover:text-teal-600 transition-colors duration-100 rounded-lg"
+              >
+                {link.label}
+              </a>
+            ),
+          )
+        }
+
+        <div class="mx-2">
+          <LanguageSwitcher />
+        </div>
+
+        <a
+          href={getLocalizedPath("/contact", lang)}
+          class="ml-2 inline-flex items-center px-5 py-2.5 bg-teal-600 text-white text-sm font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+        >
+          {t("nav.cta")}
+        </a>
+      </nav>
+
+      <!-- Mobile: CTA + Hamburger -->
+      <div class="flex items-center gap-3 lg:hidden">
+        <a
+          href={getLocalizedPath("/contact", lang)}
+          class="inline-flex items-center px-4 py-2 bg-teal-600 text-white text-sm font-semibold rounded-lg hover:bg-teal-700 transition-colors duration-150"
+        >
+          {t("nav.cta")}
+        </a>
+        <button
+          id="mobile-menu-toggle"
+          class="p-2 text-navy-700 hover:text-navy-900"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<MobileNav />

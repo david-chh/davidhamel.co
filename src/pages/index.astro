@@ -1,0 +1,194 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionWrapper from "@/components/SectionWrapper.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import BlogCard from "@/components/BlogCard.astro";
+import CTABlock from "@/components/CTABlock.astro";
+import headshot from "@/assets/images/headshot-david.jpg";
+---
+
+<BaseLayout
+  title="David Hamel — Financial Planning Coach & Product Builder"
+  description="Independent financial planning coach and product builder. Helping expats in Germany take control of their money. Building apps and products from strategy to shipped code."
+>
+  <!-- Hero -->
+  <section class="bg-warm-white">
+    <div
+      class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24"
+    >
+      <h1
+        class="text-4xl sm:text-5xl lg:text-[72px] font-bold leading-[1.05] tracking-tight text-navy-900 mb-6"
+      >
+        Financial planning coach.<br />Product leader. Builder.
+      </h1>
+      <p
+        class="text-lg sm:text-xl text-navy-700 max-w-[580px] mb-8 leading-relaxed"
+      >
+        I help expats in Germany make confident financial decisions — and I
+        build products that ship. No commissions, no complexity, no corporate
+        filler.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="/coaching"
+          class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+        >
+          Financial Coaching
+          <span class="ml-2">&rarr;</span>
+        </a>
+        <a
+          href="/services"
+          class="inline-flex items-center justify-center px-7 py-4 border-[1.5px] border-navy-200 text-navy-900 text-lg font-semibold rounded-lg hover:border-navy-900 hover:bg-navy-50 transition-all duration-150"
+        >
+          Product & Build Services
+          <span class="ml-2">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who I Am -->
+  <SectionWrapper>
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center">
+      <div class="lg:col-span-2">
+        <Image
+          src={headshot}
+          alt="David Hamel — financial planning coach and product builder"
+          class="rounded-2xl w-full max-h-[500px] object-cover"
+          widths={[400, 640, 800]}
+          sizes="(max-width: 1024px) 100vw, 40vw"
+        />
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-lg text-navy-800 leading-relaxed mb-4">
+          I'm David — an independent financial planning coach and product
+          builder based in Berlin. I've lived and worked across 15+ countries,
+          built fintech products used by tens of thousands of people, and led
+          product teams at places like Porsche Digital Lab.
+        </p>
+        <p class="text-lg text-navy-800 leading-relaxed mb-6">
+          Today I split my time between coaching expats through the German
+          financial system and building apps and websites for startups and
+          founders.
+        </p>
+        <a
+          href="/about"
+          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+        >
+          More about me
+          <span
+            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+            >&rarr;</span
+          >
+        </a>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Selected Work -->
+  <SectionWrapper background="navy-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Selected Work
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <ProjectCard
+        name="Alba Wealth"
+        oneLiner="AI-powered financial planning for expats"
+        role="Founder"
+        badge="Venture"
+      />
+      <ProjectCard
+        name="Ziggma"
+        oneLiner="Portfolio management for 35,000+ investors"
+        role="Co-Founder & COO"
+        badge="Venture"
+        metric="€1.5bn linked assets"
+      />
+      <ProjectCard
+        name="Porsche Digital Lab"
+        oneLiner="Blockchain product for classic car provenance"
+        role="Product Owner"
+        badge="Contract"
+        metric="€6.5M funding secured"
+      />
+      <ProjectCard
+        name="Digital Partners"
+        oneLiner="IoT consulting & venture building — 27 projects delivered"
+        role="Founder & CEO"
+        badge="Venture"
+        metric="7 engineers, 3 partners"
+      />
+    </div>
+    <div class="mt-8 text-center">
+      <a
+        href="/projects"
+        class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+      >
+        View all projects
+        <span
+          class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+          >&rarr;</span
+        >
+      </a>
+    </div>
+  </SectionWrapper>
+
+  <!-- Latest from the Blog -->
+  <SectionWrapper>
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Latest from the Blog
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <BlogCard
+        title="Hello, World"
+        description="Welcome to my blog. I'll be writing about expat finance, product building, and designing a life on your own terms."
+        pillar="building-alba"
+        publishDate={new Date("2026-02-16")}
+        readingTime={3}
+        slug="hello-world"
+      />
+    </div>
+    <div class="mt-8 text-center">
+      <a
+        href="/blog"
+        class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+      >
+        Read all posts
+        <span
+          class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+          >&rarr;</span
+        >
+      </a>
+    </div>
+  </SectionWrapper>
+
+  <!-- Newsletter CTA -->
+  <section class="bg-navy-900">
+    <div class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 py-16 lg:py-20">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+          Insights on money, building, and living abroad.
+        </h2>
+        <p class="text-lg text-white/85 mb-8">
+          I write about expat finance, product building, and designing a life on
+          your own terms. No spam, no fluff — just honest thinking.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-3" onsubmit="return false;">
+          <input
+            type="email"
+            placeholder="Your email address"
+            class="flex-1 h-[52px] px-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-teal-500"
+            aria-label="Your email address"
+          />
+          <button
+            type="submit"
+            class="h-[52px] px-6 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors duration-150 text-sm"
+          >
+            Subscribe <span>&rarr;</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

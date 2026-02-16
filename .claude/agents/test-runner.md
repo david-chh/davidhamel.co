@@ -19,10 +19,13 @@ You are a testing specialist for an Astro content site. Primary testing strategy
 ## Test Strategy
 
 ### 1. Build Verification (always run first)
+
 ```bash
 pnpm build
 ```
+
 The Astro build catches:
+
 - TypeScript errors (strict mode)
 - Missing imports
 - Content Collections schema violations
@@ -32,13 +35,16 @@ The Astro build catches:
 A successful build with zero warnings = primary quality gate.
 
 ### 2. Lint & Format
+
 ```bash
 pnpm lint
 pnpm format --check
 ```
 
 ### 3. E2E via Playwright Browser
+
 Use the Playwright MCP tools to:
+
 - Navigate to each page and verify it loads
 - Check that navigation links work
 - Verify language switcher toggles between EN and DE
@@ -48,6 +54,7 @@ Use the Playwright MCP tools to:
 - Screenshot comparison for visual regressions
 
 ### 4. i18n Verification
+
 - Check every EN page has a DE counterpart that loads
 - Verify `hreflang` tags in page source
 - Confirm language switcher navigates correctly
@@ -57,18 +64,22 @@ Use the Playwright MCP tools to:
 ## Common Issues
 
 ### "Cannot find module" Error
+
 - Check import paths — Astro uses `src/` alias
 - Verify the file exists at the referenced path
 
 ### Content Collection Error
+
 - Check frontmatter matches the Zod schema in `config.ts`
 - Ensure required fields are present
 
 ### React Island Not Rendering
+
 - Verify `client:` directive is present on the component
 - Check that React integration is configured in `astro.config.mjs`
 
 ### Build Fails with Zero Output
+
 - Check for circular imports
 - Verify `astro.config.mjs` is valid
 
@@ -77,6 +88,7 @@ Use the Playwright MCP tools to:
 ## Output Format
 
 ### Test Results Summary
+
 ```
 ## Test Results
 

@@ -13,11 +13,13 @@ Battle-tested patterns that prevent common bugs.
 When debugging, **confirm the actual cause** before implementing fixes.
 
 Red flags (haven't found root cause):
+
 - "It could be..."
 - "Probably..."
 - "Let's try..."
 
 Green flags (found root cause):
+
 - "Looking at line X, I can see..."
 - "The database shows..."
 - "Tracing the execution reveals..."
@@ -27,37 +29,37 @@ Green flags (found root cause):
 Always validate inputs at system boundaries using Zod:
 
 ```typescript
-import { z } from 'zod'
+import { z } from "zod";
 
 const schema = z.object({
   name: z.string().min(1).max(100),
   email: z.string().email(),
-})
+});
 ```
 
 ## Astro Content Collections
 
 ```typescript
 // CORRECT: Use Astro Content Collections for type-safe content
-import { defineCollection, z } from 'astro:content'
+import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string(),
     publishDate: z.date(),
     pillar: z.enum([
-      'expat-money-mastery',
-      'systems-and-money',
-      'building-alba',
-      'freedom-by-design',
-      'practitioners-edge',
+      "expat-money-mastery",
+      "systems-and-money",
+      "building-alba",
+      "freedom-by-design",
+      "practitioners-edge",
     ]),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
   }),
-})
+});
 ```
 
 ## React Islands in Astro
@@ -65,7 +67,7 @@ const blog = defineCollection({
 ```astro
 ---
 // CORRECT: Import React component and use client directive
-import NewsletterSignup from '../components/NewsletterSignup.tsx'
+import NewsletterSignup from "../components/NewsletterSignup.tsx";
 ---
 
 <!-- client:load — loads immediately (above the fold, critical interactivity) -->

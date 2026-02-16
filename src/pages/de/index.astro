@@ -1,0 +1,194 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionWrapper from "@/components/SectionWrapper.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import BlogCard from "@/components/BlogCard.astro";
+import headshot from "@/assets/images/headshot-david.jpg";
+---
+
+<BaseLayout
+  title="David Hamel — Finanzcoach & Product Builder"
+  description="Unabhängiger Finanzcoach und Product Builder. Ich helfe Expats in Deutschland, ihre Finanzen in den Griff zu bekommen. Apps und Produkte von der Strategie bis zum fertigen Code."
+>
+  <!-- Hero -->
+  <section class="bg-warm-white">
+    <div
+      class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24"
+    >
+      <h1
+        class="text-4xl sm:text-5xl lg:text-[72px] font-bold leading-[1.05] tracking-tight text-navy-900 mb-6"
+      >
+        Finanzcoach. Produktführer.<br />Builder.
+      </h1>
+      <p
+        class="text-lg sm:text-xl text-navy-700 max-w-[580px] mb-8 leading-relaxed"
+      >
+        Ich helfe Expats in Deutschland, sichere Finanzentscheidungen zu treffen
+        — und ich baue Produkte, die live gehen. Keine Provisionen, keine
+        Komplexität, kein Unternehmenssprech.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="/de/coaching"
+          class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+        >
+          Finanzcoaching
+          <span class="ml-2">&rarr;</span>
+        </a>
+        <a
+          href="/de/services"
+          class="inline-flex items-center justify-center px-7 py-4 border-[1.5px] border-navy-200 text-navy-900 text-lg font-semibold rounded-lg hover:border-navy-900 hover:bg-navy-50 transition-all duration-150"
+        >
+          Product & Build
+          <span class="ml-2">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who I Am -->
+  <SectionWrapper>
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center">
+      <div class="lg:col-span-2">
+        <Image
+          src={headshot}
+          alt="David Hamel — Finanzcoach und Product Builder"
+          class="rounded-2xl w-full max-h-[500px] object-cover"
+          widths={[400, 640, 800]}
+          sizes="(max-width: 1024px) 100vw, 40vw"
+        />
+      </div>
+      <div class="lg:col-span-3">
+        <p class="text-lg text-navy-800 leading-relaxed mb-4">
+          Ich bin David — unabhängiger Finanzcoach und Product Builder in
+          Berlin. Ich habe in über 15 Ländern gelebt und gearbeitet,
+          Fintech-Produkte für Zehntausende Nutzer gebaut und Produktteams unter
+          anderem beim Porsche Digital Lab geleitet.
+        </p>
+        <p class="text-lg text-navy-800 leading-relaxed mb-6">
+          Heute teile ich meine Zeit zwischen Finanzcoaching für Expats im
+          deutschen Finanzsystem und dem Bau von Apps und Websites für Startups
+          und Gründer.
+        </p>
+        <a
+          href="/de/about"
+          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+        >
+          Mehr über mich
+          <span
+            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+            >&rarr;</span
+          >
+        </a>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Selected Work -->
+  <SectionWrapper background="navy-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Ausgewählte Projekte
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <ProjectCard
+        name="Alba Wealth"
+        oneLiner="KI-gestützte Finanzplanung für Expats"
+        role="Gründer"
+        badge="Venture"
+      />
+      <ProjectCard
+        name="Ziggma"
+        oneLiner="Portfoliomanagement für 35.000+ Anleger"
+        role="Co-Founder & COO"
+        badge="Venture"
+        metric="€1,5 Mrd. verknüpfte Assets"
+      />
+      <ProjectCard
+        name="Porsche Digital Lab"
+        oneLiner="Blockchain-Produkt für die Herkunft klassischer Autos"
+        role="Product Owner"
+        badge="Auftrag"
+        metric="€6,5 Mio. Finanzierung gesichert"
+      />
+      <ProjectCard
+        name="Digital Partners"
+        oneLiner="IoT-Beratung & Venture Building — 27 Projekte umgesetzt"
+        role="Gründer & CEO"
+        badge="Venture"
+        metric="7 Entwickler, 3 Partner"
+      />
+    </div>
+    <div class="mt-8 text-center">
+      <a
+        href="/de/projects"
+        class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+      >
+        Alle Projekte ansehen
+        <span
+          class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+          >&rarr;</span
+        >
+      </a>
+    </div>
+  </SectionWrapper>
+
+  <!-- Latest from the Blog -->
+  <SectionWrapper>
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Neueste Beiträge
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <BlogCard
+        title="Hello, World"
+        description="Welcome to my blog. I'll be writing about expat finance, product building, and designing a life on your own terms."
+        pillar="building-alba"
+        publishDate={new Date("2026-02-16")}
+        readingTime={3}
+        slug="hello-world"
+        locale="de-DE"
+      />
+    </div>
+    <div class="mt-8 text-center">
+      <a
+        href="/de/blog"
+        class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+      >
+        Alle Beiträge lesen
+        <span
+          class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+          >&rarr;</span
+        >
+      </a>
+    </div>
+  </SectionWrapper>
+
+  <!-- Newsletter CTA -->
+  <section class="bg-navy-900">
+    <div class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 py-16 lg:py-20">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+          Impulse zu Geld, Bauen und Leben im Ausland.
+        </h2>
+        <p class="text-lg text-white/85 mb-8">
+          Ich schreibe über Expat-Finanzen, Produktentwicklung und ein
+          selbstbestimmtes Leben. Kein Spam, kein Blabla — ehrliche Gedanken.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-3" onsubmit="return false;">
+          <input
+            type="email"
+            placeholder="Deine E-Mail-Adresse"
+            class="flex-1 h-[52px] px-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-teal-500"
+            aria-label="Deine E-Mail-Adresse"
+          />
+          <button
+            type="submit"
+            class="h-[52px] px-6 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors duration-150 text-sm"
+          >
+            Abonnieren <span>&rarr;</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

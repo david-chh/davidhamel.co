@@ -40,20 +40,20 @@ Apply the brand color palette from CLAUDE.md:
 ```js
 // tailwind.config.mjs
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       colors: {
         teal: {
-          DEFAULT: '#0A6E6E',
-          light: '#B8D8D8',
+          DEFAULT: "#0A6E6E",
+          light: "#B8D8D8",
         },
-        navy: '#1A1A2E',
-        coral: '#E07A5F',
+        navy: "#1A1A2E",
+        coral: "#E07A5F",
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Source Serif Pro', 'Georgia', 'serif'],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        serif: ["Source Serif Pro", "Georgia", "serif"],
       },
     },
   },
@@ -67,6 +67,7 @@ The CLAUDE.md file provided alongside this brief is the project's source of trut
 ### 5. Set Up Base Layout
 
 Create `src/layouts/BaseLayout.astro` with:
+
 - HTML shell with proper meta tags (charset, viewport, description, OG tags)
 - Google Fonts link for Inter + Source Serif Pro (or self-host)
 - Navigation component (logo text "David Hamel" + page links + CTA button)
@@ -76,6 +77,7 @@ Create `src/layouts/BaseLayout.astro` with:
 ### 6. Build Homepage (index.astro)
 
 Structure:
+
 1. **Hero section** — Headline: "Independent financial planning coach and fintech builder." Sub-headline from brand statement. Two CTA buttons: "Financial Coaching →" and "Product & Build Services →"
 2. **Brief intro block** — 2–3 sentences + headshot placeholder
 3. **Latest blog posts** — 2–3 cards (can use placeholder content initially)
@@ -88,21 +90,21 @@ Use the brand colors, respect the typography principles (large headings, 18-20px
 
 ```typescript
 // src/content/config.ts
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string(),
     publishDate: z.date(),
     updatedDate: z.date().optional(),
     pillar: z.enum([
-      'expat-money-mastery',
-      'systems-and-money',
-      'building-alba',
-      'freedom-by-design',
-      'practitioners-edge',
+      "expat-money-mastery",
+      "systems-and-money",
+      "building-alba",
+      "freedom-by-design",
+      "practitioners-edge",
     ]),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
@@ -167,15 +169,17 @@ pnpm add -D vercel
 ## Phase 2 Scope Note: /projects
 
 Phase 2 includes building 9 individual project pages under /projects/:
+
 - Alba Wealth, Ziggma, DeRisk, Digital Partners (own ventures)
 - Porsche Digital Lab, Buena, Carly, Impactive (consulting engagements)
 - Rootlocaly (own build / side project)
-Plus the /projects/index.astro portfolio grid page.
-The /services page links to these as proof points; /about tells the full career narrative.
+  Plus the /projects/index.astro portfolio grid page.
+  The /services page links to these as proof points; /about tells the full career narrative.
 
 ## Design Reference
 
 When building the homepage, reference these principles from the Visual Identity:
+
 - **Whitespace-forward** — generous spacing, editorial feel
 - **Typography-driven** — type does the heavy lifting
 - **Mobile-first** — majority of traffic will be mobile

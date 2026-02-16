@@ -1,0 +1,122 @@
+---
+import {
+  getLangFromUrl,
+  useTranslations,
+  getLocalizedPath,
+} from "@/i18n/utils";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-[60] bg-navy-900 hidden flex-col"
+  aria-hidden="true"
+>
+  <div class="flex items-center justify-between px-5 h-16">
+    <a
+      href={getLocalizedPath("/", lang)}
+      class="text-lg font-semibold text-white"
+    >
+      David Hamel
+    </a>
+    <button
+      id="mobile-menu-close"
+      class="p-2 text-white/80 hover:text-white"
+      aria-label="Close menu"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <nav
+    class="flex flex-col items-start px-8 pt-8 gap-6"
+    aria-label="Mobile navigation"
+  >
+    <a
+      href={getLocalizedPath("/about", lang)}
+      class="text-[28px] font-semibold text-white hover:text-teal-100 transition-colors"
+    >
+      {t("nav.about")}
+    </a>
+    <div class="flex flex-col gap-3">
+      <span class="text-[28px] font-semibold text-white"
+        >{t("nav.services")}</span
+      >
+      <a
+        href={getLocalizedPath("/coaching", lang)}
+        class="text-xl text-white/70 hover:text-white pl-4 transition-colors"
+      >
+        {t("nav.services.coaching")}
+      </a>
+      <a
+        href={getLocalizedPath("/services", lang)}
+        class="text-xl text-white/70 hover:text-white pl-4 transition-colors"
+      >
+        {t("nav.services.build")}
+      </a>
+    </div>
+    <a
+      href={getLocalizedPath("/projects", lang)}
+      class="text-[28px] font-semibold text-white hover:text-teal-100 transition-colors"
+    >
+      {t("nav.projects")}
+    </a>
+    <a
+      href={getLocalizedPath("/blog", lang)}
+      class="text-[28px] font-semibold text-white hover:text-teal-100 transition-colors"
+    >
+      {t("nav.blog")}
+    </a>
+    <a
+      href={getLocalizedPath("/adventures", lang)}
+      class="text-[28px] font-semibold text-white hover:text-teal-100 transition-colors"
+    >
+      {t("nav.adventures")}
+    </a>
+
+    <div class="pt-6 border-t border-white/10 w-full">
+      <LanguageSwitcher />
+    </div>
+  </nav>
+</div>
+
+<script>
+  const toggle = document.getElementById("mobile-menu-toggle");
+  const close = document.getElementById("mobile-menu-close");
+  const menu = document.getElementById("mobile-menu");
+
+  function openMenu(): void {
+    menu?.classList.remove("hidden");
+    menu?.classList.add("flex");
+    menu?.setAttribute("aria-hidden", "false");
+    toggle?.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu(): void {
+    menu?.classList.add("hidden");
+    menu?.classList.remove("flex");
+    menu?.setAttribute("aria-hidden", "true");
+    toggle?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  toggle?.addEventListener("click", openMenu);
+  close?.addEventListener("click", closeMenu);
+
+  // Close on escape key
+  document.addEventListener("keydown", (e: KeyboardEvent) => {
+    if (e.key === "Escape") closeMenu();
+  });
+</script>

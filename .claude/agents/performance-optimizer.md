@@ -32,6 +32,7 @@ You are a performance optimization specialist for an Astro content site. Astro s
 ## Key Astro Patterns
 
 ### Lazy Islands
+
 ```astro
 <!-- Below the fold → load when visible -->
 <CalendlyEmbed client:visible />
@@ -44,22 +45,25 @@ You are a performance optimization specialist for an Astro content site. Astro s
 ```
 
 ### Image Optimization
+
 ```astro
 ---
-import { Image } from 'astro:assets';
-import headshot from '../images/headshot.jpg';
+import { Image } from "astro:assets";
+import headshot from "../images/headshot.jpg";
 ---
+
 <!-- Astro auto-optimizes: WebP/AVIF, responsive srcset, lazy loading -->
 <Image src={headshot} alt="David Hamel" width={400} />
 ```
 
 ### Tree-Shaking Imports
+
 ```typescript
 // WRONG: Import entire library
-import * as _ from 'lodash'
+import * as _ from "lodash";
 
 // CORRECT: Import specific functions
-import debounce from 'lodash/debounce'
+import debounce from "lodash/debounce";
 ```
 
 ---

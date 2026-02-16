@@ -1,0 +1,76 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import PillarTag from "@/components/PillarTag.astro";
+import { formatDate, getReadingTime } from "@/lib/utils";
+import { getLangFromUrl } from "@/i18n/utils";
+
+interface Props {
+  title: string;
+  description: string;
+  publishDate: Date;
+  pillar: string;
+  content: string;
+}
+
+const { title, description, publishDate, pillar, content } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const locale = lang === "de" ? "de-DE" : "en-US";
+const readingTime = getReadingTime(content);
+---
+
+<BaseLayout title={`${title} — David Hamel`} description={description}>
+  <article class="py-12 sm:py-16 lg:py-20">
+    <!-- Header -->
+    <div class="mx-auto max-w-[800px] px-5 sm:px-8 mb-10">
+      <PillarTag pillar={pillar} class="mb-4" />
+      <h1
+        class="text-3xl sm:text-4xl lg:text-[44px] font-bold leading-tight tracking-tight text-navy-900 mb-4"
+      >
+        {title}
+      </h1>
+      <p class="text-sm text-navy-400">
+        {formatDate(publishDate, locale)} &middot; {readingTime} min read
+      </p>
+    </div>
+
+    <!-- Body -->
+    <div class="mx-auto max-w-[680px] px-5 sm:px-8 prose-blog">
+      <slot />
+    </div>
+
+    <!-- Author bio -->
+    <div
+      class="mx-auto max-w-[680px] px-5 sm:px-8 mt-16 pt-8 border-t border-navy-100"
+    >
+      <p class="text-base text-navy-700">
+        {
+          lang === "de" ? (
+            <>
+              <strong>David Hamel</strong> ist unabhängiger Finanzcoach und
+              Product Builder in Berlin. Er hilft Expats in Deutschland, ihre
+              Finanzen in den Griff zu bekommen, und baut Apps und Produkte von
+              der Strategie bis zum fertigen Code.
+            </>
+          ) : (
+            <>
+              <strong>David Hamel</strong> is an independent financial planning
+              coach and product builder based in Berlin. He helps expats in
+              Germany take control of their finances and builds apps and
+              products from strategy to shipped code.
+            </>
+          )
+        }
+      </p>
+      <a
+        href={lang === "de" ? "/de/about" : "/about"}
+        class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 text-sm mt-2 inline-block group"
+      >
+        {lang === "de" ? "Mehr über David" : "More about David"}
+        <span
+          class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+          >&rarr;</span
+        >
+      </a>
+    </div>
+  </article>
+</BaseLayout>

@@ -19,6 +19,7 @@ You are a git workflow specialist ensuring clean version control practices.
 ## Commit Message Guidelines
 
 ### Format
+
 ```
 <type>: <short summary in imperative mood>
 
@@ -28,6 +29,7 @@ Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
 ```
 
 ### Types
+
 - `feat:` New feature
 - `fix:` Bug fix
 - `refactor:` Code restructuring without behavior change
@@ -41,6 +43,7 @@ Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
 ## Branch Strategy
 
 ### Branch Naming
+
 ```
 feature/goal-tracking
 fix/auth-session-cookie
@@ -53,6 +56,7 @@ docs/api-documentation
 ## Safety Rules
 
 ### NEVER Do
+
 - `git push --force` to main/master
 - `git reset --hard` without backup
 - Commit secrets or credentials
@@ -60,6 +64,7 @@ docs/api-documentation
 - Amend pushed commits
 
 ### ALWAYS Do
+
 - Pull before pushing
 - Check `git status` before committing
 - Write meaningful commit messages
@@ -71,6 +76,7 @@ docs/api-documentation
 ## Pre-Commit Checklist
 
 Before committing, verify:
+
 - [ ] Typecheck passes
 - [ ] Lint passes
 - [ ] Tests pass (for relevant tests)

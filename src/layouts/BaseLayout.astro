@@ -1,0 +1,63 @@
+---
+import "@/styles/global.css";
+import Nav from "@/components/Nav.astro";
+import Footer from "@/components/Footer.astro";
+import { getLangFromUrl } from "@/i18n/utils";
+import { getLocalizedPathFromMap } from "@/i18n/pathMap";
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { title, description, ogImage } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const alternateLang = lang === "en" ? "de" : "en";
+const currentPath = Astro.url.pathname;
+const alternatePath = getLocalizedPathFromMap(currentPath, alternateLang);
+const canonicalURL = new URL(currentPath, Astro.site);
+const alternateURL = new URL(alternatePath, Astro.site);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang={lang} href={canonicalURL} />
+    <link rel="alternate" hreflang={alternateLang} href={alternateURL} />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={lang === "en" ? canonicalURL : alternateURL}
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:locale" content={lang === "en" ? "en_US" : "de_DE"} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <Nav />
+    <main id="main-content" class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

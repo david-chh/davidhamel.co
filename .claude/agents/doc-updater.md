@@ -19,12 +19,14 @@ You are a documentation specialist ensuring all documentation stays current and 
 
 **Purpose:** Quick context for AI sessions
 **Update when:**
+
 - New feature completed
 - Architecture decision made
 - Tech stack change
 - Project state changes
 
 **Keep it:**
+
 - Concise (scannable in 30 seconds)
 - Current (no outdated information)
 - Actionable (clear next steps)
@@ -36,11 +38,13 @@ You are a documentation specialist ensuring all documentation stays current and 
 
 **Purpose:** Current development state and session continuity
 **Update when:**
+
 - At end of every session
 - Significant work completed
 - Important decisions made
 
 **Include:**
+
 - Current state summary
 - Completed work with dates
 - Next steps
@@ -50,24 +54,28 @@ You are a documentation specialist ensuring all documentation stays current and 
 ## Documentation Quality Standards
 
 ### Clarity
+
 - Use simple language
 - Define jargon on first use
 - One concept per paragraph
 - Use code examples
 
 ### Accuracy
+
 - No aspirational claims as facts
 - Date time-sensitive information
 - Link to source of truth
 - Remove outdated content
 
 ### Completeness
+
 - Cover happy path and edge cases
 - Include error handling notes
 - Document known limitations
 - Provide context for decisions
 
 ### Maintainability
+
 - Keep files focused (one purpose)
 - Use consistent formatting
 - Follow existing patterns

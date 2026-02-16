@@ -29,9 +29,11 @@ Code style and patterns for davidhamel.co (Astro + React islands).
 ## UI Components
 
 Before creating any UI component, check if shadcn/ui has it:
+
 ```bash
 npx shadcn@latest add [component]
 ```
+
 Never build custom buttons, inputs, dialogs, cards, etc. when shadcn/ui provides them.
 Use as React islands with appropriate `client:` directive.
 

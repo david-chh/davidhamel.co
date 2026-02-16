@@ -11,20 +11,25 @@
 ### Session Start Routine
 
 **What you say:**
+
 ```
 "Read activeContext.md and let's continue where we left off"
 ```
+
 or
+
 ```
 "Today I want to implement [feature]. Read the relevant specs first."
 ```
 
 **What happens:**
+
 - Claude reads CLAUDE.md automatically (always)
 - Claude reads .claude/rules/ files as needed
 - You explicitly ask Claude to read activeContext.md for current state
 
 **If starting fresh work:**
+
 ```
 "Let's start [new feature]. First read [relevant spec] for the page spec."
 ```
@@ -39,6 +44,7 @@ or
 6. **Quick memories**: Type `# [instruction]` to add something to CLAUDE.md memory
 
 **If Claude loses context mid-session:**
+
 ```
 "Read activeContext.md to restore context"
 ```
@@ -46,21 +52,23 @@ or
 ### Session End Routine
 
 **What you say:**
+
 ```
 "Let's wrap up. Update activeContext.md, commit everything, and push."
 ```
 
 **Claude will:**
+
 1. Update `.claude/memory/activeContext.md` with current state
 2. Stage, commit, and push all changes
 
 ### Recovery Scenarios
 
-| Situation | What to say |
-|-----------|-------------|
-| Session crashed | "Read activeContext.md, continue where we left off" |
-| Context seems lost | "Read activeContext.md to restore context" |
-| Claude forgot a decision | "Check the Key Decisions table in CLAUDE.md" |
+| Situation                | What to say                                         |
+| ------------------------ | --------------------------------------------------- |
+| Session crashed          | "Read activeContext.md, continue where we left off" |
+| Context seems lost       | "Read activeContext.md to restore context"          |
+| Claude forgot a decision | "Check the Key Decisions table in CLAUDE.md"        |
 
 ---
 
@@ -96,27 +104,27 @@ or
 
 For complex tasks, Claude Code has specialized agents in `.claude/agents/`:
 
-| Agent | When to Use |
-|-------|-------------|
-| `debugger` | Error investigation, bug fixes |
-| `code-reviewer` | After significant code changes |
-| `test-runner` | Running and fixing tests |
-| `security-auditor` | Before deploying, after security changes |
-| `performance-optimizer` | Slow load times, janky UI |
-| `doc-updater` | After significant feature/architecture changes |
-| `git-workflow` | Committing, branching, PRs |
+| Agent                   | When to Use                                    |
+| ----------------------- | ---------------------------------------------- |
+| `debugger`              | Error investigation, bug fixes                 |
+| `code-reviewer`         | After significant code changes                 |
+| `test-runner`           | Running and fixing tests                       |
+| `security-auditor`      | Before deploying, after security changes       |
+| `performance-optimizer` | Slow load times, janky UI                      |
+| `doc-updater`           | After significant feature/architecture changes |
+| `git-workflow`          | Committing, branching, PRs                     |
 
 ---
 
 ### Important Files
 
-| File | Purpose |
-|------|---------|
-| `CLAUDE.md` | Claude Code instructions (keep lean!) |
-| `.claude/rules/*.md` | Modular coding rules |
-| `.claude/memory/activeContext.md` | Current development state |
-| `.claude/agents/*.md` | Specialized agent instructions |
+| File                              | Purpose                               |
+| --------------------------------- | ------------------------------------- |
+| `CLAUDE.md`                       | Claude Code instructions (keep lean!) |
+| `.claude/rules/*.md`              | Modular coding rules                  |
+| `.claude/memory/activeContext.md` | Current development state             |
+| `.claude/agents/*.md`             | Specialized agent instructions        |
 
 ---
 
-*This file is for human reference. Claude Code reads CLAUDE.md and .claude/rules/ instead.*
+_This file is for human reference. Claude Code reads CLAUDE.md and .claude/rules/ instead._

@@ -44,6 +44,7 @@ Once the §34h license is obtained, terminology transitions to "independent fina
 **For** English-speaking professionals in Germany (€75k–200k earners) who feel lost navigating the German financial system.
 
 **Two tracks:**
+
 1. **Financial Coaching (primary):** Independent, fee-based financial planning for expats. No commissions, no product-binding.
 2. **Product & Build Services (secondary):** Fractional CPO, product strategy consulting, AND hands-on app/website development. David combines product leadership experience with AI-native development (Claude Code) to offer full-service product delivery — from strategy through shipped code. Target clients: startups, small businesses, and founders who need a product thinker who can also build. Pricing model: one-time build fee + monthly retainer for maintenance/iteration.
 
@@ -88,13 +89,13 @@ Together: "I've seen the world, I've analyzed the systems, and here's what I've 
 
 ### Color Palette
 
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Deep Ocean Teal | #0A6E6E | Primary — headers, CTAs, key UI elements |
-| Clean White | #FFFFFF / #FAFAFA | Backgrounds, whitespace |
-| Dark Navy | #1A1A2E | Body text, contrast sections (replaces pure black) |
-| Warm Coral | #E07A5F | Accent — CTAs, highlights, emphasis (sparingly) |
-| Light Seafoam | #B8D8D8 | Card surfaces, subtle backgrounds, section dividers |
+| Color           | Hex               | Usage                                               |
+| --------------- | ----------------- | --------------------------------------------------- |
+| Deep Ocean Teal | #0A6E6E           | Primary — headers, CTAs, key UI elements            |
+| Clean White     | #FFFFFF / #FAFAFA | Backgrounds, whitespace                             |
+| Dark Navy       | #1A1A2E           | Body text, contrast sections (replaces pure black)  |
+| Warm Coral      | #E07A5F           | Accent — CTAs, highlights, emphasis (sparingly)     |
+| Light Seafoam   | #B8D8D8           | Card surfaces, subtle backgrounds, section dividers |
 
 **Rationale:** Ocean teal differentiates from the royal-blue-and-gold of most financial sites. Coral adds warmth. Says "trustworthy AND alive."
 
@@ -107,6 +108,7 @@ Together: "I've seen the world, I've analyzed the systems, and here's what I've 
 All free/open-source. Use Google Fonts or self-host for performance.
 
 **Principles:**
+
 - Large bold headings, generous tracking
 - Body text 18–20px
 - Line height 1.5–1.7 for body
@@ -153,29 +155,30 @@ The `/about` page tells the **full career story** chronologically — all projec
 
 ### Key Pages Detail
 
-**Homepage:** Hero with headline + two paths (coaching / product & build services). "Who I am" block with headshot. Selected work highlights (3–4 project cards linking to /projects/*). Latest 2–3 blog posts. Newsletter signup CTA.
+**Homepage:** Hero with headline + two paths (coaching / product & build services). "Who I am" block with headshot. Selected work highlights (3–4 project cards linking to /projects/\*). Latest 2–3 blog posts. Newsletter signup CTA.
 
 **Coaching:** What I offer (scoped to pre-§34h language). Who it's for. 3-step process: Understand → Plan → Implement. Differentiation (fee-only, expat perspective, AI tools). Link to Alba Wealth. CTA: Book free 30-min consultation.
 
 **Services (Product & Build Services):** Service-focused page — what, who, why:
+
 1. **Fractional CPO / Product Strategy** — For startups and scaleups that need senior product leadership without a full-time hire. Strategy, roadmapping, team coaching.
 2. **App & Website Builds** — Full-service development using AI-native tooling (Claude Code). Fast delivery, high quality, productized pricing. One-time build fee + optional monthly retainer.
 3. **Differentiators** — Product + code in one person, AI-native 3-5x speed, transparent pricing, ongoing relationship, portfolio proof.
-Selected project references link to /projects/* pages. CTA: "Let's talk about your project" (Calendly or contact form).
+   Selected project references link to /projects/\* pages. CTA: "Let's talk about your project" (Calendly or contact form).
 
 **Projects (Portfolio):** Grid/list overview of all projects. Each project has its own page:
 
-| Project | Type | Period | Page |
-|---------|------|--------|------|
-| Alba Wealth (Stealth Startup) | Own venture (primary, active) | Jan 2025–present | /projects/alba-wealth |
-| Ziggma | Own venture (Co-Founder & COO) | Feb 2023–Nov 2024 | /projects/ziggma |
-| DeRisk | Own venture (Co-Founder & CEO) | Apr 2021–Feb 2022 | /projects/derisk |
-| Digital Partners | Own venture (first business, Co-Founder & CEO) | Dec 2015–Jun 2022 | /projects/digital-partners |
-| Porsche Digital Lab | Contract (via Digital Partners) | May–Aug 2018 | /projects/porsche-digital-lab |
-| Buena (Home HT GmbH) | Contract | Jul–Sep 2020 | /projects/buena |
-| Carly (Carly Connected Car) | Contract | Feb–Apr 2020 | /projects/carly |
-| Impactive Tech | Contract (Venture Consultant) | Jul–Dec 2023 | /projects/impactive |
-| Rootlocaly | Own build (side project) | Recent | /projects/rootlocaly |
+| Project                       | Type                                           | Period            | Page                          |
+| ----------------------------- | ---------------------------------------------- | ----------------- | ----------------------------- |
+| Alba Wealth (Stealth Startup) | Own venture (primary, active)                  | Jan 2025–present  | /projects/alba-wealth         |
+| Ziggma                        | Own venture (Co-Founder & COO)                 | Feb 2023–Nov 2024 | /projects/ziggma              |
+| DeRisk                        | Own venture (Co-Founder & CEO)                 | Apr 2021–Feb 2022 | /projects/derisk              |
+| Digital Partners              | Own venture (first business, Co-Founder & CEO) | Dec 2015–Jun 2022 | /projects/digital-partners    |
+| Porsche Digital Lab           | Contract (via Digital Partners)                | May–Aug 2018      | /projects/porsche-digital-lab |
+| Buena (Home HT GmbH)          | Contract                                       | Jul–Sep 2020      | /projects/buena               |
+| Carly (Carly Connected Car)   | Contract                                       | Feb–Apr 2020      | /projects/carly               |
+| Impactive Tech                | Contract (Venture Consultant)                  | Jul–Dec 2023      | /projects/impactive           |
+| Rootlocaly                    | Own build (side project)                       | Recent            | /projects/rootlocaly          |
 
 Projects mentioned in About narrative only (no dedicated page): Cormo Energy (early-stage solar idea), Antler EIR program (Oct–Dec 2021), ABN Amro internship (origin story), ISM eCompany (student job).
 
@@ -259,12 +262,12 @@ Resend is the single email layer for both davidhamel.co and alba-wealth.com.
 
 ### Audiences (Segments)
 
-| Audience | Source | Content |
-|----------|--------|---------|
-| Newsletter Subscribers | davidhamel.co signup form | Blog digests, insights, personal updates |
-| Coaching Leads | davidhamel.co Calendly booking | Coaching follow-up sequences |
-| Build Clients | davidhamel.co /services inquiries | Project follow-ups, case studies, product updates |
-| Alba Users | alba-wealth.com registration | Product updates, feature announcements |
+| Audience               | Source                            | Content                                           |
+| ---------------------- | --------------------------------- | ------------------------------------------------- |
+| Newsletter Subscribers | davidhamel.co signup form         | Blog digests, insights, personal updates          |
+| Coaching Leads         | davidhamel.co Calendly booking    | Coaching follow-up sequences                      |
+| Build Clients          | davidhamel.co /services inquiries | Project follow-ups, case studies, product updates |
+| Alba Users             | alba-wealth.com registration      | Product updates, feature announcements            |
 
 A single contact can belong to multiple audiences. One source of truth across both properties.
 
@@ -313,6 +316,7 @@ pnpm format       # Prettier format
 ## Phased Implementation
 
 ### Phase 1: Foundation (Week 1–2)
+
 - Create repo, initialize Astro + Tailwind + shadcn
 - Set up CLAUDE.md, ESLint, Prettier, TypeScript config
 - Set up Vercel deployment (preview URL, no custom domain yet)
@@ -321,6 +325,7 @@ pnpm format       # Prettier format
 - Implement color palette and typography in Tailwind config
 
 ### Phase 2: Website Build (Week 3–4)
+
 - Build homepage (2-track hero, selected work highlights, blog cards, newsletter CTA)
 - Build About page (origin story, full career narrative, values)
 - Build Coaching page (services, process, Calendly embed)
@@ -336,6 +341,7 @@ pnpm format       # Prettier format
 - Write and publish first 2–3 blog posts
 
 ### Phase 3: Marketing Agent v1 (Week 5–6)
+
 - Create Claude Code shortcuts (.claude/shortcuts/)
 - Build content drafter subagent with brand voice skill
 - Build release announcer subagent (monitors Alba repo)
@@ -344,6 +350,7 @@ pnpm format       # Prettier format
 - Test full cycle: draft → review → approve → publish
 
 ### Phase 4: Integration & Automation (Week 7–8)
+
 - Connect Umami API for analytics
 - Build analytics reporter subagent
 - Build social scheduler subagent (LinkedIn/X APIs)
@@ -351,6 +358,7 @@ pnpm format       # Prettier format
 - Feedback loop: analytics → content optimization
 
 ### Phase 5: Iteration (Ongoing)
+
 - Newsletter growth and optimization
 - Instagram tertiary channel
 - SEO monitoring
@@ -365,23 +373,23 @@ pnpm format       # Prettier format
 
 **Note:** Digital Partners ran from Dec 2015 – Jun 2022 as David's primary company. Porsche, Buena, and Carly were short contract engagements executed **during** the Digital Partners period. Dates overlap intentionally.
 
-| Period | Role | Company | Type | Key Detail |
-|--------|------|---------|------|------------|
-| Feb 2013 – Sep 2013 | Business Development DACH | ISM eCompany, Rotterdam | Part-time (student) | Dutch e-commerce, DACH market entry |
-| Aug 2011 – Aug 2014 | BSc International Business | RSM, Erasmus University | Education | GPA 8.0/10, exchange at SMU Singapore |
-| Aug 2014 – Dec 2015 | MSc Finance & Investments | RSM (Cum Laude) + EDHEC exchange | Education | GPA 8.4/10, exchange at EDHEC Nice |
-| Mar 2015 – Jun 2015 | Commodities Trade Finance | ABN AMRO Bank, Amsterdam | Internship | Financial & political risk analysis |
-| Dec 2015 – Jun 2022 | Co-Founder & CEO | DigitalPartners.io, Berlin + SF | Own venture (first business) | Digital strategy consulting, corporate venturing, IT/IoT. 27 projects for Viessmann, Porsche, Körber. Team of 7 engineers + 3 consulting partners |
-| May 2018 – Aug 2018 | Product Owner | Porsche Digital Lab, Berlin | Contract (via Digital Partners) | Blockchain app for classic car owners. Scaled prototype to full versions, secured €6.5M funding. Hired/managed team of 12 |
-| Feb 2020 – Apr 2020 | Product Manager | Carly Connected Car (Carly Solutions GmbH), Munich | Contract | Car diagnostics e-commerce. Built web funnel improving purchase conversion by 25%. Created agile product org, Analytics & BI setup |
-| Jul 2020 – Sep 2020 | Senior Product Manager | Buena GmbH (Home HT GmbH), Berlin | Contract | Online marketplace for tenants/landlords. Automated contract generation from <5% to 100%. Agile processes for team of 9 |
-| Oct 2021 – Dec 2021 | Entrepreneur in Residence | Antler, Berlin | Program | Ideating, learning and building with founder community |
-| Apr 2021 – Feb 2022 | Co-Founder & CEO | DeRisk (DeRisk.earth), London/Berlin | Own venture | SaaS for asset managers — portfolio relationships & systemic risks. Piloted with NBIM, Barings, CCLA (>€1.5tn AUM) |
-| Feb 2023 – Dec 2024 | Co-Founder & COO | Ziggma (Ziggma.com), Berlin | Own venture | Portfolio management SaaS for retail investors. 35k users, €10k MRR, €1.5bn linked assets |
-| Jul 2023 – Dec 2023 | Venture Consultant | Impactive Tech (Impactive.pro), London | Contract | Strategy & business development for asset management stewardship/shareholder engagement SaaS |
-| ~2022 | Founder | Cormo Energy | Own venture (inactive) | Solar energy B2B platform for commercial customers, German market |
-| Jan 2025 – present | Co-Founder | Stealth Startup / Alba Wealth, Berlin + London | Own venture (primary, active) | AI agents for financial services. Financial planning coaching + AI-powered planning tool |
-| Recent | Builder | Rootlocaly | Own build (side project) | Vibe coding learning project |
+| Period              | Role                       | Company                                            | Type                            | Key Detail                                                                                                                                        |
+| ------------------- | -------------------------- | -------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Feb 2013 – Sep 2013 | Business Development DACH  | ISM eCompany, Rotterdam                            | Part-time (student)             | Dutch e-commerce, DACH market entry                                                                                                               |
+| Aug 2011 – Aug 2014 | BSc International Business | RSM, Erasmus University                            | Education                       | GPA 8.0/10, exchange at SMU Singapore                                                                                                             |
+| Aug 2014 – Dec 2015 | MSc Finance & Investments  | RSM (Cum Laude) + EDHEC exchange                   | Education                       | GPA 8.4/10, exchange at EDHEC Nice                                                                                                                |
+| Mar 2015 – Jun 2015 | Commodities Trade Finance  | ABN AMRO Bank, Amsterdam                           | Internship                      | Financial & political risk analysis                                                                                                               |
+| Dec 2015 – Jun 2022 | Co-Founder & CEO           | DigitalPartners.io, Berlin + SF                    | Own venture (first business)    | Digital strategy consulting, corporate venturing, IT/IoT. 27 projects for Viessmann, Porsche, Körber. Team of 7 engineers + 3 consulting partners |
+| May 2018 – Aug 2018 | Product Owner              | Porsche Digital Lab, Berlin                        | Contract (via Digital Partners) | Blockchain app for classic car owners. Scaled prototype to full versions, secured €6.5M funding. Hired/managed team of 12                         |
+| Feb 2020 – Apr 2020 | Product Manager            | Carly Connected Car (Carly Solutions GmbH), Munich | Contract                        | Car diagnostics e-commerce. Built web funnel improving purchase conversion by 25%. Created agile product org, Analytics & BI setup                |
+| Jul 2020 – Sep 2020 | Senior Product Manager     | Buena GmbH (Home HT GmbH), Berlin                  | Contract                        | Online marketplace for tenants/landlords. Automated contract generation from <5% to 100%. Agile processes for team of 9                           |
+| Oct 2021 – Dec 2021 | Entrepreneur in Residence  | Antler, Berlin                                     | Program                         | Ideating, learning and building with founder community                                                                                            |
+| Apr 2021 – Feb 2022 | Co-Founder & CEO           | DeRisk (DeRisk.earth), London/Berlin               | Own venture                     | SaaS for asset managers — portfolio relationships & systemic risks. Piloted with NBIM, Barings, CCLA (>€1.5tn AUM)                                |
+| Feb 2023 – Dec 2024 | Co-Founder & COO           | Ziggma (Ziggma.com), Berlin                        | Own venture                     | Portfolio management SaaS for retail investors. 35k users, €10k MRR, €1.5bn linked assets                                                         |
+| Jul 2023 – Dec 2023 | Venture Consultant         | Impactive Tech (Impactive.pro), London             | Contract                        | Strategy & business development for asset management stewardship/shareholder engagement SaaS                                                      |
+| ~2022               | Founder                    | Cormo Energy                                       | Own venture (inactive)          | Solar energy B2B platform for commercial customers, German market                                                                                 |
+| Jan 2025 – present  | Co-Founder                 | Stealth Startup / Alba Wealth, Berlin + London     | Own venture (primary, active)   | AI agents for financial services. Financial planning coaching + AI-powered planning tool                                                          |
+| Recent              | Builder                    | Rootlocaly                                         | Own build (side project)        | Vibe coding learning project                                                                                                                      |
 
 **Safe to reference in marketing:** ABN Amro, Porsche/Porsche Digital Lab, Buena/HomeHT.
 **Context-only (not endorsements):** NBIM, Barings, CCLA were DeRisk prototyping clients.

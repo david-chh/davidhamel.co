@@ -17,17 +17,18 @@
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
-| Nav Item | Links To | Notes |
-|----------|----------|-------|
-| David Hamel | `/` | Wordmark in heading font (no logo for v1) |
-| About | `/about` | |
-| Services | dropdown or link | See below |
-| Projects | `/projects` | |
-| Blog | `/blog` | |
-| Adventures | `/adventures` | |
-| Book a Call | Calendly link | CTA button (teal bg, white text). Opens Calendly in new tab or modal |
+| Nav Item    | Links To         | Notes                                                                |
+| ----------- | ---------------- | -------------------------------------------------------------------- |
+| David Hamel | `/`              | Wordmark in heading font (no logo for v1)                            |
+| About       | `/about`         |                                                                      |
+| Services    | dropdown or link | See below                                                            |
+| Projects    | `/projects`      |                                                                      |
+| Blog        | `/blog`          |                                                                      |
+| Adventures  | `/adventures`    |                                                                      |
+| Book a Call | Calendly link    | CTA button (teal bg, white text). Opens Calendly in new tab or modal |
 
 **Services navigation behavior:**
+
 - On desktop: hovering "Services" shows a simple dropdown with two items:
   - Financial Coaching → `/coaching`
   - Product & Build → `/services`
@@ -54,6 +55,7 @@
 ```
 
 **Legal pages (required for Germany):**
+
 - `/impressum` — German legal requirement (Impressum/Imprint)
 - `/datenschutz` — Privacy policy (Datenschutzerklärung)
 - Footer-only links, no nav entry needed
@@ -141,6 +143,7 @@
 ```
 
 **CTAs on this page:**
+
 1. Hero → `/coaching` or `/services`
 2. Selected work cards → `/projects/[slug]`
 3. Blog cards → `/blog/[slug]`
@@ -199,6 +202,7 @@ SECTIONS (top to bottom):
 ```
 
 **Content cross-references:**
+
 - Each project mention links to `/projects/[slug]`
 - Alba Wealth link also goes to `alba-wealth.com` (external)
 - "Financial coaching" links to `/coaching`
@@ -258,6 +262,7 @@ SECTIONS:
 ```
 
 **Regulatory notes:**
+
 - NEVER use "financial advisor", "advisory", "investment advice"
 - ALWAYS use "financial planning coach", "coaching", "planning support"
 - No specific product recommendations on this page
@@ -401,17 +406,17 @@ SECTIONS:
 
 **Per-project content sources:**
 
-| Project | Key Content | Metrics |
-|---------|------------|---------|
-| **Alba Wealth** | AI financial planning, coaching platform, founder story | Active, AI-powered |
-| **Ziggma** | Portfolio management SaaS, retail investors | 35k users, €10k MRR, €1.5bn linked |
-| **DeRisk** | Institutional risk analytics, shareholder engagement | NBIM/Barings/CCLA, >€1.5tn AUM |
-| **Digital Partners** | First business, IoT/Industry 4.0, consulting pivot | 27 projects, 7 engineers + 3 partners, Viessmann/Porsche/Körber |
-| **Porsche Digital Lab** | Blockchain app for classic cars | €6.5M funding, team of 12 |
-| **Buena** | Proptech marketplace, contract generation | <5% → 100% automation, team of 9 |
-| **Carly** | Car diagnostics e-commerce | +25% purchase conversion |
-| **Impactive** | Asset management stewardship SaaS | Strategy & business development |
-| **Rootlocaly** | Side project, vibe coding | Learning showcase, AI-native build |
+| Project                 | Key Content                                             | Metrics                                                         |
+| ----------------------- | ------------------------------------------------------- | --------------------------------------------------------------- |
+| **Alba Wealth**         | AI financial planning, coaching platform, founder story | Active, AI-powered                                              |
+| **Ziggma**              | Portfolio management SaaS, retail investors             | 35k users, €10k MRR, €1.5bn linked                              |
+| **DeRisk**              | Institutional risk analytics, shareholder engagement    | NBIM/Barings/CCLA, >€1.5tn AUM                                  |
+| **Digital Partners**    | First business, IoT/Industry 4.0, consulting pivot      | 27 projects, 7 engineers + 3 partners, Viessmann/Porsche/Körber |
+| **Porsche Digital Lab** | Blockchain app for classic cars                         | €6.5M funding, team of 12                                       |
+| **Buena**               | Proptech marketplace, contract generation               | <5% → 100% automation, team of 9                                |
+| **Carly**               | Car diagnostics e-commerce                              | +25% purchase conversion                                        |
+| **Impactive**           | Asset management stewardship SaaS                       | Strategy & business development                                 |
+| **Rootlocaly**          | Side project, vibe coding                               | Learning showcase, AI-native build                              |
 
 ---
 
@@ -447,13 +452,13 @@ SECTIONS:
 
 **Content pillar → audience mapping:**
 
-| Pillar | Audience | Track |
-|--------|----------|-------|
-| Expat Money Mastery | Coaching prospects | Financial coaching |
-| Systems & Money | Coaching prospects + general | Financial coaching |
-| Building Alba | Both audiences | Bridge |
-| Freedom by Design | General / personal brand | Personal |
-| The Practitioner's Edge | Product/build prospects | Product & build services |
+| Pillar                  | Audience                     | Track                    |
+| ----------------------- | ---------------------------- | ------------------------ |
+| Expat Money Mastery     | Coaching prospects           | Financial coaching       |
+| Systems & Money         | Coaching prospects + general | Financial coaching       |
+| Building Alba           | Both audiences               | Bridge                   |
+| Freedom by Design       | General / personal brand     | Personal                 |
+| The Practitioner's Edge | Product/build prospects      | Product & build services |
 
 ---
 
@@ -557,10 +562,12 @@ SECTIONS:
 ### 11. Legal Pages
 
 **`/impressum`** — Required German legal page (Impressum)
+
 - David Hamel, address, contact info, VAT number if applicable
 - Plain text, no design needed beyond basic layout
 
 **`/datenschutz`** — Privacy policy (Datenschutzerklärung)
+
 - Covers: Umami analytics (no cookies, no personal data), Resend email, Calendly, Vercel hosting
 - In German (legal requirement) with optional English translation
 
@@ -609,17 +616,17 @@ Cross-links:
 
 ## Shared Components
 
-| Component | Type | Used On | Notes |
-|-----------|------|---------|-------|
-| `Nav.astro` | Astro | All pages | Sticky header, Services dropdown, mobile hamburger |
-| `Footer.astro` | Astro | All pages | 3-column links, newsletter signup, legal links |
-| `NewsletterSignup.tsx` | React island | Homepage, Blog, Footer, Contact | `client:visible` on most, `client:load` on Contact |
-| `CalendlyEmbed.tsx` | React island | Coaching, Contact | `client:visible` |
-| `BlogCard.astro` | Astro | Homepage, Blog listing | Title, date, pillar tag, excerpt |
-| `ProjectCard.astro` | Astro | Homepage, Projects grid, Services | Name, description, role, period, type badge, metric |
-| `CTABlock.astro` | Astro | Multiple pages | Reusable call-to-action section |
-| `SectionWrapper.astro` | Astro | All pages | Consistent max-width, padding, spacing |
-| `PillarTag.astro` | Astro | Blog cards, blog posts | Color-coded content pillar label |
+| Component              | Type         | Used On                           | Notes                                               |
+| ---------------------- | ------------ | --------------------------------- | --------------------------------------------------- |
+| `Nav.astro`            | Astro        | All pages                         | Sticky header, Services dropdown, mobile hamburger  |
+| `Footer.astro`         | Astro        | All pages                         | 3-column links, newsletter signup, legal links      |
+| `NewsletterSignup.tsx` | React island | Homepage, Blog, Footer, Contact   | `client:visible` on most, `client:load` on Contact  |
+| `CalendlyEmbed.tsx`    | React island | Coaching, Contact                 | `client:visible`                                    |
+| `BlogCard.astro`       | Astro        | Homepage, Blog listing            | Title, date, pillar tag, excerpt                    |
+| `ProjectCard.astro`    | Astro        | Homepage, Projects grid, Services | Name, description, role, period, type badge, metric |
+| `CTABlock.astro`       | Astro        | Multiple pages                    | Reusable call-to-action section                     |
+| `SectionWrapper.astro` | Astro        | All pages                         | Consistent max-width, padding, spacing              |
+| `PillarTag.astro`      | Astro        | Blog cards, blog posts            | Color-coded content pillar label                    |
 
 ---
 
@@ -649,6 +656,7 @@ Cross-links:
 ```
 
 **Total pages at launch:**
+
 - 9 static pages (home, about, coaching, services, projects, blog, adventures, contact, impressum)
 - 1 privacy page (datenschutz)
 - 9 project pages
@@ -660,6 +668,7 @@ Cross-links:
 ## SEO & Meta
 
 Every page gets:
+
 - Unique `<title>` tag: `Page Name — David Hamel`
 - Unique `<meta name="description">` (150-160 chars)
 - Open Graph tags: `og:title`, `og:description`, `og:image`, `og:url`
@@ -672,4 +681,4 @@ Every page gets:
 
 ---
 
-*This document is the source of truth for what goes where. Update it when IA changes are made.*
+_This document is the source of truth for what goes where. Update it when IA changes are made._

@@ -6,12 +6,14 @@ Paste this section into the Brand Assets page after the existing Elevator Pitch 
 
 # NEW SECTION: Product & Build Services Positioning
 
-*Added 2026-02-15. Working title — may iterate on naming.*
+_Added 2026-02-15. Working title — may iterate on naming._
 
 ## Service One-liner
+
 Product leader who ships code. Strategy through execution, powered by AI.
 
 ## Service Elevator Pitch (30 seconds, spoken)
+
 > I've spent eight years leading product at companies like Porsche and fintech startups. Now I combine that product thinking with AI-native development tools to build apps and websites for clients — fast, high quality, and at a fraction of what a dev shop would charge. I'm not just a developer who codes or a consultant who advises — I do both. From strategy to shipped product.
 
 ## Service Positioning Statement
@@ -22,6 +24,7 @@ For startups, small businesses, and founders who need a product person who can a
 
 **1. Fractional CPO / Product Strategy**
 For startups and scaleups that need senior product leadership without a full-time hire.
+
 - Product strategy and roadmapping
 - Team coaching and process design
 - Technical architecture guidance
@@ -29,6 +32,7 @@ For startups and scaleups that need senior product leadership without a full-tim
 
 **2. App & Website Builds**
 Full-service development of small apps, websites, and landing pages using AI-native tooling (Claude Code).
+
 - Fast delivery (weeks, not months)
 - High quality (modern stack: Astro, Next.js, React, Tailwind)
 - Productized pricing: one-time build fee + optional monthly retainer
@@ -37,6 +41,7 @@ Full-service development of small apps, websites, and landing pages using AI-nat
 
 **3. Own Ventures (Portfolio)**
 David's own products — demonstrates the "practitioner who builds" positioning:
+
 - Alba Wealth (primary) — AI-powered financial planning
 - Ziggma — portfolio management, 35k users, €10k MRR, €1.5bn linked assets
 - DeRisk — institutional risk analytics (NBIM/Barings/CCLA, >€1.5tn AUM)
@@ -76,6 +81,7 @@ Updated: Two tracks (financial coaching + Product & Build Services)
 Original: "Independent financial planning coach and fintech builder helping expats in Germany take control of their money."
 
 Additional options reflecting expanded positioning:
+
 1. "Financial planning coach. Product leader. Builder." (shortest, broadest)
 2. "Independent financial planning coach and product builder helping expats and startups do more with less." (bridges both tracks)
 3. Keep original for coaching-focused contexts, use "Product leader and AI-native builder. From strategy to shipped code." for build-focused contexts.
@@ -85,12 +91,14 @@ Additional options reflecting expanded positioning:
 # UPDATE: Content Pillar 5 Expansion
 
 **The Practitioner's Edge** now covers:
+
 - Product strategy and venture building (existing)
 - AI-native development and Claude Code workflows (new)
 - Build case studies and client work showcases (new)
 - "How I built X" technical breakdowns (new)
 
 Example topics to add:
+
 - "How I build websites in days, not months"
 - "Why your startup doesn't need a CTO yet"
 - "The AI-native product stack I use for every client"

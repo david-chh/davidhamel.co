@@ -1,0 +1,37 @@
+---
+import { getLangFromUrl } from "@/i18n/utils";
+import { getLocalizedPathFromMap } from "@/i18n/pathMap";
+
+const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+const alternateLang = lang === "en" ? "de" : "en";
+const alternatePath = getLocalizedPathFromMap(currentPath, alternateLang);
+---
+
+<div class="inline-flex items-center text-sm font-medium">
+  {
+    lang === "en" ? (
+      <>
+        <span class="text-navy-900">EN</span>
+        <span class="mx-1 text-navy-400">/</span>
+        <a
+          href={alternatePath}
+          class="text-navy-400 hover:text-teal-600 transition-colors duration-100"
+        >
+          DE
+        </a>
+      </>
+    ) : (
+      <>
+        <a
+          href={alternatePath}
+          class="text-navy-400 hover:text-teal-600 transition-colors duration-100"
+        >
+          EN
+        </a>
+        <span class="mx-1 text-navy-400">/</span>
+        <span class="text-navy-900">DE</span>
+      </>
+    )
+  }
+</div>

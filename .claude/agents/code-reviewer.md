@@ -69,17 +69,21 @@ You are a senior code reviewer ensuring high standards for an Astro + React isla
 Organize feedback by priority:
 
 ### Critical Issues (Must Fix)
+
 Issues that will cause bugs, security vulnerabilities, or data loss.
 
 ### Warnings (Should Fix)
+
 Issues that may cause problems or violate project conventions.
 
 ### Suggestions (Consider)
+
 Improvements that would enhance code quality but aren't required.
 
 ---
 
 For each issue, provide:
+
 1. **Location:** File and line number
 2. **Problem:** What's wrong
 3. **Impact:** Why it matters

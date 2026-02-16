@@ -1,0 +1,61 @@
+---
+interface Props {
+  pillar: string;
+  class?: string;
+}
+
+const { pillar, class: className } = Astro.props;
+
+const pillarStyles: Record<string, { bg: string; text: string; dot: string }> =
+  {
+    "expat-money-mastery": {
+      bg: "bg-teal-100",
+      text: "text-teal-700",
+      dot: "bg-teal-600",
+    },
+    "systems-and-money": {
+      bg: "bg-navy-100",
+      text: "text-navy-700",
+      dot: "bg-navy-900",
+    },
+    "building-alba": {
+      bg: "bg-coral-100",
+      text: "text-coral-500",
+      dot: "bg-coral-500",
+    },
+    "freedom-by-design": {
+      bg: "bg-teal-100",
+      text: "text-teal-500",
+      dot: "bg-teal-500",
+    },
+    "practitioners-edge": {
+      bg: "bg-[#fdf3e3]",
+      text: "text-[#b8860b]",
+      dot: "bg-[#b8860b]",
+    },
+  };
+
+const style = pillarStyles[pillar] ?? pillarStyles["expat-money-mastery"];
+
+const pillarLabels: Record<string, string> = {
+  "expat-money-mastery": "Expat Money",
+  "systems-and-money": "Systems & Money",
+  "building-alba": "Building Alba",
+  "freedom-by-design": "Freedom by Design",
+  "practitioners-edge": "Practitioner's Edge",
+};
+
+const label = pillarLabels[pillar] ?? pillar;
+---
+
+<span
+  class:list={[
+    "inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-[0.08em]",
+    style.bg,
+    style.text,
+    className,
+  ]}
+>
+  <span class:list={["w-1.5 h-1.5 rounded-full", style.dot]}></span>
+  {label}
+</span>

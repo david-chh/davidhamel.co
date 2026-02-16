@@ -27,7 +27,7 @@ pnpm format           # Prettier
 ## Core Rules
 
 1. **No timeouts** - Never add `setTimeout` or delays. Use proper event handling or state management.
-2. **shadcn/ui first** - Check `npx shadcn@latest add [component]` before building UI.
+2. **shadcn/ui for React islands only** - Use shadcn/ui inside interactive React components (forms, embeds). All static UI is custom Astro + Tailwind. See `docs/ui-design-spec.md` for the full design system.
 3. **Astro for static, React for interactive** - Use `.astro` for pages/components. `.tsx` React ONLY for interactive islands (forms, embeds). Always specify `client:load`, `client:visible`, or `client:only="react"`.
 4. **Complete all work** - Test, build, commit, push. Don't leave partial work.
 5. **Test with Playwright** - Always verify features work by running through the app in browser.
@@ -43,16 +43,17 @@ David does NOT yet hold the §34h GewO license. See `docs/brand-context.md` for 
 
 ## Documentation Map
 
-| Topic | File |
-|-------|------|
-| **Brand & Visual Identity** | `docs/brand-context.md` |
-| **Marketing Infrastructure** | `docs/marketing-infrastructure.md` |
-| **Information Architecture** | `docs/information-architecture.md` |
-| **Technical Architecture** | `docs/technical-architecture.md` |
-| **Copy Deck (EN + DE)** | `docs/copy-deck.md` |
-| **Kickoff Brief** | `docs/kickoff-brief.md` |
-| **Coding Conventions** | `.claude/rules/coding-conventions.md` |
-| **Technical Patterns** | `.claude/rules/technical-patterns.md` |
+| Topic                        | File                                  |
+| ---------------------------- | ------------------------------------- |
+| **UI Design Spec**           | `docs/ui-design-spec.md`              |
+| **Brand & Visual Identity**  | `docs/brand-context.md`               |
+| **Marketing Infrastructure** | `docs/marketing-infrastructure.md`    |
+| **Information Architecture** | `docs/information-architecture.md`    |
+| **Technical Architecture**   | `docs/technical-architecture.md`      |
+| **Copy Deck (EN + DE)**      | `docs/copy-deck.md`                   |
+| **Kickoff Brief**            | `docs/kickoff-brief.md`               |
+| **Coding Conventions**       | `.claude/rules/coding-conventions.md` |
+| **Technical Patterns**       | `.claude/rules/technical-patterns.md` |
 
 ## Modular Rules (`.claude/rules/`)
 
@@ -61,15 +62,15 @@ David does NOT yet hold the §34h GewO license. See `docs/brand-context.md` for 
 
 ## Key Decisions
 
-| Decision | Choice |
-|----------|--------|
-| Framework | Astro (not Next.js — content site, zero JS by default) |
-| Analytics | Umami Cloud free tier (GDPR-friendly, no cookies) |
-| Email | Resend unified (newsletters + transactional, no separate tool) |
-| Hosting | Vercel free Hobby tier |
-| Domain/DNS | Cloudflare |
-| i18n | Astro built-in routing + Paraglide.js (EN default, DE secondary) |
-| Blog content | English-only (pages are bilingual) |
+| Decision     | Choice                                                           |
+| ------------ | ---------------------------------------------------------------- |
+| Framework    | Astro (not Next.js — content site, zero JS by default)           |
+| Analytics    | Umami Cloud free tier (GDPR-friendly, no cookies)                |
+| Email        | Resend unified (newsletters + transactional, no separate tool)   |
+| Hosting      | Vercel free Hobby tier                                           |
+| Domain/DNS   | Cloudflare                                                       |
+| i18n         | Astro built-in routing + Paraglide.js (EN default, DE secondary) |
+| Blog content | English-only (pages are bilingual)                               |
 
 ## Current Context
 
@@ -78,4 +79,4 @@ David does NOT yet hold the §34h GewO license. See `docs/brand-context.md` for 
 
 ---
 
-*Last updated: 2026-02-16 | Target: <100 lines | Current: ~85 lines*
+_Last updated: 2026-02-16 | Target: <100 lines | Current: ~85 lines_

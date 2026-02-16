@@ -8,22 +8,22 @@
 
 ## 1. Tech Stack (Finalized)
 
-| Layer | Tool | Version / Tier | Rationale |
-|-------|------|---------------|-----------|
-| **Framework** | Astro | 5.x | Content-first, zero JS by default, islands architecture. 2-3x faster FCP than Next.js. |
-| **UI library** | React | 19.x | Islands only — forms, embeds, interactive components |
-| **Styling** | Tailwind CSS | 4.x | Utility-first, brand tokens in config |
-| **Component library** | shadcn/ui | latest | React islands — use `npx shadcn@latest add [component]` before building custom |
-| **Content** | MDX via Astro Content Collections | built-in | Type-safe frontmatter, Zod schemas |
-| **Language** | TypeScript | strict mode | No `any`, explicit return types |
-| **i18n** | Astro built-in routing + Paraglide.js | see § 3 | Static routes per locale, type-safe UI strings |
-| **Package manager** | pnpm | latest | Fast, disk-efficient |
-| **Hosting** | Vercel | Free Hobby tier | 100GB bandwidth/mo, familiar from Alba |
-| **Analytics** | Umami Cloud | Free tier | GDPR, no cookies, 100k events/mo, 3 sites, 6mo retention |
-| **Email** | Resend | unified account | Newsletters (Broadcasts), transactional, nurture sequences |
-| **DNS** | Cloudflare | wholesale pricing | DNSSEC, free WHOIS privacy |
-| **Testing** | Playwright | E2E | Visual verification through browser automation |
-| **Linting** | ESLint + Prettier | with Astro plugins | prettier-plugin-astro, eslint-plugin-astro |
+| Layer                 | Tool                                  | Version / Tier     | Rationale                                                                              |
+| --------------------- | ------------------------------------- | ------------------ | -------------------------------------------------------------------------------------- |
+| **Framework**         | Astro                                 | 5.x                | Content-first, zero JS by default, islands architecture. 2-3x faster FCP than Next.js. |
+| **UI library**        | React                                 | 19.x               | Islands only — forms, embeds, interactive components                                   |
+| **Styling**           | Tailwind CSS                          | 4.x                | Utility-first, brand tokens in config                                                  |
+| **Component library** | shadcn/ui                             | latest             | React islands — use `npx shadcn@latest add [component]` before building custom         |
+| **Content**           | MDX via Astro Content Collections     | built-in           | Type-safe frontmatter, Zod schemas                                                     |
+| **Language**          | TypeScript                            | strict mode        | No `any`, explicit return types                                                        |
+| **i18n**              | Astro built-in routing + Paraglide.js | see § 3            | Static routes per locale, type-safe UI strings                                         |
+| **Package manager**   | pnpm                                  | latest             | Fast, disk-efficient                                                                   |
+| **Hosting**           | Vercel                                | Free Hobby tier    | 100GB bandwidth/mo, familiar from Alba                                                 |
+| **Analytics**         | Umami Cloud                           | Free tier          | GDPR, no cookies, 100k events/mo, 3 sites, 6mo retention                               |
+| **Email**             | Resend                                | unified account    | Newsletters (Broadcasts), transactional, nurture sequences                             |
+| **DNS**               | Cloudflare                            | wholesale pricing  | DNSSEC, free WHOIS privacy                                                             |
+| **Testing**           | Playwright                            | E2E                | Visual verification through browser automation                                         |
+| **Linting**           | ESLint + Prettier                     | with Astro plugins | prettier-plugin-astro, eslint-plugin-astro                                             |
 
 ### Stack Rationale: Astro vs Next.js
 
@@ -35,14 +35,14 @@ Alba Wealth is a full SaaS app — stays on Next.js. Different tools for differe
 
 ## 2. Cost Model
 
-| Service | Cost | Notes |
-|---------|------|-------|
-| Vercel Hobby | €0/mo | 100GB bandwidth |
-| Umami Cloud Free | €0/mo | 100k events, 3 sites |
-| Resend Free | €0/mo | 3,000 emails/mo, 100 contacts |
-| Cloudflare domain | ~€1/mo amortized | Wholesale pricing |
-| Claude Code (agents) | €0 incremental | Covered by David's existing Pro/Max subscription |
-| **Total** | **~€1/mo** | |
+| Service              | Cost             | Notes                                            |
+| -------------------- | ---------------- | ------------------------------------------------ |
+| Vercel Hobby         | €0/mo            | 100GB bandwidth                                  |
+| Umami Cloud Free     | €0/mo            | 100k events, 3 sites                             |
+| Resend Free          | €0/mo            | 3,000 emails/mo, 100 contacts                    |
+| Cloudflare domain    | ~€1/mo amortized | Wholesale pricing                                |
+| Claude Code (agents) | €0 incremental   | Covered by David's existing Pro/Max subscription |
+| **Total**            | **~€1/mo**       |                                                  |
 
 Upgrade paths: Umami self-host on Hetzner (~€4.50/mo) or Umami Pro (€20/mo). Resend Pro when contact list exceeds 100. Agent SDK migration (API pay-per-token) only if fully autonomous scheduling needed.
 
@@ -62,6 +62,7 @@ The site launches bilingual: English (default) + German. **All site pages** have
 2. **Paraglide.js** — handles UI string translations for shared components (nav, footer, buttons)
 
 **Why this combo:**
+
 - Astro's i18n gives us `/en/` and `/de/` prefixes with proper `hreflang` tags, automatic locale detection, and middleware support
 - Paraglide.js is type-safe, tree-shaken, and recommended by the Astro community over `astro-i18next` (which has Astro 5 compatibility issues)
 - Static content (page sections, project pages) uses duplicate `.astro` files per locale — simple, no runtime overhead
@@ -102,12 +103,12 @@ The site launches bilingual: English (default) + German. **All site pages** have
 
 ```typescript
 // astro.config.mjs
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'de'],
+    defaultLocale: "en",
+    locales: ["en", "de"],
     routing: {
       prefixDefaultLocale: false, // /about (not /en/about)
       redirectToDefaultLocale: false,
@@ -168,6 +169,7 @@ src/
 ```
 
 **Why duplicate page files instead of a single template with i18n data?**
+
 - Astro pages are mostly static content — the copy IS the page
 - Duplicate files are simpler to reason about, no abstraction layer
 - Each locale can have independent layout tweaks (German text is ~30% longer)
@@ -215,38 +217,50 @@ src/
 ```astro
 ---
 // src/components/LanguageSwitcher.astro
-const { currentLocale = 'en' } = Astro.props;
+const { currentLocale = "en" } = Astro.props;
 
 // Map current path to the other locale's equivalent
 const pathMap: Record<string, string> = {
-  '/': '/de/',
-  '/about': '/de/ueber-mich',
-  '/coaching': '/de/coaching',
-  '/services': '/de/services',
-  '/projects': '/de/projekte',
-  '/adventures': '/de/abenteuer',
-  '/contact': '/de/kontakt',
-  '/blog': '/de/blog',
+  "/": "/de/",
+  "/about": "/de/ueber-mich",
+  "/coaching": "/de/coaching",
+  "/services": "/de/services",
+  "/projects": "/de/projekte",
+  "/adventures": "/de/abenteuer",
+  "/contact": "/de/kontakt",
+  "/blog": "/de/blog",
   // Reverse mappings for DE → EN
-  '/de/': '/',
-  '/de/ueber-mich': '/about',
-  '/de/coaching': '/coaching',
-  '/de/services': '/services',
-  '/de/projekte': '/projects',
-  '/de/abenteuer': '/adventures',
-  '/de/kontakt': '/contact',
-  '/de/blog': '/blog',
+  "/de/": "/",
+  "/de/ueber-mich": "/about",
+  "/de/coaching": "/coaching",
+  "/de/services": "/services",
+  "/de/projekte": "/projects",
+  "/de/abenteuer": "/adventures",
+  "/de/kontakt": "/contact",
+  "/de/blog": "/blog",
 };
 
 const currentPath = Astro.url.pathname;
-const targetPath = pathMap[currentPath] ?? (currentLocale === 'en' ? `/de${currentPath}` : currentPath.replace('/de/', '/'));
-const targetLocale = currentLocale === 'en' ? 'de' : 'en';
+const targetPath =
+  pathMap[currentPath] ??
+  (currentLocale === "en"
+    ? `/de${currentPath}`
+    : currentPath.replace("/de/", "/"));
+const targetLocale = currentLocale === "en" ? "de" : "en";
 ---
 
-<a href={targetPath} class="text-sm font-medium hover:text-teal" aria-label={`Switch to ${targetLocale === 'de' ? 'German' : 'English'}`}>
-  <span class:list={[currentLocale === 'en' ? 'font-bold' : 'opacity-60']}>EN</span>
+<a
+  href={targetPath}
+  class="text-sm font-medium hover:text-teal"
+  aria-label={`Switch to ${targetLocale === "de" ? "German" : "English"}`}
+>
+  <span class:list={[currentLocale === "en" ? "font-bold" : "opacity-60"]}
+    >EN</span
+  >
   <span class="mx-1">/</span>
-  <span class:list={[currentLocale === 'de' ? 'font-bold' : 'opacity-60']}>DE</span>
+  <span class:list={[currentLocale === "de" ? "font-bold" : "opacity-60"]}
+    >DE</span
+  >
 </a>
 ```
 
@@ -256,27 +270,27 @@ Blog posts are English-only for now. The schema includes a `locale` field for fu
 
 ```typescript
 // src/content/config.ts
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string(),
     publishDate: z.date(),
     updatedDate: z.date().optional(),
     pillar: z.enum([
-      'expat-money-mastery',
-      'systems-and-money',
-      'building-alba',
-      'freedom-by-design',
-      'practitioners-edge',
+      "expat-money-mastery",
+      "systems-and-money",
+      "building-alba",
+      "freedom-by-design",
+      "practitioners-edge",
     ]),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
     image: z.string().optional(),
-    locale: z.enum(['en', 'de']).default('en'),       // Future-proof for DE posts
-    translationOf: z.string().optional(),              // Link to other-locale version
+    locale: z.enum(["en", "de"]).default("en"), // Future-proof for DE posts
+    translationOf: z.string().optional(), // Link to other-locale version
   }),
 });
 
@@ -284,6 +298,7 @@ export const collections = { blog };
 ```
 
 Blog post files (English-only for now):
+
 ```
 src/content/blog/
 ├── hello-world.mdx
@@ -300,7 +315,11 @@ Every page includes `hreflang` in `<head>` for proper search engine indexing:
 ```html
 <!-- On /about -->
 <link rel="alternate" hreflang="en" href="https://davidhamel.co/about" />
-<link rel="alternate" hreflang="de" href="https://davidhamel.co/de/ueber-mich" />
+<link
+  rel="alternate"
+  hreflang="de"
+  href="https://davidhamel.co/de/ueber-mich"
+/>
 <link rel="alternate" hreflang="x-default" href="https://davidhamel.co/about" />
 ```
 
@@ -471,6 +490,7 @@ PUBLIC_SITE_URL=https://davidhamel.co
 ```
 
 **Rules:**
+
 - `PUBLIC_` prefix = client-visible (Astro convention)
 - Everything else = server-only
 - Never commit `.env` — only `.env.example`
@@ -492,15 +512,15 @@ All agents run inside Claude Code using David's Pro/Max subscription. No separat
 
 #### Existing Agents (7 — ported from Alba, to be updated)
 
-| Agent | Purpose | Status |
-|-------|---------|--------|
-| `debugger.md` | Root cause analysis for errors | ✅ Keep, update for Astro |
-| `code-reviewer.md` | Code quality, security, maintainability | ✅ Keep, update for Astro |
-| `git-workflow.md` | Commits, branches, PRs | ✅ Keep as-is |
-| `doc-updater.md` | Documentation maintenance | ✅ Keep as-is |
-| `test-runner.md` | Run and analyze tests | ✅ Keep, update for Playwright |
-| `security-auditor.md` | Vulnerability scanning | ✅ Keep, simplify (no auth/DB) |
-| `performance-optimizer.md` | Performance bottlenecks | ✅ Keep, update for Astro |
+| Agent                      | Purpose                                 | Status                         |
+| -------------------------- | --------------------------------------- | ------------------------------ |
+| `debugger.md`              | Root cause analysis for errors          | ✅ Keep, update for Astro      |
+| `code-reviewer.md`         | Code quality, security, maintainability | ✅ Keep, update for Astro      |
+| `git-workflow.md`          | Commits, branches, PRs                  | ✅ Keep as-is                  |
+| `doc-updater.md`           | Documentation maintenance               | ✅ Keep as-is                  |
+| `test-runner.md`           | Run and analyze tests                   | ✅ Keep, update for Playwright |
+| `security-auditor.md`      | Vulnerability scanning                  | ✅ Keep, simplify (no auth/DB) |
+| `performance-optimizer.md` | Performance bottlenecks                 | ✅ Keep, update for Astro      |
 
 **Updates needed for existing agents:**
 
@@ -583,14 +603,15 @@ Tools: Read, Grep, Glob, Bash
 
 These are defined in `docs/marketing-infrastructure.md` and will be implemented as Claude Code shortcuts (`.claude/shortcuts/`) and subagents.
 
-| Agent | Shortcut | Phase | Purpose |
-|-------|----------|-------|---------|
-| **ContentDrafter** | `/marketing-draft` | 3 | Reads Notion Content Pipeline for "Ready to Draft" items. Uses brand voice skill. Outputs blog MDX + social posts. Updates Notion to "In Review". |
-| **ReleaseAnnouncer** | (part of `/marketing-draft`) | 3 | Checks Alba GitHub repo for releases/CHANGELOG changes. Generates announcement copy. Queues in Content Pipeline. |
-| **AnalyticsReporter** | `/analytics-report` | 4 | Pulls Umami + PostHog APIs. Generates weekly performance summary. Saves to Notion. |
-| **SocialScheduler** | `/marketing-publish` | 4 | Takes approved content, formats for LinkedIn/X, publishes via API. Tracks status in Notion. |
+| Agent                 | Shortcut                     | Phase | Purpose                                                                                                                                           |
+| --------------------- | ---------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ContentDrafter**    | `/marketing-draft`           | 3     | Reads Notion Content Pipeline for "Ready to Draft" items. Uses brand voice skill. Outputs blog MDX + social posts. Updates Notion to "In Review". |
+| **ReleaseAnnouncer**  | (part of `/marketing-draft`) | 3     | Checks Alba GitHub repo for releases/CHANGELOG changes. Generates announcement copy. Queues in Content Pipeline.                                  |
+| **AnalyticsReporter** | `/analytics-report`          | 4     | Pulls Umami + PostHog APIs. Generates weekly performance summary. Saves to Notion.                                                                |
+| **SocialScheduler**   | `/marketing-publish`         | 4     | Takes approved content, formats for LinkedIn/X, publishes via API. Tracks status in Notion.                                                       |
 
 **Weekly routine:**
+
 - Monday: `/marketing-draft` (~5 min)
 - Tue–Wed: David reviews in Notion
 - Thursday: `/marketing-publish` (~3 min)
@@ -633,14 +654,14 @@ MARKETING AGENTS (Phase 3+, triggered via shortcuts)
 
 Agents from Alba that **don't transfer** to this project:
 
-| Alba Agent | Why Not Needed |
-|-----------|----------------|
-| `backend-architect` | No backend — Astro is static, Resend/Calendly are external APIs |
-| `frontend-developer` | Covered by `astro-developer` (more specific) |
-| `prisma-specialist` | No database |
-| `typescript-specialist` | Generic TS knowledge in all agents; Astro TS is simpler |
-| `ui-designer` | Design system is Tailwind + shadcn/ui; brand-guardian covers voice |
-| `ux-researcher` | No user research phase — this is a personal marketing site |
+| Alba Agent              | Why Not Needed                                                     |
+| ----------------------- | ------------------------------------------------------------------ |
+| `backend-architect`     | No backend — Astro is static, Resend/Calendly are external APIs    |
+| `frontend-developer`    | Covered by `astro-developer` (more specific)                       |
+| `prisma-specialist`     | No database                                                        |
+| `typescript-specialist` | Generic TS knowledge in all agents; Astro TS is simpler            |
+| `ui-designer`           | Design system is Tailwind + shadcn/ui; brand-guardian covers voice |
+| `ux-researcher`         | No user research phase — this is a personal marketing site         |
 
 ---
 
@@ -648,32 +669,32 @@ Agents from Alba that **don't transfer** to this project:
 
 ### Static Components (Astro)
 
-| Component | Props | Used By |
-|-----------|-------|---------|
-| `Nav.astro` | `locale: 'en' \| 'de'` | BaseLayout |
-| `Footer.astro` | `locale: 'en' \| 'de'` | BaseLayout |
-| `LanguageSwitcher.astro` | `currentLocale, currentPath` | Nav |
-| `MobileNav.astro` | `locale` | Nav |
-| `ServiceDropdown.astro` | `locale` | Nav |
-| `BlogCard.astro` | `title, date, pillar, excerpt, slug, locale` | Homepage, Blog listing |
-| `ProjectCard.astro` | `name, description, role, period, badge, metric, slug, locale` | Homepage, Projects grid, Services |
-| `CTABlock.astro` | `heading, text, buttonText, buttonHref, locale` | Multiple pages |
-| `SectionWrapper.astro` | `class?` | All pages |
-| `PillarTag.astro` | `pillar` | BlogCard, Blog posts |
+| Component                | Props                                                          | Used By                           |
+| ------------------------ | -------------------------------------------------------------- | --------------------------------- |
+| `Nav.astro`              | `locale: 'en' \| 'de'`                                         | BaseLayout                        |
+| `Footer.astro`           | `locale: 'en' \| 'de'`                                         | BaseLayout                        |
+| `LanguageSwitcher.astro` | `currentLocale, currentPath`                                   | Nav                               |
+| `MobileNav.astro`        | `locale`                                                       | Nav                               |
+| `ServiceDropdown.astro`  | `locale`                                                       | Nav                               |
+| `BlogCard.astro`         | `title, date, pillar, excerpt, slug, locale`                   | Homepage, Blog listing            |
+| `ProjectCard.astro`      | `name, description, role, period, badge, metric, slug, locale` | Homepage, Projects grid, Services |
+| `CTABlock.astro`         | `heading, text, buttonText, buttonHref, locale`                | Multiple pages                    |
+| `SectionWrapper.astro`   | `class?`                                                       | All pages                         |
+| `PillarTag.astro`        | `pillar`                                                       | BlogCard, Blog posts              |
 
 ### Interactive Components (React Islands)
 
-| Component | Client Directive | Props | API Integration |
-|-----------|-----------------|-------|-----------------|
-| `NewsletterSignup.tsx` | `client:visible` (footer), `client:load` (contact) | `locale` | Resend Contacts API |
-| `CalendlyEmbed.tsx` | `client:visible` | `url` | Calendly embed script |
+| Component              | Client Directive                                   | Props    | API Integration       |
+| ---------------------- | -------------------------------------------------- | -------- | --------------------- |
+| `NewsletterSignup.tsx` | `client:visible` (footer), `client:load` (contact) | `locale` | Resend Contacts API   |
+| `CalendlyEmbed.tsx`    | `client:visible`                                   | `url`    | Calendly embed script |
 
 ### Layout Components
 
-| Layout | Purpose | Props |
-|--------|---------|-------|
-| `BaseLayout.astro` | HTML shell, meta tags, OG, hreflang, nav, footer, analytics | `title, description, ogImage?, locale, canonicalUrl?` |
-| `BlogPostLayout.astro` | Blog post wrapper (article schema, author bio, related) | `frontmatter, locale` |
+| Layout                 | Purpose                                                     | Props                                                 |
+| ---------------------- | ----------------------------------------------------------- | ----------------------------------------------------- |
+| `BaseLayout.astro`     | HTML shell, meta tags, OG, hreflang, nav, footer, analytics | `title, description, ogImage?, locale, canonicalUrl?` |
+| `BlogPostLayout.astro` | Blog post wrapper (article schema, author bio, related)     | `frontmatter, locale`                                 |
 
 ---
 
@@ -695,18 +716,20 @@ pnpm format           # Prettier
 - **Build command:** `pnpm build`
 - **Output:** `dist/` (Astro static output)
 - **Preview deployments:** Every PR gets a preview URL
-- **Environment variables:** Set in Vercel dashboard (RESEND_API_KEY, PUBLIC_* vars)
+- **Environment variables:** Set in Vercel dashboard (RESEND*API_KEY, PUBLIC*\* vars)
 - **Domain:** `davidhamel.co` via Cloudflare DNS (CNAME to Vercel)
 
 ### CI Checks (via Vercel + Astro build)
 
 The `pnpm build` step catches:
+
 - TypeScript errors (strict mode)
 - Missing Content Collections schema violations
 - Broken imports and missing pages
 - Invalid Astro component usage
 
 No separate CI pipeline needed for Phase 1. GitHub Actions can be added later for:
+
 - Lighthouse CI (automated performance testing)
 - Link checker (broken link detection)
 - i18n completeness check (every EN page has DE counterpart)
@@ -717,12 +740,12 @@ No separate CI pipeline needed for Phase 1. GitHub Actions can be added later fo
 
 ### Resend (Email)
 
-| Integration | Trigger | API |
-|-------------|---------|-----|
-| Newsletter signup | Form submit (NewsletterSignup.tsx) | `POST /contacts` → "Newsletter" audience |
-| Coaching lead capture | Calendly webhook (future) | `POST /contacts` → "Coaching Leads" audience |
-| Build client inquiry | Contact form (future) | `POST /contacts` → "Build Clients" audience |
-| Newsletter broadcast | `/marketing-publish` shortcut | Resend Broadcast API |
+| Integration           | Trigger                            | API                                          |
+| --------------------- | ---------------------------------- | -------------------------------------------- |
+| Newsletter signup     | Form submit (NewsletterSignup.tsx) | `POST /contacts` → "Newsletter" audience     |
+| Coaching lead capture | Calendly webhook (future)          | `POST /contacts` → "Coaching Leads" audience |
+| Build client inquiry  | Contact form (future)              | `POST /contacts` → "Build Clients" audience  |
+| Newsletter broadcast  | `/marketing-publish` shortcut      | Resend Broadcast API                         |
 
 **Implementation:** Server-side API route in Astro (`src/pages/api/subscribe.ts`) → Resend SDK → add to audience.
 
@@ -733,7 +756,7 @@ No separate CI pipeline needed for Phase 1. GitHub Actions can be added later fo
 <script
   defer
   src="https://cloud.umami.is/script.js"
-  data-website-id={import.meta.env.PUBLIC_UMAMI_WEBSITE_ID}
+  data-website-id="{import.meta.env.PUBLIC_UMAMI_WEBSITE_ID}"
 ></script>
 ```
 
@@ -814,4 +837,4 @@ Based on the technical architecture, here's the revised phase plan:
 
 ---
 
-*This document is the technical source of truth. Update when architecture decisions change.*
+_This document is the technical source of truth. Update when architecture decisions change._

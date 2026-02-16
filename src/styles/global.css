@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+/* Fontsource imports */
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource-variable/source-serif-4";
+@import "@fontsource/jetbrains-mono/400.css";
+
+@theme {
+  /* Colors — Primary Teal */
+  --color-teal-50: #f0f9f9;
+  --color-teal-100: #e0f2f2;
+  --color-teal-500: #0d8585;
+  --color-teal-600: #0a6e6e;
+  --color-teal-700: #085858;
+
+  /* Colors — Neutral Navy */
+  --color-navy-50: #f5f5f8;
+  --color-navy-100: #e8e8f0;
+  --color-navy-200: #c4c4d4;
+  --color-navy-400: #8888a0;
+  --color-navy-700: #44445e;
+  --color-navy-800: #2d2d44;
+  --color-navy-900: #1a1a2e;
+
+  /* Colors — Backgrounds */
+  --color-warm-white: #faf9f7;
+  --color-off-white: #fafafa;
+
+  /* Colors — Accent */
+  --color-coral-100: #fbe8e2;
+  --color-coral-400: #e8967e;
+  --color-coral-500: #e07a5f;
+  --color-seafoam-100: #e4f0f0;
+  --color-seafoam-300: #b8d8d8;
+  --color-golden-500: #d4a843;
+
+  /* Colors — Semantic */
+  --color-success: #0a6e6e;
+  --color-error: #d64545;
+  --color-warning: #e07a5f;
+  --color-info: #b8d8d8;
+
+  /* Fonts */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4 Variable", "Georgia", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Shadows */
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-dropdown: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --shadow-nav: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  /* Animations */
+  --animate-fade-in: fade-in 400ms ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-navy-900);
+    background-color: #ffffff;
+    line-height: 1.7;
+  }
+
+  /* Focus ring */
+  :focus-visible {
+    outline: 2px solid var(--color-teal-600);
+    outline-offset: 2px;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Skip to content */
+  .skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    z-index: 100;
+    padding: 8px 16px;
+    background: var(--color-teal-600);
+    color: white;
+    border-radius: 0 0 8px 8px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .skip-to-content:focus {
+    top: 0;
+  }
+}
+
+/* Prose styles for blog content */
+@layer components {
+  .prose-blog {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-navy-800);
+  }
+
+  .prose-blog h1,
+  .prose-blog h2,
+  .prose-blog h3,
+  .prose-blog h4 {
+    font-family: var(--font-sans);
+    color: var(--color-navy-900);
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+  }
+
+  .prose-blog h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .prose-blog h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+  }
+
+  .prose-blog p {
+    margin-bottom: 1.5em;
+  }
+
+  .prose-blog a {
+    color: var(--color-teal-600);
+    text-decoration: none;
+  }
+
+  .prose-blog a:hover {
+    text-decoration: underline;
+  }
+
+  .prose-blog blockquote {
+    border-left: 3px solid var(--color-teal-600);
+    padding-left: 1.25rem;
+    margin-left: 0;
+    font-style: italic;
+    color: var(--color-navy-700);
+  }
+
+  .prose-blog code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--color-navy-50);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .prose-blog pre {
+    background: var(--color-navy-900);
+    color: #e8e8f0;
+    padding: 1.25rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin: 1.5em 0;
+  }
+
+  .prose-blog pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+
+  .prose-blog img {
+    border-radius: 12px;
+    margin: 2em 0;
+  }
+
+  .prose-blog ul,
+  .prose-blog ol {
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .prose-blog li {
+    margin-bottom: 0.5em;
+  }
+}

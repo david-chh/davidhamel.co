@@ -1,0 +1,61 @@
+---
+interface Props {
+  name: string;
+  oneLiner: string;
+  role: string;
+  badge: string;
+  metric?: string;
+  href?: string;
+}
+
+const { name, oneLiner, role, badge, metric, href } = Astro.props;
+
+const badgeColors: Record<string, string> = {
+  Venture: "bg-teal-100 text-teal-700",
+  Contract: "bg-navy-100 text-navy-700",
+  Auftrag: "bg-navy-100 text-navy-700",
+  "Side Project": "bg-coral-100 text-coral-500",
+  Nebenprojekt: "bg-coral-100 text-coral-500",
+};
+
+const Tag = href ? "a" : "div";
+---
+
+<Tag
+  href={href}
+  class:list={[
+    "block border border-navy-100 rounded-2xl bg-white shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200 overflow-hidden",
+    href && "cursor-pointer",
+  ]}
+>
+  <!-- Placeholder image area -->
+  <div class="aspect-[16/10] bg-teal-50 flex items-center justify-center">
+    <span class="text-5xl font-bold text-teal-600/30">{name[0]}</span>
+  </div>
+
+  <!-- Content -->
+  <div class="p-6">
+    <span
+      class:list={[
+        "inline-block text-xs font-semibold uppercase tracking-[0.08em] px-3 py-1 rounded-full mb-3",
+        badgeColors[badge] ?? "bg-navy-100 text-navy-700",
+      ]}
+    >
+      {badge}
+    </span>
+    <h3 class="text-[22px] font-semibold leading-tight text-navy-900 mb-1">
+      {name}
+    </h3>
+    <p class="text-base text-navy-700 mb-3">
+      {oneLiner}
+    </p>
+    <p class="text-sm text-navy-400">
+      {role}
+    </p>
+    {
+      metric && (
+        <p class="text-base font-semibold text-teal-600 mt-2">{metric}</p>
+      )
+    }
+  </div>
+</Tag>

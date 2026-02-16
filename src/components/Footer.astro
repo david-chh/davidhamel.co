@@ -1,0 +1,198 @@
+---
+import {
+  getLangFromUrl,
+  useTranslations,
+  getLocalizedPath,
+} from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="bg-navy-900 text-white">
+  <div
+    class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 pt-16 pb-8 lg:pt-20 lg:pb-10"
+  >
+    <!-- Main grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+      <!-- Brand column -->
+      <div>
+        <a
+          href={getLocalizedPath("/", lang)}
+          class="text-lg font-semibold text-white"
+        >
+          David Hamel
+        </a>
+        <p class="mt-3 text-sm text-white/60 max-w-[240px]">
+          Financial planning coach & product builder in Berlin.
+        </p>
+      </div>
+
+      <!-- Services column -->
+      <div>
+        <h3
+          class="text-xs font-semibold uppercase tracking-[0.08em] text-white/50 mb-4"
+        >
+          {t("footer.col1.heading")}
+        </h3>
+        <ul class="space-y-3">
+          <li>
+            <a
+              href={getLocalizedPath("/coaching", lang)}
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col1.coaching")}
+            </a>
+          </li>
+          <li>
+            <a
+              href={getLocalizedPath("/services", lang)}
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col1.build")}
+            </a>
+          </li>
+          <li>
+            <a
+              href={getLocalizedPath("/contact", lang)}
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col1.cta")}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Explore column -->
+      <div>
+        <h3
+          class="text-xs font-semibold uppercase tracking-[0.08em] text-white/50 mb-4"
+        >
+          {t("footer.col2.heading")}
+        </h3>
+        <ul class="space-y-3">
+          <li>
+            <a
+              href={getLocalizedPath("/blog", lang)}
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col2.blog")}
+            </a>
+          </li>
+          <li>
+            <a
+              href={getLocalizedPath("/projects", lang)}
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col2.projects")}
+            </a>
+          </li>
+          <li>
+            <a
+              href={getLocalizedPath("/adventures", lang)}
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col2.adventures")}
+            </a>
+          </li>
+          <li>
+            <a
+              href={getLocalizedPath("/about", lang)}
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col2.about")}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Connect column -->
+      <div>
+        <h3
+          class="text-xs font-semibold uppercase tracking-[0.08em] text-white/50 mb-4"
+        >
+          {t("footer.col3.heading")}
+        </h3>
+        <ul class="space-y-3">
+          <li>
+            <a
+              href="mailto:david.ch.hamel@gmail.com"
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col3.email")}
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/david-hamel-11baa841"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col3.linkedin")}
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/davidhamel"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col3.github")}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Newsletter row -->
+    <div class="mt-12 pt-8 border-t border-white/10">
+      <div class="max-w-xl">
+        <h3 class="text-base font-semibold text-white mb-1">
+          {t("footer.newsletter.heading")}
+        </h3>
+        <p class="text-sm text-white/60 mb-4">
+          {t("footer.newsletter.subtext")}
+        </p>
+        <form class="flex flex-col sm:flex-row gap-3" onsubmit="return false;">
+          <input
+            type="email"
+            placeholder={t("footer.newsletter.placeholder")}
+            class="flex-1 h-[52px] px-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-teal-500"
+            aria-label={t("footer.newsletter.placeholder")}
+          />
+          <button
+            type="submit"
+            class="h-[52px] px-6 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors duration-150 text-sm"
+          >
+            {t("footer.newsletter.button")}
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Legal row -->
+    <div
+      class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2"
+    >
+      <p class="text-xs text-white/50">
+        {t("footer.copyright")}
+      </p>
+      <div class="flex gap-4">
+        <a
+          href={getLocalizedPath("/impressum", lang)}
+          class="text-xs text-white/50 hover:text-white/80 transition-colors duration-100"
+        >
+          {t("footer.imprint")}
+        </a>
+        <a
+          href={getLocalizedPath("/datenschutz", lang)}
+          class="text-xs text-white/50 hover:text-white/80 transition-colors duration-100"
+        >
+          {t("footer.privacy")}
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

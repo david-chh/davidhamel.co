@@ -1,0 +1,25 @@
+---
+interface Props {
+  background?: "white" | "warm-white" | "navy-50" | "navy-900" | "teal-50";
+  class?: string;
+  id?: string;
+}
+
+const { background = "white", class: className, id } = Astro.props;
+
+const bgClasses: Record<string, string> = {
+  white: "bg-white",
+  "warm-white": "bg-warm-white",
+  "navy-50": "bg-navy-50",
+  "navy-900": "bg-navy-900 text-white",
+  "teal-50": "bg-teal-50",
+};
+---
+
+<section class:list={[bgClasses[background], className]} id={id}>
+  <div
+    class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 py-12 sm:py-16 lg:py-20"
+  >
+    <slot />
+  </div>
+</section>
