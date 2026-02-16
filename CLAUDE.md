@@ -33,7 +33,7 @@ pnpm format           # Prettier
 5. **Test with Playwright** - Always verify features work by running through the app in browser.
 6. **Configure via Playwright** - Proactively use Playwright browser to configure external services. Don't just document settings - navigate to dashboards and apply them directly.
 7. **Keep Playwright browser open** - Never close browser tabs after testing. Leave them open for the user to inspect or for follow-up work. Only close if explicitly requested.
-8. **Session wrap-up** - At the end of EVERY session: update all relevant documentation (`.claude/memory/activeContext.md`, any affected technical docs), commit all changes, and push to remote. Never leave uncommitted work.
+8. **Session wrap-up** - At the end of EVERY session: update `.claude/memory/session-log.md` (continuously during session) and `.claude/memory/activeContext.md` (at session end), commit all changes, and push to remote. Never leave uncommitted work.
 
 ## Brand Context (Critical)
 
@@ -74,6 +74,7 @@ David does NOT yet hold the §34h GewO license. See `docs/brand-context.md` for 
 ## Current Context
 
 **Read `.claude/memory/activeContext.md` at session start** for current focus and recent decisions. Update it at session end.
+**Session log:** `.claude/memory/session-log.md` — chronological record of all work. Update continuously during each session.
 
 ---
 
