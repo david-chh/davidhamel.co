@@ -10,7 +10,9 @@
 
 ## Tech Stack
 
-Astro (content-first, islands architecture) | TypeScript (strict) | TailwindCSS | shadcn/ui (React islands) | MDX (Astro Content Collections) | Vercel | Umami Cloud | Resend | Cloudflare DNS
+Astro (content-first, islands architecture) | TypeScript (strict) | TailwindCSS | shadcn/ui (React islands) | MDX (Astro Content Collections) | Paraglide.js (i18n UI strings) | Vercel | Umami Cloud | Resend | Cloudflare DNS
+
+**Bilingual:** EN (default, no prefix) + DE (`/de/` prefix). All site pages are bilingual. Blog posts are English-only. See `docs/technical-architecture.md` § 3 for i18n details.
 
 ## Key Commands
 
@@ -46,6 +48,8 @@ David does NOT yet hold the §34h GewO license. See `docs/brand-context.md` for 
 | **Brand & Visual Identity** | `docs/brand-context.md` |
 | **Marketing Infrastructure** | `docs/marketing-infrastructure.md` |
 | **Information Architecture** | `docs/information-architecture.md` |
+| **Technical Architecture** | `docs/technical-architecture.md` |
+| **Copy Deck (EN + DE)** | `docs/copy-deck.md` |
 | **Kickoff Brief** | `docs/kickoff-brief.md` |
 | **Coding Conventions** | `.claude/rules/coding-conventions.md` |
 | **Technical Patterns** | `.claude/rules/technical-patterns.md` |
@@ -64,6 +68,8 @@ David does NOT yet hold the §34h GewO license. See `docs/brand-context.md` for 
 | Email | Resend unified (newsletters + transactional, no separate tool) |
 | Hosting | Vercel free Hobby tier |
 | Domain/DNS | Cloudflare |
+| i18n | Astro built-in routing + Paraglide.js (EN default, DE secondary) |
+| Blog content | English-only (pages are bilingual) |
 
 ## Current Context
 
@@ -71,4 +77,4 @@ David does NOT yet hold the §34h GewO license. See `docs/brand-context.md` for 
 
 ---
 
-*Last updated: 2026-02-15 | Target: <100 lines | Current: ~75 lines*
+*Last updated: 2026-02-16 | Target: <100 lines | Current: ~85 lines*

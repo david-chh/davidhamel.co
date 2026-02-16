@@ -8,8 +8,8 @@
 
 ## Current State
 
-**Status**: Project initialized. Planning & IA complete. Ready for Phase 1 build.
-**Focus**: Follow `docs/kickoff-brief.md` to scaffold Astro project and build homepage.
+**Status**: Project initialized. Planning, IA, copy, and technical architecture complete. Ready for Phase 1 build.
+**Focus**: Follow `docs/kickoff-brief.md` to scaffold Astro project. Then build homepage (EN + DE) using `docs/copy-deck.md` and `docs/technical-architecture.md`.
 
 ## Completed Work (2026-02-15 - Session 1)
 
@@ -48,18 +48,41 @@
 
 ### Career Timeline Corrections (from CV + LinkedIn)
 - Cross-referenced David's CV (Nov 2025) and LinkedIn profile against project docs
-- Major corrections to dates, roles, and stats:
-  - Digital Partners ran Dec 2015–Jun 2022 (much longer than previously documented)
-  - Porsche, Buena, Carly were short contracts **during** Digital Partners period
-  - Ziggma: Co-Founder & COO (not CPO), Feb 2023–Dec 2024, 35k users/€1.5bn linked (not 10k/$2B)
-  - DeRisk: Co-Founder & CEO (not CPO), Apr 2021–Feb 2022, added CCLA to client list
-  - Porsche: Product Owner (not PM), May–Aug 2018 only (4 months)
-  - Buena: Senior PM (not Head of Product), Jul–Sep 2020 (not 2022–2023)
-  - Impactive: Jul–Dec 2023, company = Impactive Tech
-  - Added: Antler EIR (Oct–Dec 2021), ISM eCompany (Feb–Sep 2013), Stealth Startup (Jan 2025–present = Alba)
-- Updated brand-context.md career timeline, project table, and About narrative
-- Updated brand-assets-additions.md Ziggma stats
-- Updated Notion Brand Assets page: career timeline, bios, venture stats
+- Major corrections to dates, roles, and stats (see session 2 summary for details)
+
+### Copy Deck (Bilingual EN + DE)
+- Created `docs/copy-deck.md` (1,506 lines) with complete production-ready copy for every page
+- All navigation labels, meta tags, page sections, CTAs, and project pages in EN + DE
+- Photo shot list: 13 minimum images for launch
+
+## Completed Work (2026-02-16 - Session 3)
+
+### Technical Architecture & Agent Design
+- Created `docs/technical-architecture.md` — comprehensive technical spec covering:
+  - Finalized tech stack with rationale
+  - Cost model (~€1/mo total)
+  - **i18n strategy**: Astro built-in routing (EN default, DE with `/de/` prefix) + Paraglide.js for UI strings
+  - Decision: **site pages bilingual, blog posts English-only**
+  - Full project structure with i18n file layout (~44 pages at launch)
+  - Environment variables spec
+  - Component architecture (static Astro + React islands)
+  - Build & deploy pipeline (Vercel auto-deploy on push)
+  - Third-party integrations (Resend, Umami, Calendly)
+  - Updated phase plan aligned with new architecture
+
+### Sub-Agent Architecture (11 development + 4 marketing)
+- Updated 4 existing agents for Astro (removed Next.js references):
+  - `code-reviewer.md` — added Astro checks, i18n checks, brand/regulatory checks
+  - `performance-optimizer.md` — Astro-specific patterns, Core Web Vitals focus
+  - `security-auditor.md` — simplified for static site (no DB/auth), focus on env vars and API keys
+  - `test-runner.md` — build verification + Playwright E2E, i18n verification
+- Created 4 new project-specific agents:
+  - `astro-developer.md` — Astro patterns, islands, i18n, Content Collections
+  - `brand-guardian.md` — brand voice, §34h regulatory compliance, copy deck consistency
+  - `i18n-reviewer.md` — translation completeness, German formatting, hreflang validation
+  - `seo-auditor.md` — meta tags, OG tags, structured data (JSON-LD), sitemap
+- 3 existing agents kept as-is: `debugger.md`, `git-workflow.md`, `doc-updater.md`
+- Marketing agents (Phase 3): ContentDrafter, ReleaseAnnouncer, AnalyticsReporter, SocialScheduler — defined in architecture, built later
 
 ## Key Decisions
 
@@ -70,19 +93,26 @@
 | Email | Resend unified |
 | Hosting | Vercel free Hobby tier |
 | DNS | Cloudflare |
+| i18n | Astro built-in routing + Paraglide.js |
+| Default locale | English (no URL prefix) |
+| Secondary locale | German (`/de/` prefix) |
+| Blog content | English-only (pages are bilingual) |
 | IA: Services vs Projects | /services sells (tiers + differentiators), /projects proves (portfolio) |
 | Project pages | 9 pages: Alba, Ziggma, DeRisk, Digital Partners, Porsche, Buena, Carly, Impactive, Rootlocaly |
 
 ## Next Steps (Phase 1: Foundation)
 
 1. Initialize Astro + Tailwind + shadcn project (`docs/kickoff-brief.md` steps 2-3)
-2. Set up Tailwind config with brand colors
-3. Build BaseLayout (nav, footer, meta tags)
-4. Build homepage
-5. Set up content collections for blog
-6. Set up Vercel deployment
-7. Set up ESLint + Prettier
+2. Configure i18n in `astro.config.mjs`
+3. Set up Paraglide.js with message files
+4. Set up Tailwind config with brand colors
+5. Build BaseLayout (nav with language switcher, footer, meta tags, hreflang)
+6. Build EN homepage (using `docs/copy-deck.md`)
+7. Build DE homepage
+8. Set up Content Collections for blog
+9. Set up Vercel deployment
+10. Set up ESLint + Prettier
 
 ---
 
-*Last updated: 2026-02-15 (Session 2 - Information Architecture)*
+*Last updated: 2026-02-16 (Session 3 - Technical Architecture & Agent Design)*
