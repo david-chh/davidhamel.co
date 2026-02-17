@@ -6,7 +6,7 @@
 > **Convention:** Each section shows English first, then German.
 > Photo/image placeholders marked with `[IMAGE: description]`.
 >
-> Last updated: 2026-02-15
+> Last updated: 2026-02-17 (v2 — Three-service split)
 
 ---
 
@@ -14,17 +14,18 @@
 
 ### Primary Navigation
 
-| Element                     | EN                 | DE              |
-| --------------------------- | ------------------ | --------------- |
-| Logo/wordmark               | David Hamel        | David Hamel     |
-| Nav item 1                  | About              | Über mich       |
-| Nav item 2 (dropdown label) | Services           | Leistungen      |
-| Nav dropdown item 1         | Financial Coaching | Finanzcoaching  |
-| Nav dropdown item 2         | Product & Build    | Product & Build |
-| Nav item 3                  | Projects           | Projekte        |
-| Nav item 4                  | Blog               | Blog            |
-| Nav item 5                  | Adventures         | Abenteuer       |
-| CTA button                  | Book a Call        | Gespräch buchen |
+| Element                     | EN                   | DE                    |
+| --------------------------- | -------------------- | --------------------- |
+| Logo/wordmark               | David Hamel          | David Hamel           |
+| Nav item 1                  | About                | Über mich             |
+| Nav item 2 (top-level)      | Coaching             | Coaching              |
+| Nav item 3 (dropdown label) | Services             | Leistungen            |
+| Nav dropdown item 1         | Product Leadership   | Produktführung        |
+| Nav dropdown item 2         | Build                | Build                 |
+| Nav item 4                  | Projects             | Projekte              |
+| Nav item 5                  | Blog                 | Blog                  |
+| Nav item 6                  | Adventures           | Abenteuer             |
+| CTA button                  | Book a Call          | Gespräch buchen       |
 
 ### Footer
 
@@ -32,8 +33,9 @@
 | ---------------------- | ----------------------------------------------- | -------------------------------------------- |
 | Column 1 heading       | Services                                        | Leistungen                                   |
 | Column 1 link 1        | Financial Coaching                              | Finanzcoaching                               |
-| Column 1 link 2        | Product & Build                                 | Product & Build                              |
-| Column 1 link 3        | Book a Call                                     | Gespräch buchen                              |
+| Column 1 link 2        | Product Leadership                              | Produktführung                               |
+| Column 1 link 3        | Build                                           | Build                                        |
+| Column 1 link 4        | Book a Call                                     | Gespräch buchen                              |
 | Column 2 heading       | Explore                                         | Entdecken                                    |
 | Column 2 link 1        | Blog                                            | Blog                                         |
 | Column 2 link 2        | Projects                                        | Projekte                                     |
@@ -66,7 +68,7 @@
 | Field                | EN                                                                                                                                                                         | DE                                                                                                                                                                                |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<title>`            | David Hamel — Financial Planning Coach & Product Builder                                                                                                                   | David Hamel — Finanzcoach & Product Builder                                                                                                                                       |
-| `<meta description>` | Independent financial planning coach and product builder. Helping expats in Germany take control of their money. Building apps and products from strategy to shipped code. | Unabhängiger Finanzcoach und Product Builder. Ich helfe Expats in Deutschland, ihre Finanzen in den Griff zu bekommen. Apps und Produkte von der Strategie bis zum fertigen Code. |
+| `<meta description>` | Financial planning coach, product leader, and builder. I help expats in Germany navigate their finances, lead product for startups, and build apps for businesses. | Finanzcoach, Produktführer und Builder. Ich helfe Expats in Deutschland bei ihren Finanzen, leite Produkte für Startups und baue Apps für Unternehmen. |
 
 ### Section 1: Hero
 
@@ -78,15 +80,7 @@ Headline:
 
 Subheadline:
 
-> I help expats in Germany make confident financial decisions — and I build products that ship. No commissions, no complexity, no corporate filler.
-
-CTA 1 (primary, teal):
-
-> Financial Coaching →
-
-CTA 2 (secondary, outlined):
-
-> Product & Build Services →
+> I help people navigate complex systems — financial planning for expats in Germany, product strategy for startups, and AI-native development for businesses that need to ship.
 
 **DE:**
 
@@ -96,17 +90,53 @@ Headline:
 
 Subheadline:
 
-> Ich helfe Expats in Deutschland, sichere Finanzentscheidungen zu treffen — und ich baue Produkte, die live gehen. Keine Provisionen, keine Komplexität, kein Unternehmenssprech.
+> Ich helfe Menschen, komplexe Systeme zu navigieren — Finanzplanung für Expats in Deutschland, Produktstrategie für Startups und KI-natives Development für Unternehmen, die liefern müssen.
 
-CTA 1:
+### Section 2: Three-Card Routing
 
-> Finanzcoaching →
+Three cards side-by-side that let visitors self-identify and route to the right service page.
 
-CTA 2:
+**EN:**
 
-> Product & Build →
+Card 1:
 
-### Section 2: Who I Am
+> **Financial Coaching**
+> For expat professionals in Germany navigating taxes, insurance, and investing — in plain English, with no commissions.
+> [Learn more →](/coaching)
+
+Card 2:
+
+> **Product Leadership**
+> For startups and scaleups that need senior product thinking without a full-time hire.
+> [Learn more →](/product)
+
+Card 3:
+
+> **App & Web Builds**
+> For SMBs and financial services firms that need a product person who understands their world — and builds the software.
+> [Learn more →](/build)
+
+**DE:**
+
+Card 1:
+
+> **Finanzcoaching**
+> Für Expat-Fachkräfte in Deutschland, die Steuern, Versicherungen und Geldanlage navigieren — auf Englisch, ohne Provisionen.
+> [Mehr erfahren →](/de/coaching)
+
+Card 2:
+
+> **Produktführung**
+> Für Startups und Scaleups, die erfahrenes Produktdenken brauchen, ohne eine Vollzeitstelle zu besetzen.
+> [Mehr erfahren →](/de/product)
+
+Card 3:
+
+> **App & Web Builds**
+> Für KMU und Finanzdienstleister, die einen Produktmenschen brauchen, der ihre Branche versteht — und die Software selbst baut.
+> [Mehr erfahren →](/de/build)
+
+### Section 3: Who I Am
 
 `[IMAGE: Headshot — professional but approachable, natural light]`
 
@@ -114,7 +144,7 @@ CTA 2:
 
 > I'm David — an independent financial planning coach and product builder based in Berlin. I've lived and worked across 15+ countries, built fintech products used by tens of thousands of people, and led product teams at places like Porsche Digital Lab.
 >
-> Today I split my time between coaching expats through the German financial system and building apps and websites for startups and founders.
+> Today I coach expats through the German financial system, provide product leadership to startups, and build apps and websites for businesses — with a particular focus on fintech and financial services.
 
 Link: More about me →
 
@@ -122,11 +152,11 @@ Link: More about me →
 
 > Ich bin David — unabhängiger Finanzcoach und Product Builder in Berlin. Ich habe in über 15 Ländern gelebt und gearbeitet, Fintech-Produkte für Zehntausende Nutzer gebaut und Produktteams unter anderem beim Porsche Digital Lab geleitet.
 >
-> Heute teile ich meine Zeit zwischen Finanzcoaching für Expats im deutschen Finanzsystem und dem Bau von Apps und Websites für Startups und Gründer.
+> Heute coache ich Expats durch das deutsche Finanzsystem, biete Startups Produktführung und baue Apps und Websites für Unternehmen — mit besonderem Fokus auf Fintech und Finanzdienstleistungen.
 
 Link: Mehr über mich →
 
-### Section 3: Selected Work
+### Section 4: Selected Work
 
 Section heading:
 
@@ -177,7 +207,7 @@ Link below cards:
 | ------------------- | ----------------------- |
 | View all projects → | Alle Projekte ansehen → |
 
-### Section 4: Latest from the Blog
+### Section 5: Latest from the Blog
 
 Section heading:
 
@@ -193,7 +223,7 @@ Link below cards:
 | ---------------- | --------------------- |
 | Read all posts → | Alle Beiträge lesen → |
 
-### Section 5: Newsletter Signup
+### Section 6: Newsletter Signup
 
 **EN:**
 
@@ -244,9 +274,9 @@ Headline:
 
 Opening:
 
-> I grew up in the northwest of Germany. Since I can remember, home was always the most boring place — even though I was very happy there.
+> I grew up in a small town in northern Germany. It was a great place to be a kid — but I always knew there was a bigger world out there.
 >
-> So as soon as I could, I left.
+> So as soon as I could, I left to find it.
 
 **DE:**
 
@@ -256,23 +286,23 @@ Headline:
 
 Opening:
 
-> Ich bin im Nordwesten Deutschlands aufgewachsen. Solange ich mich erinnern kann, war Zuhause immer der langweiligste Ort — obwohl ich dort sehr glücklich war.
+> Ich bin in einer Kleinstadt in Norddeutschland aufgewachsen. Es war ein toller Ort zum Aufwachsen — aber ich wusste immer, dass es eine größere Welt da draußen gibt.
 >
-> Also bin ich losgezogen, sobald es ging.
+> Also bin ich losgezogen, sobald ich konnte.
 
 ### Section 2: The Story
 
 **EN:**
 
-> I spent a year kitesurfing, surfing, and exploring — from Egypt to Brazil, Argentina to Fiji, Thailand to New Zealand. Somewhere along the way, I realized that economics was the lens I wanted to understand the world through. Not because it was glamorous, but because it explained why things worked the way they did.
+> I spent a year kitesurfing, surfing, and exploring — from Egypt to Brazil, Argentina to Fiji, Thailand to New Zealand. Traveling through so many countries showed me one thing clearly: international business, economics, and finance are the systems that shape our global world. Understanding how those systems work is what pulled me in — and what I decided to study.
 >
-> I studied economics at Rotterdam School of Management, graduated Cum Laude, spent a semester at EDHEC in Nice and another at SMU in Singapore. After a stint in commodities trade finance at ABN Amro in Amsterdam, I knew I wanted to build things — not analyze them from a desk.
+> I studied International Business Administration at Rotterdam School of Management, graduated Cum Laude, then completed my MSc in Finance and Investments — with semesters at EDHEC in Nice and SMU in Singapore. After a stint in commodities trade finance at ABN Amro in Amsterdam, I knew I wanted to build things — not analyze them from a desk.
 >
 > So I started my first company. [Digital Partners](/projects/digital-partners) was a digital strategy and IoT consulting firm. Over six years, we executed 27 projects for industrial clients like Viessmann, Porsche, and Körber, building a team of seven engineers and three consulting partners across Berlin and San Francisco. During that time, I also took on product roles at [Porsche Digital Lab](/projects/porsche-digital-lab) — where I led a blockchain product for classic car provenance and helped secure €6.5M in funding — and at [Carly](/projects/carly) and [Buena](/projects/buena), where I built sales funnels and automated contract workflows.
 >
 > In late 2021, I joined Antler's Entrepreneur in Residence program in Berlin. That's where the idea for [DeRisk](/projects/derisk) crystallized — a platform for institutional investors to manage portfolio relationships and systemic risk. We built the product and piloted it with asset managers overseeing more than €1.5 trillion, including NBIM, Barings, and CCLA.
 >
-> After DeRisk, I co-founded [Ziggma](/projects/ziggma) as COO — a portfolio management platform for retail investors. We grew it to 35,000 users and €1.5 billion in linked assets. During that period, I also consulted for [Impactive](/projects/impactive) on strategy for their institutional shareholder engagement platform.
+> After DeRisk, I joined [Ziggma](/projects/ziggma) as Co-Founder and COO — a portfolio management platform for retail investors that was already gaining traction. We grew it to 35,000 users and €1.5 billion in linked assets. During that period, I also consulted for [Impactive](/projects/impactive) on strategy for their institutional shareholder engagement platform.
 >
 > But here's what I kept noticing: the people around me — smart, well-earning professionals — had no idea what to do with their money. Especially the expats. The German financial system is complex, opaque, and overwhelmingly in German. Most advisors earn commissions, which means they're incentivized to sell you products, not solve your problems.
 >
@@ -284,15 +314,15 @@ Opening:
 
 **DE:**
 
-> Ich habe ein Jahr lang gekitesurft, gesurft und die Welt erkundet — von Ägypten über Brasilien, Argentinien bis Fidschi, Thailand bis Neuseeland. Irgendwann wurde mir klar, dass Wirtschaft die Brille ist, durch die ich die Welt verstehen wollte. Nicht weil es glamourös war, sondern weil es erklärte, warum Dinge so funktionieren, wie sie funktionieren.
+> Ich habe ein Jahr lang gekitesurft, gesurft und die Welt erkundet — von Ägypten über Brasilien, Argentinien bis Fidschi, Thailand bis Neuseeland. Das Reisen durch so viele Länder hat mir eines klar gezeigt: Internationales Business, Volkswirtschaft und Finanzen sind die Systeme, die unsere globale Welt formen. Zu verstehen, wie diese Systeme funktionieren, hat mich gepackt — und das wollte ich studieren.
 >
-> Ich studierte Wirtschaftswissenschaften an der Rotterdam School of Management, schloss mit Cum Laude ab und verbrachte je ein Semester an der EDHEC in Nizza und an der SMU in Singapur. Nach einer Zeit im Commodities Trade Finance bei ABN Amro in Amsterdam wusste ich: Ich will Dinge bauen — nicht vom Schreibtisch aus analysieren.
+> Ich studierte International Business Administration an der Rotterdam School of Management, schloss mit Cum Laude ab und machte dann meinen MSc in Finance and Investments — mit Semestern an der EDHEC in Nizza und der SMU in Singapur. Nach einer Zeit im Commodities Trade Finance bei ABN Amro in Amsterdam wusste ich: Ich will Dinge bauen — nicht vom Schreibtisch aus analysieren.
 >
 > Also gründete ich mein erstes Unternehmen. [Digital Partners](/projects/digital-partners) war eine Beratung für digitale Strategie und IoT. Über sechs Jahre haben wir 27 Projekte für Industriekunden wie Viessmann, Porsche und Körber umgesetzt und ein Team aus sieben Entwicklern und drei Beratungspartnern in Berlin und San Francisco aufgebaut. In dieser Zeit übernahm ich auch Produktrollen beim [Porsche Digital Lab](/projects/porsche-digital-lab) — wo ich ein Blockchain-Produkt für die Herkunftsdokumentation klassischer Autos leitete und €6,5 Mio. Finanzierung mitgesichert habe — sowie bei [Carly](/projects/carly) und [Buena](/projects/buena), wo ich Vertriebstrichter baute und Vertragsworkflows automatisierte.
 >
 > Ende 2021 nahm ich am Entrepreneur in Residence-Programm von Antler in Berlin teil. Dort entstand die Idee für [DeRisk](/projects/derisk) — eine Plattform für institutionelle Investoren zur Verwaltung von Portfolio-Beziehungen und systemischen Risiken. Wir bauten das Produkt und pilotierten es mit Vermögensverwaltern, die über €1,5 Billionen betreuen, darunter NBIM, Barings und CCLA.
 >
-> Nach DeRisk gründete ich [Ziggma](/projects/ziggma) als COO mit — eine Portfoliomanagement-Plattform für Privatanleger. Wir wuchsen auf 35.000 Nutzer und €1,5 Milliarden verknüpfte Assets. Parallel beriet ich [Impactive](/projects/impactive) bei der Strategie für ihre institutionelle Shareholder-Engagement-Plattform.
+> Nach DeRisk stieg ich bei [Ziggma](/projects/ziggma) als Co-Founder und COO ein — eine Portfoliomanagement-Plattform für Privatanleger, die bereits Fahrt aufgenommen hatte. Wir wuchsen auf 35.000 Nutzer und €1,5 Milliarden verknüpfte Assets. Parallel beriet ich [Impactive](/projects/impactive) bei der Strategie für ihre institutionelle Shareholder-Engagement-Plattform.
 >
 > Aber was mir immer wieder auffiel: Die Menschen um mich herum — kluge, gut verdienende Fachkräfte — hatten keine Ahnung, was sie mit ihrem Geld anfangen sollten. Besonders die Expats. Das deutsche Finanzsystem ist komplex, undurchsichtig und überwiegend auf Deutsch. Die meisten Berater verdienen Provisionen, was bedeutet, dass sie einen Anreiz haben, dir Produkte zu verkaufen, nicht deine Probleme zu lösen.
 >
@@ -346,7 +376,7 @@ Heading:
 
 > **Languages:** German · English · French · Spanish
 >
-> **Education:** BSc & MSc Economics, Rotterdam School of Management (Cum Laude). Exchanges at EDHEC Business School (Nice) and SMU (Singapore).
+> **Education:** BSc International Business Administration & MSc Finance and Investments, Rotterdam School of Management (Cum Laude). Exchanges at EDHEC Business School (Nice) and SMU (Singapore).
 
 **DE:**
 
@@ -356,7 +386,7 @@ Heading:
 
 > **Sprachen:** Deutsch · Englisch · Französisch · Spanisch
 >
-> **Ausbildung:** BSc & MSc Wirtschaftswissenschaften, Rotterdam School of Management (Cum Laude). Auslandssemester an der EDHEC Business School (Nizza) und SMU (Singapur).
+> **Ausbildung:** BSc International Business Administration & MSc Finance and Investments, Rotterdam School of Management (Cum Laude). Auslandssemester an der EDHEC Business School (Nizza) und SMU (Singapur).
 
 ### Section 5: CTA
 
@@ -366,19 +396,27 @@ Heading:
 >
 > [Financial Coaching →](/coaching)
 >
-> **Need a product person?** I combine product leadership with AI-native development to build apps, websites, and products — from strategy to shipped code.
+> **Need product leadership?** I embed with your team part-time to define strategy, build roadmaps, and ship. Eight years of product experience at ventures and startups.
 >
-> [Product & Build Services →](/services)
+> [Product Leadership →](/product)
+>
+> **Need something built?** I combine product thinking with AI-native development to build apps and websites for businesses — from first brief to live product.
+>
+> [Build Services →](/build)
 
 **DE:**
 
 > **Brauchst du Finanzcoaching?** Ich helfe englischsprachigen Fachkräften in Deutschland bei Steuern, Versicherungen, Geldanlage und Altersvorsorge — in klarer Sprache, ohne Interessenkonflikte.
 >
-> [Finanzcoaching →](/coaching)
+> [Finanzcoaching →](/de/coaching)
 >
-> **Brauchst du einen Produktmenschen?** Ich verbinde Produktführung mit KI-nativem Development, um Apps, Websites und Produkte zu bauen — von der Strategie bis zum fertigen Code.
+> **Brauchst du Produktführung?** Ich arbeite in Teilzeit in deinem Team, um Strategie zu definieren, Roadmaps zu erstellen und zu liefern. Acht Jahre Produkterfahrung bei Ventures und Startups.
 >
-> [Product & Build →](/services)
+> [Produktführung →](/de/product)
+>
+> **Brauchst du einen Builder?** Ich verbinde Produktdenken mit KI-nativem Development, um Apps und Websites für Unternehmen zu bauen — vom ersten Briefing bis zum Live-Produkt.
+>
+> [Build Services →](/de/build)
 
 ---
 
@@ -609,14 +647,14 @@ Alternative:
 
 ---
 
-## 4. Product & Build Services (`/services`)
+## 4. Product Leadership (`/product`)
 
 ### Meta
 
-| Field                | EN                                                                                                                                                                  | DE                                                                                                                                                                           |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<title>`            | Product & Build Services — David Hamel                                                                                                                              | Product & Build Services — David Hamel                                                                                                                                       |
-| `<meta description>` | Product leader who ships code. Fractional CPO, product strategy, and AI-native app development. From strategy to shipped product — fast, high-quality, transparent. | Produktführer, der Code liefert. Fractional CPO, Produktstrategie und KI-natives App-Development. Von der Strategie zum fertigen Produkt — schnell, hochwertig, transparent. |
+| Field                | EN                                                                                                                                                                   | DE                                                                                                                                                                             |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `<title>`            | Product Leadership — David Hamel                                                                                                                                     | Produktführung — David Hamel                                                                                                                                                   |
+| `<meta description>` | Fractional product leadership for startups and scaleups. 8+ years building products at Porsche, Ziggma, and fintech ventures. Strategy, roadmapping, and execution. | Fraktionale Produktführung für Startups und Scaleups. 8+ Jahre Produktentwicklung bei Porsche, Ziggma und Fintech-Ventures. Strategie, Roadmapping und Umsetzung.             |
 
 ### Section 1: Hero
 
@@ -624,11 +662,234 @@ Alternative:
 
 Headline:
 
-> Product leader who ships code.
+> Senior product leadership, without the full-time hire.
 
 Subheadline:
 
-> I've spent eight years building products at companies like Porsche and fintech startups. Now I combine that product thinking with AI-native development to build apps and websites for clients — fast, high quality, and at a fraction of what a dev shop would charge.
+> I've led product at ventures that reached 35,000 users, secured €6.5M in funding, and served institutional clients managing over €1.5 trillion. I bring that experience to your team — part-time, without the overhead.
+
+CTA:
+
+> Book a Discovery Call →
+
+**DE:**
+
+Headline:
+
+> Erfahrene Produktführung, ohne die Vollzeitstelle.
+
+Subheadline:
+
+> Ich habe Produkte bei Ventures geleitet, die 35.000 Nutzer erreichten, €6,5 Mio. Finanzierung sicherten und institutionelle Kunden mit über €1,5 Billionen betreuten. Diese Erfahrung bringe ich in dein Team — in Teilzeit, ohne den Overhead.
+
+CTA:
+
+> Discovery Call buchen →
+
+### Section 2: When This Works
+
+**EN:**
+
+Heading:
+
+> When to bring me in
+
+> - You have an engineering team but no senior product leader
+> - You need a product strategy and roadmap — not just a backlog manager
+> - You're preparing for a fundraise, launch, or pivot and need product clarity
+> - Your team is shipping features but you're not sure they're the right features
+
+Heading:
+
+> When this is NOT the right fit
+
+> - You need someone full-time and embedded 5 days a week
+> - You're looking for a project manager or scrum master
+> - You need someone to manage an outsourced dev team I haven't built
+> - You want a strategy deck without hands-on execution
+
+**DE:**
+
+Heading:
+
+> Wann du mich brauchst
+
+> - Du hast ein Engineering-Team, aber keine erfahrene Produktführung
+> - Du brauchst eine Produktstrategie und Roadmap — nicht nur einen Backlog-Manager
+> - Du bereitest eine Finanzierungsrunde, einen Launch oder Pivot vor und brauchst Produktklarheit
+> - Dein Team liefert Features, aber du bist nicht sicher, ob es die richtigen sind
+
+Heading:
+
+> Wann es NICHT passt
+
+> - Du brauchst jemanden in Vollzeit, 5 Tage die Woche
+> - Du suchst einen Projektmanager oder Scrum Master
+> - Du brauchst jemanden, der ein externes Dev-Team managt, das ich nicht aufgebaut habe
+> - Du willst ein Strategiedeck ohne Hands-on-Umsetzung
+
+### Section 3: What You Get
+
+**EN:**
+
+Heading:
+
+> What you get
+
+> - **Product strategy and roadmapping** — Where to focus, what to build, in what order
+> - **Team coaching and process design** — Sprint structure, rituals, and decision-making frameworks
+> - **Technical architecture guidance** — Stack decisions, build-vs-buy, scalability planning
+> - **Stakeholder alignment** — Translate between business, design, and engineering
+> - **Go-to-market support** — Positioning, launch planning, success metrics
+
+Engagement structure:
+
+> Typically 1-2 days per week, 3+ month engagements. Retainer-based, scoped to your needs.
+
+**DE:**
+
+Heading:
+
+> Was du bekommst
+
+> - **Produktstrategie und Roadmapping** — Worauf fokussieren, was bauen, in welcher Reihenfolge
+> - **Teamcoaching und Prozessdesign** — Sprint-Struktur, Rituale und Entscheidungsrahmen
+> - **Technische Architekturberatung** — Stack-Entscheidungen, Build-vs-Buy, Skalierungsplanung
+> - **Stakeholder-Alignment** — Übersetzen zwischen Business, Design und Engineering
+> - **Go-to-Market-Support** — Positionierung, Launch-Planung, Erfolgsmetriken
+
+Engagement-Struktur:
+
+> Typischerweise 1-2 Tage pro Woche, ab 3 Monaten. Retainer-basiert, auf deine Bedürfnisse zugeschnitten.
+
+### Section 4: Track Record
+
+Section heading:
+
+| EN           | DE           |
+| ------------ | ------------ |
+| Track record | Track Record |
+
+(3-4 ProjectCards — Focus on: Porsche Digital Lab, Ziggma, DeRisk, Buena)
+
+Link:
+
+| EN                    | DE                           |
+| --------------------- | ---------------------------- |
+| View full portfolio → | Gesamtes Portfolio ansehen → |
+
+### Section 5: How I Work
+
+**EN:**
+
+Heading:
+
+> How I work
+
+Step 1:
+
+> **Assess** — I spend the first 1-2 weeks understanding your product, team, market, and customers. No assumptions, no playbook — I learn your context first.
+
+Step 2:
+
+> **Align** — We define the product strategy, roadmap, and success metrics together. I align stakeholders and make sure everyone is working toward the same outcome.
+
+Step 3:
+
+> **Execute** — I embed with your team and ship. Sprint planning, reviews, and hands-on product work — not just advice from a distance.
+
+FAQ:
+
+> **What does a typical engagement look like?**
+> 1-2 days per week, embedded with your team. I attend standups, lead planning, review work, and make product decisions alongside you. Most engagements run 3-6 months.
+>
+> **How is this different from a consultant?**
+> A consultant writes a report and leaves. I embed with your team and ship alongside them. I'm accountable for outcomes, not deliverables.
+>
+> **What's the time commitment?**
+> Flexible. Some clients need 1 day per week, others 2-3. We scope it based on what you actually need.
+
+**DE:**
+
+Heading:
+
+> Wie ich arbeite
+
+Schritt 1:
+
+> **Verstehen** — In den ersten 1-2 Wochen lerne ich dein Produkt, Team, den Markt und deine Kunden kennen. Keine Annahmen, kein Standardansatz — ich verstehe zuerst deinen Kontext.
+
+Schritt 2:
+
+> **Ausrichten** — Wir definieren gemeinsam Produktstrategie, Roadmap und Erfolgsmetriken. Ich bringe Stakeholder auf eine Linie und stelle sicher, dass alle auf dasselbe Ziel hinarbeiten.
+
+Schritt 3:
+
+> **Umsetzen** — Ich arbeite in deinem Team mit und liefere. Sprint Planning, Reviews und praktische Produktarbeit — nicht nur Ratschläge aus der Ferne.
+
+FAQ:
+
+> **Wie sieht ein typisches Engagement aus?**
+> 1-2 Tage pro Woche, eingebettet in dein Team. Ich nehme an Standups teil, leite Plannings, reviewe Arbeit und treffe Produktentscheidungen gemeinsam mit dir. Die meisten Engagements laufen 3-6 Monate.
+>
+> **Wie unterscheidet sich das von Beratung?**
+> Ein Berater schreibt einen Report und geht. Ich arbeite in deinem Team mit und liefere gemeinsam. Ich bin verantwortlich für Ergebnisse, nicht für Deliverables.
+>
+> **Was ist der Zeitaufwand?**
+> Flexibel. Manche Kunden brauchen 1 Tag pro Woche, andere 2-3. Wir definieren den Umfang basierend auf dem, was du tatsächlich brauchst.
+
+### Section 6: CTA
+
+**EN:**
+
+Heading:
+
+> Let's talk about your product.
+
+Subtext:
+
+> Book a free discovery call. We'll discuss your product challenges and I'll tell you honestly whether I'm the right fit.
+
+CTA: Book a Discovery Call →
+
+Alternative: Or email me at david.ch.hamel@gmail.com
+
+**DE:**
+
+Heading:
+
+> Lass uns über dein Produkt sprechen.
+
+Subtext:
+
+> Buche ein kostenloses Discovery Call. Wir besprechen deine Produktherausforderungen und ich sage dir ehrlich, ob ich der richtige bin.
+
+CTA: Discovery Call buchen →
+
+Alternative: Oder schreib mir an david.ch.hamel@gmail.com
+
+---
+
+## 5. Build Services (`/build`)
+
+### Meta
+
+| Field                | EN                                                                                                                                                                    | DE                                                                                                                                                                                |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<title>`            | App & Website Development — David Hamel                                                                                                                               | App- & Website-Entwicklung — David Hamel                                                                                                                                          |
+| `<meta description>` | Product thinking + AI-native development. I build apps and websites for SMBs and financial services firms — from first brief to live product. One person, end-to-end. | Produktdenken + KI-natives Development. Ich baue Apps und Websites für KMU und Finanzdienstleister — vom ersten Briefing bis zum Live-Produkt. Eine Person, von A bis Z.          |
+
+### Section 1: Hero
+
+**EN:**
+
+Headline:
+
+> I understand your business. And I build the software.
+
+Subheadline:
+
+> Most developers build what you tell them to. I start with the problem. Eight years of fintech product experience means I understand your domain — and I use AI-native development to ship in weeks, not months.
 
 CTA:
 
@@ -638,129 +899,123 @@ CTA:
 
 Headline:
 
-> Produktführer, der Code liefert.
+> Ich verstehe dein Geschäft. Und ich baue die Software.
 
 Subheadline:
 
-> Ich habe acht Jahre lang Produkte bei Unternehmen wie Porsche und Fintech-Startups gebaut. Jetzt verbinde ich dieses Produktdenken mit KI-nativem Development, um Apps und Websites für Kunden zu bauen — schnell, hochwertig und zu einem Bruchteil dessen, was eine Agentur kosten würde.
+> Die meisten Entwickler bauen, was man ihnen sagt. Ich fange beim Problem an. Acht Jahre Fintech-Produkterfahrung bedeuten, dass ich deine Branche verstehe — und ich nutze KI-natives Development, um in Wochen statt Monaten zu liefern.
 
 CTA:
 
 > Lass uns über dein Projekt sprechen →
 
-### Section 2: Fractional CPO / Product Strategy
+### Section 2: How I Work
 
 **EN:**
 
 Heading:
 
-> Fractional CPO & Product Strategy
+> How I work
 
-> For startups and scaleups that need senior product leadership without a full-time hire.
+Step 1:
 
-> - Product strategy and roadmapping
-> - Team coaching and process design
-> - Technical architecture guidance
-> - Stakeholder alignment and prioritization
->
-> I've been the product leader at ventures that reached 35,000 users, secured €6.5M in funding, and served institutional clients managing over €1.5 trillion. I bring that experience to your team — part-time, without the overhead.
+> **Discovery** — We define what to build and why. I ask the questions a product leader asks: Who is this for? What problem does it solve? How will you know it's working? This phase ensures we build the right thing — not just a thing.
 
-Pricing note:
+Step 2:
 
-> Retainer-based, scoped per engagement. Let's talk about what you need.
+> **Build** — I design and develop the product using modern, production-grade tools. AI-native development means I ship faster than a traditional dev team — without cutting corners on quality.
+
+Step 3:
+
+> **Launch & Evolve** — We put it in front of real users and iterate. I don't build and disappear. The optional monthly retainer keeps your product evolving — new features, content updates, performance improvements.
 
 **DE:**
 
 Heading:
 
-> Fractional CPO & Produktstrategie
+> Wie ich arbeite
 
-> Für Startups und Scaleups, die erfahrene Produktführung brauchen, ohne eine Vollzeitstelle zu besetzen.
+Schritt 1:
 
-> - Produktstrategie und Roadmapping
-> - Teamcoaching und Prozessdesign
-> - Technische Architekturberatung
-> - Stakeholder-Alignment und Priorisierung
->
-> Ich war Produktverantwortlicher bei Ventures, die 35.000 Nutzer erreichten, €6,5 Mio. Finanzierung sicherten und institutionelle Kunden mit über €1,5 Billionen betreuten. Diese Erfahrung bringe ich in dein Team — in Teilzeit, ohne den Overhead.
+> **Discovery** — Wir definieren, was wir bauen und warum. Ich stelle die Fragen, die ein Produktverantwortlicher stellt: Für wen ist das? Welches Problem löst es? Woran erkennen wir, dass es funktioniert? Diese Phase stellt sicher, dass wir das Richtige bauen — nicht einfach nur etwas.
 
-Preishinweis:
+Schritt 2:
 
-> Retainer-basiert, individuell abgestimmt. Lass uns besprechen, was du brauchst.
+> **Build** — Ich designe und entwickle das Produkt mit modernen, produktionsreifen Tools. KI-natives Development bedeutet, ich liefere schneller als ein traditionelles Dev-Team — ohne Abstriche bei der Qualität.
 
-### Section 3: App & Website Builds
+Schritt 3:
+
+> **Launch & Weiterentwicklung** — Wir bringen es vor echte Nutzer und iterieren. Ich baue nicht und verschwinde. Der optionale monatliche Retainer hält dein Produkt am Wachsen — neue Features, Content-Updates, Performance-Verbesserungen.
+
+### Section 3: What I Build
 
 **EN:**
 
 Heading:
 
-> App & Website Builds
+> What I build
 
-> Full-service development of apps, websites, and landing pages — from first brief to live product.
+> - **Web applications and SaaS platforms** — Customer-facing products, dashboards, internal tools
+> - **Marketing websites and landing pages** — Fast, modern sites that convert
+> - **AI-powered features and integrations** — Chatbots, document processing, intelligent workflows
+> - **Internal tools and dashboards** — Data visualization, admin panels, operational tools
 
-> - **Fast:** Weeks, not months. AI-native tooling means I ship faster than a traditional dev team.
-> - **Modern:** Built on production-grade stacks — Astro, Next.js, React, Tailwind, TypeScript.
-> - **Transparent:** One-time build fee. No hourly billing, no scope creep surprises.
-> - **Ongoing:** Optional monthly retainer for hosting, content updates, new features, and analytics.
->
-> You get a product person who understands strategy, UX, and code — not just someone who builds what you tell them to.
+Tech:
 
-Pricing note:
-
-> Fixed build fee + optional monthly retainer. Request a quote for your project.
+> Built on production-grade stacks: Astro, Next.js, React, Tailwind, TypeScript, Supabase, Vercel.
 
 **DE:**
 
 Heading:
 
-> App & Website Builds
+> Was ich baue
 
-> Full-Service-Entwicklung von Apps, Websites und Landing Pages — vom ersten Briefing bis zum Live-Produkt.
+> - **Web-Applikationen und SaaS-Plattformen** — Kundenprodukte, Dashboards, interne Tools
+> - **Marketing-Websites und Landing Pages** — Schnelle, moderne Websites, die konvertieren
+> - **KI-gestützte Features und Integrationen** — Chatbots, Dokumentenverarbeitung, intelligente Workflows
+> - **Interne Tools und Dashboards** — Datenvisualisierung, Admin-Panels, Operations-Tools
 
-> - **Schnell:** Wochen, nicht Monate. KI-natives Tooling bedeutet, ich liefere schneller als ein traditionelles Dev-Team.
-> - **Modern:** Auf produktionsreifen Stacks gebaut — Astro, Next.js, React, Tailwind, TypeScript.
-> - **Transparent:** Einmaliger Build-Preis. Keine Stundenabrechnung, keine Scope-Creep-Überraschungen.
-> - **Laufend:** Optionaler monatlicher Retainer für Hosting, Content-Updates, neue Features und Analytics.
->
-> Du bekommst einen Produktmenschen, der Strategie, UX und Code versteht — nicht nur jemanden, der baut, was man ihm sagt.
+Tech:
 
-Preishinweis:
+> Gebaut auf produktionsreifen Stacks: Astro, Next.js, React, Tailwind, TypeScript, Supabase, Vercel.
 
-> Festpreis für den Build + optionaler monatlicher Retainer. Fordere ein Angebot für dein Projekt an.
-
-### Section 4: Why Me (Differentiators)
+### Section 4: Why Me — Not an Agency
 
 **EN:**
 
 Heading:
 
-> Why me — not an agency, not a freelancer
+> Why me — not an agency
 
-> **Product + Code in one person** — Most developers lack product thinking. Most PMs can't ship code. I do both.
+> **Domain expertise** — I've built fintech products for eight years. I understand financial services, compliance considerations, and how to build user trust. A generic agency would spend weeks learning what I already know.
 >
-> **AI-native development** — I use Claude Code and other AI tools for 3-5x faster delivery than traditional development. Same quality, less time, lower cost.
+> **Product + Code in one person** — You get a product strategist who writes the code himself. No telephone game between a PM, a designer, and a developer.
 >
-> **Transparent pricing** — Fixed build fee, clear monthly retainer. You know exactly what you're paying for before we start.
+> **AI-native development** — I use tools like Claude Code for faster delivery than traditional development. Same quality, less time, lower cost.
 >
-> **Ongoing relationship** — I don't build and disappear. The monthly retainer keeps your product evolving — new features, content updates, performance improvements.
+> **Transparent pricing** — Fixed build fee. No hourly billing, no scope creep surprises. You know exactly what you're paying for before we start.
 >
-> **Portfolio proof** — I build my own products. Alba Wealth, Ziggma, Rootlocaly — I use the same tools and approach for my own ventures as I do for clients.
+> **Ongoing relationship** — The optional monthly retainer keeps your product evolving. Hosting, content updates, new features, performance improvements — all handled.
+>
+> **Direct access** — You work with me. Not a junior developer. Not a project manager. Me.
 
 **DE:**
 
 Heading:
 
-> Warum ich — nicht eine Agentur, nicht ein Freelancer
+> Warum ich — nicht eine Agentur
 
-> **Produkt + Code in einer Person** — Den meisten Entwicklern fehlt Produktdenken. Die meisten PMs können keinen Code liefern. Ich mache beides.
+> **Branchenexpertise** — Ich baue seit acht Jahren Fintech-Produkte. Ich verstehe Finanzdienstleistungen, Compliance-Anforderungen und wie man Nutzervertrauen aufbaut. Eine generische Agentur würde Wochen brauchen, um zu lernen, was ich bereits weiß.
 >
-> **KI-natives Development** — Ich nutze Claude Code und andere KI-Tools für 3-5x schnellere Umsetzung als traditionelles Development. Gleiche Qualität, weniger Zeit, geringere Kosten.
+> **Produkt + Code in einer Person** — Du bekommst einen Produktstrategen, der den Code selbst schreibt. Kein Stille-Post-Spiel zwischen PM, Designer und Entwickler.
 >
-> **Transparente Preise** — Fester Build-Preis, klarer monatlicher Retainer. Du weißt genau, wofür du bezahlst, bevor wir anfangen.
+> **KI-natives Development** — Ich nutze Tools wie Claude Code für schnellere Umsetzung als traditionelles Development. Gleiche Qualität, weniger Zeit, geringere Kosten.
 >
-> **Laufende Beziehung** — Ich baue nicht und verschwinde. Der monatliche Retainer hält dein Produkt am Wachsen — neue Features, Content-Updates, Performance-Verbesserungen.
+> **Transparente Preise** — Fester Build-Preis. Keine Stundenabrechnung, keine Scope-Creep-Überraschungen. Du weißt genau, wofür du bezahlst, bevor wir anfangen.
 >
-> **Portfolio als Beweis** — Ich baue meine eigenen Produkte. Alba Wealth, Ziggma, Rootlocaly — ich nutze dieselben Tools und denselben Ansatz für meine eigenen Ventures wie für Kunden.
+> **Laufende Beziehung** — Der optionale monatliche Retainer hält dein Produkt am Wachsen. Hosting, Content-Updates, neue Features, Performance-Verbesserungen — alles abgedeckt.
+>
+> **Direkter Kontakt** — Du arbeitest mit mir. Nicht mit einem Junior-Entwickler. Nicht mit einem Projektmanager. Mit mir.
 
 ### Section 5: Selected Work
 
@@ -770,7 +1025,7 @@ Section heading:
 | ------------- | -------------------- |
 | Selected work | Ausgewählte Projekte |
 
-(3-4 ProjectCards — different selection from homepage. Focus on: Porsche, Ziggma, Alba Wealth, Rootlocaly)
+(3-4 ProjectCards — Focus on: Alba Wealth, Rootlocaly, Digital Partners, davidhamel.co itself)
 
 Link:
 
@@ -778,7 +1033,21 @@ Link:
 | --------------------- | ---------------------------- |
 | View full portfolio → | Gesamtes Portfolio ansehen → |
 
-### Section 6: CTA
+### Section 6: Pricing
+
+**EN:**
+
+> Fixed build fee + optional monthly retainer. No hourly billing, no surprises.
+>
+> Every project starts with a free discovery call where we scope the work together. You get a clear quote before we start.
+
+**DE:**
+
+> Festpreis für den Build + optionaler monatlicher Retainer. Keine Stundenabrechnung, keine Überraschungen.
+>
+> Jedes Projekt beginnt mit einem kostenlosen Discovery Call, in dem wir den Umfang gemeinsam definieren. Du bekommst ein klares Angebot, bevor wir starten.
+
+### Section 7: CTA
 
 **EN:**
 
@@ -788,9 +1057,9 @@ Heading:
 
 Subtext:
 
-> Whether you need a fractional product leader or someone to build your app from scratch — book a call and we'll figure out the right approach.
+> Tell me what you need built. We'll have a free discovery call, I'll scope the work, and you'll get a clear quote — no obligation.
 
-CTA: Book a Call →
+CTA: Let's Talk →
 
 Alternative: Or email me at david.ch.hamel@gmail.com
 
@@ -802,15 +1071,15 @@ Heading:
 
 Subtext:
 
-> Ob du einen fraktionalen Produktverantwortlichen brauchst oder jemanden, der deine App von Grund auf baut — buche ein Gespräch und wir finden den richtigen Ansatz.
+> Sag mir, was du brauchst. Wir machen einen kostenlosen Discovery Call, ich definiere den Umfang und du bekommst ein klares Angebot — unverbindlich.
 
-CTA: Gespräch buchen →
+CTA: Lass uns sprechen →
 
 Alternative: Oder schreib mir an david.ch.hamel@gmail.com
 
 ---
 
-## 5. Projects Grid (`/projects`)
+## 6. Projects Grid (`/projects`)
 
 ### Meta
 
@@ -935,7 +1204,7 @@ Subheadline:
 
 ---
 
-## 6. Individual Project Pages (`/projects/[slug]`)
+## 7. Individual Project Pages (`/projects/[slug]`)
 
 ### Template Meta Pattern
 
@@ -1377,7 +1646,7 @@ Metadata:
 
 Overview:
 
-> Rootlocaly is a local discovery platform I built as a side project to learn AI-native development workflows. It's a showcase of what's possible when you combine product thinking with tools like Claude Code — going from idea to deployed app in days, not months.
+> Rootlocaly is a local events discovery platform I built as a side project to learn AI-native development workflows. It's a showcase of what's possible when you combine product thinking with tools like Claude Code — going from idea to deployed app in days, not months.
 >
 > This project demonstrates the same approach I use for client builds: fast iteration, modern stack, product-first thinking.
 
@@ -1396,7 +1665,7 @@ Metadaten:
 
 Überblick:
 
-> Rootlocaly ist eine lokale Entdeckungsplattform, die ich als Nebenprojekt gebaut habe, um KI-native Entwicklungsworkflows zu lernen. Es ist ein Showcase dessen, was möglich ist, wenn man Produktdenken mit Tools wie Claude Code verbindet — von der Idee zur deployed App in Tagen, nicht Monaten.
+> Rootlocaly ist eine lokale Event-Entdeckungsplattform, die ich als Nebenprojekt gebaut habe, um KI-native Entwicklungsworkflows zu lernen. Es ist ein Showcase dessen, was möglich ist, wenn man Produktdenken mit Tools wie Claude Code verbindet — von der Idee zur deployed App in Tagen, nicht Monaten.
 >
 > Dieses Projekt zeigt denselben Ansatz, den ich für Kunden-Builds verwende: schnelle Iteration, moderner Stack, produktzuerst-Denken.
 
@@ -1418,7 +1687,7 @@ Was ich gemacht habe:
 
 ---
 
-## 7. Blog Listing (`/blog`)
+## 8. Blog Listing (`/blog`)
 
 ### Meta
 
@@ -1466,19 +1735,19 @@ Same as homepage Section 5.
 
 ---
 
-## 8. Blog Post Template (`/blog/[slug]`)
+## 9. Blog Post Template (`/blog/[slug]`)
 
 ### Author Bio (bottom of every post)
 
 **EN:**
 
-> **David Hamel** is an independent financial planning coach and product builder based in Berlin. He helps expats in Germany take control of their finances and builds apps and products from strategy to shipped code.
+> **David Hamel** is an independent financial planning coach, product leader, and builder based in Berlin. He coaches expats through German finances, leads product for startups, and builds apps for businesses.
 
 Link: More about David →
 
 **DE:**
 
-> **David Hamel** ist unabhängiger Finanzcoach und Product Builder in Berlin. Er hilft Expats in Deutschland, ihre Finanzen in den Griff zu bekommen, und baut Apps und Produkte von der Strategie bis zum fertigen Code.
+> **David Hamel** ist unabhängiger Finanzcoach, Produktführer und Builder in Berlin. Er coacht Expats durch das deutsche Finanzsystem, leitet Produkte für Startups und baut Apps für Unternehmen.
 
 Link: Mehr über David →
 
@@ -1502,7 +1771,7 @@ Link: Mehr über David →
 
 ---
 
-## 9. Adventures (`/adventures`)
+## 10. Adventures (`/adventures`)
 
 ### Meta
 
@@ -1544,14 +1813,14 @@ Subheadline:
 
 ---
 
-## 10. Contact (`/contact`)
+## 11. Contact (`/contact`)
 
 ### Meta
 
 | Field                | EN                                                                                                              | DE                                                                                                                          |
 | -------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | `<title>`            | Contact — David Hamel                                                                                           | Kontakt — David Hamel                                                                                                       |
-| `<meta description>` | Book a free consultation or get in touch. Financial coaching for expats, product & build services for startups. | Buche ein kostenloses Erstgespräch oder nimm Kontakt auf. Finanzcoaching für Expats, Product & Build Services für Startups. |
+| `<meta description>` | Book a free consultation or get in touch. Financial coaching for expats, product leadership for startups, app development for businesses. | Buche ein kostenloses Erstgespräch oder nimm Kontakt auf. Finanzcoaching für Expats, Produktführung für Startups, App-Entwicklung für Unternehmen. |
 
 ### Content
 
@@ -1563,7 +1832,7 @@ Headline:
 
 Subheadline:
 
-> Whether you need financial coaching or a product partner — the first conversation is free.
+> Whether you need financial coaching, product leadership, or someone to build your next project — the first conversation is free.
 
 Calendly heading:
 
@@ -1584,7 +1853,7 @@ Headline:
 
 Subheadline:
 
-> Ob du Finanzcoaching brauchst oder einen Produktpartner — das erste Gespräch ist kostenlos.
+> Ob du Finanzcoaching brauchst, Produktführung oder jemanden, der dein nächstes Projekt baut — das erste Gespräch ist kostenlos.
 
 Calendly heading:
 
@@ -1599,7 +1868,7 @@ Direct contact heading:
 
 ---
 
-## 11. Legal Pages
+## 12. Legal Pages
 
 ### Impressum (`/impressum`)
 

@@ -2,7 +2,7 @@
 
 > Detailed IA spec. Defines every page, section, navigation element, and content relationship.
 >
-> Last updated: 2026-02-15
+> Last updated: 2026-02-17 (v2 — Three-service split)
 
 ---
 
@@ -11,17 +11,18 @@
 ### Primary Navigation (sticky header)
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│  David Hamel          About  Services  Projects  Blog  Adventures  │
-│  [logo/wordmark]                                    [Book a Call ↗] │
-└─────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  David Hamel      About  Coaching  Services ▾  Projects  Blog  Adventures   │
+│  [logo/wordmark]                                             [Book a Call ↗] │
+└──────────────────────────────────────────────────────────────────────────────┘
 ```
 
 | Nav Item    | Links To         | Notes                                                                |
 | ----------- | ---------------- | -------------------------------------------------------------------- |
 | David Hamel | `/`              | Wordmark in heading font (no logo for v1)                            |
 | About       | `/about`         |                                                                      |
-| Services    | dropdown or link | See below                                                            |
+| Coaching    | `/coaching`      | Top-level — serves a completely different audience than other services |
+| Services    | dropdown         | See below                                                            |
 | Projects    | `/projects`      |                                                                      |
 | Blog        | `/blog`          |                                                                      |
 | Adventures  | `/adventures`    |                                                                      |
@@ -29,29 +30,30 @@
 
 **Services navigation behavior:**
 
-- On desktop: hovering "Services" shows a simple dropdown with two items:
-  - Financial Coaching → `/coaching`
-  - Product & Build → `/services`
+- Coaching is top-level because it serves a fundamentally different audience (expat professionals) from the other two services
+- On desktop: hovering "Services" shows a dropdown with two items:
+  - Product Leadership → `/product`
+  - Build → `/build`
 - On mobile: tapping "Services" expands to show both links
-- Rationale: the two tracks serve completely different audiences. Grouping them under one nav item keeps the header clean while making both discoverable.
+- Rationale: Product leadership and build services share some audience overlap (tech/finance businesses). Coaching is completely separate and should be immediately findable without a dropdown.
 
 ### Footer Navigation
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│  David Hamel                                                        │
-│                                                                     │
-│  SERVICES          EXPLORE          CONNECT                         │
-│  Financial Coaching  Blog           Email                           │
-│  Product & Build     Projects       LinkedIn                        │
-│  Book a Call         Adventures     GitHub                          │
-│                      About                                          │
-│                                                                     │
-│  ─────────────────── Newsletter Signup ───────────────────          │
-│  [Email input]                              [Subscribe →]           │
-│                                                                     │
-│  © 2026 David Hamel · Impressum · Datenschutz                      │
-└─────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────┐
+│  David Hamel                                                         │
+│                                                                      │
+│  SERVICES            EXPLORE          CONNECT                        │
+│  Financial Coaching   Blog            Email                          │
+│  Product Leadership   Projects        LinkedIn                       │
+│  Build                Adventures      GitHub                         │
+│  Book a Call          About                                          │
+│                                                                      │
+│  ─────────────────── Newsletter Signup ───────────────────           │
+│  [Email input]                              [Subscribe →]            │
+│                                                                      │
+│  © 2026 David Hamel · Impressum · Datenschutz                       │
+└──────────────────────────────────────────────────────────────────────┘
 ```
 
 **Legal pages (required for Germany):**
@@ -73,78 +75,92 @@
 
 ### 1. Homepage (`/`)
 
-**Purpose:** First impression. Establish who David is, surface both tracks, showcase credibility, drive to next action.
+**Purpose:** First impression. Establish who David is, route three distinct audiences, showcase credibility, drive to next action.
 
 **URL:** `/`
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│ [NAV]                                                            │
-├──────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  HERO SECTION                                                    │
-│  ─────────────────────────────────────────────────               │
-│  Headline: "Financial planning coach.                            │
-│             Product leader. Builder."                            │
-│  Subheadline: 1-2 sentences from brand statement                │
-│                                                                  │
-│  [Financial Coaching →]    [Product & Build Services →]          │
-│   links to /coaching        links to /services                   │
-│                                                                  │
-├──────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  WHO I AM (brief intro block)                                    │
-│  ─────────────────────────────────────────────────               │
-│  [Headshot]  2-3 sentences. Expat story, product background,    │
-│              what I do now. Link: "More about me →" → /about     │
-│                                                                  │
-├──────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  SELECTED WORK                                                   │
-│  ─────────────────────────────────────────────────               │
-│  3-4 ProjectCards in a grid. Each card shows:                    │
-│  - Project name                                                  │
-│  - One-line description                                          │
-│  - Role tag (Founder / Contract / Side Project)                  │
-│  - Key metric or achievement                                     │
-│  Links to individual /projects/[slug] pages                      │
-│                                                                  │
-│  Suggested featured projects:                                    │
-│  Alba Wealth (active), Ziggma (metrics), Porsche (brand),       │
-│  Digital Partners (scope)                                        │
-│                                                                  │
-│  "View all projects →" → /projects                               │
-│                                                                  │
-├──────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  LATEST FROM THE BLOG                                            │
-│  ─────────────────────────────────────────────────               │
-│  2-3 BlogCards. Each shows:                                      │
-│  - Title                                                         │
-│  - Pillar tag (color-coded)                                      │
-│  - Publication date                                              │
-│  - 1-line excerpt                                                │
-│  Links to /blog/[slug]                                           │
-│                                                                  │
-│  "Read all posts →" → /blog                                      │
-│                                                                  │
-├──────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  NEWSLETTER SIGNUP                                               │
-│  ─────────────────────────────────────────────────               │
-│  Headline: "Insights on money, building, and living abroad."     │
-│  Subtext: No spam. Unsubscribe anytime.                          │
-│  [Email input] [Subscribe →]                                     │
-│  React island: NewsletterSignup.tsx → Resend Contacts API        │
-│                                                                  │
-├──────────────────────────────────────────────────────────────────┤
-│ [FOOTER]                                                         │
-└──────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│ [NAV]                                                             │
+├───────────────────────────────────────────────────────────────────┤
+│                                                                   │
+│  HERO SECTION                                                     │
+│  ─────────────────────────────────────────────────                │
+│  Headline: "Financial planning coach.                             │
+│             Product leader. Builder."                             │
+│  Throughline subheadline: connects all three services             │
+│  with a unifying theme                                            │
+│                                                                   │
+├───────────────────────────────────────────────────────────────────┤
+│                                                                   │
+│  THREE-CARD ROUTING (audience self-selection)                     │
+│  ─────────────────────────────────────────────────                │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐            │
+│  │  Financial   │  │   Product    │  │  App & Web   │            │
+│  │  Coaching    │  │  Leadership  │  │    Builds    │            │
+│  │             │  │             │  │             │            │
+│  │ For expat   │  │ For startups │  │ For SMBs &  │            │
+│  │ professionals│  │ & scaleups  │  │ financial   │            │
+│  │ in Germany  │  │             │  │ services    │            │
+│  │             │  │             │  │ firms       │            │
+│  │ [Learn →]   │  │ [Learn →]   │  │ [Learn →]   │            │
+│  └──────────────┘  └──────────────┘  └──────────────┘            │
+│   → /coaching       → /product        → /build                    │
+│                                                                   │
+├───────────────────────────────────────────────────────────────────┤
+│                                                                   │
+│  WHO I AM (brief intro block)                                     │
+│  ─────────────────────────────────────────────────                │
+│  [Headshot]  2-3 sentences. Expat story, product background,     │
+│              what I do now. Link: "More about me →" → /about      │
+│                                                                   │
+├───────────────────────────────────────────────────────────────────┤
+│                                                                   │
+│  SELECTED WORK                                                    │
+│  ─────────────────────────────────────────────────                │
+│  3-4 ProjectCards in a grid. Each card shows:                     │
+│  - Project name                                                   │
+│  - One-line description                                           │
+│  - Role tag (Founder / Contract / Side Project)                   │
+│  - Key metric or achievement                                      │
+│  Links to individual /projects/[slug] pages                       │
+│                                                                   │
+│  Suggested featured projects:                                     │
+│  Alba Wealth (active), Ziggma (metrics), Porsche (brand),        │
+│  Digital Partners (scope)                                         │
+│                                                                   │
+│  "View all projects →" → /projects                                │
+│                                                                   │
+├───────────────────────────────────────────────────────────────────┤
+│                                                                   │
+│  LATEST FROM THE BLOG                                             │
+│  ─────────────────────────────────────────────────                │
+│  2-3 BlogCards. Each shows:                                       │
+│  - Title                                                          │
+│  - Pillar tag (color-coded)                                       │
+│  - Publication date                                               │
+│  - 1-line excerpt                                                 │
+│  Links to /blog/[slug]                                            │
+│                                                                   │
+│  "Read all posts →" → /blog                                       │
+│                                                                   │
+├───────────────────────────────────────────────────────────────────┤
+│                                                                   │
+│  NEWSLETTER SIGNUP                                                │
+│  ─────────────────────────────────────────────────                │
+│  Headline: "Insights on money, building, and living abroad."      │
+│  Subtext: No spam. Unsubscribe anytime.                           │
+│  [Email input] [Subscribe →]                                      │
+│  React island: NewsletterSignup.tsx → Resend Contacts API         │
+│                                                                   │
+├───────────────────────────────────────────────────────────────────┤
+│ [FOOTER]                                                          │
+└───────────────────────────────────────────────────────────────────┘
 ```
 
 **CTAs on this page:**
 
-1. Hero → `/coaching` or `/services`
+1. Three-card routing → `/coaching`, `/product`, `/build`
 2. Selected work cards → `/projects/[slug]`
 3. Blog cards → `/blog/[slug]`
 4. Newsletter signup → Resend API
@@ -197,8 +213,10 @@ SECTIONS (top to bottom):
    - Education: RSM BSc/MSc (Cum Laude), EDHEC exchange, SMU Singapore exchange
 
 5. CTA SECTION
-   - Two paths: "Need financial coaching?" → /coaching
-                 "Need a product person?" → /services
+   - Three paths:
+     "Need financial coaching?" → /coaching
+     "Need product leadership?" → /product
+     "Need something built?" → /build
 ```
 
 **Content cross-references:**
@@ -206,6 +224,8 @@ SECTIONS (top to bottom):
 - Each project mention links to `/projects/[slug]`
 - Alba Wealth link also goes to `alba-wealth.com` (external)
 - "Financial coaching" links to `/coaching`
+- "Product leadership" links to `/product`
+- "Build" links to `/build`
 
 ---
 
@@ -269,59 +289,126 @@ SECTIONS:
 
 ---
 
-### 4. Product & Build Services (`/services`)
+### 4. Product Leadership (`/product`)
 
-**Purpose:** Sell the product/build services. Differentiate from agencies and freelancers. Convert to contact/Calendly.
+**Purpose:** Sell fractional CPO and product strategy services. Build trust through track record. Convert to Calendly booking.
 
-**URL:** `/services`
+**URL:** `/product`
 
-**Target audience:** Startups, small businesses, founders
+**Target audience:** Startups and scaleups needing senior product leadership without a full-time hire. Likely fintech-adjacent or tech companies with existing engineering teams.
 
 ```
 SECTIONS:
 ─────────────────────────────
 
 1. HERO
-   - Headline: "Product leader who ships code."
-   - Subheadline: "Strategy through execution, powered by AI."
-   - [Let's Talk About Your Project →] → Calendly or /contact
+   - Headline: "Senior product leadership, without the full-time hire."
+   - Subheadline: Positions 8+ years of product experience, names recognizable companies.
+   - [Book a Discovery Call →] → Calendly
 
-2. SERVICE TIER 1: FRACTIONAL CPO / PRODUCT STRATEGY
-   - For startups and scaleups needing senior product leadership
-   - What's included: strategy, roadmapping, team coaching, technical architecture guidance
-   - Pricing model: retainer-based, scoped per engagement
-   - "See my product work →" links to relevant /projects/* pages
-     (Porsche, Ziggma, DeRisk, Buena, Carly, Impactive)
+2. WHEN THIS WORKS (and when it doesn't)
+   - "When to hire me" framing (builds trust by showing selectivity)
+   - Also: "When this is NOT the right fit"
+   - Pattern borrowed from Harpal Singh — strongest trust-building structural element
+     observed in competitive research
 
-3. SERVICE TIER 2: APP & WEBSITE BUILDS
-   - Full-service development using AI-native tooling (Claude Code)
-   - What's included: design, development, deployment
-   - Stack: Astro, Next.js, React, Tailwind
-   - Pricing model: one-time build fee + optional monthly retainer
-   - Retainer covers: hosting, content updates, minor features, analytics
-   - "See what I've built →" links to /projects/alba-wealth, /projects/rootlocaly
+3. WHAT YOU GET
+   - Structured service description (scannable, not narrative):
+     • Product strategy and roadmapping
+     • Team coaching and process design
+     • Technical architecture guidance
+     • Stakeholder alignment and prioritization
+     • Go-to-market support
+   - Engagement structure: typically 1-2 days/week, 3+ months
 
-4. WHY ME (DIFFERENTIATORS)
-   - Product + Code in one person
-   - AI-native development (3-5x faster)
-   - Transparent pricing (no scope creep)
-   - Ongoing relationship (monthly retainer)
-   - Portfolio proof (I build my own products)
-
-5. SELECTED WORK (inline proof)
-   - 3-4 ProjectCards linking to /projects/*
-   - Different selection from homepage — focus on:
-     Porsche (brand), Ziggma (scale), Alba (current), one build project
+4. TRACK RECORD (inline proof)
+   - 3-4 ProjectCards linking to relevant /projects/* pages
+   - Focus: Porsche (brand), Ziggma (scale), DeRisk (institutional), Buena (results)
+   - Specific metrics per project, not generic claims
    - "View full portfolio →" → /projects
 
+5. HOW I WORK
+   - 3-step process visualization:
+     1. Assess — Understand your product, team, and market position
+     2. Align — Define strategy, roadmap, and success metrics
+     3. Execute — Embed with your team and ship
+   - FAQ-style section for common questions:
+     "What does a typical engagement look like?"
+     "How is this different from a consultant?"
+     "What's the time commitment?"
+
 6. CTA
-   - "Let's talk about your project."
+   - "Let's talk about your product."
    - Calendly embed or link to /contact
+   - Secondary: newsletter for prospects not ready to talk
 ```
 
 ---
 
-### 5. Projects — Portfolio Grid (`/projects`)
+### 5. Build Services (`/build`)
+
+**Purpose:** Sell app and website development services. Differentiate from agencies and freelance developers through product thinking + domain expertise. Convert to contact/Calendly.
+
+**URL:** `/build`
+
+**Target audience:** SMBs, financial services firms, and fintech companies that need a web presence, internal tool, or customer-facing app built. They value domain expertise and a thinking partner, not just a pair of hands.
+
+```
+SECTIONS:
+─────────────────────────────
+
+1. HERO
+   - Headline: "I understand your business. And I build the software."
+   - Subheadline: Product thinking + AI-native development. One person, end-to-end.
+   - [Let's Talk About Your Project →] → /contact
+
+2. HOW I WORK (3-step process)
+   - Visual process section — the core differentiator:
+     1. Discovery — We define what to build and why (product strategy hat)
+     2. Build — I ship working software in weeks, not months (builder hat)
+     3. Launch & Evolve — We put it in front of real users and iterate (product leader hat)
+   - Key message: "Unlike a developer, I start with the problem.
+     Unlike an agency, you work directly with me."
+
+3. WHAT I BUILD
+   - Deliverable types (scannable list):
+     • Web applications and SaaS platforms
+     • Marketing websites and landing pages
+     • Internal tools and dashboards
+     • AI-powered features and integrations
+   - Tech stack: Astro, Next.js, React, Tailwind, TypeScript
+   - "Built on production-grade stacks — modern, fast, maintainable."
+
+4. WHY ME — NOT AN AGENCY
+   - Differentiators tailored to SMB/financial services buyer:
+     • Domain expertise: "I've built fintech products for 8 years.
+       I understand financial services, compliance considerations, and user trust."
+     • Product + Code: "You get a product strategist who writes the code himself."
+     • Speed: "AI-native development — weeks, not months."
+     • Transparent pricing: "Fixed build fee. No hourly billing, no scope creep."
+     • Ongoing relationship: "Optional monthly retainer for hosting, updates, and new features."
+     • Direct access: "You work with me — not a junior developer or a project manager."
+
+5. SELECTED WORK (inline proof)
+   - 3-4 ProjectCards linking to /projects/*
+   - Focus: Alba Wealth (fintech, current), Rootlocaly (AI-native showcase),
+     Digital Partners (scope), one client build
+   - "View full portfolio →" → /projects
+
+6. PRICING SIGNAL
+   - Not full pricing, but engagement structure:
+     "Fixed build fee + optional monthly retainer. Request a quote for your project."
+   - Reduces tire-kickers without boxing into specific rates
+
+7. CTA
+   - "Let's talk about your project."
+   - Calendly embed or link to /contact
+   - Secondary: email link
+```
+
+---
+
+### 6. Projects — Portfolio Grid (`/projects`)
 
 **Purpose:** Showcase all projects. Prove the "practitioner who builds" positioning. Let visitors browse by interest.
 
@@ -365,7 +452,7 @@ SECTIONS:
 
 ---
 
-### 6. Individual Project Pages (`/projects/[slug]`)
+### 7. Individual Project Pages (`/projects/[slug]`)
 
 **Purpose:** Case-study-like detail for each project. Demonstrate depth, results, and skills.
 
@@ -420,7 +507,7 @@ SECTIONS:
 
 ---
 
-### 7. Blog Listing (`/blog`)
+### 8. Blog Listing (`/blog`)
 
 **Purpose:** Browse all blog content. Filter by topic/pillar.
 
@@ -452,17 +539,17 @@ SECTIONS:
 
 **Content pillar → audience mapping:**
 
-| Pillar                  | Audience                     | Track                    |
-| ----------------------- | ---------------------------- | ------------------------ |
-| Expat Money Mastery     | Coaching prospects           | Financial coaching       |
-| Systems & Money         | Coaching prospects + general | Financial coaching       |
-| Building Alba           | Both audiences               | Bridge                   |
-| Freedom by Design       | General / personal brand     | Personal                 |
-| The Practitioner's Edge | Product/build prospects      | Product & build services |
+| Pillar                  | Audience                      | Service page link |
+| ----------------------- | ----------------------------- | ----------------- |
+| Expat Money Mastery     | Coaching prospects             | `/coaching`       |
+| Systems & Money         | Coaching prospects + general   | `/coaching`       |
+| Building Alba           | All audiences                  | Bridge            |
+| Freedom by Design       | General / personal brand       | Personal          |
+| The Practitioner's Edge | Product + build prospects      | `/product`, `/build` |
 
 ---
 
-### 8. Blog Post (`/blog/[slug]`)
+### 9. Blog Post (`/blog/[slug]`)
 
 **Purpose:** Individual article. Deep content. Drive newsletter signups and related reading.
 
@@ -497,7 +584,7 @@ SECTIONS:
 
 ---
 
-### 9. Adventures (`/adventures`)
+### 10. Adventures (`/adventures`)
 
 **Purpose:** Personal brand building. Show the "Active Living" value. Photography showcase.
 
@@ -526,7 +613,7 @@ SECTIONS:
 
 ---
 
-### 10. Contact (`/contact`)
+### 11. Contact (`/contact`)
 
 **Purpose:** Catch-all contact point. Calendly booking + direct email + social links.
 
@@ -538,7 +625,8 @@ SECTIONS:
 
 1. HERO
    - Headline: "Let's talk."
-   - Subheadline: "Whether you need financial coaching or a product partner."
+   - Subheadline: "Whether you need financial coaching, product leadership,
+     or someone to build your next project."
 
 2. CALENDLY EMBED
    - Full Calendly widget (React island: CalendlyEmbed.tsx, client:visible)
@@ -559,7 +647,7 @@ SECTIONS:
 
 ---
 
-### 11. Legal Pages
+### 12. Legal Pages
 
 **`/impressum`** — Required German legal page (Impressum)
 
@@ -576,39 +664,47 @@ SECTIONS:
 ## Content Relationships Map
 
 ```
-                          ┌──────────┐
-                          │ HOMEPAGE │
-                          └────┬─────┘
-                               │
-              ┌────────────────┼────────────────┐
-              │                │                │
-              ▼                ▼                ▼
-        ┌──────────┐    ┌──────────┐    ┌──────────┐
-        │  ABOUT   │    │ SERVICES │    │   BLOG   │
-        │ (story)  │    │ (2 tracks)│   │ (content)│
-        └────┬─────┘    └────┬─────┘    └────┬─────┘
-             │               │               │
-             │          ┌────┴────┐          │
-             │          │         │          │
-             ▼          ▼         ▼          ▼
-        ┌─────────┐ ┌────────┐ ┌────────┐ ┌────────────┐
-        │PROJECTS │ │COACHING│ │SERVICES│ │ BLOG POST  │
-        │ (grid)  │ │(track1)│ │(track2)│ │  [slug]    │
-        └────┬────┘ └────┬───┘ └────┬───┘ └────────────┘
-             │           │         │
-             ▼           ▼         │
-        ┌─────────┐  Calendly     │
-        │ PROJECT │◄──────────────┘
-        │ [slug]  │  (proof points)
-        └─────────┘
+                            ┌──────────┐
+                            │ HOMEPAGE │
+                            └────┬─────┘
+                                 │
+                    ┌────────────┼────────────┐
+                    │            │            │
+                    ▼            ▼            ▼
+              ┌──────────┐ ┌──────────┐ ┌──────────┐
+              │  ABOUT   │ │ 3 CARDS  │ │   BLOG   │
+              │ (story)  │ │ (routes) │ │ (content)│
+              └────┬─────┘ └────┬─────┘ └────┬─────┘
+                   │            │            │
+                   │     ┌──────┼──────┐     │
+                   │     │      │      │     │
+                   ▼     ▼      ▼      ▼     ▼
+              ┌────────┐┌────────┐┌────────┐┌────────────┐
+              │COACHING││PRODUCT ││ BUILD  ││ BLOG POST  │
+              │(expats)││(starts)││(SMBs)  ││  [slug]    │
+              └───┬────┘└───┬────┘└───┬────┘└────────────┘
+                  │         │         │
+                  ▼         ▼         ▼
+              ┌─────────┐  Calendly
+              │PROJECTS │◄─── (proof points from all 3 service pages)
+              │ (grid)  │
+              └────┬────┘
+                   ▼
+              ┌─────────┐
+              │ PROJECT │
+              │ [slug]  │
+              └─────────┘
 
 Cross-links:
+  • Homepage → Coaching, Product, Build (three-card routing)
   • Homepage → Projects (selected work), Blog (latest posts)
   • About → Projects (inline links in career narrative)
-  • Services → Projects (proof points)
+  • About → Coaching, Product, Build (three-path CTA)
+  • Product → Projects (proof: Porsche, Ziggma, DeRisk, Buena)
+  • Build → Projects (proof: Alba, Rootlocaly, Digital Partners)
   • Coaching → Alba Wealth (external)
   • Blog posts → Related posts, Projects (where relevant)
-  • Projects → Next/prev project, Services, Contact
+  • Projects → Next/prev project, Contact
   • Every page → Calendly (via nav CTA), Newsletter (via footer)
 ```
 
@@ -621,9 +717,10 @@ Cross-links:
 | `Nav.astro`            | Astro        | All pages                         | Sticky header, Services dropdown, mobile hamburger  |
 | `Footer.astro`         | Astro        | All pages                         | 3-column links, newsletter signup, legal links      |
 | `NewsletterSignup.tsx` | React island | Homepage, Blog, Footer, Contact   | `client:visible` on most, `client:load` on Contact  |
-| `CalendlyEmbed.tsx`    | React island | Coaching, Contact                 | `client:visible`                                    |
+| `CalendlyEmbed.tsx`    | React island | Coaching, Product, Build, Contact | `client:visible`                                    |
 | `BlogCard.astro`       | Astro        | Homepage, Blog listing            | Title, date, pillar tag, excerpt                    |
-| `ProjectCard.astro`    | Astro        | Homepage, Projects grid, Services | Name, description, role, period, type badge, metric |
+| `ServiceCard.astro`    | Astro        | Homepage                          | Three-card routing: icon, heading, description, CTA |
+| `ProjectCard.astro`    | Astro        | Homepage, Projects, Product, Build | Name, description, role, period, type badge, metric |
 | `CTABlock.astro`       | Astro        | Multiple pages                    | Reusable call-to-action section                     |
 | `SectionWrapper.astro` | Astro        | All pages                         | Consistent max-width, padding, spacing              |
 | `PillarTag.astro`      | Astro        | Blog cards, blog posts            | Color-coded content pillar label                    |
@@ -635,8 +732,9 @@ Cross-links:
 ```
 /                              Homepage
 /about                         About / Story
-/coaching                      Financial Coaching (Track 1)
-/services                      Product & Build Services (Track 2)
+/coaching                      Financial Coaching
+/product                       Product Leadership (Fractional CPO)
+/build                         Build Services (App & Web Development)
 /projects                      Portfolio grid
 /projects/alba-wealth          Project: Alba Wealth
 /projects/ziggma               Project: Ziggma
@@ -657,11 +755,11 @@ Cross-links:
 
 **Total pages at launch:**
 
-- 9 static pages (home, about, coaching, services, projects, blog, adventures, contact, impressum)
+- 10 static pages (home, about, coaching, product, build, projects, blog, adventures, contact, impressum)
 - 1 privacy page (datenschutz)
 - 9 project pages
 - N blog posts (start with 2-3)
-- **= ~22 pages at launch**
+- **= ~24 pages at launch** (EN) + ~24 DE = ~48 bilingual pages
 
 ---
 
@@ -678,6 +776,8 @@ Every page gets:
   - Homepage: `Person` schema
   - Blog posts: `Article` schema
   - Coaching: `Service` schema
+  - Product Leadership: `Service` schema
+  - Build Services: `Service` schema
 
 ---
 

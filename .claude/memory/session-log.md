@@ -535,4 +535,77 @@ src/i18n/ui.ts — expanded translation keys
 
 ---
 
-_Next session: Visual review in Playwright, commit and push, then Vercel deployment_
+---
+
+## Session 7 — 2026-02-17 (Three-Service Split)
+
+**Duration:** ~2 hours | **Phase:** Phase 1 (Foundation)
+
+### What happened
+
+#### Three-Service Split Implementation
+
+Implemented the full three-service split plan, restructuring the site from two service tracks (Coaching + combined Product & Build at `/services`) into three distinct service pages.
+
+1. **i18n Foundation** — Updated `src/i18n/ui.ts` with ~12 new/updated translation keys (nav.coaching, nav.services.product, nav.services.build, footer.col1.product, product.title/description, build.title/description, updated contact keys). Added `/product` and `/build` to `src/i18n/pathMap.ts`.
+
+2. **New ServiceCard component** — Created `src/components/ServiceCard.astro` for the homepage three-card routing section. White card with teal hover border and arrow animation.
+
+3. **Product Leadership pages** — Created `src/pages/product.astro` (EN) and `src/pages/de/product.astro` (DE) with 6 sections: Hero, When This Works (two-column positive/negative), What You Get (5 deliverables + engagement callout), Track Record (4 ProjectCards), How I Work + FAQ (3-step + 3 FAQs), CTA.
+
+4. **Build Services pages** — Created `src/pages/build.astro` (EN) and `src/pages/de/build.astro` (DE) with 7 sections: Hero, How I Work (3-step), What I Build (4 deliverables + tech stack), Why Me — Not an Agency (6 cards in 2x3 grid), Selected Work (3 ProjectCards), Pricing Signal, CTA.
+
+5. **Navigation restructured** — Updated `Nav.astro`: Coaching promoted to top-level (after About), Services dropdown now shows Product Leadership + Build. Updated `MobileNav.astro`: same structure. Updated `Footer.astro`: Services column lists Financial Coaching, Product Leadership, Build.
+
+6. **Homepage updated** — Updated `index.astro` and `de/index.astro`: new throughline subheadline, removed old two CTA buttons, added three-card routing section (ServiceCard), updated Who I Am paragraph.
+
+7. **About page updated** — Updated `about.astro` and `de/about.astro`: replaced two-button CTABlock with three-path CTA section using `border-l` pattern.
+
+8. **Contact page updated** — Updated `contact.astro` and `de/contact.astro`: subheadline and meta description now mention all three services.
+
+9. **Services redirect** — Replaced `services.astro` and `de/services.astro` with 301 redirects to homepage.
+
+10. **Build verification** — `pnpm build` passed with 42 pages, zero errors. Playwright verification confirmed all pages, navigation, language switcher, and redirects working.
+
+### Files created (5 files)
+
+```
+src/components/ServiceCard.astro
+src/pages/product.astro
+src/pages/de/product.astro
+src/pages/build.astro
+src/pages/de/build.astro
+```
+
+### Files modified (13 files)
+
+```
+src/i18n/ui.ts — ~12 new/updated translation keys
+src/i18n/pathMap.ts — /product and /build mappings
+src/components/Nav.astro — Coaching top-level, dropdown items
+src/components/MobileNav.astro — Same nav restructure
+src/components/Footer.astro — Three service links
+src/pages/index.astro — Hero, three-card section, Who I Am
+src/pages/de/index.astro — Same homepage changes (DE)
+src/pages/about.astro — Three-path CTA
+src/pages/de/about.astro — Three-path CTA (DE)
+src/pages/contact.astro — Subheadline update
+src/pages/de/contact.astro — Subheadline update (DE)
+src/pages/services.astro — 301 redirect
+src/pages/de/services.astro — 301 redirect (DE)
+```
+
+### Commits
+
+- `403133b` — feat: Build all remaining sub-pages (About, Coaching, Services, Projects, Adventures, Contact, Legal)
+
+### Key decisions
+
+- Three separate service pages: `/coaching`, `/product`, `/build` (not combined)
+- Coaching promoted to top-level nav (not nested under Services dropdown)
+- `/services` redirects to homepage (301) where three-card routing handles service selection
+- About page CTA uses `border-l` pattern for three service paths (matches existing design)
+
+---
+
+_Next session: Vercel deployment, Umami analytics, Resend newsletter, Calendly embed_

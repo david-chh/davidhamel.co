@@ -340,8 +340,8 @@ export const projects: ProjectData[] = [
       de: "Ein Nebenprojekt, gebaut mit KI — von der Idee zur Live-App.",
     },
     oneLiner: {
-      en: "Local discovery platform — AI-native build showcase",
-      de: "Lokale Entdeckungsplattform — KI-nativer Build-Showcase",
+      en: "Local events discovery platform — AI-native build showcase",
+      de: "Lokale Event-Entdeckungsplattform — KI-nativer Build-Showcase",
     },
     role: { en: "Builder", de: "Builder" },
     period: "2025",
@@ -349,8 +349,8 @@ export const projects: ProjectData[] = [
     metric: { en: "Vibe coded", de: "Vibe coded" },
     type: { en: "Side project", de: "Nebenprojekt" },
     overview: {
-      en: "Rootlocaly is a local discovery platform I built as a side project to learn AI-native development workflows. It's a showcase of what's possible when you combine product thinking with tools like Claude Code — going from idea to deployed app in days, not months.\n\nThis project demonstrates the same approach I use for client builds: fast iteration, modern stack, product-first thinking.",
-      de: "Rootlocaly ist eine lokale Entdeckungsplattform, die ich als Nebenprojekt gebaut habe, um KI-native Entwicklungsworkflows zu lernen. Es ist ein Showcase dessen, was möglich ist, wenn man Produktdenken mit Tools wie Claude Code verbindet — von der Idee zur deployed App in Tagen, nicht Monaten.\n\nDieses Projekt zeigt denselben Ansatz, den ich für Kunden-Builds verwende: schnelle Iteration, moderner Stack, produktzuerst-Denken.",
+      en: "Rootlocaly is a local events discovery platform I built as a side project to learn AI-native development workflows. It's a showcase of what's possible when you combine product thinking with tools like Claude Code — going from idea to deployed app in days, not months.\n\nThis project demonstrates the same approach I use for client builds: fast iteration, modern stack, product-first thinking.",
+      de: "Rootlocaly ist eine lokale Event-Entdeckungsplattform, die ich als Nebenprojekt gebaut habe, um KI-native Entwicklungsworkflows zu lernen. Es ist ein Showcase dessen, was möglich ist, wenn man Produktdenken mit Tools wie Claude Code verbindet — von der Idee zur deployed App in Tagen, nicht Monaten.\n\nDieses Projekt zeigt denselben Ansatz, den ich für Kunden-Builds verwende: schnelle Iteration, moderner Stack, produktzuerst-Denken.",
     },
     whatIDid: {
       en: "Designed and built the entire application from scratch using AI-native development tools. Concept, UX, full-stack development, and deployment — all done solo using Claude Code.",
