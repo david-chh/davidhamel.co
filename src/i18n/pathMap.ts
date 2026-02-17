@@ -8,9 +8,20 @@ const pathMap: Record<string, string> = {
   "/coaching": "/de/coaching",
   "/services": "/de/services",
   "/projects": "/de/projects",
+  "/projects/alba-wealth": "/de/projects/alba-wealth",
+  "/projects/ziggma": "/de/projects/ziggma",
+  "/projects/porsche-digital-lab": "/de/projects/porsche-digital-lab",
+  "/projects/derisk": "/de/projects/derisk",
+  "/projects/digital-partners": "/de/projects/digital-partners",
+  "/projects/buena": "/de/projects/buena",
+  "/projects/carly": "/de/projects/carly",
+  "/projects/impactive": "/de/projects/impactive",
+  "/projects/rootlocaly": "/de/projects/rootlocaly",
   "/blog": "/de/blog",
   "/adventures": "/de/adventures",
   "/contact": "/de/contact",
+  "/impressum": "/de/impressum",
+  "/datenschutz": "/de/datenschutz",
 };
 
 /** Reverse map for DE → EN lookup */

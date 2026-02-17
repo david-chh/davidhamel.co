@@ -1,0 +1,291 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionWrapper from "@/components/SectionWrapper.astro";
+import CTABlock from "@/components/CTABlock.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+---
+
+<BaseLayout
+  title="Product & Build Services — David Hamel"
+  description="Product leader who ships code. Fractional CPO, product strategy, and AI-native app development. From strategy to shipped product — fast, high-quality, transparent."
+>
+  <!-- Hero -->
+  <SectionWrapper>
+    <h1
+      class="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.1] tracking-tight text-navy-900 mb-6"
+    >
+      Product leader who ships code.
+    </h1>
+    <p class="text-lg text-navy-700 max-w-[640px] mb-8 leading-relaxed">
+      I've spent eight years building products at companies like Porsche and
+      fintech startups. Now I combine that product thinking with AI-native
+      development to build apps and websites for clients — fast, high quality,
+      and at a fraction of what a dev shop would charge.
+    </p>
+    <a
+      href="/contact"
+      class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+    >
+      Let's Talk About Your Project
+      <span class="ml-2">&rarr;</span>
+    </a>
+  </SectionWrapper>
+
+  <!-- Service Tiers -->
+  <SectionWrapper background="navy-50">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- Card 1: Fractional CPO -->
+      <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-card">
+        <h2 class="text-[28px] font-semibold leading-tight text-navy-900 mb-3">
+          Fractional CPO & Product Strategy
+        </h2>
+        <p class="text-lg text-navy-700 mb-6">
+          For startups and scaleups that need senior product leadership without a
+          full-time hire.
+        </p>
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-navy-800">Product strategy and roadmapping</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-navy-800">Team coaching and process design</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-navy-800"
+              >Technical architecture guidance</span
+            >
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-navy-800"
+              >Stakeholder alignment and prioritization</span
+            >
+          </li>
+        </ul>
+        <p class="text-navy-800 leading-relaxed mb-6">
+          I've been the product leader at ventures that reached 35,000 users,
+          secured &euro;6.5M in funding, and served institutional clients
+          managing over &euro;1.5 trillion. I bring that experience to your team
+          — part-time, without the overhead.
+        </p>
+        <p class="text-sm text-navy-400 italic mt-6">
+          Retainer-based, scoped per engagement. Let's talk about what you need.
+        </p>
+      </div>
+
+      <!-- Card 2: App & Website Builds -->
+      <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-card">
+        <h2 class="text-[28px] font-semibold leading-tight text-navy-900 mb-3">
+          App & Website Builds
+        </h2>
+        <p class="text-lg text-navy-700 mb-6">
+          Full-service development of apps, websites, and landing pages — from
+          first brief to live product.
+        </p>
+        <ul class="space-y-4 mb-6">
+          <li class="text-navy-800">
+            <span class="font-semibold text-navy-900">Fast:</span> Weeks, not
+            months. AI-native tooling means I ship faster than a traditional dev
+            team.
+          </li>
+          <li class="text-navy-800">
+            <span class="font-semibold text-navy-900">Modern:</span> Built on
+            production-grade stacks — Astro, Next.js, React, Tailwind,
+            TypeScript.
+          </li>
+          <li class="text-navy-800">
+            <span class="font-semibold text-navy-900">Transparent:</span>
+            One-time build fee. No hourly billing, no scope creep surprises.
+          </li>
+          <li class="text-navy-800">
+            <span class="font-semibold text-navy-900">Ongoing:</span> Optional
+            monthly retainer for hosting, content updates, new features, and
+            analytics.
+          </li>
+        </ul>
+        <p class="text-navy-800 leading-relaxed mb-6">
+          You get a product person who understands strategy, UX, and code — not
+          just someone who builds what you tell them to.
+        </p>
+        <p class="text-sm text-navy-400 italic mt-6">
+          Fixed build fee + optional monthly retainer. Request a quote for your
+          project.
+        </p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Why Me -->
+  <SectionWrapper>
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-12">
+      Why me — not an agency, not a freelancer
+    </h2>
+    <div class="max-w-[780px]">
+      <div class="border-b border-navy-100 pb-8 mb-8">
+        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
+          Product + Code in one person
+        </h3>
+        <p class="text-lg text-navy-700 leading-relaxed">
+          Most developers lack product thinking. Most PMs can't ship code. I do
+          both.
+        </p>
+      </div>
+      <div class="border-b border-navy-100 pb-8 mb-8">
+        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
+          AI-native development
+        </h3>
+        <p class="text-lg text-navy-700 leading-relaxed">
+          I use Claude Code and other AI tools for 3-5x faster delivery than
+          traditional development. Same quality, less time, lower cost.
+        </p>
+      </div>
+      <div class="border-b border-navy-100 pb-8 mb-8">
+        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
+          Transparent pricing
+        </h3>
+        <p class="text-lg text-navy-700 leading-relaxed">
+          Fixed build fee, clear monthly retainer. You know exactly what you're
+          paying for before we start.
+        </p>
+      </div>
+      <div class="border-b border-navy-100 pb-8 mb-8">
+        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
+          Ongoing relationship
+        </h3>
+        <p class="text-lg text-navy-700 leading-relaxed">
+          I don't build and disappear. The monthly retainer keeps your product
+          evolving — new features, content updates, performance improvements.
+        </p>
+      </div>
+      <div class="pb-0 mb-0">
+        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
+          Portfolio proof
+        </h3>
+        <p class="text-lg text-navy-700 leading-relaxed">
+          I build my own products. Alba Wealth, Ziggma, Rootlocaly — I use the
+          same tools and approach for my own ventures as I do for clients.
+        </p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Selected Work -->
+  <SectionWrapper background="teal-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Selected work
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <ProjectCard
+        name="Porsche Digital Lab"
+        oneLiner="Blockchain product for classic car provenance"
+        role="Product Owner"
+        badge="Contract"
+        metric="€6.5M funding secured"
+        href="/projects/porsche-digital-lab"
+      />
+      <ProjectCard
+        name="Ziggma"
+        oneLiner="Portfolio management for 35,000+ investors"
+        role="Co-Founder & COO"
+        badge="Venture"
+        metric="€1.5bn linked assets"
+        href="/projects/ziggma"
+      />
+      <ProjectCard
+        name="Alba Wealth"
+        oneLiner="AI-powered financial planning for expats"
+        role="Founder"
+        badge="Venture"
+        href="/projects/alba-wealth"
+      />
+      <ProjectCard
+        name="Rootlocaly"
+        oneLiner="Local discovery platform — AI-native build showcase"
+        role="Builder"
+        badge="Side Project"
+        metric="Vibe coded"
+        href="/projects/rootlocaly"
+      />
+    </div>
+    <div class="mt-8 text-center">
+      <a
+        href="/projects"
+        class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+      >
+        View full portfolio
+        <span
+          class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+          >&rarr;</span
+        >
+      </a>
+    </div>
+  </SectionWrapper>
+
+  <!-- CTA -->
+  <CTABlock
+    heading="Let's talk about your project."
+    subtext="Whether you need a fractional product leader or someone to build your app from scratch — book a call and we'll figure out the right approach."
+    fullBleed
+  >
+    <a
+      href="/contact"
+      class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+    >
+      Book a Call
+      <span class="ml-2">&rarr;</span>
+    </a>
+    <p class="text-sm text-white/60 mt-4">
+      Or email me at <a
+        href="mailto:david.ch.hamel@gmail.com"
+        class="underline hover:text-white/80 transition-colors">david.ch.hamel@gmail.com</a
+      >
+    </p>
+  </CTABlock>
+</BaseLayout>

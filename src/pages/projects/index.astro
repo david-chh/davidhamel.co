@@ -1,0 +1,47 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionWrapper from "@/components/SectionWrapper.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import { projects } from "@/data/projects";
+---
+
+<BaseLayout
+  title="Projects — David Hamel"
+  description="8+ years of ventures, products, and consulting. From fintech platforms to industrial IoT to blockchain — what I've built, led, and learned."
+>
+  <!-- Hero -->
+  <section class="bg-white">
+    <div
+      class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20"
+    >
+      <h1
+        class="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-tight tracking-tight text-navy-900 mb-4"
+      >
+        What I've built.
+      </h1>
+      <p class="text-lg sm:text-xl text-navy-700 max-w-[640px]">
+        Ventures, products, and consulting engagements spanning fintech,
+        automotive, proptech, and IoT. Eight years of building things that ship.
+      </p>
+    </div>
+  </section>
+
+  <!-- Project Grid -->
+  <SectionWrapper>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        projects.map((p) => (
+          <ProjectCard
+            name={p.name}
+            oneLiner={p.oneLiner.en}
+            role={p.role.en}
+            badge={p.badge.en}
+            metric={p.metric?.en}
+            period={p.period}
+            href={`/projects/${p.slug}`}
+          />
+        ))
+      }
+    </div>
+  </SectionWrapper>
+</BaseLayout>

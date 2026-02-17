@@ -1,0 +1,169 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+// Hero image
+import heroImage from "@/assets/images/adventures-hero.jpg";
+
+// Adventure photos
+import surfCoxos from "@/assets/images/adventures/surf-coxos.jpg";
+import surfBarrel from "@/assets/images/adventures/surf-barrel.jpg";
+import surfWaveWall from "@/assets/images/adventures/surf-wave-wall.jpg";
+import surfGreenWave from "@/assets/images/adventures/surf-green-wave.jpg";
+import surfOceanBeach from "@/assets/images/adventures/surf-ocean-beach.jpg";
+import surfBoat from "@/assets/images/adventures/surf-boat.jpg";
+import freediveCave from "@/assets/images/adventures/freedive-cave.jpg";
+import freediveCenote from "@/assets/images/adventures/freedive-cenote.jpg";
+import kitePortugal from "@/assets/images/adventures/kite-portugal.jpg";
+import kiteSouthAfrica from "@/assets/images/adventures/kite-south-africa.jpg";
+import snowPowder from "@/assets/images/adventures/snow-powder.jpg";
+import travelCoastalSunset from "@/assets/images/adventures/travel-coastal-sunset.jpg";
+import travelPortugueseBay from "@/assets/images/adventures/travel-portuguese-bay.jpg";
+import travelCoastline from "@/assets/images/adventures/travel-coastline.jpg";
+import travelJoshuaTree from "@/assets/images/adventures/travel-joshua-tree.jpg";
+import travelHikerCoast from "@/assets/images/adventures/travel-hiker-coast.jpg";
+import travelVanRainbow from "@/assets/images/adventures/travel-van-rainbow.jpg";
+
+const photos = [
+  { src: surfCoxos, alt: "Surfen in Coxos, Portugal", category: "surf" },
+  { src: freediveCenote, alt: "Freitauchen in einer Cenote, Mexiko", category: "freedive" },
+  { src: travelCoastalSunset, alt: "Sonnenuntergang an der Küste", category: "travel" },
+  { src: surfBarrel, alt: "In einer Barrelwelle", category: "surf" },
+  { src: kitePortugal, alt: "Kitesurfen in Portugal", category: "kite" },
+  { src: travelHikerCoast, alt: "Wandern entlang der Küste", category: "travel" },
+  { src: surfWaveWall, alt: "Massive Wellenwand", category: "surf" },
+  { src: freediveCave, alt: "Höhlen-Freitauchen, Taak Bi Ha", category: "freedive" },
+  { src: snowPowder, alt: "Tiefschnee-Skifahren", category: "snow" },
+  { src: surfGreenWave, alt: "Grüne Welle mit Felsen", category: "surf" },
+  { src: travelPortugueseBay, alt: "Portugiesische Bucht", category: "travel" },
+  { src: kiteSouthAfrica, alt: "Kitesurfen in Südafrika", category: "kite" },
+  { src: travelJoshuaTree, alt: "Joshua Tree", category: "travel" },
+  { src: surfOceanBeach, alt: "Surfen am Ocean Beach, San Francisco", category: "surf" },
+  { src: travelVanRainbow, alt: "Van Life mit Regenbogen", category: "travel" },
+  { src: surfBoat, alt: "Boot in der Brandung", category: "surf" },
+  { src: travelCoastline, alt: "Küstenpanorama", category: "travel" },
+];
+
+const categories = ["all", "surf", "freedive", "kite", "snow", "travel"];
+const categoryLabels: Record<string, string> = {
+  all: "Alle",
+  surf: "Surfen",
+  freedive: "Tauchen",
+  kite: "Kite",
+  snow: "Snow",
+  travel: "Reisen",
+};
+---
+
+<BaseLayout
+  title="Abenteuer — David Hamel"
+  description="Surfen, Tauchen, Reisen. Fotos aus 15+ Ländern und einem Leben im Ozean."
+>
+  <!-- Hero -->
+  <section class="relative h-[50vh] lg:h-[70vh] overflow-hidden">
+    <Image
+      src={heroImage}
+      alt="Freitauchen in einer Cenote — türkisfarbener Lichtstrahl"
+      class="absolute inset-0 w-full h-full object-cover"
+      widths={[640, 960, 1280, 1920]}
+      sizes="100vw"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-[rgba(26,26,46,0.6)] to-transparent"
+    >
+    </div>
+    <div
+      class="absolute inset-0 flex flex-col items-center justify-end pb-16 lg:pb-24 text-center px-5"
+    >
+      <h1
+        class="text-4xl sm:text-5xl lg:text-[56px] font-bold text-white leading-tight mb-3"
+      >
+        Abenteuer
+      </h1>
+      <p class="text-lg text-white/85 max-w-md">
+        Wenn ich nicht baue oder coache, bin ich im Ozean.
+      </p>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="bg-white border-b border-navy-100 sticky top-16 lg:top-[72px] z-40">
+    <div
+      class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 py-4 flex gap-2 overflow-x-auto"
+    >
+      {
+        categories.map((cat) => (
+          <button
+            data-filter={cat}
+            class:list={[
+              "filter-btn px-4 py-2 rounded-full text-sm font-semibold transition-all duration-150 whitespace-nowrap",
+              cat === "all"
+                ? "bg-teal-600 text-white"
+                : "bg-navy-50 text-navy-700 hover:bg-navy-100",
+            ]}
+          >
+            {categoryLabels[cat]}
+          </button>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Photo Grid -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 py-12 lg:py-16">
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-3" id="photo-grid">
+        {
+          photos.map((photo) => (
+            <div
+              class="photo-item mb-3 break-inside-avoid"
+              data-category={photo.category}
+            >
+              <div class="relative group overflow-hidden rounded-xl">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  class="w-full h-auto group-hover:scale-[1.02] transition-transform duration-300"
+                  widths={[400, 640, 800]}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-end p-4">
+                  <span class="text-sm text-white/80">{photo.alt}</span>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>(".filter-btn");
+  const items = document.querySelectorAll<HTMLElement>(".photo-item");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
+
+      // Update active button
+      buttons.forEach((b) => {
+        b.classList.remove("bg-teal-600", "text-white");
+        b.classList.add("bg-navy-50", "text-navy-700");
+      });
+      btn.classList.remove("bg-navy-50", "text-navy-700");
+      btn.classList.add("bg-teal-600", "text-white");
+
+      // Filter photos
+      items.forEach((item) => {
+        if (filter === "all" || item.dataset.category === filter) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+</script>

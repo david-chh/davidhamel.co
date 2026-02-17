@@ -1,0 +1,183 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import SectionWrapper from "@/components/SectionWrapper.astro";
+import CTABlock from "@/components/CTABlock.astro";
+import { getLangFromUrl, getLocalizedPath } from "@/i18n/utils";
+import type { ProjectData } from "@/data/projects";
+import { getAdjacentProjects } from "@/data/projects";
+
+interface Props {
+  project: ProjectData;
+}
+
+const { project } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const l = (obj: { en: string; de: string }): string => obj[lang];
+const { prev, next } = getAdjacentProjects(project.slug);
+
+const title = `${project.name} — David Hamel`;
+const description = l(project.tagline);
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- Header -->
+  <SectionWrapper>
+    <a
+      href={getLocalizedPath("/projects", lang)}
+      class="inline-flex items-center text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group mb-8"
+    >
+      <span
+        class="inline-block mr-1 group-hover:-translate-x-1 transition-transform duration-150"
+        >&larr;</span
+      >
+      {lang === "de" ? "Alle Projekte" : "All Projects"}
+    </a>
+
+    <h1
+      class="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-tight tracking-tight text-navy-900 mb-4"
+    >
+      {project.name}
+    </h1>
+    <p class="text-lg sm:text-xl text-navy-700 max-w-[680px] mb-6">
+      {l(project.tagline)}
+    </p>
+
+    <!-- Metadata badges -->
+    <div class="flex flex-wrap gap-3">
+      <span
+        class="inline-flex items-center px-3 py-1.5 bg-navy-50 text-sm text-navy-700 rounded-lg"
+      >
+        {l(project.role)}
+      </span>
+      <span
+        class="inline-flex items-center px-3 py-1.5 bg-navy-50 text-sm text-navy-700 rounded-lg"
+      >
+        {project.period}
+      </span>
+      <span
+        class="inline-flex items-center px-3 py-1.5 bg-navy-50 text-sm text-navy-700 rounded-lg"
+      >
+        {l(project.type)}
+      </span>
+      {
+        project.location && (
+          <span class="inline-flex items-center px-3 py-1.5 bg-navy-50 text-sm text-navy-700 rounded-lg">
+            {project.location}
+          </span>
+        )
+      }
+    </div>
+  </SectionWrapper>
+
+  <!-- Overview -->
+  <SectionWrapper>
+    <div class="max-w-[800px]">
+      <h2 class="text-2xl sm:text-[28px] font-semibold text-navy-900 mb-6">
+        {lang === "de" ? "Überblick" : "Overview"}
+      </h2>
+      {
+        l(project.overview)
+          .split("\n\n")
+          .map((para) => (
+            <p class="text-lg text-navy-800 leading-relaxed mb-4">{para}</p>
+          ))
+      }
+    </div>
+  </SectionWrapper>
+
+  <!-- Key Metrics -->
+  {
+    project.metrics && project.metrics.length > 0 && (
+      <SectionWrapper background="teal-50">
+        <h2 class="text-2xl sm:text-[28px] font-semibold text-navy-900 mb-8">
+          {lang === "de" ? "Kennzahlen" : "Key Metrics"}
+        </h2>
+        <div class="flex flex-wrap gap-8 lg:gap-16">
+          {project.metrics.map((m) => (
+            <div>
+              <p class="text-3xl sm:text-4xl font-bold text-teal-600 mb-1">
+                {m.value}
+              </p>
+              <p class="text-sm text-navy-700">{l(m.label)}</p>
+            </div>
+          ))}
+        </div>
+      </SectionWrapper>
+    )
+  }
+
+  <!-- What I Did -->
+  <SectionWrapper>
+    <div class="max-w-[800px]">
+      <h2 class="text-2xl sm:text-[28px] font-semibold text-navy-900 mb-6">
+        {lang === "de" ? "Was ich gemacht habe" : "What I Did"}
+      </h2>
+      <p class="text-lg text-navy-800 leading-relaxed">
+        {l(project.whatIDid)}
+      </p>
+    </div>
+  </SectionWrapper>
+
+  <!-- Tech Stack -->
+  {
+    project.techStack && (
+      <SectionWrapper background="navy-50">
+        <h2 class="text-2xl sm:text-[28px] font-semibold text-navy-900 mb-4">
+          {lang === "de" ? "Tech Stack" : "Tech Stack"}
+        </h2>
+        <p class="text-lg text-navy-700">{project.techStack}</p>
+      </SectionWrapper>
+    )
+  }
+
+  <!-- Navigation -->
+  <SectionWrapper>
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-8 border-b border-navy-100">
+      {
+        prev ? (
+          <a
+            href={getLocalizedPath(`/projects/${prev.slug}`, lang)}
+            class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+          >
+            <span class="inline-block mr-1 group-hover:-translate-x-1 transition-transform duration-150">
+              &larr;
+            </span>
+            {prev.name}
+          </a>
+        ) : (
+          <div />
+        )
+      }
+      {
+        next && (
+          <a
+            href={getLocalizedPath(`/projects/${next.slug}`, lang)}
+            class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+          >
+            {lang === "de" ? "Nächstes" : "Next"}: {next.name}
+            <span class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150">
+              &rarr;
+            </span>
+          </a>
+        )
+      }
+    </div>
+  </SectionWrapper>
+
+  <!-- CTA -->
+  <CTABlock
+    heading={lang === "de" ? "Zusammenarbeiten?" : "Want to work together?"}
+    subtext={lang === "de"
+      ? "Lass uns über dein Projekt sprechen."
+      : "Let's talk about your project."}
+    fullBleed
+  >
+    <a
+      href={getLocalizedPath("/contact", lang)}
+      class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+    >
+      {lang === "de" ? "Gespräch buchen" : "Book a Call"}
+      <span class="ml-2">&rarr;</span>
+    </a>
+  </CTABlock>
+</BaseLayout>

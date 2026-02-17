@@ -5,10 +5,11 @@ interface Props {
   role: string;
   badge: string;
   metric?: string;
+  period?: string;
   href?: string;
 }
 
-const { name, oneLiner, role, badge, metric, href } = Astro.props;
+const { name, oneLiner, role, badge, metric, period, href } = Astro.props;
 
 const badgeColors: Record<string, string> = {
   Venture: "bg-teal-100 text-teal-700",
@@ -50,7 +51,7 @@ const Tag = href ? "a" : "div";
       {oneLiner}
     </p>
     <p class="text-sm text-navy-400">
-      {role}
+      {role}{period && ` · ${period}`}
     </p>
     {
       metric && (

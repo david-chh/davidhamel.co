@@ -424,4 +424,115 @@ src/pages/de/blog/[...slug].astro
 
 ---
 
-_Next session: Visual review in browser (Playwright), fix any styling issues, then push to remote_
+---
+
+## Session 6 — 2026-02-17 (All Remaining Sub-Pages)
+
+**Duration:** ~1.5 hours | **Phase:** Phase 1 (All Pages)
+
+### What happened
+
+#### Infrastructure Prep (Step 0)
+
+1. Copied ~20 photos from `photo-selection/` to `src/assets/images/`:
+   - `about-portrait.jpg`, `about-van.jpg`, `about-surfer.jpg`
+   - `adventures-hero.jpg` (freedive cenote)
+   - 17 adventure photos to `src/assets/images/adventures/` (surf, freedive, kite, snow, travel)
+2. Created `src/data/projects.ts` — centralized typed data for all 9 projects with EN + DE bilingual fields, helper functions (`getProjectBySlug`, `getAdjacentProjects`)
+3. Created `src/layouts/ProjectPageLayout.astro` — shared project detail layout with metrics, tech stack, prev/next navigation, CTA
+4. Created `src/components/NewsletterCTA.astro` — reusable dark newsletter section
+5. Updated `src/components/ProjectCard.astro` — added `period` prop
+6. Updated `src/i18n/pathMap.ts` — added all new page paths (projects x9, legal pages)
+7. Expanded `src/i18n/ui.ts` — added translation keys for all new pages
+
+#### About Pages (Step 1)
+
+8. Created `src/pages/about.astro` (EN) — Hero with B&W portrait, Story narrative with inline project links + van/surfer images, What I Believe (5 teal-bordered values), Background, CTA
+9. Created `src/pages/de/about.astro` (DE) — Same structure, German copy
+
+#### Coaching Pages (Step 2)
+
+10. Created `src/pages/coaching.astro` (EN) — Hero, The Problem (navy-900 dark), How I Help 3-step grid, Why Me 2x2 cards, Alba Wealth 2-col, Is This For You checklist, Calendly CTA
+11. Created `src/pages/de/coaching.astro` (DE) — Same structure, German copy
+
+#### Services Pages (Step 3)
+
+12. Created `src/pages/services.astro` (EN) — Hero, Service Tiers 2-col cards (Fractional CPO + App Builds), Why Me 5 differentiators, Selected Work with ProjectCards, CTABlock
+13. Created `src/pages/de/services.astro` (DE) — Same structure, German copy
+
+#### Projects (Steps 4-5)
+
+14. Created `src/pages/projects/index.astro` (EN) — 3-col grid of 9 ProjectCards
+15. Created `src/pages/de/projects/index.astro` (DE) — Same with German labels
+16. Created `src/pages/projects/[slug].astro` (EN) — Dynamic route via `getStaticPaths()`, renders ProjectPageLayout
+17. Created `src/pages/de/projects/[slug].astro` (DE) — Same dynamic route
+
+#### Adventures (Step 6)
+
+18. Created `src/pages/adventures.astro` (EN) — Full-bleed hero (70vh/50vh), sticky category filter pills, CSS columns masonry grid with 17 photos, inline `<script>` for filtering
+19. Created `src/pages/de/adventures.astro` (DE) — Same with German category labels and alt text
+
+#### Contact (Step 7)
+
+20. Created `src/pages/contact.astro` (EN) — Hero, Calendly placeholder, direct contact (email + LinkedIn SVG icons), NewsletterCTA
+21. Created `src/pages/de/contact.astro` (DE) — Same with German copy
+
+#### Legal Pages (Step 8)
+
+22. Created `src/pages/impressum.astro` — German-only imprint (§ 5 TMG, contact, responsible party, disclaimer)
+23. Created `src/pages/datenschutz.astro` — German-only privacy policy (hosting, analytics, newsletter, Calendly, rights)
+
+#### Build Verification (Step 9)
+
+24. Ran `pnpm build` — **38 pages built successfully**, zero errors, 87 optimized images, ~2.2s build time
+
+### Files created (~25 new files)
+
+```
+src/data/projects.ts
+src/layouts/ProjectPageLayout.astro
+src/components/NewsletterCTA.astro
+src/pages/about.astro
+src/pages/de/about.astro
+src/pages/coaching.astro
+src/pages/de/coaching.astro
+src/pages/services.astro
+src/pages/de/services.astro
+src/pages/projects/index.astro
+src/pages/de/projects/index.astro
+src/pages/projects/[slug].astro
+src/pages/de/projects/[slug].astro
+src/pages/adventures.astro
+src/pages/de/adventures.astro
+src/pages/contact.astro
+src/pages/de/contact.astro
+src/pages/impressum.astro
+src/pages/datenschutz.astro
+src/assets/images/about-portrait.jpg
+src/assets/images/about-van.jpg
+src/assets/images/about-surfer.jpg
+src/assets/images/adventures-hero.jpg
+src/assets/images/adventures/ (17 photos)
+```
+
+### Files modified
+
+```
+src/components/ProjectCard.astro — added period prop
+src/i18n/pathMap.ts — all new page paths
+src/i18n/ui.ts — expanded translation keys
+.claude/memory/activeContext.md
+.claude/memory/session-log.md
+```
+
+### Key decisions
+
+- Dynamic routes (`[slug].astro`) for project pages instead of 9 individual files
+- Centralized project data in TypeScript file with typed interface
+- CSS columns masonry for Adventures grid (no JS library needed)
+- Inline `<script>` for Adventures filtering (no React needed)
+- Legal pages (Impressum, Datenschutz) at root level, German-only
+
+---
+
+_Next session: Visual review in Playwright, commit and push, then Vercel deployment_
