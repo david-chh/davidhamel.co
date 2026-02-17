@@ -6,6 +6,8 @@ const pathMap: Record<string, string> = {
   "/": "/de",
   "/about": "/de/about",
   "/coaching": "/de/coaching",
+  "/product": "/de/product",
+  "/build": "/de/build",
   "/services": "/de/services",
   "/projects": "/de/projects",
   "/projects/alba-wealth": "/de/projects/alba-wealth",

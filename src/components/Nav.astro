@@ -12,6 +12,7 @@ const t = useTranslations(lang);
 
 const navLinks = [
   { label: t("nav.about"), href: getLocalizedPath("/about", lang) },
+  { label: t("nav.coaching"), href: getLocalizedPath("/coaching", lang) },
   { label: t("nav.projects"), href: getLocalizedPath("/projects", lang) },
   { label: t("nav.blog"), href: getLocalizedPath("/blog", lang) },
   { label: t("nav.adventures"), href: getLocalizedPath("/adventures", lang) },
@@ -19,10 +20,10 @@ const navLinks = [
 
 const servicesLinks = [
   {
-    label: t("nav.services.coaching"),
-    href: getLocalizedPath("/coaching", lang),
+    label: t("nav.services.product"),
+    href: getLocalizedPath("/product", lang),
   },
-  { label: t("nav.services.build"), href: getLocalizedPath("/services", lang) },
+  { label: t("nav.services.build"), href: getLocalizedPath("/build", lang) },
 ];
 ---
 
@@ -47,16 +48,8 @@ const servicesLinks = [
       >
         {
           navLinks.map((link, i) =>
-            i === 0 ? (
-              /* About link */
-              <a
-                href={link.href}
-                class="px-3 py-2 text-[15px] font-medium text-navy-700 hover:text-teal-600 transition-colors duration-100 rounded-lg"
-              >
-                {link.label}
-              </a>
-            ) : i === 1 ? (
-              /* Insert Services dropdown before Projects */
+            i === 2 ? (
+              /* Insert Services dropdown before Projects (index 2) */
               <>
                 <div class="relative group">
                   <button

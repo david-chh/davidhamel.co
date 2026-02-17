@@ -1,0 +1,287 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionWrapper from "@/components/SectionWrapper.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import CTABlock from "@/components/CTABlock.astro";
+---
+
+<BaseLayout
+  title="Build — David Hamel"
+  description="I understand your business — and I build the software. AI-native app and web development for SMBs and financial services firms."
+>
+  <!-- Hero -->
+  <section class="bg-warm-white">
+    <div
+      class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24"
+    >
+      <h1
+        class="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.1] tracking-tight text-navy-900 mb-6"
+      >
+        I understand your business.<br />And I build the software.
+      </h1>
+      <p
+        class="text-lg sm:text-xl text-navy-700 max-w-[640px] mb-8 leading-relaxed"
+      >
+        Most developers build what you tell them to. I start with the problem.
+        Eight years of fintech product experience means I understand your domain
+        &mdash; and I use AI-native development to ship in weeks, not months.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+      >
+        Let's Talk About Your Project
+        <span class="ml-2">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- How I Work -->
+  <SectionWrapper>
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-12">
+      How I work
+    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <!-- Step 1 -->
+      <div>
+        <div
+          class="w-12 h-12 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xl mb-4"
+        >
+          1
+        </div>
+        <h3 class="text-xl font-bold text-navy-900 mb-3">Discovery</h3>
+        <p class="text-navy-700 leading-relaxed">
+          We define what to build and why. I ask the questions a product leader
+          asks: Who is this for? What problem does it solve? How will you know
+          it's working? This phase ensures we build the right thing &mdash; not
+          just a thing.
+        </p>
+      </div>
+      <!-- Step 2 -->
+      <div>
+        <div
+          class="w-12 h-12 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xl mb-4"
+        >
+          2
+        </div>
+        <h3 class="text-xl font-bold text-navy-900 mb-3">Build</h3>
+        <p class="text-navy-700 leading-relaxed">
+          I design and develop the product using modern, production-grade tools.
+          AI-native development means I ship faster than a traditional dev team
+          &mdash; without cutting corners on quality.
+        </p>
+      </div>
+      <!-- Step 3 -->
+      <div>
+        <div
+          class="w-12 h-12 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xl mb-4"
+        >
+          3
+        </div>
+        <h3 class="text-xl font-bold text-navy-900 mb-3">
+          Launch & Evolve
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          We put it in front of real users and iterate. I don't build and
+          disappear. The optional monthly retainer keeps your product evolving
+          &mdash; new features, content updates, performance improvements.
+        </p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- What I Build -->
+  <SectionWrapper background="navy-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      What I build
+    </h2>
+    <div class="max-w-[780px] space-y-6 mb-10">
+      <div class="border-b border-navy-200 pb-6">
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          Web applications and SaaS platforms
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Customer-facing products, dashboards, internal tools.
+        </p>
+      </div>
+      <div class="border-b border-navy-200 pb-6">
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          Marketing websites and landing pages
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Fast, modern sites that convert.
+        </p>
+      </div>
+      <div class="border-b border-navy-200 pb-6">
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          AI-powered features and integrations
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Chatbots, document processing, intelligent workflows.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          Internal tools and dashboards
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Data visualization, admin panels, operational tools.
+        </p>
+      </div>
+    </div>
+    <div
+      class="bg-white border border-navy-200 rounded-xl p-6 max-w-[780px]"
+    >
+      <p class="text-navy-800">
+        <span class="font-semibold text-navy-900">Tech:</span>{" "}
+        Built on production-grade stacks: Astro, Next.js, React, Tailwind,
+        TypeScript, Supabase, Vercel.
+      </p>
+    </div>
+  </SectionWrapper>
+
+  <!-- Why Me — Not an Agency -->
+  <SectionWrapper>
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Why me &mdash; not an agency
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white border border-navy-100 rounded-2xl p-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-3">Domain expertise</h3>
+        <p class="text-navy-700 leading-relaxed">
+          I've built fintech products for eight years. I understand financial
+          services, compliance considerations, and how to build user trust. A
+          generic agency would spend weeks learning what I already know.
+        </p>
+      </div>
+      <div class="bg-white border border-navy-100 rounded-2xl p-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-3">
+          Product + Code in one person
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          You get a product strategist who writes the code himself. No telephone
+          game between a PM, a designer, and a developer.
+        </p>
+      </div>
+      <div class="bg-white border border-navy-100 rounded-2xl p-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-3">
+          AI-native development
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          I use tools like Claude Code for faster delivery than traditional
+          development. Same quality, less time, lower cost.
+        </p>
+      </div>
+      <div class="bg-white border border-navy-100 rounded-2xl p-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-3">
+          Transparent pricing
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Fixed build fee. No hourly billing, no scope creep surprises. You know
+          exactly what you're paying for before we start.
+        </p>
+      </div>
+      <div class="bg-white border border-navy-100 rounded-2xl p-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-3">
+          Ongoing relationship
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          The optional monthly retainer keeps your product evolving. Hosting,
+          content updates, new features, performance improvements &mdash; all
+          handled.
+        </p>
+      </div>
+      <div class="bg-white border border-navy-100 rounded-2xl p-8">
+        <h3 class="text-lg font-bold text-navy-900 mb-3">Direct access</h3>
+        <p class="text-navy-700 leading-relaxed">
+          You work with me. Not a junior developer. Not a project manager. Me.
+        </p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Selected Work -->
+  <SectionWrapper background="teal-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Selected work
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <ProjectCard
+        name="Alba Wealth"
+        oneLiner="AI-powered financial planning for expats"
+        role="Founder"
+        badge="Venture"
+        href="/projects/alba-wealth"
+      />
+      <ProjectCard
+        name="Rootlocaly"
+        oneLiner="Local events discovery platform — AI-native build showcase"
+        role="Builder"
+        badge="Side Project"
+        metric="Vibe coded"
+        href="/projects/rootlocaly"
+      />
+      <ProjectCard
+        name="Digital Partners"
+        oneLiner="IoT consulting & venture building — 27 projects delivered"
+        role="Founder & CEO"
+        badge="Venture"
+        metric="7 engineers, 3 partners"
+        href="/projects/digital-partners"
+      />
+    </div>
+    <div class="mt-8 text-center">
+      <a
+        href="/projects"
+        class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+      >
+        View full portfolio
+        <span
+          class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+          >&rarr;</span
+        >
+      </a>
+    </div>
+  </SectionWrapper>
+
+  <!-- Pricing Signal -->
+  <SectionWrapper>
+    <div class="max-w-[680px] mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
+        Pricing
+      </h2>
+      <p class="text-lg text-navy-800 leading-relaxed mb-4">
+        <span class="font-semibold text-navy-900"
+          >Fixed build fee + optional monthly retainer.</span
+        >{" "}
+        No hourly billing, no surprises.
+      </p>
+      <p class="text-navy-700 leading-relaxed">
+        Every project starts with a free discovery call where we scope the work
+        together. You get a clear quote before we start.
+      </p>
+    </div>
+  </SectionWrapper>
+
+  <!-- CTA -->
+  <CTABlock
+    heading="Let's talk about your project."
+    subtext="Tell me what you need built. We'll have a free discovery call, I'll scope the work, and you'll get a clear quote — no obligation."
+    fullBleed
+  >
+    <a
+      href="/contact"
+      class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+    >
+      Let's Talk
+      <span class="ml-2">&rarr;</span>
+    </a>
+    <p class="text-sm text-white/60 mt-4">
+      Or email me at <a
+        href="mailto:david.ch.hamel@gmail.com"
+        class="underline hover:text-white/80 transition-colors"
+        >david.ch.hamel@gmail.com</a
+      >
+    </p>
+  </CTABlock>
+</BaseLayout>

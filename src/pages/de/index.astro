@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SectionWrapper from "@/components/SectionWrapper.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
 import ProjectCard from "@/components/ProjectCard.astro";
 import BlogCard from "@/components/BlogCard.astro";
 import headshot from "@/assets/images/headshot-david.jpg";
@@ -22,30 +23,38 @@ import headshot from "@/assets/images/headshot-david.jpg";
         Finanzcoach. Produktführer.<br />Builder.
       </h1>
       <p
-        class="text-lg sm:text-xl text-navy-700 max-w-[580px] mb-8 leading-relaxed"
+        class="text-lg sm:text-xl text-navy-700 max-w-[640px] mb-0 leading-relaxed"
       >
-        Ich helfe Expats in Deutschland, sichere Finanzentscheidungen zu treffen
-        — und ich baue Produkte, die live gehen. Keine Provisionen, keine
-        Komplexität, kein Unternehmenssprech.
+        Ich helfe Menschen, komplexe Systeme zu navigieren &mdash; Finanzplanung
+        f&uuml;r Expats in Deutschland, Produktstrategie f&uuml;r Startups und
+        KI-natives Development f&uuml;r Unternehmen, die liefern m&uuml;ssen.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a
-          href="/de/coaching"
-          class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
-        >
-          Finanzcoaching
-          <span class="ml-2">&rarr;</span>
-        </a>
-        <a
-          href="/de/services"
-          class="inline-flex items-center justify-center px-7 py-4 border-[1.5px] border-navy-200 text-navy-900 text-lg font-semibold rounded-lg hover:border-navy-900 hover:bg-navy-50 transition-all duration-150"
-        >
-          Product & Build
-          <span class="ml-2">&rarr;</span>
-        </a>
-      </div>
     </div>
   </section>
+
+  <!-- Three-Card Routing -->
+  <SectionWrapper>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <ServiceCard
+        heading="Finanzcoaching"
+        description="F&uuml;r Expat-Fachkr&auml;fte in Deutschland, die Steuern, Versicherungen und Geldanlage navigieren &mdash; auf Englisch, ohne Provisionen."
+        href="/de/coaching"
+        linkText="Mehr erfahren"
+      />
+      <ServiceCard
+        heading="Produktf&uuml;hrung"
+        description="F&uuml;r Startups und Scaleups, die erfahrenes Produktdenken brauchen, ohne eine Vollzeitstelle zu besetzen."
+        href="/de/product"
+        linkText="Mehr erfahren"
+      />
+      <ServiceCard
+        heading="App & Web Builds"
+        description="F&uuml;r KMU und Finanzdienstleister, die einen Produktmenschen brauchen, der ihre Branche versteht &mdash; und die Software selbst baut."
+        href="/de/build"
+        linkText="Mehr erfahren"
+      />
+    </div>
+  </SectionWrapper>
 
   <!-- Who I Am -->
   <SectionWrapper>
@@ -67,9 +76,10 @@ import headshot from "@/assets/images/headshot-david.jpg";
           anderem beim Porsche Digital Lab geleitet.
         </p>
         <p class="text-lg text-navy-800 leading-relaxed mb-6">
-          Heute teile ich meine Zeit zwischen Finanzcoaching für Expats im
-          deutschen Finanzsystem und dem Bau von Apps und Websites für Startups
-          und Gründer.
+          Heute coache ich Expats durch das deutsche Finanzsystem, biete
+          Startups Produktf&uuml;hrung und baue Apps und Websites f&uuml;r
+          Unternehmen &mdash; mit besonderem Fokus auf Fintech und
+          Finanzdienstleistungen.
         </p>
         <a
           href="/de/about"

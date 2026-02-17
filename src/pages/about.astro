@@ -2,7 +2,6 @@
 import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SectionWrapper from "@/components/SectionWrapper.astro";
-import CTABlock from "@/components/CTABlock.astro";
 import aboutPortrait from "@/assets/images/about-portrait.jpg";
 import aboutVan from "@/assets/images/about-van.jpg";
 import aboutSurfer from "@/assets/images/about-surfer.jpg";
@@ -22,11 +21,11 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
           About
         </h1>
         <p class="text-lg sm:text-xl text-navy-800 leading-relaxed mb-4">
-          I grew up in the northwest of Germany. Since I can remember, home was
-          always the most boring place — even though I was very happy there.
+          I grew up in a small town in northern Germany. It was a great place to
+          be a kid — but I always knew there was a bigger world out there.
         </p>
         <p class="text-lg sm:text-xl text-navy-800 leading-relaxed">
-          So as soon as I could, I left.
+          So as soon as I could, I left to find it.
         </p>
       </div>
       <div class="lg:col-span-2">
@@ -47,16 +46,17 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
       <div class="font-serif text-lg leading-[1.8] text-navy-800">
         <p class="mb-6">
           I spent a year kitesurfing, surfing, and exploring — from Egypt to
-          Brazil, Argentina to Fiji, Thailand to New Zealand. Somewhere along the
-          way, I realized that economics was the lens I wanted to understand the
-          world through. Not because it was glamorous, but because it explained
-          why things worked the way they did.
+          Brazil, Argentina to Fiji, Thailand to New Zealand. Traveling through
+          so many countries showed me one thing clearly: international business,
+          economics, and finance are the systems that shape our global world.
+          Understanding how those systems work is what pulled me in — and what I
+          decided to study.
         </p>
 
         <p class="mb-6">
-          I studied economics at Rotterdam School of Management, graduated Cum
-          Laude, spent a semester at EDHEC in Nice and another at SMU in
-          Singapore. After a stint in commodities trade finance at ABN Amro in
+          I studied International Business Administration at Rotterdam School of
+          Management, graduated Cum Laude, then completed my MSc in Finance and
+          Investments — with semesters at EDHEC in Nice and SMU in Singapore. After a stint in commodities trade finance at ABN Amro in
           Amsterdam, I knew I wanted to build things — not analyze them from a
           desk.
         </p>
@@ -102,11 +102,11 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
         </p>
 
         <p class="mb-6">
-          After DeRisk, I co-founded <a
+          After DeRisk, I joined <a
             href="/projects/ziggma"
             class="text-teal-600 hover:underline">Ziggma</a
-          > as COO — a portfolio management platform for retail investors. We
-          grew it to 35,000 users and €1.5 billion in linked assets. During that
+          > as Co-Founder and COO — a portfolio management platform for retail
+          investors that was already gaining traction. We grew it to 35,000 users and €1.5 billion in linked assets. During that
           period, I also consulted for <a
             href="/projects/impactive"
             class="text-teal-600 hover:underline">Impactive</a
@@ -226,28 +226,78 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
         </p>
         <p>
           <span class="font-semibold text-navy-900">Education:</span>{" "}
-           BSc & MSc Economics, Rotterdam School of Management (Cum Laude).
-          Exchanges at EDHEC Business School (Nice) and SMU (Singapore).
+           BSc International Business Administration & MSc Finance and
+          Investments, Rotterdam School of Management (Cum Laude). Exchanges at
+          EDHEC Business School (Nice) and SMU (Singapore).
         </p>
       </div>
     </div>
   </SectionWrapper>
 
-  <!-- CTA -->
-  <CTABlock heading="How can I help?" fullBleed>
-    <a
-      href="/coaching"
-      class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
-    >
-      Financial Coaching
-      <span class="ml-2">&rarr;</span>
-    </a>
-    <a
-      href="/services"
-      class="inline-flex items-center justify-center px-7 py-4 border-[1.5px] border-white/30 text-white text-lg font-semibold rounded-lg hover:border-white hover:bg-white/10 transition-all duration-150"
-    >
-      Product & Build Services
-      <span class="ml-2">&rarr;</span>
-    </a>
-  </CTABlock>
+  <!-- Three-Path CTA -->
+  <SectionWrapper background="navy-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      How can I help?
+    </h2>
+    <div class="max-w-[680px] space-y-8">
+      <div class="border-l-[3px] border-teal-600 pl-6">
+        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
+          Need financial coaching?
+        </h3>
+        <p class="text-lg text-navy-700 leading-relaxed mb-3">
+          I help English-speaking professionals in Germany navigate taxes,
+          insurance, investing, and retirement planning &mdash; in plain
+          language, with no conflicts of interest.
+        </p>
+        <a
+          href="/coaching"
+          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+        >
+          Financial Coaching
+          <span
+            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+            >&rarr;</span
+          >
+        </a>
+      </div>
+      <div class="border-l-[3px] border-teal-600 pl-6">
+        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
+          Need product leadership?
+        </h3>
+        <p class="text-lg text-navy-700 leading-relaxed mb-3">
+          I embed with your team part-time to define strategy, build roadmaps,
+          and ship. Eight years of product experience at ventures and startups.
+        </p>
+        <a
+          href="/product"
+          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+        >
+          Product Leadership
+          <span
+            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+            >&rarr;</span
+          >
+        </a>
+      </div>
+      <div class="border-l-[3px] border-teal-600 pl-6">
+        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
+          Need something built?
+        </h3>
+        <p class="text-lg text-navy-700 leading-relaxed mb-3">
+          I combine product thinking with AI-native development to build apps
+          and websites for businesses &mdash; from first brief to live product.
+        </p>
+        <a
+          href="/build"
+          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+        >
+          Build Services
+          <span
+            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+            >&rarr;</span
+          >
+        </a>
+      </div>
+    </div>
+  </SectionWrapper>
 </BaseLayout>

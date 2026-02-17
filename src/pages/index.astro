@@ -2,9 +2,9 @@
 import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SectionWrapper from "@/components/SectionWrapper.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
 import ProjectCard from "@/components/ProjectCard.astro";
 import BlogCard from "@/components/BlogCard.astro";
-import CTABlock from "@/components/CTABlock.astro";
 import headshot from "@/assets/images/headshot-david.jpg";
 ---
 
@@ -23,30 +23,38 @@ import headshot from "@/assets/images/headshot-david.jpg";
         Financial planning coach.<br />Product leader. Builder.
       </h1>
       <p
-        class="text-lg sm:text-xl text-navy-700 max-w-[580px] mb-8 leading-relaxed"
+        class="text-lg sm:text-xl text-navy-700 max-w-[640px] mb-0 leading-relaxed"
       >
-        I help expats in Germany make confident financial decisions — and I
-        build products that ship. No commissions, no complexity, no corporate
-        filler.
+        I help people navigate complex systems &mdash; financial planning for
+        expats in Germany, product strategy for startups, and AI-native
+        development for businesses that need to ship.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a
-          href="/coaching"
-          class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
-        >
-          Financial Coaching
-          <span class="ml-2">&rarr;</span>
-        </a>
-        <a
-          href="/services"
-          class="inline-flex items-center justify-center px-7 py-4 border-[1.5px] border-navy-200 text-navy-900 text-lg font-semibold rounded-lg hover:border-navy-900 hover:bg-navy-50 transition-all duration-150"
-        >
-          Product & Build Services
-          <span class="ml-2">&rarr;</span>
-        </a>
-      </div>
     </div>
   </section>
+
+  <!-- Three-Card Routing -->
+  <SectionWrapper>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <ServiceCard
+        heading="Financial Coaching"
+        description="For expat professionals in Germany navigating taxes, insurance, and investing — in plain English, with no commissions."
+        href="/coaching"
+        linkText="Learn more"
+      />
+      <ServiceCard
+        heading="Product Leadership"
+        description="For startups and scaleups that need senior product thinking without a full-time hire."
+        href="/product"
+        linkText="Learn more"
+      />
+      <ServiceCard
+        heading="App & Web Builds"
+        description="For SMBs and financial services firms that need a product person who understands their world — and builds the software."
+        href="/build"
+        linkText="Learn more"
+      />
+    </div>
+  </SectionWrapper>
 
   <!-- Who I Am -->
   <SectionWrapper>
@@ -68,9 +76,10 @@ import headshot from "@/assets/images/headshot-david.jpg";
           product teams at places like Porsche Digital Lab.
         </p>
         <p class="text-lg text-navy-800 leading-relaxed mb-6">
-          Today I split my time between coaching expats through the German
-          financial system and building apps and websites for startups and
-          founders.
+          Today I coach expats through the German financial system, provide
+          product leadership to startups, and build apps and websites for
+          businesses &mdash; with a particular focus on fintech and financial
+          services.
         </p>
         <a
           href="/about"

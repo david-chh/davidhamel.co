@@ -11,9 +11,10 @@ export const ui = {
   en: {
     // Navigation
     "nav.about": "About",
+    "nav.coaching": "Coaching",
     "nav.services": "Services",
-    "nav.services.coaching": "Financial Coaching",
-    "nav.services.build": "Product & Build",
+    "nav.services.product": "Product Leadership",
+    "nav.services.build": "Build",
     "nav.projects": "Projects",
     "nav.blog": "Blog",
     "nav.adventures": "Adventures",
@@ -22,7 +23,8 @@ export const ui = {
     // Footer
     "footer.col1.heading": "Services",
     "footer.col1.coaching": "Financial Coaching",
-    "footer.col1.build": "Product & Build",
+    "footer.col1.product": "Product Leadership",
+    "footer.col1.build": "Build",
     "footer.col1.cta": "Book a Call",
     "footer.col2.heading": "Explore",
     "footer.col2.blog": "Blog",
@@ -77,11 +79,15 @@ export const ui = {
     "coaching.description":
       "Independent, fee-based financial planning for English-speaking professionals in Germany. No commissions, no conflicts of interest. Book a free consultation.",
 
-    // Services
-    "services.title": "Product & Build Services \u2014 David Hamel",
-    "services.description":
-      "Product leader who ships code. Fractional CPO, product strategy, and AI-native app development. From strategy to shipped product \u2014 fast, high-quality, transparent.",
-    "services.selectedWork": "Selected work",
+    // Product Leadership
+    "product.title": "Product Leadership \u2014 David Hamel",
+    "product.description":
+      "Senior product leadership, without the full-time hire. Fractional CPO, product strategy, and roadmapping for startups and scaleups.",
+
+    // Build
+    "build.title": "Build \u2014 David Hamel",
+    "build.description":
+      "I understand your business \u2014 and I build the software. AI-native app and web development for SMBs and financial services firms.",
 
     // Adventures
     "adventures.title": "Adventures \u2014 David Hamel",
@@ -100,10 +106,10 @@ export const ui = {
     // Contact
     "contact.title": "Contact \u2014 David Hamel",
     "contact.description":
-      "Book a free consultation or get in touch. Financial coaching for expats, product & build services for startups.",
+      "Book a free consultation or get in touch. Financial coaching for expats, product leadership for startups, app and web builds for businesses.",
     "contact.heading": "Let's talk.",
     "contact.subheading":
-      "Whether you need financial coaching or a product partner \u2014 the first conversation is free.",
+      "Whether you need financial coaching, product leadership, or someone to build your next project \u2014 the first conversation is free.",
     "contact.calendlyHeading": "Book a 30-minute consultation",
     "contact.directHeading": "Or reach me directly",
     "contact.calendlyPlaceholder": "Calendly booking will be available soon.",
@@ -125,9 +131,10 @@ export const ui = {
   de: {
     // Navigation
     "nav.about": "\u00dcber mich",
+    "nav.coaching": "Coaching",
     "nav.services": "Leistungen",
-    "nav.services.coaching": "Finanzcoaching",
-    "nav.services.build": "Product & Build",
+    "nav.services.product": "Produktf\u00fchrung",
+    "nav.services.build": "Build",
     "nav.projects": "Projekte",
     "nav.blog": "Blog",
     "nav.adventures": "Abenteuer",
@@ -136,7 +143,8 @@ export const ui = {
     // Footer
     "footer.col1.heading": "Leistungen",
     "footer.col1.coaching": "Finanzcoaching",
-    "footer.col1.build": "Product & Build",
+    "footer.col1.product": "Produktf\u00fchrung",
+    "footer.col1.build": "Build",
     "footer.col1.cta": "Gespr\u00e4ch buchen",
     "footer.col2.heading": "Entdecken",
     "footer.col2.blog": "Blog",
@@ -192,11 +200,15 @@ export const ui = {
     "coaching.description":
       "Unabh\u00e4ngige, honorarbasierte Finanzplanung f\u00fcr englischsprachige Fachkr\u00e4fte in Deutschland. Keine Provisionen, keine Interessenkonflikte. Kostenloses Erstgespr\u00e4ch buchen.",
 
-    // Services
-    "services.title": "Product & Build Services \u2014 David Hamel",
-    "services.description":
-      "Produktf\u00fchrer, der Code liefert. Fractional CPO, Produktstrategie und KI-natives App-Development. Von der Strategie zum fertigen Produkt \u2014 schnell, hochwertig, transparent.",
-    "services.selectedWork": "Ausgew\u00e4hlte Projekte",
+    // Product Leadership
+    "product.title": "Produktf\u00fchrung \u2014 David Hamel",
+    "product.description":
+      "Erfahrene Produktf\u00fchrung, ohne die Vollzeitstelle. Fractional CPO, Produktstrategie und Roadmapping f\u00fcr Startups und Scaleups.",
+
+    // Build
+    "build.title": "Build \u2014 David Hamel",
+    "build.description":
+      "Ich verstehe dein Gesch\u00e4ft \u2014 und ich baue die Software. KI-natives App- und Web-Development f\u00fcr KMU und Finanzdienstleister.",
 
     // Adventures
     "adventures.title": "Abenteuer \u2014 David Hamel",
@@ -215,10 +227,10 @@ export const ui = {
     // Contact
     "contact.title": "Kontakt \u2014 David Hamel",
     "contact.description":
-      "Buche ein kostenloses Erstgespr\u00e4ch oder nimm Kontakt auf. Finanzcoaching f\u00fcr Expats, Product & Build Services f\u00fcr Startups.",
+      "Buche ein kostenloses Erstgespr\u00e4ch oder nimm Kontakt auf. Finanzcoaching f\u00fcr Expats, Produktf\u00fchrung f\u00fcr Startups, App- und Web-Builds f\u00fcr Unternehmen.",
     "contact.heading": "Lass uns sprechen.",
     "contact.subheading":
-      "Ob du Finanzcoaching brauchst oder einen Produktpartner \u2014 das erste Gespr\u00e4ch ist kostenlos.",
+      "Ob du Finanzcoaching brauchst, Produktf\u00fchrung oder jemanden, der dein n\u00e4chstes Projekt baut \u2014 das erste Gespr\u00e4ch ist kostenlos.",
     "contact.calendlyHeading": "Buche ein 30-min\u00fctiges Gespr\u00e4ch",
     "contact.directHeading": "Oder schreib mir direkt",
     "contact.calendlyPlaceholder":

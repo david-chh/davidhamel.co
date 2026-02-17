@@ -46,7 +46,15 @@ const t = useTranslations(lang);
           </li>
           <li>
             <a
-              href={getLocalizedPath("/services", lang)}
+              href={getLocalizedPath("/product", lang)}
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col1.product")}
+            </a>
+          </li>
+          <li>
+            <a
+              href={getLocalizedPath("/build", lang)}
               class="text-sm text-white/70 hover:text-white transition-colors duration-100"
             >
               {t("footer.col1.build")}

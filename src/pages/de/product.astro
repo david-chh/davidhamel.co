@@ -1,0 +1,425 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionWrapper from "@/components/SectionWrapper.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import CTABlock from "@/components/CTABlock.astro";
+---
+
+<BaseLayout
+  title="Produktf&uuml;hrung &mdash; David Hamel"
+  description="Erfahrene Produktf&uuml;hrung, ohne die Vollzeitstelle. Fractional CPO, Produktstrategie und Roadmapping f&uuml;r Startups und Scaleups."
+>
+  <!-- Hero -->
+  <section class="bg-warm-white">
+    <div
+      class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24"
+    >
+      <h1
+        class="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.1] tracking-tight text-navy-900 mb-6"
+      >
+        Erfahrene Produktf&uuml;hrung, ohne die Vollzeitstelle.
+      </h1>
+      <p
+        class="text-lg sm:text-xl text-navy-700 max-w-[640px] mb-8 leading-relaxed"
+      >
+        Ich habe Produkte bei Ventures geleitet, die 35.000 Nutzer erreichten,
+        &euro;6,5 Mio. Finanzierung sicherten und institutionelle Kunden mit
+        &uuml;ber &euro;1,5 Billionen betreuten. Diese Erfahrung bringe ich in
+        dein Team &mdash; in Teilzeit, ohne den Overhead.
+      </p>
+      <a
+        href="/de/contact"
+        class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+      >
+        Discovery Call buchen
+        <span class="ml-2">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- When This Works -->
+  <SectionWrapper>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+      <!-- Positive -->
+      <div>
+        <h2 class="text-2xl font-bold text-navy-900 mb-6">
+          Wann du mich brauchst
+        </h2>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-navy-800"
+              >Du hast ein Engineering-Team, aber keine erfahrene
+              Produktf&uuml;hrung</span
+            >
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-navy-800"
+              >Du brauchst eine Produktstrategie und Roadmap &mdash; nicht nur
+              einen Backlog-Manager</span
+            >
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-navy-800"
+              >Du bereitest eine Finanzierungsrunde, einen Launch oder Pivot vor
+              und brauchst Produktklarheit</span
+            >
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-navy-800"
+              >Dein Team liefert Features, aber du bist nicht sicher, ob es die
+              richtigen sind</span
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Negative -->
+      <div>
+        <h2 class="text-2xl font-bold text-navy-900 mb-6">
+          Wann es NICHT passt
+        </h2>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-coral-500 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-navy-800"
+              >Du brauchst jemanden in Vollzeit, 5 Tage die Woche</span
+            >
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-coral-500 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-navy-800"
+              >Du suchst einen Projektmanager oder Scrum Master</span
+            >
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-coral-500 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-navy-800"
+              >Du brauchst jemanden, der ein externes Dev-Team managt, das ich
+              nicht aufgebaut habe</span
+            >
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-5 h-5 text-coral-500 mt-0.5 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <span class="text-navy-800"
+              >Du willst ein Strategiedeck ohne Hands-on-Umsetzung</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- What You Get -->
+  <SectionWrapper background="navy-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Was du bekommst
+    </h2>
+    <div class="max-w-[780px] space-y-6">
+      <div class="border-b border-navy-200 pb-6">
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          Produktstrategie und Roadmapping
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Worauf fokussieren, was bauen, in welcher Reihenfolge.
+        </p>
+      </div>
+      <div class="border-b border-navy-200 pb-6">
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          Teamcoaching und Prozessdesign
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Sprint-Struktur, Rituale und Entscheidungsrahmen.
+        </p>
+      </div>
+      <div class="border-b border-navy-200 pb-6">
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          Technische Architekturberatung
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Stack-Entscheidungen, Build-vs-Buy, Skalierungsplanung.
+        </p>
+      </div>
+      <div class="border-b border-navy-200 pb-6">
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          Stakeholder-Alignment
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          &Uuml;bersetzen zwischen Business, Design und Engineering.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          Go-to-Market-Support
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Positionierung, Launch-Planung, Erfolgsmetriken.
+        </p>
+      </div>
+    </div>
+    <div
+      class="mt-10 bg-white border border-navy-200 rounded-xl p-6 max-w-[780px]"
+    >
+      <p class="text-navy-800">
+        <span class="font-semibold text-navy-900">Engagement-Struktur:</span>{" "}
+        Typischerweise 1&ndash;2 Tage pro Woche, ab 3 Monaten.
+        Retainer-basiert, auf deine Bed&uuml;rfnisse zugeschnitten.
+      </p>
+    </div>
+  </SectionWrapper>
+
+  <!-- Track Record -->
+  <SectionWrapper>
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Track Record
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <ProjectCard
+        name="Porsche Digital Lab"
+        oneLiner="Blockchain-Produkt f&uuml;r die Herkunft klassischer Autos"
+        role="Product Owner"
+        badge="Auftrag"
+        metric="&euro;6,5 Mio. Finanzierung gesichert"
+        href="/de/projects/porsche-digital-lab"
+      />
+      <ProjectCard
+        name="Ziggma"
+        oneLiner="Portfoliomanagement f&uuml;r 35.000+ Anleger"
+        role="Co-Founder & COO"
+        badge="Venture"
+        metric="&euro;1,5 Mrd. verkn&uuml;pfte Assets"
+        href="/de/projects/ziggma"
+      />
+      <ProjectCard
+        name="DeRisk"
+        oneLiner="Portfolio-Risikomanagement f&uuml;r institutionelle Investoren"
+        role="Co-Founder & CPO"
+        badge="Venture"
+        metric="&euro;1,5 Bio. AUM pilotiert"
+        href="/de/projects/derisk"
+      />
+      <ProjectCard
+        name="Buena"
+        oneLiner="Proptech-Plattform &mdash; automatisierte Mietvertrags-Workflows"
+        role="Product Lead"
+        badge="Auftrag"
+        href="/de/projects/buena"
+      />
+    </div>
+    <div class="mt-8 text-center">
+      <a
+        href="/de/projects"
+        class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+      >
+        Gesamtes Portfolio ansehen
+        <span
+          class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+          >&rarr;</span
+        >
+      </a>
+    </div>
+  </SectionWrapper>
+
+  <!-- How I Work + FAQ -->
+  <SectionWrapper background="teal-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-12">
+      Wie ich arbeite
+    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-16">
+      <!-- Step 1 -->
+      <div>
+        <div
+          class="w-12 h-12 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xl mb-4"
+        >
+          1
+        </div>
+        <h3 class="text-xl font-bold text-navy-900 mb-3">Verstehen</h3>
+        <p class="text-navy-700 leading-relaxed">
+          In den ersten 1&ndash;2 Wochen lerne ich dein Produkt, Team, den Markt
+          und deine Kunden kennen. Keine Annahmen, kein Standardansatz &mdash;
+          ich verstehe zuerst deinen Kontext.
+        </p>
+      </div>
+      <!-- Step 2 -->
+      <div>
+        <div
+          class="w-12 h-12 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xl mb-4"
+        >
+          2
+        </div>
+        <h3 class="text-xl font-bold text-navy-900 mb-3">Ausrichten</h3>
+        <p class="text-navy-700 leading-relaxed">
+          Wir definieren gemeinsam Produktstrategie, Roadmap und
+          Erfolgsmetriken. Ich bringe Stakeholder auf eine Linie und stelle
+          sicher, dass alle auf dasselbe Ziel hinarbeiten.
+        </p>
+      </div>
+      <!-- Step 3 -->
+      <div>
+        <div
+          class="w-12 h-12 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xl mb-4"
+        >
+          3
+        </div>
+        <h3 class="text-xl font-bold text-navy-900 mb-3">Umsetzen</h3>
+        <p class="text-navy-700 leading-relaxed">
+          Ich arbeite in deinem Team mit und liefere. Sprint Planning, Reviews
+          und praktische Produktarbeit &mdash; nicht nur Ratschl&auml;ge aus der
+          Ferne.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="max-w-[780px]">
+      <h3 class="text-2xl font-bold text-navy-900 mb-8">
+        H&auml;ufig gestellte Fragen
+      </h3>
+      <div class="space-y-6">
+        <div class="border-b border-navy-200 pb-6">
+          <h4 class="text-lg font-semibold text-navy-900 mb-2">
+            Wie sieht ein typisches Engagement aus?
+          </h4>
+          <p class="text-navy-700 leading-relaxed">
+            1&ndash;2 Tage pro Woche, eingebettet in dein Team. Ich nehme an
+            Standups teil, leite Plannings, reviewe Arbeit und treffe
+            Produktentscheidungen gemeinsam mit dir. Die meisten Engagements
+            laufen 3&ndash;6 Monate.
+          </p>
+        </div>
+        <div class="border-b border-navy-200 pb-6">
+          <h4 class="text-lg font-semibold text-navy-900 mb-2">
+            Wie unterscheidet sich das von Beratung?
+          </h4>
+          <p class="text-navy-700 leading-relaxed">
+            Ein Berater schreibt einen Report und geht. Ich arbeite in deinem
+            Team mit und liefere gemeinsam. Ich bin verantwortlich f&uuml;r
+            Ergebnisse, nicht f&uuml;r Deliverables.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-navy-900 mb-2">
+            Was ist der Zeitaufwand?
+          </h4>
+          <p class="text-navy-700 leading-relaxed">
+            Flexibel. Manche Kunden brauchen 1 Tag pro Woche, andere 2&ndash;3.
+            Wir definieren den Umfang basierend auf dem, was du
+            tats&auml;chlich brauchst.
+          </p>
+        </div>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- CTA -->
+  <CTABlock
+    heading="Lass uns &uuml;ber dein Produkt sprechen."
+    subtext="Buche ein kostenloses Discovery Call. Wir besprechen deine Produktherausforderungen und ich sage dir ehrlich, ob ich der richtige bin."
+    fullBleed
+  >
+    <a
+      href="/de/contact"
+      class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+    >
+      Discovery Call buchen
+      <span class="ml-2">&rarr;</span>
+    </a>
+    <p class="text-sm text-white/60 mt-4">
+      Oder schreib mir an <a
+        href="mailto:david.ch.hamel@gmail.com"
+        class="underline hover:text-white/80 transition-colors"
+        >david.ch.hamel@gmail.com</a
+      >
+    </p>
+  </CTABlock>
+</BaseLayout>
