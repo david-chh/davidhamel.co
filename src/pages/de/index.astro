@@ -17,18 +17,34 @@ import headshot from "@/assets/images/headshot-david.jpg";
     <div
       class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24"
     >
-      <h1
-        class="text-4xl sm:text-5xl lg:text-[72px] font-bold leading-[1.05] tracking-tight text-navy-900 mb-6"
-      >
-        Finanzcoach. Produktführer.<br />Builder.
-      </h1>
-      <p
-        class="text-lg sm:text-xl text-navy-700 max-w-[640px] mb-0 leading-relaxed"
-      >
-        Ich helfe Menschen, komplexe Systeme zu navigieren &mdash; Finanzplanung
-        f&uuml;r Expats in Deutschland, Produktstrategie f&uuml;r Startups und
-        KI-natives Development f&uuml;r Unternehmen, die liefern m&uuml;ssen.
-      </p>
+      <div class="flex flex-col lg:flex-row lg:items-center lg:gap-16">
+        <!-- Text -->
+        <div class="flex-1">
+          <h1
+            class="text-4xl sm:text-5xl lg:text-[72px] font-bold leading-[1.05] tracking-tight text-navy-900 mb-6"
+          >
+            Finanzcoach<br />und Produktleiter.
+          </h1>
+          <p
+            class="text-lg sm:text-xl text-navy-700 max-w-[540px] mb-0 leading-relaxed"
+          >
+            Ich helfe bei Finanzplanung f&uuml;r Expats, Produktstrategie
+            f&uuml;r Startups und KI-nativem Development f&uuml;r Unternehmen.
+          </p>
+        </div>
+        <!-- Photo in rounded shape -->
+        <div class="hidden lg:block flex-shrink-0">
+          <div class="w-[340px] h-[400px] rounded-[2.5rem] overflow-hidden shadow-card">
+            <Image
+              src={headshot}
+              alt="David Hamel"
+              width={680}
+              quality={85}
+              class="w-full h-full object-cover object-[60%_50%]"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -37,7 +53,7 @@ import headshot from "@/assets/images/headshot-david.jpg";
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <ServiceCard
         heading="Finanzcoaching"
-        description="F&uuml;r Expat-Fachkr&auml;fte in Deutschland, die Steuern, Versicherungen und Geldanlage navigieren &mdash; auf Englisch, ohne Provisionen."
+        description="F&uuml;r Expat-Fachkr&auml;fte in Deutschland, die Steuern, Versicherungen und Geldanlage navigieren. Auf Englisch, ohne Provisionen."
         href="/de/coaching"
         linkText="Mehr erfahren"
       />
@@ -49,7 +65,7 @@ import headshot from "@/assets/images/headshot-david.jpg";
       />
       <ServiceCard
         heading="App & Web Builds"
-        description="F&uuml;r KMU und Finanzdienstleister, die einen Produktmenschen brauchen, der ihre Branche versteht &mdash; und die Software selbst baut."
+        description="F&uuml;r KMU und Finanzdienstleister, die einen Produktmenschen brauchen, der ihre Branche versteht und die Software selbst baut."
         href="/de/build"
         linkText="Mehr erfahren"
       />
@@ -70,15 +86,15 @@ import headshot from "@/assets/images/headshot-david.jpg";
       </div>
       <div class="lg:col-span-3">
         <p class="text-lg text-navy-800 leading-relaxed mb-4">
-          Ich bin David — unabhängiger Finanzcoach und Product Builder in
+          Ich bin David, unabhängiger Finanzcoach und Product Builder in
           Berlin. Ich habe in über 15 Ländern gelebt und gearbeitet,
-          Fintech-Produkte für Zehntausende Nutzer gebaut und Produktteams unter
-          anderem beim Porsche Digital Lab geleitet.
+          Fintech-Produkte für Zehntausende Nutzer gebaut und Produktteams bei
+          Startups und Konzernen geleitet.
         </p>
         <p class="text-lg text-navy-800 leading-relaxed mb-6">
           Heute coache ich Expats durch das deutsche Finanzsystem, biete
           Startups Produktf&uuml;hrung und baue Apps und Websites f&uuml;r
-          Unternehmen &mdash; mit besonderem Fokus auf Fintech und
+          Unternehmen, mit besonderem Fokus auf Fintech und
           Finanzdienstleistungen.
         </p>
         <a
@@ -106,6 +122,7 @@ import headshot from "@/assets/images/headshot-david.jpg";
         oneLiner="KI-gestützte Finanzplanung für Expats"
         role="Gründer"
         badge="Venture"
+        logo="/logos/alba-wealth.svg"
       />
       <ProjectCard
         name="Ziggma"
@@ -113,6 +130,7 @@ import headshot from "@/assets/images/headshot-david.jpg";
         role="Co-Founder & COO"
         badge="Venture"
         metric="€1,5 Mrd. verknüpfte Assets"
+        logo="/logos/ziggma.png"
       />
       <ProjectCard
         name="Porsche Digital Lab"
@@ -120,13 +138,15 @@ import headshot from "@/assets/images/headshot-david.jpg";
         role="Product Owner"
         badge="Auftrag"
         metric="€6,5 Mio. Finanzierung gesichert"
+        logo="/logos/porsche-digital-lab.png"
       />
       <ProjectCard
         name="Digital Partners"
-        oneLiner="IoT-Beratung & Venture Building — 27 Projekte umgesetzt"
+        oneLiner="IoT-Beratung & Venture Building, 27 Projekte umgesetzt"
         role="Gründer & CEO"
         badge="Venture"
         metric="7 Entwickler, 3 Partner"
+        logo="/logos/digital-partners.png"
       />
     </div>
     <div class="mt-8 text-center">
@@ -182,7 +202,7 @@ import headshot from "@/assets/images/headshot-david.jpg";
         </h2>
         <p class="text-lg text-white/85 mb-8">
           Ich schreibe über Expat-Finanzen, Produktentwicklung und ein
-          selbstbestimmtes Leben. Kein Spam, kein Blabla — ehrliche Gedanken.
+          selbstbestimmtes Leben. Kein Spam, kein Blabla. Ehrliche Gedanken.
         </p>
         <form class="flex flex-col sm:flex-row gap-3" onsubmit="return false;">
           <input

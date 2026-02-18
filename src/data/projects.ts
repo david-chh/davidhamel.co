@@ -1,6 +1,7 @@
 export interface ProjectData {
   slug: string;
   name: string;
+  logo: string;
   tagline: { en: string; de: string };
   oneLiner: { en: string; de: string };
   role: { en: string; de: string };
@@ -19,6 +20,7 @@ export const projects: ProjectData[] = [
   {
     slug: "alba-wealth",
     name: "Alba Wealth",
+    logo: "/logos/alba-wealth.svg",
     tagline: {
       en: "AI-powered financial planning for expats in Germany.",
       de: "KI-gestützte Finanzplanung für Expats in Deutschland.",
@@ -60,6 +62,7 @@ export const projects: ProjectData[] = [
   {
     slug: "ziggma",
     name: "Ziggma",
+    logo: "/logos/ziggma.png",
     tagline: {
       en: "Portfolio management for smarter retail investors.",
       de: "Portfoliomanagement für klügere Privatanleger.",
@@ -97,6 +100,7 @@ export const projects: ProjectData[] = [
   {
     slug: "porsche-digital-lab",
     name: "Porsche Digital Lab",
+    logo: "/logos/porsche-digital-lab.png",
     tagline: {
       en: "Blockchain app for classic car provenance. €6.5M in funding.",
       de: "Blockchain-App für Klassiker-Herkunft. €6,5 Mio. Finanzierung.",
@@ -149,6 +153,7 @@ export const projects: ProjectData[] = [
   {
     slug: "derisk",
     name: "DeRisk",
+    logo: "/logos/derisk.png",
     tagline: {
       en: "Systemic risk analytics for the world's largest asset managers.",
       de: "Systemische Risikoanalyse für die größten Vermögensverwalter der Welt.",
@@ -192,6 +197,7 @@ export const projects: ProjectData[] = [
   {
     slug: "digital-partners",
     name: "Digital Partners",
+    logo: "/logos/digital-partners.png",
     tagline: {
       en: "My first company. Six years of IoT consulting and venture building.",
       de: "Mein erstes Unternehmen. Sechs Jahre IoT-Beratung und Venture Building.",
@@ -235,6 +241,7 @@ export const projects: ProjectData[] = [
   {
     slug: "buena",
     name: "Buena",
+    logo: "/logos/buena.png",
     tagline: {
       en: "Automating rental contracts from 5% to 100%.",
       de: "Mietvertragsautomatisierung von 5% auf 100%.",
@@ -274,6 +281,7 @@ export const projects: ProjectData[] = [
   {
     slug: "carly",
     name: "Carly",
+    logo: "/logos/carly.png",
     tagline: {
       en: "25% more conversions through product-led sales.",
       de: "25% mehr Conversions durch produktgeführten Vertrieb.",
@@ -306,6 +314,7 @@ export const projects: ProjectData[] = [
   {
     slug: "impactive",
     name: "Impactive",
+    logo: "/logos/impactive.png",
     tagline: {
       en: "Strategy consulting for institutional shareholder engagement.",
       de: "Strategieberatung für institutionelles Shareholder Engagement.",
@@ -335,6 +344,7 @@ export const projects: ProjectData[] = [
   {
     slug: "rootlocaly",
     name: "Rootlocaly",
+    logo: "/logos/rootlocaly.svg",
     tagline: {
       en: "A side project built with AI — from idea to live app.",
       de: "Ein Nebenprojekt, gebaut mit KI — von der Idee zur Live-App.",

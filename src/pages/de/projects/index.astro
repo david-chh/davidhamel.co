@@ -7,7 +7,7 @@ import { projects } from "@/data/projects";
 
 <BaseLayout
   title="Projekte — David Hamel"
-  description="8+ Jahre Ventures, Produkte und Beratung. Von Fintech-Plattformen über Industrial IoT bis Blockchain — was ich gebaut, geleitet und gelernt habe."
+  description="8+ Jahre Ventures, Produkte und Beratung. Von Fintech-Plattformen über Industrial IoT bis Blockchain. Was ich gebaut, geleitet und gelernt habe."
 >
   <!-- Hero -->
   <section class="bg-white">
@@ -21,7 +21,7 @@ import { projects } from "@/data/projects";
       </h1>
       <p class="text-lg sm:text-xl text-navy-700 max-w-[640px]">
         Ventures, Produkte und Beratungsprojekte in Fintech, Automotive,
-        Proptech und IoT. Acht Jahre lang Dinge gebaut, die live gehen.
+        Proptech und IoT. Acht Jahre Produkte ausgeliefert.
       </p>
     </div>
   </section>
@@ -38,6 +38,7 @@ import { projects } from "@/data/projects";
             badge={p.badge.de}
             metric={p.metric?.de}
             period={p.period}
+            logo={p.logo}
             href={`/de/projects/${p.slug}`}
           />
         ))

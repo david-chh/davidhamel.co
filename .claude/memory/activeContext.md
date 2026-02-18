@@ -8,55 +8,34 @@
 
 ## Current State
 
-**Status**: Phase 1 Foundation COMPLETE. Three-service split implemented. Build passing with 42 pages.
+**Status**: Phase 1 Foundation COMPLETE. Copy polish and real logos done. Build passing with 42 pages.
 **Focus**: Vercel deployment and integrations.
 
-## Completed Work (Session 7 — 2026-02-17)
+## Completed Work (Session 8 — 2026-02-18)
 
-### Three-Service Split
+### Copy Polish
+- Removed all em dashes (~60+) across 16+ files — replaced with periods, commas, colons for natural tone
+- Rewrote About page opening using PR psychology: "I've lived in over 15 countries, started four companies, and once spent a year kitesurfing..." (EN + DE)
+- Homepage "Who I Am": changed "Porsche Digital Lab" → "startups and corporates"
+- Projects page: "Eight years of building things that ship" → "Eight years of shipping products" (EN + DE)
 
-Split the combined `/services` (Product & Build) page into three distinct service pages:
+### Real Company Logos
+Replaced all generated monogram SVGs with real logos:
+- **Digital Partners**: recovered from Wayback Machine (digitalpartners.io), 247x35 PNG
+- **Impactive**: extracted from impactive.pro (Wix), 444x156 PNG
+- **DeRisk**: extracted from LinkedIn company page (derisk-earth), 200x200 PNG
+- Updated all references in `src/data/projects.ts`, `src/pages/product.astro`, `src/pages/de/product.astro`
+- ProjectCard component updated to show logos with proper sizing
 
-- **`/product`** (EN + DE) — Product Leadership page with 6 sections: Hero, When This Works (two-column positive/negative), What You Get (5 deliverables + engagement callout), Track Record (4 ProjectCards), How I Work + FAQ (3-step process + 3 FAQs), CTA
-- **`/build`** (EN + DE) — Build Services page with 7 sections: Hero, How I Work (3-step), What I Build (4 deliverables + tech stack), Why Me — Not an Agency (6 differentiator cards in 2x3 grid), Selected Work (3 ProjectCards), Pricing Signal, CTA
-- **Coaching promoted to top-level nav** — No longer nested under Services dropdown
+### Hero Photo
+- Centered David's face in hero rounded rectangle: `object-[60%_50%]` (horizontal shift, no zoom)
 
-### Navigation Restructured
+## Previous Work (Sessions 5-7)
 
-- **Desktop Nav**: About → Coaching → Services (dropdown: Product Leadership, Build) → Projects → Blog → Adventures
-- **Mobile Nav**: Same structure, Coaching as full-size top-level link
-- **Footer**: Services column now lists Financial Coaching, Product Leadership, Build
-
-### Homepage Updated
-
-- Hero subheadline changed to throughline: "I help people navigate complex systems..."
-- Old two CTA buttons removed
-- New three-card routing section (ServiceCard component) between hero and Who I Am
-- Who I Am paragraph updated to mention all three services
-
-### Other Page Updates
-
-- **About** (EN + DE): Replaced two-button CTABlock with three-path CTA section using border-l pattern
-- **Contact** (EN + DE): Updated subheadline to mention all three services
-- **`/services`** (EN + DE): Replaced with 301 redirect to homepage
-
-### New Files
-
-- `src/components/ServiceCard.astro` — Reusable card for homepage routing section
-- `src/pages/product.astro` + `src/pages/de/product.astro`
-- `src/pages/build.astro` + `src/pages/de/build.astro`
-
-### Build Results
-
-- **42 pages** built successfully, zero errors (up from 38)
-- All 301 redirects working
-- Language switcher works on new pages
-
-## Previous Work (Sessions 5-6)
-
-- Scaffolded Astro project, design system, i18n, layout/components
+- Three-service split: `/coaching`, `/product`, `/build` (Session 7)
+- Scaffolded Astro project, design system, i18n, layout/components (Sessions 5-6)
 - EN + DE homepages, blog foundation, all sub-pages built
-- 38 pages passing build
+- 42 pages passing build
 
 ## Key Decisions
 

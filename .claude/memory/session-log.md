@@ -608,4 +608,84 @@ src/pages/de/services.astro — 301 redirect (DE)
 
 ---
 
+---
+
+## Session 8 — 2026-02-18 (Copy Polish, Real Logos, Hero Photo)
+
+**Duration:** ~2 hours | **Phase:** Phase 1 (Polish)
+
+### What happened
+
+#### Hero Photo Centering
+
+1. Centered David's face in the hero rounded rectangle photo
+2. Multiple iterations on `object-position` — landscape source image (8256x5504) in portrait container (340x400) means only horizontal cropping occurs
+3. Final fix: `object-[60%_50%]` (horizontal shift, no zoom/scale)
+
+#### Copy Polish
+
+4. Changed homepage "Who I Am" text: "led product teams at places like Porsche Digital Lab" → "at startups and corporates" (EN + DE)
+5. Removed all em dashes (~60+) across 16+ files using 4 parallel agents — replaced with periods, commas, colons for natural non-AI tone
+6. Rewrote About page opening using PR psychology principles:
+   - Before: "I grew up in a small town in northern Germany..."
+   - After: "I've lived in over 15 countries, started four companies, and once spent a year kitesurfing from Egypt to New Zealand before any of them. Then I got into finance. Here's the full story."
+   - Old origin story moved into narrative body
+7. Projects page: "Eight years of building things that ship" → "Eight years of shipping products" (EN + DE)
+
+#### Real Company Logos
+
+8. **Digital Partners**: Recovered real logo from Wayback Machine (digitalpartners.io) — 247x35 PNG with "DIGITAL PARTNERS" text + geometric mark. Replaced monogram SVG.
+9. **Impactive**: Extracted real logo from impactive.pro (Wix static assets) — 444x156 PNG "ImpactiveBlueTransparent". Replaced monogram SVG.
+10. **DeRisk**: Extracted logo from LinkedIn company page (derisk-earth) — 200x200 PNG, teal square with "DeRisk" text. Replaced monogram SVG.
+11. Updated all file references from `.svg` to `.png` in `src/data/projects.ts`, `src/pages/product.astro`, `src/pages/de/product.astro`
+12. ProjectCard component updated to display actual company logos with proper sizing
+
+### Files created
+
+```
+public/logos/digital-partners.png
+public/logos/impactive.png
+public/logos/derisk.png
+```
+
+### Files deleted
+
+```
+public/logos/digital-partners.svg (monogram)
+public/logos/impactive.svg (monogram)
+public/logos/derisk.svg (monogram)
+```
+
+### Files modified (19 files)
+
+```
+src/components/ProjectCard.astro — logo display support
+src/data/projects.ts — logo refs .svg → .png for 3 projects
+src/i18n/ui.ts — updated projects subheading copy
+src/pages/index.astro — hero photo centering, Who I Am text, em dashes
+src/pages/de/index.astro — same changes (DE)
+src/pages/about.astro — opening rewrite, em dash removal
+src/pages/de/about.astro — same changes (DE)
+src/pages/build.astro — em dash removal
+src/pages/de/build.astro — em dash removal
+src/pages/coaching.astro — em dash removal
+src/pages/de/coaching.astro — em dash removal
+src/pages/product.astro — em dash removal, logo ref
+src/pages/de/product.astro — em dash removal, logo ref
+src/pages/contact.astro — em dash removal
+src/pages/de/contact.astro — em dash removal
+src/pages/blog/index.astro — em dash removal
+src/pages/de/blog/index.astro — em dash removal
+src/pages/projects/index.astro — subheading copy update
+src/pages/de/projects/index.astro — subheading copy update (DE)
+```
+
+### Key decisions
+
+- Em dashes removed site-wide (look AI-written)
+- About page opening uses PR psychology: contrast, specificity, pattern interrupt, curiosity gap
+- Real logos sourced from Wayback Machine and LinkedIn when original domains defunct
+
+---
+
 _Next session: Vercel deployment, Umami analytics, Resend newsletter, Calendly embed_

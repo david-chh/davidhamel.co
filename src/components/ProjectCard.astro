@@ -7,9 +7,11 @@ interface Props {
   metric?: string;
   period?: string;
   href?: string;
+  logo?: string;
 }
 
-const { name, oneLiner, role, badge, metric, period, href } = Astro.props;
+const { name, oneLiner, role, badge, metric, period, href, logo } =
+  Astro.props;
 
 const badgeColors: Record<string, string> = {
   Venture: "bg-teal-100 text-teal-700",
@@ -29,9 +31,19 @@ const Tag = href ? "a" : "div";
     href && "cursor-pointer",
   ]}
 >
-  <!-- Placeholder image area -->
-  <div class="aspect-[16/10] bg-teal-50 flex items-center justify-center">
-    <span class="text-5xl font-bold text-teal-600/30">{name[0]}</span>
+  <!-- Logo area -->
+  <div class="aspect-[16/10] bg-navy-50 flex items-center justify-center p-8">
+    {
+      logo ? (
+        <img
+          src={logo}
+          alt={`${name} logo`}
+          class="max-h-full max-w-[60%] object-contain"
+        />
+      ) : (
+        <span class="text-5xl font-bold text-teal-600/30">{name[0]}</span>
+      )
+    }
   </div>
 
   <!-- Content -->

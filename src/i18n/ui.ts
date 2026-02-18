@@ -61,7 +61,7 @@ export const ui = {
     "projects.selectedWork": "Selected Work",
     "projects.heading": "What I've built.",
     "projects.subheading":
-      "Ventures, products, and consulting engagements spanning fintech, automotive, proptech, and IoT. Eight years of building things that ship.",
+      "Ventures, products, and consulting engagements spanning fintech, automotive, proptech, and IoT. Eight years of shipping products.",
     "projects.allProjects": "All Projects",
     "projects.viewFullPortfolio": "View full portfolio",
 
@@ -182,7 +182,7 @@ export const ui = {
     "projects.selectedWork": "Ausgew\u00e4hlte Projekte",
     "projects.heading": "Was ich gebaut habe.",
     "projects.subheading":
-      "Ventures, Produkte und Beratungsprojekte in Fintech, Automotive, Proptech und IoT. Acht Jahre lang Dinge gebaut, die live gehen.",
+      "Ventures, Produkte und Beratungsprojekte in Fintech, Automotive, Proptech und IoT. Acht Jahre Produkte ausgeliefert.",
     "projects.allProjects": "Alle Projekte",
     "projects.viewFullPortfolio": "Gesamtes Portfolio ansehen",
 
