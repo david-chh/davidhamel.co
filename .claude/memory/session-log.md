@@ -688,4 +688,134 @@ src/pages/de/projects/index.astro — subheading copy update (DE)
 
 ---
 
-_Next session: Vercel deployment, Umami analytics, Resend newsletter, Calendly embed_
+---
+
+## Session 9 — 2026-02-18 (About Rewrite, Section Removals, Documentation)
+
+**Duration:** ~1.5 hours | **Phase:** Phase 1 (Polish)
+
+### What happened
+
+#### About Page Rewrite (EN + DE)
+
+1. New personal narrative: independence, travel, curiosity about finance, entrepreneurship journey from consulting to fintech to coaching + AI
+2. Story no longer mentions specific project names or KPIs
+3. Hero section: bullet-list format, warm-white background, portrait scaled down (lg:max-w-[280px])
+4. University logos (RSM, EDHEC, SMU) added to Background section
+5. "Germany and Portugal" positioning (was just Berlin/Germany)
+
+#### Section Removals
+
+6. Removed "How can I help?" CTA section from About page (EN + DE)
+7. Removed "Who I Am" bio section from homepage (EN + DE)
+8. Removed Newsletter CTA sections from all pages (homepage, blog, contact). Newsletter signup now only in footer.
+9. Removed subtitle from Adventures page (EN + DE)
+10. Removed "Book a Call" from footer Services column
+
+#### Footer Newsletter Updates
+
+11. Heading: "Insights on money, building AI, and living abroad." (added "AI")
+12. Subtext simplified: "Subscribe to my newsletter" / "Newsletter abonnieren"
+
+#### Documentation Updates
+
+13. Updated `docs/copy-deck.md` -- About page copy rewritten, removed deleted sections, updated footer
+14. Updated `docs/brand-context.md` -- location to "Germany and Portugal"
+15. Updated `docs/information-architecture.md` -- removed deleted sections from page structures
+
+### Key decisions
+
+- Newsletter signup moved to footer only (removed from all page bodies)
+- About page uses bullet-list hero format (not paragraph)
+- "Germany and Portugal" positioning sitewide
+
+---
+
+## Session 10 — 2026-02-19 (Build Page Rewrite, Calendly, Copy Corrections)
+
+**Duration:** ~2 hours | **Phase:** Phase 1 (Polish)
+
+### What happened
+
+#### Build Page Complete Rewrite (EN + DE)
+
+1. New hero: "Custom software is now viable for problems that were never worth solving before"
+2. New section: "Why this matters now" (two-column: software cost collapsed + building fast without building right = risk)
+3. "What I build" streamlined from 4 categories to 2: Custom applications, AI agents and automation
+4. "How I work" reframed: Scope, Build, Ship & Support (emphasis on scoping as differentiator)
+5. "Why me not an agency" (6 cards) replaced with "Why this works" (3 cards: Product thinking, One person full context, Built for production)
+6. Removed: tech stack box, hero CTA button, pricing section, FAQ section
+
+#### Product Page Updates (EN + DE)
+
+7. Removed FAQ section
+8. CTA simplified to button + email only (same pattern as build page)
+9. Engagement structure box already removed in prior session
+
+#### Calendly Integration
+
+10. Contact page (EN + DE): Calendly embed integrated with https://calendly.com/david-chh/call (replaced placeholder)
+11. Coaching page (EN + DE): Calendly embed integrated (replaced placeholder)
+
+#### Coaching Page Updates
+
+12. Alba Wealth logo added (replaced text placeholder)
+
+#### CTABlock Component
+
+13. `heading` prop made optional
+14. Slot wrapper changed from flex-row to flex-col items-center (centered layout)
+
+#### Sitewide Copy Corrections
+
+15. "27 projects" changed to "30+ projects" everywhere (build pages, homepage, projects.ts)
+16. "Vibe coded" changed to "AI-native build" (build pages, projects.ts, Rootlocaly)
+17. "purchase conversion/funnel" changed to "sales conversion/funnel" for Carly (projects.ts, llms.txt)
+
+#### New Files
+
+18. `public/llms.txt` -- Machine-readable CV for AI consumption, linked from About page (EN: "Machine-readable CV", DE: "Maschinenlesbarer Lebenslauf")
+
+#### Notion Updated
+
+19. Brand document updated with all positioning changes
+
+### Files created
+
+```
+public/llms.txt
+```
+
+### Files modified
+
+```
+src/pages/build.astro -- complete rewrite
+src/pages/de/build.astro -- complete rewrite (DE)
+src/pages/product.astro -- FAQ removed, CTA simplified
+src/pages/de/product.astro -- FAQ removed, CTA simplified (DE)
+src/pages/contact.astro -- Calendly integrated
+src/pages/de/contact.astro -- Calendly integrated (DE)
+src/pages/coaching.astro -- Calendly integrated, Alba Wealth logo
+src/pages/de/coaching.astro -- Calendly integrated, Alba Wealth logo (DE)
+src/pages/about.astro -- llms.txt link added
+src/pages/de/about.astro -- llms.txt link added (DE)
+src/pages/adventures.astro -- minor updates
+src/pages/de/adventures.astro -- minor updates (DE)
+src/components/CTABlock.astro -- heading optional, flex-col layout
+src/data/projects.ts -- 30+ projects, AI-native build, sales conversion
+src/pages/index.astro -- 30+ projects reference
+src/pages/de/index.astro -- 30+ projects reference (DE)
+```
+
+### Key decisions
+
+- "Vibe coding" term retired sitewide, replaced with "AI-native build"
+- Build page no longer promises pricing or timelines (removed pricing section)
+- Scoping positioned as the key differentiator on build page (not speed or cost)
+- CTA pattern standardized: button + email, no heading, centered flex-col
+- Calendly URL: https://calendly.com/david-chh/call
+- llms.txt added for AI discoverability
+
+---
+
+_Next session: Vercel deployment, Umami analytics, Resend newsletter integration_

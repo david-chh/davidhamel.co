@@ -2,7 +2,7 @@
 
 > Detailed IA spec. Defines every page, section, navigation element, and content relationship.
 >
-> Last updated: 2026-02-17 (v2 — Three-service split)
+> Last updated: 2026-02-18 (v3 — Section removals, About rewrite, footer updates)
 
 ---
 
@@ -47,7 +47,7 @@
 │  Financial Coaching   Blog            Email                          │
 │  Product Leadership   Projects        LinkedIn                       │
 │  Build                Adventures      GitHub                         │
-│  Book a Call          About                                          │
+│                       About                                          │
 │                                                                      │
 │  ─────────────────── Newsletter Signup ───────────────────           │
 │  [Email input]                              [Subscribe →]            │
@@ -109,13 +109,6 @@
 │                                                                   │
 ├───────────────────────────────────────────────────────────────────┤
 │                                                                   │
-│  WHO I AM (brief intro block)                                     │
-│  ─────────────────────────────────────────────────                │
-│  [Headshot]  2-3 sentences. Expat story, product background,     │
-│              what I do now. Link: "More about me →" → /about      │
-│                                                                   │
-├───────────────────────────────────────────────────────────────────┤
-│                                                                   │
 │  SELECTED WORK                                                    │
 │  ─────────────────────────────────────────────────                │
 │  3-4 ProjectCards in a grid. Each card shows:                     │
@@ -145,16 +138,7 @@
 │  "Read all posts →" → /blog                                       │
 │                                                                   │
 ├───────────────────────────────────────────────────────────────────┤
-│                                                                   │
-│  NEWSLETTER SIGNUP                                                │
-│  ─────────────────────────────────────────────────                │
-│  Headline: "Insights on money, building, and living abroad."      │
-│  Subtext: No spam. Unsubscribe anytime.                           │
-│  [Email input] [Subscribe →]                                      │
-│  React island: NewsletterSignup.tsx → Resend Contacts API         │
-│                                                                   │
-├───────────────────────────────────────────────────────────────────┤
-│ [FOOTER]                                                          │
+│ [FOOTER — includes newsletter signup]                             │
 └───────────────────────────────────────────────────────────────────┘
 ```
 
@@ -163,8 +147,8 @@
 1. Three-card routing → `/coaching`, `/product`, `/build`
 2. Selected work cards → `/projects/[slug]`
 3. Blog cards → `/blog/[slug]`
-4. Newsletter signup → Resend API
-5. "Book a Call" in nav → Calendly
+4. "Book a Call" in nav → Calendly
+5. Newsletter signup in footer → Resend API
 
 ---
 
@@ -179,53 +163,36 @@ SECTIONS (top to bottom):
 ─────────────────────────────
 
 1. HERO / INTRO
-   - Headline: "About David" or similar
-   - Headshot (large)
-   - Opening paragraph from Origin Story (docs/brand-context.md § Origin Story)
+   - Headline: "About"
+   - Bullet-list summary of key facts (grew up in Germany, traveled,
+     studied, co-founded four companies, consulting, now coaching + Alba)
+   - Portrait photo (warm-white bg, grayscale, scaled down lg:max-w-[280px])
 
 2. THE STORY
-   - Narrative prose (NOT a résumé or bullet list)
-   - Flows chronologically through:
-     • Growing up in northwest Germany, leaving to explore
-     • Kitesurfing/surfing/travel year (Egypt → Brazil → Argentina → Fiji → Thailand → NZ)
-     • Rotterdam School of Management (BSc + MSc, Cum Laude, EDHEC exchange, SMU Singapore)
-     • ABN Amro internship (brief mention — financial analysis foundation)
-     • Digital Partners — first business, IoT/Industry 4.0, 27 projects,
-       built team, clients like Viessmann/Porsche/Körber
-       (Porsche Digital Lab, Carly, Buena contracts woven into this narrative)
-     • Antler EIR — Berlin founder community
-     • DeRisk — institutional risk analytics, NBIM/Barings/CCLA
-     • Ziggma — portfolio management, 35k users, co-founder & COO
-       (Impactive consulting woven in)
-     • The realization: expats can't get good financial advice
-     • Alba Wealth — building AI-powered financial planning
-     • Rootlocaly — side project, learning vibe coding
-   - Each project name links to its /projects/[slug] page where applicable
-   - Projects without pages (Cormo Energy, Antler, ISM eCompany) get brief inline mentions
+   - Narrative prose focused on independence, travel, curiosity about finance,
+     entrepreneurship journey from consulting to fintech to coaching + AI
+   - Does NOT mention specific project names or KPIs in the story body
+   - Mentions "Germany and Portugal" as current location
+   - Closes with "When I'm not working on money, I'm most likely in the ocean."
+   - Inline surfer photo after closing line
 
 3. WHAT I BELIEVE (values)
    - 5 core values from brand-context.md (Independence, Transparency, Systems Thinking,
      Freedom by Design, Active Living)
    - Short paragraph for each, not just bullet points
 
-4. LANGUAGES & EDUCATION
-   - Languages: German, English (professional), French, Spanish (fluent)
+4. BACKGROUND (Languages, Education & University Logos)
+   - Languages: German, English, French, Spanish
    - Education: RSM BSc/MSc (Cum Laude), EDHEC exchange, SMU Singapore exchange
+   - University logos row: RSM, EDHEC, SMU (grayscale, h-8)
 
-5. CTA SECTION
-   - Three paths:
-     "Need financial coaching?" → /coaching
-     "Need product leadership?" → /product
-     "Need something built?" → /build
+(No CTA section — removed)
 ```
 
 **Content cross-references:**
 
-- Each project mention links to `/projects/[slug]`
-- Alba Wealth link also goes to `alba-wealth.com` (external)
-- "Financial coaching" links to `/coaching`
-- "Product leadership" links to `/product`
-- "Build" links to `/build`
+- Alba Wealth link in hero bullet list goes to `/projects/alba-wealth`
+- Newsletter signup in footer only
 
 ---
 
@@ -533,8 +500,7 @@ SECTIONS:
    - Sorted by date (newest first)
    - Pagination or infinite scroll (v2)
 
-4. NEWSLETTER CTA (bottom)
-   - Same component as homepage
+(Newsletter CTA removed — lives in footer only)
 ```
 
 **Content pillar → audience mapping:**
@@ -572,13 +538,10 @@ SECTIONS:
    - Short bio (1-2 sentences)
    - Links to /about and relevant service page
 
-4. NEWSLETTER CTA
-   - Inline newsletter signup
-
-5. RELATED POSTS
+4. RELATED POSTS
    - 2-3 posts from same pillar or related tags
 
-6. NAVIGATION
+5. NAVIGATION
    - "← Previous post" / "Next post →"
 ```
 
@@ -596,11 +559,11 @@ SECTIONS:
 
 1. HERO
    - Headline: "Adventures"
-   - Subheadline: "When I'm not building or coaching, I'm in the ocean."
+   - (No subtitle)
 
 2. PHOTO GRID
    - Masonry or grid layout
-   - Categories (can filter or just section): Surf, Dive, Travel
+   - Categories: All, Surf, Freedive, Kite, Snow, Travel
    - David's own photos only (never stock)
    - Lightbox on click (v2)
 
@@ -633,13 +596,10 @@ SECTIONS:
    - "Book a free 30-minute consultation"
 
 3. DIRECT CONTACT
-   - Email: david.ch.hamel@gmail.com (or professional domain once set up)
+   - Email: hello@davidhamel.co
    - LinkedIn: linkedin.com/in/david-hamel-11baa841
 
-4. NEWSLETTER SIGNUP
-   - Same component as homepage/footer
-
-5. SOCIAL LINKS
+4. SOCIAL LINKS (newsletter signup in footer only)
    - LinkedIn (primary)
    - GitHub (david-chh)
    - Others as added
@@ -698,14 +658,13 @@ SECTIONS:
 Cross-links:
   • Homepage → Coaching, Product, Build (three-card routing)
   • Homepage → Projects (selected work), Blog (latest posts)
-  • About → Projects (inline links in career narrative)
-  • About → Coaching, Product, Build (three-path CTA)
+  • About → Alba Wealth (hero bullet link)
   • Product → Projects (proof: Porsche, Ziggma, DeRisk, Buena)
   • Build → Projects (proof: Alba, Rootlocaly, Digital Partners)
   • Coaching → Alba Wealth (external)
   • Blog posts → Related posts, Projects (where relevant)
   • Projects → Next/prev project, Contact
-  • Every page → Calendly (via nav CTA), Newsletter (via footer)
+  • Every page → Calendly (via nav CTA), Newsletter (via footer only)
 ```
 
 ---
@@ -716,7 +675,7 @@ Cross-links:
 | ---------------------- | ------------ | --------------------------------- | --------------------------------------------------- |
 | `Nav.astro`            | Astro        | All pages                         | Sticky header, Services dropdown, mobile hamburger  |
 | `Footer.astro`         | Astro        | All pages                         | 3-column links, newsletter signup, legal links      |
-| `NewsletterSignup.tsx` | React island | Homepage, Blog, Footer, Contact   | `client:visible` on most, `client:load` on Contact  |
+| `NewsletterSignup.tsx` | React island | Footer only                        | `client:visible` — newsletter signup consolidated in footer |
 | `CalendlyEmbed.tsx`    | React island | Coaching, Product, Build, Contact | `client:visible`                                    |
 | `BlogCard.astro`       | Astro        | Homepage, Blog listing            | Title, date, pillar tag, excerpt                    |
 | `ServiceCard.astro`    | Astro        | Homepage                          | Three-card routing: icon, heading, description, CTA |

@@ -6,7 +6,7 @@
 > **Convention:** Each section shows English first, then German.
 > Photo/image placeholders marked with `[IMAGE: description]`.
 >
-> Last updated: 2026-02-17 (v2 — Three-service split)
+> Last updated: 2026-02-19 (v4 — Build page rewrite, Carly/Digital Partners corrections, Rootlocaly metric, llms.txt)
 
 ---
 
@@ -35,7 +35,6 @@
 | Column 1 link 1        | Financial Coaching                              | Finanzcoaching                               |
 | Column 1 link 2        | Product Leadership                              | Produktführung                               |
 | Column 1 link 3        | Build                                           | Build                                        |
-| Column 1 link 4        | Book a Call                                     | Gespräch buchen                              |
 | Column 2 heading       | Explore                                         | Entdecken                                    |
 | Column 2 link 1        | Blog                                            | Blog                                         |
 | Column 2 link 2        | Projects                                        | Projekte                                     |
@@ -45,8 +44,8 @@
 | Column 3 link 1        | Email                                           | E-Mail                                       |
 | Column 3 link 2        | LinkedIn                                        | LinkedIn                                     |
 | Column 3 link 3        | GitHub                                          | GitHub                                       |
-| Newsletter heading     | Insights on money, building, and living abroad. | Impulse zu Geld, Bauen und Leben im Ausland. |
-| Newsletter subtext     | No spam. Unsubscribe anytime.                   | Kein Spam. Jederzeit abbestellbar.           |
+| Newsletter heading     | Insights on money, building AI, and living abroad. | Impulse zu Geld, Bauen und Leben im Ausland. |
+| Newsletter subtext     | Subscribe to my newsletter                         | Newsletter abonnieren                        |
 | Newsletter placeholder | Your email address                              | Deine E-Mail-Adresse                         |
 | Newsletter button      | Subscribe                                       | Abonnieren                                   |
 | Copyright              | © 2026 David Hamel                              | © 2026 David Hamel                           |
@@ -136,27 +135,7 @@ Card 3:
 > Für KMU und Finanzdienstleister, die einen Produktmenschen brauchen, der ihre Branche versteht — und die Software selbst baut.
 > [Mehr erfahren →](/de/build)
 
-### Section 3: Who I Am
-
-`[IMAGE: Headshot — professional but approachable, natural light]`
-
-**EN:**
-
-> I'm David — an independent financial planning coach and product builder based in Berlin. I've lived and worked across 15+ countries, built fintech products used by tens of thousands of people, and led product teams at places like Porsche Digital Lab.
->
-> Today I coach expats through the German financial system, provide product leadership to startups, and build apps and websites for businesses — with a particular focus on fintech and financial services.
-
-Link: More about me →
-
-**DE:**
-
-> Ich bin David — unabhängiger Finanzcoach und Product Builder in Berlin. Ich habe in über 15 Ländern gelebt und gearbeitet, Fintech-Produkte für Zehntausende Nutzer gebaut und Produktteams unter anderem beim Porsche Digital Lab geleitet.
->
-> Heute coache ich Expats durch das deutsche Finanzsystem, biete Startups Produktführung und baue Apps und Websites für Unternehmen — mit besonderem Fokus auf Fintech und Finanzdienstleistungen.
-
-Link: Mehr über mich →
-
-### Section 4: Selected Work
+### Section 3: Selected Work
 
 Section heading:
 
@@ -196,7 +175,7 @@ Cards (4 projects — see ProjectCard component):
 | Field | EN | DE |
 |-------|----|----|
 | Name | Digital Partners | Digital Partners |
-| One-liner | IoT consulting & venture building — 27 projects delivered | IoT-Beratung & Venture Building — 27 Projekte umgesetzt |
+| One-liner | IoT consulting & venture building — 30+ projects delivered | IoT-Beratung & Venture Building — 30+ Projekte umgesetzt |
 | Role | Founder & CEO | Gründer & CEO |
 | Metric | 7 engineers, 3 partners | 7 Entwickler, 3 Partner |
 | Badge | Venture | Venture |
@@ -207,7 +186,7 @@ Link below cards:
 | ------------------- | ----------------------- |
 | View all projects → | Alle Projekte ansehen → |
 
-### Section 5: Latest from the Blog
+### Section 4: Latest from the Blog
 
 Section heading:
 
@@ -223,34 +202,6 @@ Link below cards:
 | ---------------- | --------------------- |
 | Read all posts → | Alle Beiträge lesen → |
 
-### Section 6: Newsletter Signup
-
-**EN:**
-
-Heading:
-
-> Insights on money, building, and living abroad.
-
-Subtext:
-
-> I write about expat finance, product building, and designing a life on your own terms. No spam, no fluff — just honest thinking.
-
-Placeholder: Your email address
-Button: Subscribe →
-
-**DE:**
-
-Heading:
-
-> Impulse zu Geld, Bauen und Leben im Ausland.
-
-Subtext:
-
-> Ich schreibe über Expat-Finanzen, Produktentwicklung und ein selbstbestimmtes Leben. Kein Spam, kein Blabla — ehrliche Gedanken.
-
-Placeholder: Deine E-Mail-Adresse
-Button: Abonnieren →
-
 ---
 
 ## 2. About (`/about`)
@@ -260,11 +211,11 @@ Button: Abonnieren →
 | Field                | EN                                                                                                                                                                | DE                                                                                                                                                          |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<title>`            | About — David Hamel                                                                                                                                               | Über mich — David Hamel                                                                                                                                     |
-| `<meta description>` | The story behind the financial planning coach and product builder. From Rotterdam to San Francisco to Berlin — via 15+ countries, 4 startups, and a lot of ocean. | Die Geschichte hinter dem Finanzcoach und Product Builder. Von Rotterdam über San Francisco nach Berlin — über 15+ Länder, 4 Startups und jede Menge Ozean. |
+| `<meta description>` | The story behind the financial planning coach and product builder. 15+ countries, 4 startups, a year of kitesurfing, and a lot of ocean. | Die Geschichte hinter dem Finanzcoach und Product Builder. 15+ Länder, 4 Startups, ein Jahr Kitesurfen und jede Menge Ozean. |
 
 ### Section 1: Hero / Intro
 
-`[IMAGE: Full or half-width headshot — different from homepage, more personal/candid]`
+`[IMAGE: Portrait photo — warm-white background, scaled down with lg:max-w-[280px], grayscale]`
 
 **EN:**
 
@@ -272,11 +223,14 @@ Headline:
 
 > About
 
-Opening:
+Opening (bullet list):
 
-> I grew up in a small town in northern Germany. It was a great place to be a kid — but I always knew there was a bigger world out there.
->
-> So as soon as I could, I left to find it.
+> - Grew up in Germany.
+> - Traveled around the world.
+> - Studied business, finance and economics.
+> - Co-founded four companies.
+> - Consulted on product, finance and venture building.
+> - Now: financial coaching for expats, building [Alba Wealth](/projects/alba-wealth).
 
 **DE:**
 
@@ -284,51 +238,56 @@ Headline:
 
 > Über mich
 
-Opening:
+Opening (bullet list):
 
-> Ich bin in einer Kleinstadt in Norddeutschland aufgewachsen. Es war ein toller Ort zum Aufwachsen — aber ich wusste immer, dass es eine größere Welt da draußen gibt.
->
-> Also bin ich losgezogen, sobald ich konnte.
+> - Aufgewachsen in Deutschland.
+> - Um die Welt gereist.
+> - BWL, Finanzen und VWL studiert.
+> - Vier Unternehmen mitgegründet.
+> - Beratung in Produkt, Finanzen und Venture Building.
+> - Heute: Finanzcoaching für Expats, Aufbau von [Alba Wealth](/de/projects/alba-wealth).
 
 ### Section 2: The Story
 
+Note: The new narrative focuses on independence, travel, curiosity about finance, entrepreneurship journey from consulting to fintech to coaching + AI. It does NOT mention specific project names or KPIs in the story body. Project links are only in the hero bullet list.
+
 **EN:**
 
-> I spent a year kitesurfing, surfing, and exploring — from Egypt to Brazil, Argentina to Fiji, Thailand to New Zealand. Traveling through so many countries showed me one thing clearly: international business, economics, and finance are the systems that shape our global world. Understanding how those systems work is what pulled me in — and what I decided to study.
+> Ever since I was a teenager, I wanted to explore and be independent. It just felt natural to go travel after finishing high school. I taught kitesurfing to fund the road, and spent a year moving through Egypt, Brazil, New Zealand, and wherever the waves were good.
 >
-> I studied International Business Administration at Rotterdam School of Management, graduated Cum Laude, then completed my MSc in Finance and Investments — with semesters at EDHEC in Nice and SMU in Singapore. After a stint in commodities trade finance at ABN Amro in Amsterdam, I knew I wanted to build things — not analyze them from a desk.
+> Traveling also made me realize how important financial freedom was. So, after seeing how connected the world really is, I was drawn to international business. A year into studying, it became obvious that money is the system running everything. It shapes incentives, distributes power, connects economies. At the same time, I got hooked on entrepreneurship and technology, because there seemed to be an unlimited number of unsolved problems in the economy.
 >
-> So I started my first company. [Digital Partners](/projects/digital-partners) was a digital strategy and IoT consulting firm. Over six years, we executed 27 projects for industrial clients like Viessmann, Porsche, and Körber, building a team of seven engineers and three consulting partners across Berlin and San Francisco. During that time, I also took on product roles at [Porsche Digital Lab](/projects/porsche-digital-lab) — where I led a blockchain product for classic car provenance and helped secure €6.5M in funding — and at [Carly](/projects/carly) and [Buena](/projects/buena), where I built sales funnels and automated contract workflows.
+> I studied in Rotterdam, with semesters in Nice and Singapore, then joined a bank in commodities trade finance. I loved the scale of global banking, but I was too curious to find out if I could build something from scratch.
 >
-> In late 2021, I joined Antler's Entrepreneur in Residence program in Berlin. That's where the idea for [DeRisk](/projects/derisk) crystallized — a platform for institutional investors to manage portfolio relationships and systemic risk. We built the product and piloted it with asset managers overseeing more than €1.5 trillion, including NBIM, Barings, and CCLA.
+> In 2016, everyone was talking about how technology would disrupt industry. So I started a consulting firm to help industrial companies adopt digital technology. I wanted to see the nuts and bolts of the industrial world up close, something I would have missed if I had jumped straight into finance.
 >
-> After DeRisk, I joined [Ziggma](/projects/ziggma) as Co-Founder and COO — a portfolio management platform for retail investors that was already gaining traction. We grew it to 35,000 users and €1.5 billion in linked assets. During that period, I also consulted for [Impactive](/projects/impactive) on strategy for their institutional shareholder engagement platform.
+> When Covid put business on hold, I started exploring fintech again. The climate crisis was being hotly discussed in financial services, but most solutions were inefficient greenwashing. As someone who's always lived close to the ocean, the topic was personal. I got deep into corporate governance and shareholder engagement as a tool for real change, first building a platform for institutional investors, then co-founding a portfolio management company for retail investors.
 >
-> But here's what I kept noticing: the people around me — smart, well-earning professionals — had no idea what to do with their money. Especially the expats. The German financial system is complex, opaque, and overwhelmingly in German. Most advisors earn commissions, which means they're incentivized to sell you products, not solve your problems.
+> After two years deep in personal finance, I saw something bigger. People didn't just lack good investment tools. There were fundamental flaws in how the entire financial advice industry operates, costing people their financial independence.
 >
-> I decided to change that. I became an independent, fee-based financial planning coach and started building [Alba Wealth](/projects/alba-wealth) — an AI-powered planning tool — because I believe technology can make good financial planning accessible to everyone, not just the wealthy.
+> This coincided with the rise of AI, opening vast new possibilities for how personal finance could actually work.
 >
-> Today, I split my time between coaching expat clients one-on-one and building the tools I wish had existed when I was figuring this out myself.
+> That's where I am today. I run an independent financial coaching practice for internationals in Germany and Portugal, and I'm building a financial planning AI that takes care of your personal financial life.
 >
 > When I'm not working on money, I'm most likely in the ocean.
 
 **DE:**
 
-> Ich habe ein Jahr lang gekitesurft, gesurft und die Welt erkundet — von Ägypten über Brasilien, Argentinien bis Fidschi, Thailand bis Neuseeland. Das Reisen durch so viele Länder hat mir eines klar gezeigt: Internationales Business, Volkswirtschaft und Finanzen sind die Systeme, die unsere globale Welt formen. Zu verstehen, wie diese Systeme funktionieren, hat mich gepackt — und das wollte ich studieren.
+> Schon als Teenager wollte ich die Welt erkunden und unabhängig sein. Nach dem Abitur war es für mich selbstverständlich, erst einmal reisen zu gehen. Ich finanzierte mir die Reise als Kitesurflehrer und verbrachte ein Jahr in Ägypten, Brasilien, Neuseeland und überall dort, wo die Wellen gut waren.
 >
-> Ich studierte International Business Administration an der Rotterdam School of Management, schloss mit Cum Laude ab und machte dann meinen MSc in Finance and Investments — mit Semestern an der EDHEC in Nizza und der SMU in Singapur. Nach einer Zeit im Commodities Trade Finance bei ABN Amro in Amsterdam wusste ich: Ich will Dinge bauen — nicht vom Schreibtisch aus analysieren.
+> Das Reisen zeigte mir auch, wie wichtig finanzielle Freiheit ist. Als ich sah, wie vernetzt die Welt wirklich ist, zog es mich zum internationalen Business. Schon nach einem Jahr Studium wurde klar: Geld ist das System, das alles antreibt. Es formt Anreize, verteilt Macht, verbindet Volkswirtschaften. Gleichzeitig packte mich die Begeisterung für Unternehmertum und Technologie, weil es eine scheinbar unbegrenzte Zahl ungelöster Probleme in der Wirtschaft gab.
 >
-> Also gründete ich mein erstes Unternehmen. [Digital Partners](/projects/digital-partners) war eine Beratung für digitale Strategie und IoT. Über sechs Jahre haben wir 27 Projekte für Industriekunden wie Viessmann, Porsche und Körber umgesetzt und ein Team aus sieben Entwicklern und drei Beratungspartnern in Berlin und San Francisco aufgebaut. In dieser Zeit übernahm ich auch Produktrollen beim [Porsche Digital Lab](/projects/porsche-digital-lab) — wo ich ein Blockchain-Produkt für die Herkunftsdokumentation klassischer Autos leitete und €6,5 Mio. Finanzierung mitgesichert habe — sowie bei [Carly](/projects/carly) und [Buena](/projects/buena), wo ich Vertriebstrichter baute und Vertragsworkflows automatisierte.
+> Ich studierte in Rotterdam, mit Semestern in Nizza und Singapur, und ging dann zu einer Bank im Commodities Trade Finance. Ich liebte die Dimension des globalen Bankgeschäfts, aber ich war zu neugierig herauszufinden, ob ich etwas von Grund auf selbst aufbauen konnte.
 >
-> Ende 2021 nahm ich am Entrepreneur in Residence-Programm von Antler in Berlin teil. Dort entstand die Idee für [DeRisk](/projects/derisk) — eine Plattform für institutionelle Investoren zur Verwaltung von Portfolio-Beziehungen und systemischen Risiken. Wir bauten das Produkt und pilotierten es mit Vermögensverwaltern, die über €1,5 Billionen betreuen, darunter NBIM, Barings und CCLA.
+> 2016 sprach jeder davon, wie Technologie die Industrie verändern würde. Also gründete ich eine Beratungsfirma, um Industrieunternehmen bei der Einführung digitaler Technologie zu unterstützen. Ich wollte die Mechanismen der Industriewelt aus der Nähe sehen, etwas, das mir entgangen wäre, wenn ich direkt in die Finanzwelt eingestiegen wäre.
 >
-> Nach DeRisk stieg ich bei [Ziggma](/projects/ziggma) als Co-Founder und COO ein — eine Portfoliomanagement-Plattform für Privatanleger, die bereits Fahrt aufgenommen hatte. Wir wuchsen auf 35.000 Nutzer und €1,5 Milliarden verknüpfte Assets. Parallel beriet ich [Impactive](/projects/impactive) bei der Strategie für ihre institutionelle Shareholder-Engagement-Plattform.
+> Als Covid das Geschäft zum Stillstand brachte, begann ich, Fintech erneut zu erkunden. Die Klimakrise wurde in der Finanzbranche heiß diskutiert, aber die meisten Lösungen waren ineffizientes Greenwashing. Als jemand, der immer nah am Ozean gelebt hat, war das Thema persönlich. Ich vertiefte mich in Corporate Governance und Shareholder Engagement als Werkzeug für echten Wandel, baute zuerst eine Plattform für institutionelle Investoren und gründete dann ein Portfoliomanagement-Unternehmen für Privatanleger mit.
 >
-> Aber was mir immer wieder auffiel: Die Menschen um mich herum — kluge, gut verdienende Fachkräfte — hatten keine Ahnung, was sie mit ihrem Geld anfangen sollten. Besonders die Expats. Das deutsche Finanzsystem ist komplex, undurchsichtig und überwiegend auf Deutsch. Die meisten Berater verdienen Provisionen, was bedeutet, dass sie einen Anreiz haben, dir Produkte zu verkaufen, nicht deine Probleme zu lösen.
+> Nach zwei Jahren tief im Bereich Personal Finance erkannte ich etwas Größeres. Den Menschen fehlten nicht nur gute Anlagetools. Es gab grundlegende Mängel in der gesamten Finanzberatungsbranche, die Menschen ihre finanzielle Unabhängigkeit kosteten.
 >
-> Ich beschloss, das zu ändern. Ich wurde unabhängiger, honorarbasierter Finanzcoach und begann, [Alba Wealth](/projects/alba-wealth) zu bauen — ein KI-gestütztes Planungstool — weil ich glaube, dass Technologie gute Finanzplanung für alle zugänglich machen kann, nicht nur für Wohlhabende.
+> Das fiel zusammen mit dem Aufstieg von KI, der völlig neue Möglichkeiten eröffnete, wie Personal Finance tatsächlich funktionieren könnte.
 >
-> Heute teile ich meine Zeit zwischen dem persönlichen Coaching von Expat-Kunden und dem Bau der Tools, die ich mir selbst gewünscht hätte, als ich das alles noch herausfinden musste.
+> Hier stehe ich heute. Ich betreibe eine unabhängige Finanzcoaching-Praxis für Internationals in Deutschland und Portugal und baue eine Finanzplanungs-KI, die sich um alle Aspekte deines persönlichen Finanzlebens kümmert.
 >
 > Wenn ich nicht an Geld arbeite, bin ich höchstwahrscheinlich im Ozean.
 
@@ -366,7 +325,7 @@ Heading:
 >
 > **Aktives Leben** — Ich glaube daran, ein Leben aufzubauen, für das es sich zu planen lohnt. Reisen, Abenteuer und Gesundheit sind keine Nebensache — sie sind der Grund, warum wir das hier machen.
 
-### Section 4: Languages & Education
+### Section 4: Background (Languages, Education & University Logos)
 
 **EN:**
 
@@ -378,6 +337,8 @@ Heading:
 >
 > **Education:** BSc International Business Administration & MSc Finance and Investments, Rotterdam School of Management (Cum Laude). Exchanges at EDHEC Business School (Nice) and SMU (Singapore).
 
+University logos row: RSM (`/logos/rsm.png`), EDHEC (`/logos/edhec.png`), SMU (`/logos/smu.png`) — displayed as grayscale, h-8.
+
 **DE:**
 
 Heading:
@@ -388,35 +349,7 @@ Heading:
 >
 > **Ausbildung:** BSc International Business Administration & MSc Finance and Investments, Rotterdam School of Management (Cum Laude). Auslandssemester an der EDHEC Business School (Nizza) und SMU (Singapur).
 
-### Section 5: CTA
-
-**EN:**
-
-> **Need financial coaching?** I help English-speaking professionals in Germany navigate taxes, insurance, investing, and retirement planning — in plain language, with no conflicts of interest.
->
-> [Financial Coaching →](/coaching)
->
-> **Need product leadership?** I embed with your team part-time to define strategy, build roadmaps, and ship. Eight years of product experience at ventures and startups.
->
-> [Product Leadership →](/product)
->
-> **Need something built?** I combine product thinking with AI-native development to build apps and websites for businesses — from first brief to live product.
->
-> [Build Services →](/build)
-
-**DE:**
-
-> **Brauchst du Finanzcoaching?** Ich helfe englischsprachigen Fachkräften in Deutschland bei Steuern, Versicherungen, Geldanlage und Altersvorsorge — in klarer Sprache, ohne Interessenkonflikte.
->
-> [Finanzcoaching →](/de/coaching)
->
-> **Brauchst du Produktführung?** Ich arbeite in Teilzeit in deinem Team, um Strategie zu definieren, Roadmaps zu erstellen und zu liefern. Acht Jahre Produkterfahrung bei Ventures und Startups.
->
-> [Produktführung →](/de/product)
->
-> **Brauchst du einen Builder?** Ich verbinde Produktdenken mit KI-nativem Development, um Apps und Websites für Unternehmen zu bauen — vom ersten Briefing bis zum Live-Produkt.
->
-> [Build Services →](/de/build)
+University logos row: Same as EN.
 
 ---
 
@@ -627,7 +560,7 @@ Subtext:
 
 Alternative:
 
-> Prefer email? Reach me at david.ch.hamel@gmail.com
+> Prefer email? Reach me at hello@davidhamel.co
 
 **DE:**
 
@@ -643,7 +576,7 @@ Subtext:
 
 Alternative:
 
-> Lieber per E-Mail? Schreib mir an david.ch.hamel@gmail.com
+> Lieber per E-Mail? Schreib mir an hello@davidhamel.co
 
 ---
 
@@ -662,11 +595,11 @@ Alternative:
 
 Headline:
 
-> Senior product leadership, without the full-time hire.
+> Senior product leadership, on contract.
 
 Subheadline:
 
-> I've led product at ventures that reached 35,000 users, secured €6.5M in funding, and served institutional clients managing over €1.5 trillion. I bring that experience to your team — part-time, without the overhead.
+> I've led product at ventures that reached 35,000 users, secured €6.5M in funding, and served institutional clients managing over €1.5 trillion.
 
 CTA:
 
@@ -676,11 +609,11 @@ CTA:
 
 Headline:
 
-> Erfahrene Produktführung, ohne die Vollzeitstelle.
+> Erfahrene Produktführung, auf Vertragsbasis.
 
 Subheadline:
 
-> Ich habe Produkte bei Ventures geleitet, die 35.000 Nutzer erreichten, €6,5 Mio. Finanzierung sicherten und institutionelle Kunden mit über €1,5 Billionen betreuten. Diese Erfahrung bringe ich in dein Team — in Teilzeit, ohne den Overhead.
+> Ich habe Produkte bei Ventures geleitet, die 35.000 Nutzer erreichten, €6,5 Mio. Finanzierung sicherten und institutionelle Kunden mit über €1,5 Billionen betreuten.
 
 CTA:
 
@@ -742,10 +675,6 @@ Heading:
 > - **Stakeholder alignment** — Translate between business, design, and engineering
 > - **Go-to-market support** — Positioning, launch planning, success metrics
 
-Engagement structure:
-
-> Typically 1-2 days per week, 3+ month engagements. Retainer-based, scoped to your needs.
-
 **DE:**
 
 Heading:
@@ -757,10 +686,6 @@ Heading:
 > - **Technische Architekturberatung** — Stack-Entscheidungen, Build-vs-Buy, Skalierungsplanung
 > - **Stakeholder-Alignment** — Übersetzen zwischen Business, Design und Engineering
 > - **Go-to-Market-Support** — Positionierung, Launch-Planung, Erfolgsmetriken
-
-Engagement-Struktur:
-
-> Typischerweise 1-2 Tage pro Woche, ab 3 Monaten. Retainer-basiert, auf deine Bedürfnisse zugeschnitten.
 
 ### Section 4: Track Record
 
@@ -788,7 +713,7 @@ Heading:
 
 Step 1:
 
-> **Assess** — I spend the first 1-2 weeks understanding your product, team, market, and customers. No assumptions, no playbook — I learn your context first.
+> **Assess** — I spend the first 1-2 weeks understanding your product, team, market, and customers. No assumptions, no playbook. I learn your context first.
 
 Step 2:
 
@@ -796,18 +721,7 @@ Step 2:
 
 Step 3:
 
-> **Execute** — I embed with your team and ship. Sprint planning, reviews, and hands-on product work — not just advice from a distance.
-
-FAQ:
-
-> **What does a typical engagement look like?**
-> 1-2 days per week, embedded with your team. I attend standups, lead planning, review work, and make product decisions alongside you. Most engagements run 3-6 months.
->
-> **How is this different from a consultant?**
-> A consultant writes a report and leaves. I embed with your team and ship alongside them. I'm accountable for outcomes, not deliverables.
->
-> **What's the time commitment?**
-> Flexible. Some clients need 1 day per week, others 2-3. We scope it based on what you actually need.
+> **Execute** — I embed with your team and ship. Sprint planning, reviews, and hands-on product work, not just advice from a distance.
 
 **DE:**
 
@@ -817,7 +731,7 @@ Heading:
 
 Schritt 1:
 
-> **Verstehen** — In den ersten 1-2 Wochen lerne ich dein Produkt, Team, den Markt und deine Kunden kennen. Keine Annahmen, kein Standardansatz — ich verstehe zuerst deinen Kontext.
+> **Verstehen** — In den ersten 1-2 Wochen lerne ich dein Produkt, Team, den Markt und deine Kunden kennen. Keine Annahmen, kein Standardansatz. Ich verstehe zuerst deinen Kontext.
 
 Schritt 2:
 
@@ -825,48 +739,25 @@ Schritt 2:
 
 Schritt 3:
 
-> **Umsetzen** — Ich arbeite in deinem Team mit und liefere. Sprint Planning, Reviews und praktische Produktarbeit — nicht nur Ratschläge aus der Ferne.
+> **Umsetzen** — Ich arbeite in deinem Team mit und liefere. Sprint Planning, Reviews und praktische Produktarbeit, nicht nur Ratschlage aus der Ferne.
 
-FAQ:
-
-> **Wie sieht ein typisches Engagement aus?**
-> 1-2 Tage pro Woche, eingebettet in dein Team. Ich nehme an Standups teil, leite Plannings, reviewe Arbeit und treffe Produktentscheidungen gemeinsam mit dir. Die meisten Engagements laufen 3-6 Monate.
->
-> **Wie unterscheidet sich das von Beratung?**
-> Ein Berater schreibt einen Report und geht. Ich arbeite in deinem Team mit und liefere gemeinsam. Ich bin verantwortlich für Ergebnisse, nicht für Deliverables.
->
-> **Was ist der Zeitaufwand?**
-> Flexibel. Manche Kunden brauchen 1 Tag pro Woche, andere 2-3. Wir definieren den Umfang basierend auf dem, was du tatsächlich brauchst.
+_FAQ section removed. Engagement structure box removed._
 
 ### Section 6: CTA
 
+No heading. Button + email only (centered, flex-col layout). Same pattern as Build page.
+
 **EN:**
 
-Heading:
+CTA: Let's Talk →
 
-> Let's talk about your product.
-
-Subtext:
-
-> Book a free discovery call. We'll discuss your product challenges and I'll tell you honestly whether I'm the right fit.
-
-CTA: Book a Discovery Call →
-
-Alternative: Or email me at david.ch.hamel@gmail.com
+Alternative: Or email me at hello@davidhamel.co
 
 **DE:**
 
-Heading:
+CTA: Lass uns sprechen →
 
-> Lass uns über dein Produkt sprechen.
-
-Subtext:
-
-> Buche ein kostenloses Discovery Call. Wir besprechen deine Produktherausforderungen und ich sage dir ehrlich, ob ich der richtige bin.
-
-CTA: Discovery Call buchen →
-
-Alternative: Oder schreib mir an david.ch.hamel@gmail.com
+Alternative: Oder schreib mir an hello@davidhamel.co
 
 ---
 
@@ -874,10 +765,10 @@ Alternative: Oder schreib mir an david.ch.hamel@gmail.com
 
 ### Meta
 
-| Field                | EN                                                                                                                                                                    | DE                                                                                                                                                                                |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<title>`            | App & Website Development — David Hamel                                                                                                                               | App- & Website-Entwicklung — David Hamel                                                                                                                                          |
-| `<meta description>` | Product thinking + AI-native development. I build apps and websites for SMBs and financial services firms — from first brief to live product. One person, end-to-end. | Produktdenken + KI-natives Development. Ich baue Apps und Websites für KMU und Finanzdienstleister — vom ersten Briefing bis zum Live-Produkt. Eine Person, von A bis Z.          |
+| Field                | EN                                                                                                                                                                       | DE                                                                                                                                                                                        |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<title>`            | AI Building — David Hamel                                                                                                                                                | AI Building — David Hamel                                                                                                                                                                 |
+| `<meta description>` | Custom software is now viable for problems that were never worth solving before. AI-native development with product judgment for SMBs and financial services firms. | Individuelle Software ist jetzt fuer Probleme realisierbar, die sich vorher nie gelohnt haben. KI-natives Development mit Produkterfahrung fuer KMU und Finanzdienstleister. |
 
 ### Section 1: Hero
 
@@ -885,31 +776,83 @@ Alternative: Oder schreib mir an david.ch.hamel@gmail.com
 
 Headline:
 
-> I understand your business. And I build the software.
+> Custom software is now viable for problems that were never worth solving before.
 
 Subheadline:
 
-> Most developers build what you tell them to. I start with the problem. Eight years of fintech product experience means I understand your domain — and I use AI-native development to ship in weeks, not months.
+> AI-native development has made it possible to build production-grade software at a fraction of the traditional cost and timeline. The hard part is no longer building. It's knowing what to build, making it operational, and keeping it secure. I bring eight years of product experience to make sure we build something that actually works for your business.
 
-CTA:
-
-> Let's Talk About Your Project →
+No CTA button in hero. CTA at bottom of page only.
 
 **DE:**
 
 Headline:
 
-> Ich verstehe dein Geschäft. Und ich baue die Software.
+> Individuelle Software ist jetzt fur Probleme realisierbar, die sich vorher nie gelohnt haben.
 
 Subheadline:
 
-> Die meisten Entwickler bauen, was man ihnen sagt. Ich fange beim Problem an. Acht Jahre Fintech-Produkterfahrung bedeuten, dass ich deine Branche verstehe — und ich nutze KI-natives Development, um in Wochen statt Monaten zu liefern.
+> KI-natives Development macht es moglich, produktionsreife Software zu einem Bruchteil der traditionellen Kosten und Zeit zu bauen. Das Schwierige ist nicht mehr das Bauen. Es ist zu wissen, was sich zu bauen lohnt, es betriebsbereit zu machen und es sicher zu halten. Ich bringe acht Jahre Produkterfahrung mit, damit wir etwas bauen, das fur dein Geschaft tatsachlich funktioniert.
 
-CTA:
+### Section 2: Why This Matters Now
 
-> Lass uns über dein Projekt sprechen →
+Two-column layout. No section heading.
 
-### Section 2: How I Work
+**EN:**
+
+Column 1:
+
+> **Software used to be expensive. Now it's not.**
+>
+> AI-native development means a single experienced builder can ship what used to require a team of five. That changes the math: internal tools, workflow automation, customer-facing apps, and AI agents are now worth building for use cases that were previously too small or too niche.
+
+Column 2:
+
+> **But building fast without building right creates risk.**
+>
+> The bottleneck has moved. It's no longer "can we build this?" It's "should we build this, and will it actually work?" Poorly scoped software wastes money. AI agents that work 99% of the time but fail on edge cases create liability. Unsecured setups in regulated industries create real problems. The value isn't in the code. It's in the judgment around it.
+
+**DE:**
+
+Column 1:
+
+> **Software war teuer. Das hat sich geandert.**
+>
+> KI-natives Development bedeutet, dass ein einzelner erfahrener Builder liefern kann, wofur fruher ein Team von funf notig war. Das verandert die Rechnung: Interne Tools, Workflow-Automatisierung, kundenorientierte Apps und KI-Agenten lohnen sich jetzt fur Anwendungsfalle, die bisher zu klein oder zu nischig waren.
+
+Column 2:
+
+> **Aber schnell bauen ohne richtig zu bauen schafft Risiken.**
+>
+> Der Engpass hat sich verschoben. Die Frage ist nicht mehr "Konnen wir das bauen?" sondern "Sollten wir das bauen, und wird es tatsachlich funktionieren?" Schlecht definierte Software verschwendet Geld. KI-Agenten, die 99% der Zeit funktionieren, aber bei Grenzfallen versagen, schaffen Haftung. Unsichere Setups in regulierten Branchen schaffen echte Probleme. Der Wert liegt nicht im Code. Er liegt im Urteilsvermogen drum herum.
+
+### Section 3: What I Build
+
+Streamlined to 2 categories (was 4). No tech stack box.
+
+**EN:**
+
+Heading:
+
+> What I build
+
+> **Custom applications** — Web apps, SaaS platforms, internal tools, dashboards. For problems where off-the-shelf software doesn't fit and the ROI justifies a custom build.
+>
+> **AI agents and automation** — Autonomous agents that handle workflows, process documents, answer questions, and integrate with your existing systems. Built for reliability in production, not just demos.
+
+**DE:**
+
+Heading:
+
+> Was ich baue
+
+> **Individuelle Applikationen** — Web-Apps, SaaS-Plattformen, interne Tools, Dashboards. Fur Probleme, bei denen Standardsoftware nicht passt und der ROI einen individuellen Build rechtfertigt.
+>
+> **KI-Agenten und Automatisierung** — Autonome Agenten, die Workflows abwickeln, Dokumente verarbeiten, Fragen beantworten und sich in deine bestehenden Systeme integrieren. Gebaut fur Zuverlassigkeit in Produktion, nicht nur fur Demos.
+
+### Section 4: How I Work
+
+Reframed as Scope, Build, Ship & Support (emphasis on scoping as differentiator).
 
 **EN:**
 
@@ -919,15 +862,15 @@ Heading:
 
 Step 1:
 
-> **Discovery** — We define what to build and why. I ask the questions a product leader asks: Who is this for? What problem does it solve? How will you know it's working? This phase ensures we build the right thing — not just a thing.
+> **Scope** — We figure out if this is worth building. I ask the hard questions: What problem are we solving? What does success look like? What are the risks? Most projects fail because they skip this step, not because the code was bad.
 
 Step 2:
 
-> **Build** — I design and develop the product using modern, production-grade tools. AI-native development means I ship faster than a traditional dev team — without cutting corners on quality.
+> **Build** — I design and develop using AI-native tools. This means faster delivery and lower cost than traditional development, but with human review of every line. I don't ship code I don't understand.
 
 Step 3:
 
-> **Launch & Evolve** — We put it in front of real users and iterate. I don't build and disappear. The optional monthly retainer keeps your product evolving — new features, content updates, performance improvements.
+> **Ship & Support** — We launch, measure, and iterate. If your product needs ongoing development, I'm available for that too.
 
 **DE:**
 
@@ -937,87 +880,45 @@ Heading:
 
 Schritt 1:
 
-> **Discovery** — Wir definieren, was wir bauen und warum. Ich stelle die Fragen, die ein Produktverantwortlicher stellt: Für wen ist das? Welches Problem löst es? Woran erkennen wir, dass es funktioniert? Diese Phase stellt sicher, dass wir das Richtige bauen — nicht einfach nur etwas.
+> **Scope** — Wir klaren, ob sich das Bauen lohnt. Ich stelle die harten Fragen: Welches Problem losen wir? Wie sieht Erfolg aus? Was sind die Risiken? Die meisten Projekte scheitern, weil sie diesen Schritt uberspringen, nicht weil der Code schlecht war.
 
 Schritt 2:
 
-> **Build** — Ich designe und entwickle das Produkt mit modernen, produktionsreifen Tools. KI-natives Development bedeutet, ich liefere schneller als ein traditionelles Dev-Team — ohne Abstriche bei der Qualität.
+> **Build** — Ich designe und entwickle mit KI-nativen Tools. Das bedeutet schnellere Lieferung und geringere Kosten als traditionelles Development, aber mit menschlicher Prufung jeder Zeile. Ich shippe keinen Code, den ich nicht verstehe.
 
 Schritt 3:
 
-> **Launch & Weiterentwicklung** — Wir bringen es vor echte Nutzer und iterieren. Ich baue nicht und verschwinde. Der optionale monatliche Retainer hält dein Produkt am Wachsen — neue Features, Content-Updates, Performance-Verbesserungen.
+> **Ship & Support** — Wir launchen, messen und iterieren. Wenn dein Produkt laufende Weiterentwicklung braucht, bin ich auch dafur verfugbar.
 
-### Section 3: What I Build
+### Section 5: Why This Works
 
-**EN:**
-
-Heading:
-
-> What I build
-
-> - **Web applications and SaaS platforms** — Customer-facing products, dashboards, internal tools
-> - **Marketing websites and landing pages** — Fast, modern sites that convert
-> - **AI-powered features and integrations** — Chatbots, document processing, intelligent workflows
-> - **Internal tools and dashboards** — Data visualization, admin panels, operational tools
-
-Tech:
-
-> Built on production-grade stacks: Astro, Next.js, React, Tailwind, TypeScript, Supabase, Vercel.
-
-**DE:**
-
-Heading:
-
-> Was ich baue
-
-> - **Web-Applikationen und SaaS-Plattformen** — Kundenprodukte, Dashboards, interne Tools
-> - **Marketing-Websites und Landing Pages** — Schnelle, moderne Websites, die konvertieren
-> - **KI-gestützte Features und Integrationen** — Chatbots, Dokumentenverarbeitung, intelligente Workflows
-> - **Interne Tools und Dashboards** — Datenvisualisierung, Admin-Panels, Operations-Tools
-
-Tech:
-
-> Gebaut auf produktionsreifen Stacks: Astro, Next.js, React, Tailwind, TypeScript, Supabase, Vercel.
-
-### Section 4: Why Me — Not an Agency
+3 cards (replaced "Why me not an agency" 6 cards).
 
 **EN:**
 
 Heading:
 
-> Why me — not an agency
+> Why this works
 
-> **Domain expertise** — I've built fintech products for eight years. I understand financial services, compliance considerations, and how to build user trust. A generic agency would spend weeks learning what I already know.
+> **Product thinking, not just code** — Everyone can build fast now. The scarce skill is knowing what's worth building. I've spent eight years leading product at fintech startups and financial services companies. I scope before I build, and I'll tell you if something isn't worth building.
 >
-> **Product + Code in one person** — You get a product strategist who writes the code himself. No telephone game between a PM, a designer, and a developer.
+> **One person, full context** — No handoffs between a PM, designer, and developer. I hold the full picture from strategy to deployment. That means fewer misunderstandings and faster iteration.
 >
-> **AI-native development** — I use tools like Claude Code for faster delivery than traditional development. Same quality, less time, lower cost.
->
-> **Transparent pricing** — Fixed build fee. No hourly billing, no scope creep surprises. You know exactly what you're paying for before we start.
->
-> **Ongoing relationship** — The optional monthly retainer keeps your product evolving. Hosting, content updates, new features, performance improvements — all handled.
->
-> **Direct access** — You work with me. Not a junior developer. Not a project manager. Me.
+> **Built for production, not for demos** — AI-generated code needs experienced review. I treat security, error handling, and maintainability as requirements, not afterthoughts. Especially important if you operate in a regulated industry.
 
 **DE:**
 
 Heading:
 
-> Warum ich — nicht eine Agentur
+> Warum das funktioniert
 
-> **Branchenexpertise** — Ich baue seit acht Jahren Fintech-Produkte. Ich verstehe Finanzdienstleistungen, Compliance-Anforderungen und wie man Nutzervertrauen aufbaut. Eine generische Agentur würde Wochen brauchen, um zu lernen, was ich bereits weiß.
+> **Produktdenken, nicht nur Code** — Jeder kann jetzt schnell bauen. Die knappe Kompetenz ist zu wissen, was sich zu bauen lohnt. Ich habe acht Jahre Produkte bei Fintech-Startups und Finanzdienstleistern geleitet. Ich definiere den Scope vor dem Bauen, und ich sage dir, wenn sich etwas nicht lohnt.
 >
-> **Produkt + Code in einer Person** — Du bekommst einen Produktstrategen, der den Code selbst schreibt. Kein Stille-Post-Spiel zwischen PM, Designer und Entwickler.
+> **Eine Person, voller Kontext** — Kein Hin und Her zwischen PM, Designer und Entwickler. Ich halte das Gesamtbild von Strategie bis Deployment. Das bedeutet weniger Missverstandnisse und schnellere Iteration.
 >
-> **KI-natives Development** — Ich nutze Tools wie Claude Code für schnellere Umsetzung als traditionelles Development. Gleiche Qualität, weniger Zeit, geringere Kosten.
->
-> **Transparente Preise** — Fester Build-Preis. Keine Stundenabrechnung, keine Scope-Creep-Überraschungen. Du weißt genau, wofür du bezahlst, bevor wir anfangen.
->
-> **Laufende Beziehung** — Der optionale monatliche Retainer hält dein Produkt am Wachsen. Hosting, Content-Updates, neue Features, Performance-Verbesserungen — alles abgedeckt.
->
-> **Direkter Kontakt** — Du arbeitest mit mir. Nicht mit einem Junior-Entwickler. Nicht mit einem Projektmanager. Mit mir.
+> **Gebaut fur Produktion, nicht fur Demos** — KI-generierter Code braucht erfahrene Prufung. Ich behandle Sicherheit, Fehlerbehandlung und Wartbarkeit als Anforderungen, nicht als Nachgedanken. Besonders wichtig, wenn du in einer regulierten Branche arbeitest.
 
-### Section 5: Selected Work
+### Section 6: Selected Work
 
 Section heading:
 
@@ -1025,7 +926,7 @@ Section heading:
 | ------------- | -------------------- |
 | Selected work | Ausgewählte Projekte |
 
-(3-4 ProjectCards — Focus on: Alba Wealth, Rootlocaly, Digital Partners, davidhamel.co itself)
+(3 ProjectCards: Alba Wealth, Rootlocaly, Digital Partners)
 
 Link:
 
@@ -1033,49 +934,23 @@ Link:
 | --------------------- | ---------------------------- |
 | View full portfolio → | Gesamtes Portfolio ansehen → |
 
-### Section 6: Pricing
-
-**EN:**
-
-> Fixed build fee + optional monthly retainer. No hourly billing, no surprises.
->
-> Every project starts with a free discovery call where we scope the work together. You get a clear quote before we start.
-
-**DE:**
-
-> Festpreis für den Build + optionaler monatlicher Retainer. Keine Stundenabrechnung, keine Überraschungen.
->
-> Jedes Projekt beginnt mit einem kostenlosen Discovery Call, in dem wir den Umfang gemeinsam definieren. Du bekommst ein klares Angebot, bevor wir starten.
-
 ### Section 7: CTA
 
+No heading. Button + email only (centered, flex-col layout).
+
 **EN:**
-
-Heading:
-
-> Let's talk about your project.
-
-Subtext:
-
-> Tell me what you need built. We'll have a free discovery call, I'll scope the work, and you'll get a clear quote — no obligation.
 
 CTA: Let's Talk →
 
-Alternative: Or email me at david.ch.hamel@gmail.com
+Alternative: Or email me at hello@davidhamel.co
 
 **DE:**
 
-Heading:
-
-> Lass uns über dein Projekt sprechen.
-
-Subtext:
-
-> Sag mir, was du brauchst. Wir machen einen kostenlosen Discovery Call, ich definiere den Umfang und du bekommst ein klares Angebot — unverbindlich.
-
 CTA: Lass uns sprechen →
 
-Alternative: Oder schreib mir an david.ch.hamel@gmail.com
+Alternative: Oder schreib mir an hello@davidhamel.co
+
+_Removed from previous version: hero CTA button, tech stack box, pricing section, FAQ section, "Why me not an agency" (6 cards replaced with "Why this works" 3 cards). Term "vibe coding" no longer used anywhere; replaced with "AI-native build"._
 
 ---
 
@@ -1160,7 +1035,7 @@ Subheadline:
 | Role | Founder & CEO | Gründer & CEO |
 | Period | 2015 – 2022 | 2015 – 2022 |
 | Badge | Venture | Venture |
-| Metric | 27 projects · 10-person team | 27 Projekte · 10-köpfiges Team |
+| Metric | 30+ projects · 10-person team | 30+ Projekte · 10-köpfiges Team |
 
 **Buena**
 | Field | EN | DE |
@@ -1176,7 +1051,7 @@ Subheadline:
 | Field | EN | DE |
 |-------|----|----|
 | Name | Carly | Carly |
-| Description | Car diagnostics e-commerce — sales funnel optimization | KFZ-Diagnose E-Commerce — Vertriebstrichter-Optimierung |
+| Description | Car diagnostics e-commerce — sales funnel optimization | KFZ-Diagnose E-Commerce — Vertriebstrichter-Optimierung  |
 | Role | Product Manager | Product Manager |
 | Period | 2020 | 2020 |
 | Badge | Contract | Auftrag |
@@ -1200,7 +1075,7 @@ Subheadline:
 | Role | Builder | Builder |
 | Period | 2025 | 2025 |
 | Badge | Side Project | Nebenprojekt |
-| Metric | Vibe coded | Vibe coded |
+| Metric | AI-native build | KI-nativer Build |
 
 ---
 
@@ -1400,11 +1275,11 @@ Overview:
 
 > Digital Partners was a digital strategy and venture building consultancy I founded right out of university. We helped industrial clients adopt IT and IoT solutions, operating across Germany, the USA, and the Middle East.
 >
-> Over six years, we executed 27 projects for clients including Viessmann, Porsche, and Körber. I built a team of seven engineers and three consulting partners, and the company evolved from a B2B matching platform for Industry 4.0 into a full consulting practice — which led directly to engagements like Porsche Digital Lab.
+> Over six years, we executed 30+ projects for clients including Viessmann, Porsche, and Körber. I built a team of seven engineers and three consulting partners, and the company evolved from a B2B matching platform for Industry 4.0 into a full consulting practice — which led directly to engagements like Porsche Digital Lab.
 
 Key metrics:
 
-> - 27 IT/IoT projects delivered
+> - 30+ IT/IoT projects delivered
 > - Clients: Viessmann, Porsche, Körber
 > - Team: 7 engineers + 3 consulting partners
 > - Offices: Berlin + San Francisco
@@ -1427,11 +1302,11 @@ Metadaten:
 
 > Digital Partners war eine Digital-Strategie- und Venture-Building-Beratung, die ich direkt nach dem Studium gründete. Wir halfen Industriekunden bei der Einführung von IT- und IoT-Lösungen und waren in Deutschland, den USA und dem Mittleren Osten tätig.
 >
-> Über sechs Jahre führten wir 27 Projekte für Kunden wie Viessmann, Porsche und Körber durch. Ich baute ein Team aus sieben Entwicklern und drei Beratungspartnern auf, und das Unternehmen entwickelte sich von einer B2B-Matching-Plattform für Industrie 4.0 zu einer vollständigen Beratungspraxis — die direkt zu Engagements wie dem Porsche Digital Lab führte.
+> Über sechs Jahre führten wir 30+ Projekte für Kunden wie Viessmann, Porsche und Körber durch. Ich baute ein Team aus sieben Entwicklern und drei Beratungspartnern auf, und das Unternehmen entwickelte sich von einer B2B-Matching-Plattform für Industrie 4.0 zu einer vollständigen Beratungspraxis — die direkt zu Engagements wie dem Porsche Digital Lab führte.
 
 Kennzahlen:
 
-> - 27 IT/IoT-Projekte umgesetzt
+> - 30+ IT/IoT-Projekte umgesetzt
 > - Kunden: Viessmann, Porsche, Körber
 > - Team: 7 Entwickler + 3 Beratungspartner
 > - Büros: Berlin + San Francisco
@@ -1558,17 +1433,17 @@ Metadata:
 
 Overview:
 
-> Carly (Carly Connected Car / Carly Solutions GmbH) builds car diagnostics tools for consumers. I joined as Product Manager to improve online sales performance. I built a new web funnel that increased purchase conversion by 25%, established an agile product organization, and set up their analytics and business intelligence infrastructure.
+> Carly (Carly Connected Car / Carly Solutions GmbH) builds car diagnostics tools for consumers. I joined as Product Manager to improve online sales performance. I built a new web funnel that increased sales conversion by 25%, established an agile product organization, and set up their analytics and business intelligence infrastructure.
 
 Key metrics:
 
-> - +25% purchase conversion
+> - +25% sales conversion
 > - Agile product org created
 > - Analytics & BI infrastructure from scratch
 
 What I did:
 
-> Led product for the e-commerce function. Designed and built a new purchase funnel, analyzed user behavior data to identify drop-off points, and implemented changes that increased conversion by 25%. Established the agile product organization and built the analytics stack (BI setup, event tracking, funnel analysis).
+> Led product for the e-commerce function. Designed and built a new sales funnel, analyzed user behavior data to identify drop-off points, and implemented changes that increased conversion by 25%. Established the agile product organization and built the analytics stack (BI setup, event tracking, funnel analysis).
 
 **DE:**
 
@@ -1729,9 +1604,7 @@ Subheadline:
 | Freedom by Design   | Freedom by Design   |
 | Practitioner's Edge | Practitioner's Edge |
 
-### Newsletter CTA (bottom of page)
-
-Same as homepage Section 5.
+_Newsletter CTA section removed. Newsletter signup only lives in the footer._
 
 ---
 
@@ -1741,25 +1614,17 @@ Same as homepage Section 5.
 
 **EN:**
 
-> **David Hamel** is an independent financial planning coach, product leader, and builder based in Berlin. He coaches expats through German finances, leads product for startups, and builds apps for businesses.
+> **David Hamel** is an independent financial planning coach, product leader, and builder based in Germany and Portugal. He coaches expats through German finances, leads product for startups, and builds apps for businesses.
 
 Link: More about David →
 
 **DE:**
 
-> **David Hamel** ist unabhängiger Finanzcoach, Produktführer und Builder in Berlin. Er coacht Expats durch das deutsche Finanzsystem, leitet Produkte für Startups und baut Apps für Unternehmen.
+> **David Hamel** ist unabhängiger Finanzcoach, Produktführer und Builder in Deutschland und Portugal. Er coacht Expats durch das deutsche Finanzsystem, leitet Produkte für Startups und baut Apps für Unternehmen.
 
 Link: Mehr über David →
 
-### Newsletter CTA (inline)
-
-**EN:**
-
-> Liked this post? I write about expat finance, product building, and living abroad. Subscribe to get new posts by email.
-
-**DE:**
-
-> Hat dir dieser Beitrag gefallen? Ich schreibe über Expat-Finanzen, Produktentwicklung und Leben im Ausland. Abonniere, um neue Beiträge per E-Mail zu erhalten.
+_Inline newsletter CTA section removed. Newsletter signup only lives in the footer._
 
 ### Navigation
 
@@ -1788,9 +1653,7 @@ Headline:
 
 > Adventures
 
-Subheadline:
-
-> When I'm not building or coaching, I'm in the ocean.
+(No subtitle)
 
 **DE:**
 
@@ -1798,18 +1661,18 @@ Headline:
 
 > Abenteuer
 
-Subheadline:
-
-> Wenn ich nicht baue oder coache, bin ich im Ozean.
+(No subtitle)
 
 ### Category Labels
 
-| EN     | DE      |
-| ------ | ------- |
-| Surf   | Surfen  |
-| Dive   | Tauchen |
-| Travel | Reisen  |
-| All    | Alle    |
+| EN       | DE        |
+| -------- | --------- |
+| All      | Alle      |
+| Surf     | Surf      |
+| Freedive | Freedive  |
+| Kite     | Kite      |
+| Snow     | Snow      |
+| Travel   | Travel    |
 
 ---
 
@@ -1842,7 +1705,7 @@ Direct contact heading:
 
 > Or reach me directly
 
-> Email: david.ch.hamel@gmail.com
+> Email: hello@davidhamel.co
 > LinkedIn: linkedin.com/in/david-hamel-11baa841
 
 **DE:**
@@ -1863,7 +1726,7 @@ Direct contact heading:
 
 > Oder schreib mir direkt
 
-> E-Mail: david.ch.hamel@gmail.com
+> E-Mail: hello@davidhamel.co
 > LinkedIn: linkedin.com/in/david-hamel-11baa841
 
 ---
@@ -1882,7 +1745,7 @@ David Hamel
 [Stadt, PLZ]
 
 Telefon: +49 176 982 440 76
-E-Mail: david.ch.hamel@gmail.com
+E-Mail: hello@davidhamel.co
 
 [Umsatzsteuer-Identifikationsnummer, wenn vorhanden]
 [Zuständige Aufsichtsbehörde, wenn zutreffend]
@@ -1915,8 +1778,7 @@ Summary of all images needed across the site. Gather these after copy is finaliz
 | Location                 | Description                                        | Required             | Priority |
 | ------------------------ | -------------------------------------------------- | -------------------- | -------- |
 | Homepage hero            | Could be text-only or subtle background texture    | Optional             | Low      |
-| Homepage "Who I Am"      | Professional headshot, natural light, approachable | **Yes**              | **High** |
-| About hero               | Different headshot or candid photo                 | **Yes**              | **High** |
+| About hero               | Portrait photo, warm-white bg, grayscale, lg:max-w-[280px] | **Yes**     | **High** |
 | About story (inline)     | 1-2 photos from travels/working life (optional)    | Optional             | Medium   |
 | Coaching hero            | Could be text-only or lifestyle shot               | Optional             | Medium   |
 | Alba Wealth project page | Product screenshot or interface mockup             | **Yes**              | **High** |

@@ -12,19 +12,19 @@ export const ui = {
     // Navigation
     "nav.about": "About",
     "nav.coaching": "Coaching",
-    "nav.services": "Services",
+    "nav.services": "Product",
     "nav.services.product": "Product Leadership",
-    "nav.services.build": "Build",
+    "nav.services.build": "AI Building",
     "nav.projects": "Projects",
     "nav.blog": "Blog",
     "nav.adventures": "Adventures",
     "nav.cta": "Book a Call",
 
     // Footer
-    "footer.col1.heading": "Services",
+    "footer.col1.heading": "Product",
     "footer.col1.coaching": "Financial Coaching",
     "footer.col1.product": "Product Leadership",
-    "footer.col1.build": "Build",
+    "footer.col1.build": "AI Building",
     "footer.col1.cta": "Book a Call",
     "footer.col2.heading": "Explore",
     "footer.col2.blog": "Blog",
@@ -36,8 +36,8 @@ export const ui = {
     "footer.col3.linkedin": "LinkedIn",
     "footer.col3.github": "GitHub",
     "footer.newsletter.heading":
-      "Insights on money, building, and living abroad.",
-    "footer.newsletter.subtext": "No spam. Unsubscribe anytime.",
+      "Insights on money, building AI, and living abroad.",
+    "footer.newsletter.subtext": "Subscribe to my newsletter",
     "footer.newsletter.placeholder": "Your email address",
     "footer.newsletter.button": "Subscribe",
     "footer.copyright": "\u00a9 2026 David Hamel",
@@ -85,9 +85,9 @@ export const ui = {
       "Senior product leadership, without the full-time hire. Fractional CPO, product strategy, and roadmapping for startups and scaleups.",
 
     // Build
-    "build.title": "Build \u2014 David Hamel",
+    "build.title": "AI Building \u2014 David Hamel",
     "build.description":
-      "I understand your business \u2014 and I build the software. AI-native app and web development for SMBs and financial services firms.",
+      "I understand your business \u2014 and I build the software. Custom AI agents, web applications, and AI-native development for SMBs and financial services firms.",
 
     // Adventures
     "adventures.title": "Adventures \u2014 David Hamel",
@@ -132,19 +132,19 @@ export const ui = {
     // Navigation
     "nav.about": "\u00dcber mich",
     "nav.coaching": "Coaching",
-    "nav.services": "Leistungen",
+    "nav.services": "Produkt",
     "nav.services.product": "Produktf\u00fchrung",
-    "nav.services.build": "Build",
+    "nav.services.build": "AI Building",
     "nav.projects": "Projekte",
     "nav.blog": "Blog",
     "nav.adventures": "Abenteuer",
     "nav.cta": "Gespr\u00e4ch buchen",
 
     // Footer
-    "footer.col1.heading": "Leistungen",
+    "footer.col1.heading": "Produkt",
     "footer.col1.coaching": "Finanzcoaching",
     "footer.col1.product": "Produktf\u00fchrung",
-    "footer.col1.build": "Build",
+    "footer.col1.build": "AI Building",
     "footer.col1.cta": "Gespr\u00e4ch buchen",
     "footer.col2.heading": "Entdecken",
     "footer.col2.blog": "Blog",
@@ -157,7 +157,7 @@ export const ui = {
     "footer.col3.github": "GitHub",
     "footer.newsletter.heading":
       "Impulse zu Geld, Bauen und Leben im Ausland.",
-    "footer.newsletter.subtext": "Kein Spam. Jederzeit abbestellbar.",
+    "footer.newsletter.subtext": "Newsletter abonnieren",
     "footer.newsletter.placeholder": "Deine E-Mail-Adresse",
     "footer.newsletter.button": "Abonnieren",
     "footer.copyright": "\u00a9 2026 David Hamel",
@@ -206,9 +206,9 @@ export const ui = {
       "Erfahrene Produktf\u00fchrung, ohne die Vollzeitstelle. Fractional CPO, Produktstrategie und Roadmapping f\u00fcr Startups und Scaleups.",
 
     // Build
-    "build.title": "Build \u2014 David Hamel",
+    "build.title": "AI Building \u2014 David Hamel",
     "build.description":
-      "Ich verstehe dein Gesch\u00e4ft \u2014 und ich baue die Software. KI-natives App- und Web-Development f\u00fcr KMU und Finanzdienstleister.",
+      "Ich verstehe dein Gesch\u00e4ft \u2014 und ich baue die Software. Individuelle KI-Agenten, Web-Applikationen und KI-natives Development f\u00fcr KMU und Finanzdienstleister.",
 
     // Adventures
     "adventures.title": "Abenteuer \u2014 David Hamel",

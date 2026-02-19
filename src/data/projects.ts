@@ -210,18 +210,18 @@ export const projects: ProjectData[] = [
     period: "2015 – 2022",
     badge: { en: "Venture", de: "Venture" },
     metric: {
-      en: "27 projects · 10-person team",
-      de: "27 Projekte · 10-köpfiges Team",
+      en: "30+ projects · 10-person team",
+      de: "30+ Projekte · 10-köpfiges Team",
     },
     location: "Berlin / San Francisco",
     type: { en: "Own venture", de: "Eigenes Venture" },
     overview: {
-      en: "Digital Partners was a digital strategy and venture building consultancy I founded right out of university. We helped industrial clients adopt IT and IoT solutions, operating across Germany, the USA, and the Middle East.\n\nOver six years, we executed 27 projects for clients including Viessmann, Porsche, and Körber. I built a team of seven engineers and three consulting partners, and the company evolved from a B2B matching platform for Industry 4.0 into a full consulting practice — which led directly to engagements like Porsche Digital Lab.",
-      de: "Digital Partners war eine Digital-Strategie- und Venture-Building-Beratung, die ich direkt nach dem Studium gründete. Wir halfen Industriekunden bei der Einführung von IT- und IoT-Lösungen und waren in Deutschland, den USA und dem Mittleren Osten tätig.\n\nÜber sechs Jahre führten wir 27 Projekte für Kunden wie Viessmann, Porsche und Körber durch. Ich baute ein Team aus sieben Entwicklern und drei Beratungspartnern auf, und das Unternehmen entwickelte sich von einer B2B-Matching-Plattform für Industrie 4.0 zu einer vollständigen Beratungspraxis — die direkt zu Engagements wie dem Porsche Digital Lab führte.",
+      en: "Digital Partners was a digital strategy and venture building consultancy I founded right out of university. We helped industrial clients adopt IT and IoT solutions, operating across Germany, the USA, and the Middle East.\n\nOver six years, we executed 30+ projects for clients including Viessmann, Porsche, and Körber. I built a team of seven engineers and three consulting partners, and the company evolved from a B2B matching platform for Industry 4.0 into a full consulting practice — which led directly to engagements like Porsche Digital Lab.",
+      de: "Digital Partners war eine Digital-Strategie- und Venture-Building-Beratung, die ich direkt nach dem Studium gründete. Wir halfen Industriekunden bei der Einführung von IT- und IoT-Lösungen und waren in Deutschland, den USA und dem Mittleren Osten tätig.\n\nÜber sechs Jahre führten wir 30+ Projekte für Kunden wie Viessmann, Porsche und Körber durch. Ich baute ein Team aus sieben Entwicklern und drei Beratungspartnern auf, und das Unternehmen entwickelte sich von einer B2B-Matching-Plattform für Industrie 4.0 zu einer vollständigen Beratungspraxis — die direkt zu Engagements wie dem Porsche Digital Lab führte.",
     },
     metrics: [
       {
-        value: "27",
+        value: "30+",
         label: { en: "Projects delivered", de: "Projekte umgesetzt" },
       },
       {
@@ -297,7 +297,7 @@ export const projects: ProjectData[] = [
     location: "Munich",
     type: { en: "Contract", de: "Auftrag" },
     overview: {
-      en: "Carly (Carly Connected Car / Carly Solutions GmbH) builds car diagnostics tools for consumers. I joined as Product Manager to improve online sales performance. I built a new web funnel that increased purchase conversion by 25%, established an agile product organization, and set up their analytics and business intelligence infrastructure.",
+      en: "Carly (Carly Connected Car / Carly Solutions GmbH) builds car diagnostics tools for consumers. I joined as Product Manager to improve online sales performance. I built a new web funnel that increased sales conversion by 25%, established an agile product organization, and set up their analytics and business intelligence infrastructure.",
       de: "Carly (Carly Connected Car / Carly Solutions GmbH) baut KFZ-Diagnosetools für Endkunden. Ich kam als Product Manager, um die Online-Vertriebsleistung zu verbessern. Ich baute einen neuen Web-Funnel, der die Kaufkonversion um 25% steigerte, etablierte eine agile Produktorganisation und richtete die Analytics- und Business-Intelligence-Infrastruktur ein.",
     },
     metrics: [
@@ -307,7 +307,7 @@ export const projects: ProjectData[] = [
       },
     ],
     whatIDid: {
-      en: "Led product for the e-commerce function. Designed and built a new purchase funnel, analyzed user behavior data to identify drop-off points, and implemented changes that increased conversion by 25%. Established the agile product organization and built the analytics stack (BI setup, event tracking, funnel analysis).",
+      en: "Led product for the e-commerce function. Designed and built a new sales funnel, analyzed user behavior data to identify drop-off points, and implemented changes that increased conversion by 25%. Established the agile product organization and built the analytics stack (BI setup, event tracking, funnel analysis).",
       de: "Produkt für die E-Commerce-Funktion geleitet. Neuen Kauftrichter designed und gebaut, Nutzerverhalten analysiert, Abbruchpunkte identifiziert und Änderungen umgesetzt, die die Konversion um 25% steigerten. Agile Produktorganisation etabliert und Analytics-Stack aufgebaut (BI-Setup, Event-Tracking, Funnel-Analyse).",
     },
   },
@@ -356,7 +356,7 @@ export const projects: ProjectData[] = [
     role: { en: "Builder", de: "Builder" },
     period: "2025",
     badge: { en: "Side Project", de: "Nebenprojekt" },
-    metric: { en: "Vibe coded", de: "Vibe coded" },
+    metric: { en: "AI-native build", de: "KI-nativer Build" },
     type: { en: "Side project", de: "Nebenprojekt" },
     overview: {
       en: "Rootlocaly is a local events discovery platform I built as a side project to learn AI-native development workflows. It's a showcase of what's possible when you combine product thinking with tools like Claude Code — going from idea to deployed app in days, not months.\n\nThis project demonstrates the same approach I use for client builds: fast iteration, modern stack, product-first thinking.",

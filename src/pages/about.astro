@@ -3,7 +3,6 @@ import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SectionWrapper from "@/components/SectionWrapper.astro";
 import aboutPortrait from "@/assets/images/about-portrait.jpg";
-import aboutVan from "@/assets/images/about-van.jpg";
 import aboutSurfer from "@/assets/images/about-surfer.jpg";
 ---
 
@@ -12,7 +11,7 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
   description="The story behind the financial planning coach and product builder. 15+ countries, 4 startups, a year of kitesurfing, and a lot of ocean."
 >
   <!-- Hero / Intro -->
-  <SectionWrapper>
+  <SectionWrapper background="warm-white">
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
       <div class="lg:col-span-3">
         <h1
@@ -20,21 +19,22 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
         >
           About
         </h1>
-        <p class="text-lg sm:text-xl text-navy-800 leading-relaxed mb-4">
-          I've lived in over 15 countries, started four companies, and once
-          spent a year kitesurfing from Egypt to New Zealand before any of them.
-        </p>
-        <p class="text-lg sm:text-xl text-navy-800 leading-relaxed">
-          Then I got into finance. Here's the full story.
-        </p>
+        <ul class="space-y-3 text-lg sm:text-xl text-navy-800">
+          <li>Grew up in Germany.</li>
+          <li>Traveled around the world.</li>
+          <li>Studied business, finance and economics.</li>
+          <li>Co-founded four companies.</li>
+          <li>Consulted on product, finance and venture building.</li>
+          <li>Now: financial coaching for expats, building <a href="/projects/alba-wealth" class="text-teal-600 hover:underline">Alba Wealth</a>.</li>
+        </ul>
       </div>
-      <div class="lg:col-span-2">
+      <div class="lg:col-span-2 flex justify-end">
         <Image
           src={aboutPortrait}
           alt="David Hamel — financial planning coach and product builder"
-          class="rounded-2xl w-full object-cover grayscale"
+          class="rounded-2xl w-full lg:max-w-[280px] object-cover grayscale"
           widths={[400, 640, 800]}
-          sizes="(max-width: 1024px) 100vw, 40vw"
+          sizes="(max-width: 1024px) 100vw, 280px"
         />
       </div>
     </div>
@@ -45,97 +45,35 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
     <div class="max-w-[680px] mx-auto">
       <div class="font-serif text-lg leading-[1.8] text-navy-800">
         <p class="mb-6">
-          I grew up in a small town in northern Germany, but as soon as I
-          could, I left. I spent a year kitesurfing, surfing, and exploring:
-          Egypt, Brazil, Argentina, Fiji, Thailand, New Zealand. Traveling through
-          so many countries showed me one thing clearly: international business,
-          economics, and finance are the systems that shape our world.
-          Understanding how those systems work is what pulled me in and what I
-          decided to study.
+          Ever since I was a teenager, I wanted to explore and understand how the world works. So it felt natural to go travel after finishing high school.
         </p>
 
         <p class="mb-6">
-          I studied International Business Administration at Rotterdam School of
-          Management, graduated Cum Laude, then completed my MSc in Finance and
-          Investments, with semesters at EDHEC in Nice and SMU in Singapore. After a stint in commodities trade finance at ABN Amro in
-          Amsterdam, I knew I wanted to build things, not analyze them from a
-          desk.
+          I decided to study business and learned how finance is the system that shapes incentives, distributes power and connects economies. At the same time, I got curious about technology, because it seemed to offer an unlimited number of untapped opportunities.
         </p>
 
         <p class="mb-6">
-          So I started my first company. <a
-            href="/projects/digital-partners"
-            class="text-teal-600 hover:underline">Digital Partners</a
-          > was a digital strategy and IoT consulting firm. Over six years, we
-          executed 27 projects for industrial clients like Viessmann, Porsche,
-          and Körber, building a team of seven engineers and three consulting
-          partners across Berlin and San Francisco. During that time, I also took
-          on product roles at <a
-            href="/projects/porsche-digital-lab"
-            class="text-teal-600 hover:underline">Porsche Digital Lab</a
-          >, where I led a blockchain product for classic car provenance and
-          helped secure €6.5M in funding. At <a
-            href="/projects/carly"
-            class="text-teal-600 hover:underline">Carly</a
-          > and <a
-            href="/projects/buena"
-            class="text-teal-600 hover:underline">Buena</a
-          >, I built sales funnels and automated contract workflows.
-        </p>
-
-        <Image
-          src={aboutVan}
-          alt="David's camper van — life on the road"
-          class="rounded-2xl w-full my-10"
-          widths={[680, 960, 1360]}
-          sizes="(max-width: 680px) 100vw, 680px"
-        />
-
-        <p class="mb-6">
-          In late 2021, I joined Antler's Entrepreneur in Residence program in
-          Berlin. That's where the idea for <a
-            href="/projects/derisk"
-            class="text-teal-600 hover:underline">DeRisk</a
-          > came together: a platform for institutional investors to manage
-          portfolio relationships and systemic risk. We built the product and
-          piloted it with asset managers overseeing more than €1.5 trillion,
-          including NBIM, Barings, and CCLA.
+          While I loved the scale of global banking in my first role, I was eager to find out if I could build something from scratch.
         </p>
 
         <p class="mb-6">
-          After DeRisk, I joined <a
-            href="/projects/ziggma"
-            class="text-teal-600 hover:underline">Ziggma</a
-          >, a portfolio management platform for retail
-          investors that was already gaining traction, as Co-Founder and COO. We grew it to 35,000 users and €1.5 billion in linked assets. During that
-          period, I also consulted for <a
-            href="/projects/impactive"
-            class="text-teal-600 hover:underline">Impactive</a
-          > on strategy for their institutional shareholder engagement platform.
+          In 2016, everyone was talking about how technology would disrupt industry. So I started a consulting firm to help industrial companies adopt digital technology.
         </p>
 
         <p class="mb-6">
-          But here's what I kept noticing: the people around me, smart and
-          well-earning professionals, had no idea what to do with their money.
-          Especially the expats. The German financial system is complex, opaque,
-          and overwhelmingly in German. Most advisors earn commissions, which
-          means they're incentivized to sell you products, not solve your
-          problems.
+          When Covid put business on hold, I returned to finance. The climate crisis was being hotly discussed in financial services, but most solutions seemed to be inefficient greenwashing. As someone who has always lived close to the ocean, the topic was personal. I got deep into corporate governance as a tool for change, first building a sustainable investing platform for institutional investors, then co-founding a portfolio management company for retail investors.
         </p>
 
         <p class="mb-6">
-          I decided to change that. I became an independent, fee-based financial
-          planning coach and started building <a
-            href="/projects/alba-wealth"
-            class="text-teal-600 hover:underline">Alba Wealth</a
-          >, an AI-powered planning tool. I believe technology can make
-          good financial planning accessible to everyone, not just the wealthy.
+          But people didn't just lack good tools and financial literacy. There were fundamental flaws in how the financial advice industry operates, costing people their financial independence.
         </p>
 
         <p class="mb-6">
-          Today, I split my time between coaching expat clients one-on-one and
-          building the tools I wish had existed when I was figuring this out
-          myself.
+          This coincided with the rise of AI, opening new possibilities for how personal finance could actually work.
+        </p>
+
+        <p class="mb-6">
+          That's where I am today. I run an independent financial coaching practice for internationals in Germany and Portugal, and I'm building a financial planning AI that takes care of your personal financial life.
         </p>
 
         <p class="mb-0">
@@ -165,19 +103,18 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
           Independence
         </h3>
         <p class="text-lg text-navy-800 leading-relaxed">
-          Your advisor should work for you, not for the company whose product
-          they're selling. I charge a flat fee. No commissions, no
-          product-binding.
+          No commissions, no financial product sales, no corporate agenda. My
+          incentive is to deliver the best results.
         </p>
       </div>
 
       <div class="border-l-[3px] border-teal-600 pl-6 mb-10">
         <h3 class="text-[22px] font-semibold text-teal-600 mb-2">
-          Transparency
+          Curiosity
         </h3>
         <p class="text-lg text-navy-800 leading-relaxed">
-          I'm clear about fees, clear about trade-offs, and clear about what I
-          don't know. Financial planning shouldn't feel like a black box.
+          Every problem is different, and I will ask questions until I
+          understand yours before proposing a solution.
         </p>
       </div>
 
@@ -186,29 +123,29 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
           Systems Thinking
         </h3>
         <p class="text-lg text-navy-800 leading-relaxed">
-          Your finances aren't isolated decisions. Tax, investment, insurance,
-          retirement, and lifestyle all connect. I look at the full picture.
+          I believe sustainable solutions come from understanding the context
+          they exist in and envisioning the future they are built for.
         </p>
       </div>
 
       <div class="border-l-[3px] border-teal-600 pl-6 mb-10">
         <h3 class="text-[22px] font-semibold text-teal-600 mb-2">
-          Freedom by Design
+          Transparency
         </h3>
         <p class="text-lg text-navy-800 leading-relaxed">
-          The point of financial planning is freedom. To live where you want,
-          work how you want, and spend time on what matters. The plan serves the
-          life, not the other way around.
+          I'm clear about fees, trade-offs, and what I don't know. Financial
+          planning as well as technology development should never be a black
+          box.
         </p>
       </div>
 
       <div class="border-l-[3px] border-teal-600 pl-6 mb-0">
         <h3 class="text-[22px] font-semibold text-teal-600 mb-2">
-          Active Living
+          Freedom by Design
         </h3>
         <p class="text-lg text-navy-800 leading-relaxed">
-          I believe in building a life worth planning for. Travel, adventure,
-          and health aren't afterthoughts. They're the reason we do this.
+          Finance and technology are no end in themselves. I design them to
+          deliver outcomes, be it more time, health, security, or profits.
         </p>
       </div>
     </div>
@@ -231,74 +168,25 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
           Investments, Rotterdam School of Management (Cum Laude). Exchanges at
           EDHEC Business School (Nice) and SMU (Singapore).
         </p>
+        <div class="flex flex-wrap items-center gap-8 mt-8">
+          <img src="/logos/rsm.png" alt="Rotterdam School of Management, Erasmus University" class="h-8 object-contain grayscale opacity-70" />
+          <img src="/logos/edhec.png" alt="EDHEC Business School" class="h-8 object-contain grayscale opacity-70" />
+          <img src="/logos/smu.png" alt="Singapore Management University" class="h-8 object-contain grayscale opacity-70" />
+        </div>
+        <div class="mt-8">
+          <a
+            href="/llms.txt"
+            class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+          >
+            Machine-readable CV
+            <span
+              class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+              >&rarr;</span
+            >
+          </a>
+        </div>
       </div>
     </div>
   </SectionWrapper>
 
-  <!-- Three-Path CTA -->
-  <SectionWrapper background="navy-50">
-    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
-      How can I help?
-    </h2>
-    <div class="max-w-[680px] space-y-8">
-      <div class="border-l-[3px] border-teal-600 pl-6">
-        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
-          Need financial coaching?
-        </h3>
-        <p class="text-lg text-navy-700 leading-relaxed mb-3">
-          I help English-speaking professionals in Germany navigate taxes,
-          insurance, investing, and retirement planning. In plain
-          language, with no conflicts of interest.
-        </p>
-        <a
-          href="/coaching"
-          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
-        >
-          Financial Coaching
-          <span
-            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
-            >&rarr;</span
-          >
-        </a>
-      </div>
-      <div class="border-l-[3px] border-teal-600 pl-6">
-        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
-          Need product leadership?
-        </h3>
-        <p class="text-lg text-navy-700 leading-relaxed mb-3">
-          I embed with your team part-time to define strategy, build roadmaps,
-          and ship. Eight years of product experience at ventures and startups.
-        </p>
-        <a
-          href="/product"
-          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
-        >
-          Product Leadership
-          <span
-            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
-            >&rarr;</span
-          >
-        </a>
-      </div>
-      <div class="border-l-[3px] border-teal-600 pl-6">
-        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
-          Need something built?
-        </h3>
-        <p class="text-lg text-navy-700 leading-relaxed mb-3">
-          I combine product thinking with AI-native development to build apps
-          and websites for businesses, from first brief to live product.
-        </p>
-        <a
-          href="/build"
-          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
-        >
-          Build Services
-          <span
-            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
-            >&rarr;</span
-          >
-        </a>
-      </div>
-    </div>
-  </SectionWrapper>
 </BaseLayout>

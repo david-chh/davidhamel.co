@@ -38,14 +38,6 @@ const t = useTranslations(lang);
         <ul class="space-y-3">
           <li>
             <a
-              href={getLocalizedPath("/coaching", lang)}
-              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
-            >
-              {t("footer.col1.coaching")}
-            </a>
-          </li>
-          <li>
-            <a
               href={getLocalizedPath("/product", lang)}
               class="text-sm text-white/70 hover:text-white transition-colors duration-100"
             >
@@ -60,14 +52,6 @@ const t = useTranslations(lang);
               {t("footer.col1.build")}
             </a>
           </li>
-          <li>
-            <a
-              href={getLocalizedPath("/contact", lang)}
-              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
-            >
-              {t("footer.col1.cta")}
-            </a>
-          </li>
         </ul>
       </div>
 
@@ -79,6 +63,14 @@ const t = useTranslations(lang);
           {t("footer.col2.heading")}
         </h3>
         <ul class="space-y-3">
+          <li>
+            <a
+              href={getLocalizedPath("/coaching", lang)}
+              class="text-sm text-white/70 hover:text-white transition-colors duration-100"
+            >
+              {t("footer.col1.coaching")}
+            </a>
+          </li>
           <li>
             <a
               href={getLocalizedPath("/blog", lang)}
@@ -124,7 +116,7 @@ const t = useTranslations(lang);
         <ul class="space-y-3">
           <li>
             <a
-              href="mailto:david.ch.hamel@gmail.com"
+              href="mailto:hello@davidhamel.co"
               class="text-sm text-white/70 hover:text-white transition-colors duration-100"
             >
               {t("footer.col3.email")}

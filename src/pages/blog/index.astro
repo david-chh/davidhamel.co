@@ -53,33 +53,4 @@ const posts = (await getCollection("blog"))
       )
     }
   </SectionWrapper>
-
-  <!-- Newsletter CTA -->
-  <section class="bg-navy-900">
-    <div class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 py-16 lg:py-20">
-      <div class="max-w-xl mx-auto text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
-          Insights on money, building, and living abroad.
-        </h2>
-        <p class="text-lg text-white/85 mb-8">
-          I write about expat finance, product building, and designing a life on
-          your own terms. No spam, no fluff. Just honest thinking.
-        </p>
-        <form class="flex flex-col sm:flex-row gap-3" onsubmit="return false;">
-          <input
-            type="email"
-            placeholder="Your email address"
-            class="flex-1 h-[52px] px-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-teal-500"
-            aria-label="Your email address"
-          />
-          <button
-            type="submit"
-            class="h-[52px] px-6 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors duration-150 text-sm"
-          >
-            Subscribe <span>&rarr;</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
 </BaseLayout>

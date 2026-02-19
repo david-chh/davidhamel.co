@@ -1,0 +1,85 @@
+# David Hamel
+
+> Financial planning coach, product leader, and AI-native builder based in Berlin, Germany.
+
+Personal website: https://davidhamel.co
+Email: hello@davidhamel.co
+LinkedIn: https://linkedin.com/in/david-hamel-11baa841
+GitHub: https://github.com/davidhamel
+Booking: https://calendly.com/david-chh/call
+
+## What I Do
+
+I run three practices:
+
+1. **Financial Coaching** for expat professionals in Germany and Portugal. Independent, fee-based, no commissions.
+2. **Product Leadership** on contract for startups and scaleups. Strategy, roadmapping, team coaching, go-to-market.
+3. **AI Building** for SMBs and financial services firms. Custom AI agents, web applications, and full product builds.
+
+I am also the founder of Alba Wealth, an AI-powered financial planning platform for expats.
+
+## Experience
+
+### Alba Wealth — Founder (2025 – Present)
+AI-powered financial planning platform for English-speaking expats in Germany. Solo founder responsible for product strategy, UX design, full-stack development, financial modeling, customer research, and coaching.
+
+### Ziggma — Co-Founder & COO (2023 – 2024)
+Portfolio management SaaS platform for retail investors. 35,000 users, €1.5 billion in linked assets, €10,000 MRR. Led operations, fundraising, product strategy, business intelligence, and data pipeline infrastructure.
+
+### Impactive Tech — Venture Consultant (2023)
+SaaS platform for institutional investors to manage stewardship and shareholder engagement. Advised on strategy, product positioning, and go-to-market targeting asset managers and institutional investors.
+
+### DeRisk — Co-Founder & CEO (2021 – 2022)
+SaaS platform for institutional investors to manage portfolio relationships and systemic risks. Piloted with €1.5 trillion+ in AUM represented (NBIM, Barings, CCLA). Led product strategy, go-to-market, and business development from zero to pilot.
+
+### Buena — Senior Product Manager (2020)
+Proptech marketplace for tenants and landlords. Led the product function. Redesigned contract generation system from <5% to 100% automation. Introduced agile processes, established product roadmap, managed a team of 9 developers.
+
+### Carly — Product Manager (2020)
+Car diagnostics e-commerce platform. Led product for the e-commerce function. Designed new sales funnel that increased conversion by 25%. Built analytics and BI infrastructure from scratch. Established agile product organization.
+
+### Porsche Digital Lab — Product Owner (2018)
+Blockchain-based product for classic car provenance. Validated prototype and scaled to full product. €6.5M funding secured. Led hiring and managed a team of 12 engineers and designers. Ran sprint planning, defined roadmap.
+
+### Digital Partners — Founder & CEO (2015 – 2022)
+IoT consulting and venture building firm for industrial clients. 30+ consulting and engineering projects delivered across automotive, manufacturing, and mechanical engineering. 10-person team (7 engineers, 3 partners). Key clients: Viessmann, Porsche, Koerber. Operations in Berlin and San Francisco.
+
+### ABN AMRO Bank — Intern, Commodities Trade Finance (2015)
+Internship at ABN AMRO in Amsterdam. Financial and political risk analysis in the Commodities Trade Finance division.
+
+### Side Projects
+- **Rootlocaly** (2025): Local events discovery platform built as an AI-native development showcase. Designed and built the entire application solo using Claude Code.
+
+## Education
+
+- **MSc Finance and Investments** — Rotterdam School of Management, Erasmus University (Cum Laude)
+- **BSc International Business Administration** — Rotterdam School of Management, Erasmus University (Cum Laude)
+- Exchange semesters at EDHEC Business School (Nice) and Singapore Management University
+
+## Key Metrics
+
+- 8+ years building products and leading teams
+- 4 companies co-founded
+- 30+ consulting and engineering projects delivered
+- 35,000+ users (Ziggma)
+- €1.5 billion in linked assets (Ziggma)
+- €6.5 million in funding secured (Porsche Digital Lab)
+- €1.5 trillion+ in AUM piloted (DeRisk)
+- +25% sales conversion improvement (Carly)
+- 15+ countries lived in or traveled to
+
+## Languages
+
+German (native), English (fluent), French (conversational), Spanish (conversational)
+
+## Services
+
+### Financial Coaching
+Independent, fee-based financial coaching for English-speaking professionals in Germany and Portugal. Covers tax optimization, insurance review, investment strategy, pension planning, and holistic financial planning. No commissions, no product sales. Built with Alba Wealth platform.
+
+### Product Leadership
+Contract-based product leadership for startups and scaleups. User research and discovery, product strategy and roadmapping, product-market fit, agile team coaching, technical architecture guidance, stakeholder alignment, and go-to-market support. Flexible commitment from a few days per week to full-time.
+
+### AI Building
+Custom AI agents, web applications, SaaS platforms, marketing websites, AI-powered features, and internal tools. AI-native development process: discovery, build, launch and evolve. Fixed build fee with optional monthly retainer. Tech: Astro, Next.js, React, TypeScript, Tailwind, Supabase, Vercel.
+

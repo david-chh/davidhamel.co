@@ -59,55 +59,16 @@ import headshot from "@/assets/images/headshot-david.jpg";
       />
       <ServiceCard
         heading="Produktf&uuml;hrung"
-        description="F&uuml;r Startups und Scaleups, die erfahrenes Produktdenken brauchen, ohne eine Vollzeitstelle zu besetzen."
+        description="F&uuml;r Startups und Scaleups, die erfahrenes Produktdenken auf Vertragsbasis brauchen."
         href="/de/product"
         linkText="Mehr erfahren"
       />
       <ServiceCard
-        heading="App & Web Builds"
-        description="F&uuml;r KMU und Finanzdienstleister, die einen Produktmenschen brauchen, der ihre Branche versteht und die Software selbst baut."
+        heading="AI Building"
+        description="F&uuml;r KMU und Finanzdienstleister, die einen Produktmenschen brauchen, der ihre Branche versteht und ihre individuelle Software und KI-Agenten baut."
         href="/de/build"
         linkText="Mehr erfahren"
       />
-    </div>
-  </SectionWrapper>
-
-  <!-- Who I Am -->
-  <SectionWrapper>
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center">
-      <div class="lg:col-span-2">
-        <Image
-          src={headshot}
-          alt="David Hamel — Finanzcoach und Product Builder"
-          class="rounded-2xl w-full max-h-[500px] object-cover"
-          widths={[400, 640, 800]}
-          sizes="(max-width: 1024px) 100vw, 40vw"
-        />
-      </div>
-      <div class="lg:col-span-3">
-        <p class="text-lg text-navy-800 leading-relaxed mb-4">
-          Ich bin David, unabhängiger Finanzcoach und Product Builder in
-          Berlin. Ich habe in über 15 Ländern gelebt und gearbeitet,
-          Fintech-Produkte für Zehntausende Nutzer gebaut und Produktteams bei
-          Startups und Konzernen geleitet.
-        </p>
-        <p class="text-lg text-navy-800 leading-relaxed mb-6">
-          Heute coache ich Expats durch das deutsche Finanzsystem, biete
-          Startups Produktf&uuml;hrung und baue Apps und Websites f&uuml;r
-          Unternehmen, mit besonderem Fokus auf Fintech und
-          Finanzdienstleistungen.
-        </p>
-        <a
-          href="/de/about"
-          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
-        >
-          Mehr über mich
-          <span
-            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
-            >&rarr;</span
-          >
-        </a>
-      </div>
     </div>
   </SectionWrapper>
 
@@ -122,6 +83,7 @@ import headshot from "@/assets/images/headshot-david.jpg";
         oneLiner="KI-gestützte Finanzplanung für Expats"
         role="Gründer"
         badge="Venture"
+        metric="Private Beta"
         logo="/logos/alba-wealth.svg"
       />
       <ProjectCard
@@ -142,7 +104,7 @@ import headshot from "@/assets/images/headshot-david.jpg";
       />
       <ProjectCard
         name="Digital Partners"
-        oneLiner="IoT-Beratung & Venture Building, 27 Projekte umgesetzt"
+        oneLiner="IoT-Beratung & Venture Building, 30+ Projekte umgesetzt"
         role="Gründer & CEO"
         badge="Venture"
         metric="7 Entwickler, 3 Partner"
@@ -192,33 +154,4 @@ import headshot from "@/assets/images/headshot-david.jpg";
       </a>
     </div>
   </SectionWrapper>
-
-  <!-- Newsletter CTA -->
-  <section class="bg-navy-900">
-    <div class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 py-16 lg:py-20">
-      <div class="max-w-xl mx-auto text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
-          Impulse zu Geld, Bauen und Leben im Ausland.
-        </h2>
-        <p class="text-lg text-white/85 mb-8">
-          Ich schreibe über Expat-Finanzen, Produktentwicklung und ein
-          selbstbestimmtes Leben. Kein Spam, kein Blabla. Ehrliche Gedanken.
-        </p>
-        <form class="flex flex-col sm:flex-row gap-3" onsubmit="return false;">
-          <input
-            type="email"
-            placeholder="Deine E-Mail-Adresse"
-            class="flex-1 h-[52px] px-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-teal-500"
-            aria-label="Deine E-Mail-Adresse"
-          />
-          <button
-            type="submit"
-            class="h-[52px] px-6 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors duration-150 text-sm"
-          >
-            Abonnieren <span>&rarr;</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
 </BaseLayout>

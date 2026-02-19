@@ -8,33 +8,53 @@
 
 ## Current State
 
-**Status**: Phase 1 Foundation COMPLETE. Copy polish and real logos done. Build passing with 42 pages.
+**Status**: Phase 1 Foundation COMPLETE. All pages built, polished, and copy-finalized. Calendly integrated. Build passing with 42 pages.
 **Focus**: Vercel deployment and integrations.
 
-## Completed Work (Session 8 — 2026-02-18)
+## Completed Work (Session 10 — 2026-02-19)
 
-### Copy Polish
-- Removed all em dashes (~60+) across 16+ files — replaced with periods, commas, colons for natural tone
-- Rewrote About page opening using PR psychology: "I've lived in over 15 countries, started four companies, and once spent a year kitesurfing..." (EN + DE)
-- Homepage "Who I Am": changed "Porsche Digital Lab" → "startups and corporates"
-- Projects page: "Eight years of building things that ship" → "Eight years of shipping products" (EN + DE)
+### Build Page Complete Rewrite (EN + DE)
+- New hero: "Custom software is now viable for problems that were never worth solving before"
+- New section: "Why this matters now" (two-column: cost collapsed + building fast without building right = risk)
+- "What I build" streamlined from 4 categories to 2: Custom applications, AI agents and automation
+- "How I work" reframed: Scope, Build, Ship & Support (scoping as differentiator)
+- "Why me not an agency" (6 cards) replaced with "Why this works" (3 cards)
+- Removed: tech stack box, hero CTA button, pricing section, FAQ section
 
-### Real Company Logos
-Replaced all generated monogram SVGs with real logos:
-- **Digital Partners**: recovered from Wayback Machine (digitalpartners.io), 247x35 PNG
-- **Impactive**: extracted from impactive.pro (Wix), 444x156 PNG
-- **DeRisk**: extracted from LinkedIn company page (derisk-earth), 200x200 PNG
-- Updated all references in `src/data/projects.ts`, `src/pages/product.astro`, `src/pages/de/product.astro`
-- ProjectCard component updated to show logos with proper sizing
+### Product Page Updates (EN + DE)
+- FAQ section removed
+- CTA simplified to button + email only (centered flex-col, same as build page)
 
-### Hero Photo
-- Centered David's face in hero rounded rectangle: `object-[60%_50%]` (horizontal shift, no zoom)
+### Calendly Integration
+- Contact page (EN + DE): Calendly embed with https://calendly.com/david-chh/call
+- Coaching page (EN + DE): Calendly embed integrated
 
-## Previous Work (Sessions 5-7)
+### Sitewide Copy Corrections
+- "27 projects" to "30+ projects" everywhere
+- "Vibe coded" to "AI-native build" everywhere
+- "purchase conversion/funnel" to "sales conversion/funnel" (Carly)
 
+### New Files
+- `public/llms.txt` -- machine-readable CV, linked from About page
+
+### CTABlock Component
+- `heading` prop now optional
+- Slot wrapper: flex-col items-center (centered layout)
+
+## Completed Work (Session 9 — 2026-02-18)
+
+- About page rewrite (personal narrative, bullet-list hero, university logos)
+- Removed sections: "How can I help?" (About), "Who I Am" (homepage), Newsletter CTAs (all pages)
+- Newsletter signup moved to footer only
+- Footer newsletter heading updated ("building AI" added)
+
+## Previous Work (Sessions 5-8)
+
+- Copy polish: em dashes removed, About opening rewritten (Session 8)
+- Real company logos recovered (Digital Partners, Impactive, DeRisk) (Session 8)
 - Three-service split: `/coaching`, `/product`, `/build` (Session 7)
-- Scaffolded Astro project, design system, i18n, layout/components (Sessions 5-6)
-- EN + DE homepages, blog foundation, all sub-pages built
+- All sub-pages built (Session 6)
+- Scaffolded Astro project, design system, i18n, layout/components (Session 5)
 - 42 pages passing build
 
 ## Key Decisions
@@ -50,15 +70,17 @@ Replaced all generated monogram SVGs with real logos:
 | Blog | English-only content, bilingual chrome |
 | Projects | Dynamic routes with centralized data file |
 | Services | Three separate pages: /coaching, /product, /build |
+| Calendly | https://calendly.com/david-chh/call |
+| Terminology | "AI-native build" (not "vibe coding") |
+| CTA pattern | Button + email, no heading, centered flex-col |
 
 ## Next Steps
 
-1. ESLint config (skipped in v0 — Prettier done)
-2. Set up Vercel deployment
-3. Set up Umami analytics
-4. Set up Resend newsletter integration (React island)
-5. Set up Calendly embed (React island)
+1. Set up Vercel deployment
+2. Set up Umami analytics
+3. Set up Resend newsletter integration (React island)
+4. ESLint config (skipped in v0, Prettier done)
 
 ---
 
-_Last updated: 2026-02-17 (Session 7 - Three-Service Split)_
+_Last updated: 2026-02-19 (Session 10 - Build page rewrite, Calendly integration, copy corrections)_

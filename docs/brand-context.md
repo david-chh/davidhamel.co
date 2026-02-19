@@ -48,7 +48,7 @@ Once the §34h license is obtained, terminology transitions to "independent fina
 1. **Financial Coaching (primary):** Independent, fee-based financial planning for expats. No commissions, no product-binding.
 2. **Product & Build Services (secondary):** Fractional CPO, product strategy consulting, AND hands-on app/website development. David combines product leadership experience with AI-native development (Claude Code) to offer full-service product delivery — from strategy through shipped code. Target clients: startups, small businesses, and founders who need a product thinker who can also build. Pricing model: one-time build fee + monthly retainer for maintenance/iteration.
 
-**Brand one-liner:** Independent financial planning coach and fintech builder helping expats in Germany take control of their money.
+**Brand one-liner:** Independent financial planning coach and fintech builder in Germany and Portugal, helping expats take control of their money.
 
 ### Brand Archetypes
 
@@ -155,7 +155,7 @@ The `/about` page tells the **full career story** chronologically — all projec
 
 ### Key Pages Detail
 
-**Homepage:** Hero with headline + two paths (coaching / product & build services). "Who I am" block with headshot. Selected work highlights (3–4 project cards linking to /projects/\*). Latest 2–3 blog posts. Newsletter signup CTA.
+**Homepage:** Hero with headline + headshot photo. Three-card routing (coaching / product leadership / build). Selected work highlights (3-4 project cards linking to /projects/\*). Latest 2-3 blog posts. Newsletter signup in footer only.
 
 **Coaching:** What I offer (scoped to pre-§34h language). Who it's for. 3-step process: Understand → Plan → Implement. Differentiation (fee-only, expat perspective, AI tools). Link to Alba Wealth. CTA: Book free 30-min consultation.
 
@@ -182,7 +182,7 @@ The `/about` page tells the **full career story** chronologically — all projec
 
 Projects mentioned in About narrative only (no dedicated page): Cormo Energy (early-stage solar idea), Antler EIR program (Oct–Dec 2021), ABN Amro internship (origin story), ISM eCompany (student job).
 
-**About:** Personal story (expat journey, 15+ countries). Full career narrative connecting all projects chronologically: Digital Partners (2015–2022, with Porsche/Carly/Buena contracts during) → Antler EIR → DeRisk → Ziggma (with Impactive contract during) → Alba Wealth. ABN Amro as brief origin mention. Values and "what I believe" section. CTAs to /coaching or /services.
+**About:** Bullet-list hero (key facts). Personal narrative focused on independence, travel, curiosity about finance, entrepreneurship arc from consulting to fintech to coaching + AI. Does NOT mention specific project names or KPIs in the story body. Values ("What I Believe") section. Background section with university logos (RSM, EDHEC, SMU). No CTA section.
 
 **Adventures:** Photo grid, minimal text. Categories: Surf, Dive, Travel. Can launch sparse and fill as photos are organized.
 

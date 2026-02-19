@@ -2,10 +2,8 @@
 import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-// Hero image
-import heroImage from "@/assets/images/adventures-hero.jpg";
-
 // Adventure photos
+import heroImage from "@/assets/images/adventures-hero.jpg";
 import surfCoxos from "@/assets/images/adventures/surf-coxos.jpg";
 import surfBarrel from "@/assets/images/adventures/surf-barrel.jpg";
 import surfWaveWall from "@/assets/images/adventures/surf-wave-wall.jpg";
@@ -13,7 +11,6 @@ import surfGreenWave from "@/assets/images/adventures/surf-green-wave.jpg";
 import surfOceanBeach from "@/assets/images/adventures/surf-ocean-beach.jpg";
 import surfBoat from "@/assets/images/adventures/surf-boat.jpg";
 import freediveCave from "@/assets/images/adventures/freedive-cave.jpg";
-import freediveCenote from "@/assets/images/adventures/freedive-cenote.jpg";
 import kitePortugal from "@/assets/images/adventures/kite-portugal.jpg";
 import kiteSouthAfrica from "@/assets/images/adventures/kite-south-africa.jpg";
 import snowPowder from "@/assets/images/adventures/snow-powder.jpg";
@@ -23,25 +20,27 @@ import travelCoastline from "@/assets/images/adventures/travel-coastline.jpg";
 import travelJoshuaTree from "@/assets/images/adventures/travel-joshua-tree.jpg";
 import travelHikerCoast from "@/assets/images/adventures/travel-hiker-coast.jpg";
 import travelVanRainbow from "@/assets/images/adventures/travel-van-rainbow.jpg";
+import aboutVan from "@/assets/images/about-van.jpg";
 
 const photos = [
-  { src: surfCoxos, alt: "Surfen in Coxos, Portugal", category: "surf" },
-  { src: freediveCenote, alt: "Freitauchen in einer Cenote, Mexiko", category: "freedive" },
-  { src: travelCoastalSunset, alt: "Sonnenuntergang an der Küste", category: "travel" },
-  { src: surfBarrel, alt: "In einer Barrelwelle", category: "surf" },
+  { src: heroImage, alt: "Freitauchen in Mexiko", category: "freedive" },
+  { src: surfCoxos, alt: "Surfen in Portugal", category: "surf" },
+  { src: travelCoastalSunset, alt: "Big Sur, Kalifornien", category: "travel" },
+  { src: surfBarrel, alt: "Surfen in Portugal", category: "surf" },
   { src: kitePortugal, alt: "Kitesurfen in Portugal", category: "kite" },
-  { src: travelHikerCoast, alt: "Wandern entlang der Küste", category: "travel" },
-  { src: surfWaveWall, alt: "Massive Wellenwand", category: "surf" },
-  { src: freediveCave, alt: "Höhlen-Freitauchen, Taak Bi Ha", category: "freedive" },
-  { src: snowPowder, alt: "Tiefschnee-Skifahren", category: "snow" },
-  { src: surfGreenWave, alt: "Grüne Welle mit Felsen", category: "surf" },
-  { src: travelPortugueseBay, alt: "Portugiesische Bucht", category: "travel" },
+  { src: travelHikerCoast, alt: "Wandern in Kalifornien", category: "travel" },
+  { src: surfWaveWall, alt: "Surfen in Portugal", category: "surf" },
+  { src: freediveCave, alt: "Freitauchen in Mexiko", category: "freedive" },
+  { src: snowPowder, alt: "Snowboarden in der Schweiz", category: "snow" },
+  { src: surfGreenWave, alt: "Surfen in Portugal", category: "surf" },
+  { src: travelPortugueseBay, alt: "Aljezur, Portugal", category: "travel" },
   { src: kiteSouthAfrica, alt: "Kitesurfen in Südafrika", category: "kite" },
-  { src: travelJoshuaTree, alt: "Joshua Tree", category: "travel" },
-  { src: surfOceanBeach, alt: "Surfen am Ocean Beach, San Francisco", category: "surf" },
-  { src: travelVanRainbow, alt: "Van Life mit Regenbogen", category: "travel" },
-  { src: surfBoat, alt: "Boot in der Brandung", category: "surf" },
-  { src: travelCoastline, alt: "Küstenpanorama", category: "travel" },
+  { src: aboutVan, alt: "Van Life in Mexiko", category: "travel" },
+  { src: travelJoshuaTree, alt: "Joshua Tree, Kalifornien", category: "travel" },
+  { src: surfOceanBeach, alt: "Surfen in San Francisco", category: "surf" },
+  { src: travelVanRainbow, alt: "Van Life in Mexiko", category: "travel" },
+  { src: surfBoat, alt: "Surfen in San Francisco", category: "surf" },
+  { src: travelCoastline, alt: "Ericeira, Portugal", category: "travel" },
 ];
 
 const categories = ["all", "surf", "freedive", "kite", "snow", "travel"];
@@ -59,30 +58,12 @@ const categoryLabels: Record<string, string> = {
   title="Abenteuer — David Hamel"
   description="Surfen, Tauchen, Reisen. Fotos aus 15+ Ländern und einem Leben im Ozean."
 >
-  <!-- Hero -->
-  <section class="relative h-[50vh] lg:h-[70vh] overflow-hidden">
-    <Image
-      src={heroImage}
-      alt="Freitauchen in einer Cenote — türkisfarbener Lichtstrahl"
-      class="absolute inset-0 w-full h-full object-cover"
-      widths={[640, 960, 1280, 1920]}
-      sizes="100vw"
-    />
-    <div
-      class="absolute inset-0 bg-gradient-to-t from-[rgba(26,26,46,0.6)] to-transparent"
-    >
-    </div>
-    <div
-      class="absolute inset-0 flex flex-col items-center justify-end pb-16 lg:pb-24 text-center px-5"
-    >
-      <h1
-        class="text-4xl sm:text-5xl lg:text-[56px] font-bold text-white leading-tight mb-3"
-      >
+  <!-- Header -->
+  <section class="bg-warm-white">
+    <div class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 pt-24 pb-8 sm:pt-28 sm:pb-10 lg:pt-32 lg:pb-12">
+      <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.1] tracking-tight text-navy-900">
         Abenteuer
       </h1>
-      <p class="text-lg text-white/85 max-w-md">
-        Wenn ich nicht baue oder coache, bin ich im Ozean.
-      </p>
     </div>
   </section>
 

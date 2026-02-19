@@ -3,7 +3,6 @@ import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SectionWrapper from "@/components/SectionWrapper.astro";
 import aboutPortrait from "@/assets/images/about-portrait.jpg";
-import aboutVan from "@/assets/images/about-van.jpg";
 import aboutSurfer from "@/assets/images/about-surfer.jpg";
 ---
 
@@ -12,30 +11,30 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
   description="Die Geschichte hinter dem Finanzcoach und Product Builder. 15+ Länder, 4 Startups, ein Jahr Kitesurfen und jede Menge Ozean."
 >
   <!-- Hero / Intro -->
-  <SectionWrapper>
+  <SectionWrapper background="warm-white">
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
       <div class="lg:col-span-3">
         <h1
           class="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.1] tracking-tight text-navy-900 mb-8"
         >
-          Über mich
+          &Uuml;ber mich
         </h1>
-        <p class="text-lg sm:text-xl text-navy-800 leading-relaxed mb-4">
-          Ich habe in über 15 Ländern gelebt, vier Unternehmen gegründet und
-          davor erst mal ein Jahr mit Kitesurfen verbracht, von Ägypten bis
-          Neuseeland.
-        </p>
-        <p class="text-lg sm:text-xl text-navy-800 leading-relaxed">
-          Dann kam die Finanzwelt. Hier ist die ganze Geschichte.
-        </p>
+        <ul class="space-y-3 text-lg sm:text-xl text-navy-800">
+          <li>Aufgewachsen in Deutschland.</li>
+          <li>Um die Welt gereist.</li>
+          <li>BWL, Finanzen und VWL studiert.</li>
+          <li>Vier Unternehmen mitgegr&uuml;ndet.</li>
+          <li>Beratung in Produkt, Finanzen und Venture Building.</li>
+          <li>Heute: Finanzcoaching f&uuml;r Expats, Aufbau von <a href="/de/projects/alba-wealth" class="text-teal-600 hover:underline">Alba Wealth</a>.</li>
+        </ul>
       </div>
-      <div class="lg:col-span-2">
+      <div class="lg:col-span-2 flex justify-end">
         <Image
           src={aboutPortrait}
           alt="David Hamel — Finanzcoach und Product Builder"
-          class="rounded-2xl w-full object-cover grayscale"
+          class="rounded-2xl w-full lg:max-w-[280px] object-cover grayscale"
           widths={[400, 640, 800]}
-          sizes="(max-width: 1024px) 100vw, 40vw"
+          sizes="(max-width: 1024px) 100vw, 280px"
         />
       </div>
     </div>
@@ -46,109 +45,39 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
     <div class="max-w-[680px] mx-auto">
       <div class="font-serif text-lg leading-[1.8] text-navy-800">
         <p class="mb-6">
-          Ich bin in einer Kleinstadt in Norddeutschland aufgewachsen, aber
-          sobald ich konnte, bin ich los. Ich habe ein Jahr lang gekitesurft,
-          gesurft und die Welt erkundet: von Ägypten über Brasilien, Argentinien
-          bis Fidschi, Thailand bis Neuseeland. Das Reisen durch so viele Länder
-          hat mir eines klar
-          gezeigt: Internationales Business, Volkswirtschaft und Finanzen sind
-          die Systeme, die unsere globale Welt formen. Zu verstehen, wie diese
-          Systeme funktionieren, hat mich gepackt und das wollte ich
-          studieren.
+          Schon als Teenager wollte ich die Welt erkunden und verstehen, wie sie funktioniert. Nach dem Abitur war es f&uuml;r mich selbstverst&auml;ndlich, erst einmal reisen zu gehen.
         </p>
 
         <p class="mb-6">
-          Ich studierte International Business Administration an der Rotterdam
-          School of Management, schloss mit Cum Laude ab und machte dann meinen
-          MSc in Finance and Investments, mit Semestern an der EDHEC in Nizza
-          und der SMU in Singapur. Nach einer Zeit im
-          Commodities Trade Finance bei ABN Amro in Amsterdam wusste ich: Ich
-          will Dinge bauen, nicht vom Schreibtisch aus analysieren.
+          Ich entschied mich f&uuml;r ein BWL-Studium und lernte, wie Finanzen das System sind, das Anreize formt, Macht verteilt und Volkswirtschaften verbindet. Gleichzeitig wurde ich neugierig auf Technologie, weil sie eine scheinbar unbegrenzte Zahl ungenutzter M&ouml;glichkeiten zu bieten schien.
         </p>
 
         <p class="mb-6">
-          Also gründete ich mein erstes Unternehmen. <a
-            href="/de/projects/digital-partners"
-            class="text-teal-600 hover:underline">Digital Partners</a
-          > war eine Beratung für digitale Strategie und IoT. Über sechs Jahre
-          haben wir 27 Projekte für Industriekunden wie Viessmann, Porsche und
-          Körber umgesetzt und ein Team aus sieben Entwicklern und drei
-          Beratungspartnern in Berlin und San Francisco aufgebaut. In dieser Zeit
-          übernahm ich auch Produktrollen beim <a
-            href="/de/projects/porsche-digital-lab"
-            class="text-teal-600 hover:underline">Porsche Digital Lab</a
-          >, wo ich ein Blockchain-Produkt für die Herkunftsdokumentation
-          klassischer Autos leitete und €6,5 Mio. Finanzierung mitgesichert
-          habe. Bei <a
-            href="/de/projects/carly"
-            class="text-teal-600 hover:underline">Carly</a
-          > und <a
-            href="/de/projects/buena"
-            class="text-teal-600 hover:underline">Buena</a
-          >, wo ich Vertriebstrichter baute und Vertragsworkflows
-          automatisierte.
-        </p>
-
-        <Image
-          src={aboutVan}
-          alt="Davids Campervan — Leben unterwegs"
-          class="rounded-2xl w-full my-10"
-          widths={[680, 960, 1360]}
-          sizes="(max-width: 680px) 100vw, 680px"
-        />
-
-        <p class="mb-6">
-          Ende 2021 nahm ich am Entrepreneur in Residence-Programm von Antler in
-          Berlin teil. Dort entstand die Idee für <a
-            href="/de/projects/derisk"
-            class="text-teal-600 hover:underline">DeRisk</a
-          >: eine Plattform für institutionelle Investoren zur Verwaltung von
-          Portfolio-Beziehungen und systemischen Risiken. Wir bauten das Produkt
-          und pilotierten es mit Vermögensverwaltern, die über €1,5 Billionen
-          betreuen, darunter NBIM, Barings und CCLA.
+          So sehr ich die Dimension des globalen Bankgesch&auml;fts in meiner ersten Stelle sch&auml;tzte, ich wollte unbedingt herausfinden, ob ich etwas von Grund auf selbst aufbauen konnte.
         </p>
 
         <p class="mb-6">
-          Nach DeRisk stieg ich bei <a
-            href="/de/projects/ziggma"
-            class="text-teal-600 hover:underline">Ziggma</a
-          >, eine Portfoliomanagement-Plattform für Privatanleger, als
-          Co-Founder und COO ein.
-          Wir wuchsen auf 35.000 Nutzer und €1,5 Milliarden verknüpfte Assets.
-          Parallel beriet ich <a
-            href="/de/projects/impactive"
-            class="text-teal-600 hover:underline">Impactive</a
-          > bei der Strategie für ihre institutionelle
-          Shareholder-Engagement-Plattform.
+          2016 sprach jeder davon, wie Technologie die Industrie ver&auml;ndern w&uuml;rde. Also gr&uuml;ndete ich eine Beratungsfirma, um Industrieunternehmen bei der Einf&uuml;hrung digitaler Technologie zu unterst&uuml;tzen.
         </p>
 
         <p class="mb-6">
-          Aber was mir immer wieder auffiel: Die Menschen um mich herum, kluge
-          und gut verdienende Fachkräfte, hatten keine Ahnung, was sie mit ihrem
-          Geld anfangen sollten. Besonders die Expats. Das deutsche Finanzsystem
-          ist komplex, undurchsichtig und überwiegend auf Deutsch. Die meisten
-          Berater verdienen Provisionen, was bedeutet, dass sie einen Anreiz
-          haben, dir Produkte zu verkaufen, nicht deine Probleme zu lösen.
+          Als Covid das Gesch&auml;ft zum Stillstand brachte, kehrte ich zur Finanzwelt zur&uuml;ck. Die Klimakrise wurde in der Finanzbranche hei&szlig; diskutiert, aber die meisten L&ouml;sungen schienen ineffizientes Greenwashing zu sein. Als jemand, der immer nah am Ozean gelebt hat, war das Thema pers&ouml;nlich. Ich vertiefte mich in Corporate Governance als Werkzeug f&uuml;r Ver&auml;nderung, baute zuerst eine nachhaltige Investmentplattform f&uuml;r institutionelle Investoren und gr&uuml;ndete dann ein Portfoliomanagement-Unternehmen f&uuml;r Privatanleger mit.
         </p>
 
         <p class="mb-6">
-          Ich beschloss, das zu ändern. Ich wurde unabhängiger, honorarbasierter
-          Finanzcoach und begann, <a
-            href="/de/projects/alba-wealth"
-            class="text-teal-600 hover:underline">Alba Wealth</a
-          > zu bauen, ein KI-gestütztes Planungstool. Ich glaube, dass
-          Technologie gute Finanzplanung für alle zugänglich machen kann, nicht
-          nur für Wohlhabende.
+          Aber den Menschen fehlten nicht nur gute Tools und Finanzwissen. Es gab grundlegende M&auml;ngel in der Finanzberatungsbranche, die Menschen ihre finanzielle Unabh&auml;ngigkeit kosteten.
         </p>
 
         <p class="mb-6">
-          Heute teile ich meine Zeit zwischen dem persönlichen Coaching von
-          Expat-Kunden und dem Bau der Tools, die ich mir selbst gewünscht hätte,
-          als ich das alles noch herausfinden musste.
+          Das fiel zusammen mit dem Aufstieg von KI, der neue M&ouml;glichkeiten er&ouml;ffnete, wie Personal Finance tats&auml;chlich funktionieren k&ouml;nnte.
+        </p>
+
+        <p class="mb-6">
+          Hier stehe ich heute. Ich betreibe eine unabh&auml;ngige Finanzcoaching-Praxis f&uuml;r Internationals in Deutschland und Portugal und baue eine Finanzplanungs-KI, die sich um alle Aspekte deines pers&ouml;nlichen Finanzlebens k&uuml;mmert.
         </p>
 
         <p class="mb-0">
-          Wenn ich nicht an Geld arbeite, bin ich höchstwahrscheinlich im Ozean.
+          Wenn ich nicht an Geld arbeite, bin ich h&ouml;chstwahrscheinlich im Ozean.
         </p>
 
         <Image
@@ -171,23 +100,21 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
 
       <div class="border-l-[3px] border-teal-600 pl-6 mb-10">
         <h3 class="text-[22px] font-semibold text-teal-600 mb-2">
-          Unabhängigkeit
+          Unabh&auml;ngigkeit
         </h3>
         <p class="text-lg text-navy-800 leading-relaxed">
-          Dein Berater sollte für dich arbeiten, nicht für das Unternehmen,
-          dessen Produkte er verkauft. Ich berechne ein festes Honorar. Keine
-          Provisionen, keine Produktbindung.
+          Keine Provisionen, kein Produktverkauf, keine Konzernagenda. Mein
+          Anreiz ist es, die besten Ergebnisse zu liefern.
         </p>
       </div>
 
       <div class="border-l-[3px] border-teal-600 pl-6 mb-10">
         <h3 class="text-[22px] font-semibold text-teal-600 mb-2">
-          Transparenz
+          Neugier
         </h3>
         <p class="text-lg text-navy-800 leading-relaxed">
-          Ich bin klar bei Gebühren, klar bei Abwägungen und klar bei dem, was
-          ich nicht weiß. Finanzplanung sollte sich nicht wie eine Blackbox
-          anfühlen.
+          Jedes Problem ist anders, und ich stelle so lange Fragen, bis ich
+          deines verstanden habe, bevor ich eine L&ouml;sung vorschlage.
         </p>
       </div>
 
@@ -196,31 +123,31 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
           Systemdenken
         </h3>
         <p class="text-lg text-navy-800 leading-relaxed">
-          Deine Finanzen sind keine Einzelentscheidungen. Steuern,
-          Investitionen, Versicherung, Rente und Lebensstil hängen zusammen. Ich
-          schaue auf das große Ganze.
+          Ich glaube, dass nachhaltige L&ouml;sungen daraus entstehen, den
+          Kontext zu verstehen, in dem sie existieren, und die Zukunft
+          vorauszudenken, f&uuml;r die sie gebaut werden.
         </p>
       </div>
 
       <div class="border-l-[3px] border-teal-600 pl-6 mb-10">
         <h3 class="text-[22px] font-semibold text-teal-600 mb-2">
-          Freedom by Design
+          Transparenz
         </h3>
         <p class="text-lg text-navy-800 leading-relaxed">
-          Das Ziel von Finanzplanung ist Freiheit. Zu leben, wo du willst, zu
-          arbeiten, wie du willst, und Zeit für das zu haben, was zählt. Der Plan
-          dient dem Leben, nicht umgekehrt.
+          Ich bin klar bei Geb&uuml;hren, Abw&auml;gungen und dem, was ich
+          nicht wei&szlig;. Finanzplanung und Technologieentwicklung sollten nie
+          eine Blackbox sein.
         </p>
       </div>
 
       <div class="border-l-[3px] border-teal-600 pl-6 mb-0">
         <h3 class="text-[22px] font-semibold text-teal-600 mb-2">
-          Aktives Leben
+          Freedom by Design
         </h3>
         <p class="text-lg text-navy-800 leading-relaxed">
-          Ich glaube daran, ein Leben aufzubauen, für das es sich zu planen
-          lohnt. Reisen, Abenteuer und Gesundheit sind keine Nebensache. Sie
-          sind der Grund, warum wir das hier machen.
+          Finanzen und Technologie sind kein Selbstzweck. Ich gestalte sie so,
+          dass sie Ergebnisse liefern, sei es mehr Zeit, Gesundheit, Sicherheit
+          oder Rendite.
         </p>
       </div>
     </div>
@@ -244,76 +171,25 @@ import aboutSurfer from "@/assets/images/about-surfer.jpg";
           Auslandssemester an der EDHEC Business School (Nizza) und SMU
           (Singapur).
         </p>
+        <div class="flex flex-wrap items-center gap-8 mt-8">
+          <img src="/logos/rsm.png" alt="Rotterdam School of Management, Erasmus University" class="h-8 object-contain grayscale opacity-70" />
+          <img src="/logos/edhec.png" alt="EDHEC Business School" class="h-8 object-contain grayscale opacity-70" />
+          <img src="/logos/smu.png" alt="Singapore Management University" class="h-8 object-contain grayscale opacity-70" />
+        </div>
+        <div class="mt-8">
+          <a
+            href="/llms.txt"
+            class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+          >
+            Maschinenlesbarer Lebenslauf
+            <span
+              class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+              >&rarr;</span
+            >
+          </a>
+        </div>
       </div>
     </div>
   </SectionWrapper>
 
-  <!-- Three-Path CTA -->
-  <SectionWrapper background="navy-50">
-    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
-      Wie kann ich helfen?
-    </h2>
-    <div class="max-w-[680px] space-y-8">
-      <div class="border-l-[3px] border-teal-600 pl-6">
-        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
-          Brauchst du Finanzcoaching?
-        </h3>
-        <p class="text-lg text-navy-700 leading-relaxed mb-3">
-          Ich helfe englischsprachigen Fachkr&auml;ften in Deutschland bei
-          Steuern, Versicherungen, Geldanlage und Altersvorsorge. In
-          klarer Sprache, ohne Interessenkonflikte.
-        </p>
-        <a
-          href="/de/coaching"
-          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
-        >
-          Finanzcoaching
-          <span
-            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
-            >&rarr;</span
-          >
-        </a>
-      </div>
-      <div class="border-l-[3px] border-teal-600 pl-6">
-        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
-          Brauchst du Produktf&uuml;hrung?
-        </h3>
-        <p class="text-lg text-navy-700 leading-relaxed mb-3">
-          Ich arbeite in Teilzeit in deinem Team, um Strategie zu definieren,
-          Roadmaps zu erstellen und zu liefern. Acht Jahre Produkterfahrung bei
-          Ventures und Startups.
-        </p>
-        <a
-          href="/de/product"
-          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
-        >
-          Produktf&uuml;hrung
-          <span
-            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
-            >&rarr;</span
-          >
-        </a>
-      </div>
-      <div class="border-l-[3px] border-teal-600 pl-6">
-        <h3 class="text-[22px] font-semibold text-navy-900 mb-2">
-          Brauchst du einen Builder?
-        </h3>
-        <p class="text-lg text-navy-700 leading-relaxed mb-3">
-          Ich verbinde Produktdenken mit KI-nativem Development, um Apps und
-          Websites f&uuml;r Unternehmen zu bauen, vom ersten Briefing bis
-          zum Live-Produkt.
-        </p>
-        <a
-          href="/de/build"
-          class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
-        >
-          Build Services
-          <span
-            class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
-            >&rarr;</span
-          >
-        </a>
-      </div>
-    </div>
-  </SectionWrapper>
 </BaseLayout>

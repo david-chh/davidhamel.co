@@ -6,8 +6,8 @@ import CTABlock from "@/components/CTABlock.astro";
 ---
 
 <BaseLayout
-  title="Build — David Hamel"
-  description="Ich verstehe dein Gesch&auml;ft, und ich baue die Software. KI-natives App- und Web-Development f&uuml;r KMU und Finanzdienstleister."
+  title="AI Building — David Hamel"
+  description="Individuelle Software ist jetzt f&uuml;r Probleme realisierbar, die sich vorher nie gelohnt haben. KI-natives Development mit Produkterfahrung f&uuml;r KMU und Finanzdienstleister."
 >
   <!-- Hero -->
   <section class="bg-warm-white">
@@ -17,25 +17,84 @@ import CTABlock from "@/components/CTABlock.astro";
       <h1
         class="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.1] tracking-tight text-navy-900 mb-6"
       >
-        Ich verstehe dein Gesch&auml;ft.<br />Und ich baue die Software.
+        Individuelle Software ist jetzt<br />f&uuml;r Probleme realisierbar,
+        die sich vorher nie gelohnt haben.
       </h1>
       <p
         class="text-lg sm:text-xl text-navy-700 max-w-[640px] mb-8 leading-relaxed"
       >
-        Die meisten Entwickler bauen, was man ihnen sagt. Ich fange beim Problem
-        an. Acht Jahre Fintech-Produkterfahrung bedeuten, dass ich deine Branche
-        verstehe, und ich nutze KI-natives Development, um in Wochen
-        statt Monaten zu liefern.
+        KI-natives Development macht es m&ouml;glich, produktionsreife Software
+        zu einem Bruchteil der traditionellen Kosten und Zeit zu bauen. Das
+        Schwierige ist nicht mehr das Bauen. Es ist zu wissen, was sich zu bauen
+        lohnt, es betriebsbereit zu machen und es sicher zu halten. Ich bringe
+        acht Jahre Produkterfahrung mit, damit wir etwas bauen, das f&uuml;r
+        dein Gesch&auml;ft tats&auml;chlich funktioniert.
       </p>
-      <a
-        href="/de/contact"
-        class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
-      >
-        Lass uns &uuml;ber dein Projekt sprechen
-        <span class="ml-2">&rarr;</span>
-      </a>
     </div>
   </section>
+
+  <!-- Why This Matters Now -->
+  <SectionWrapper>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+      <div>
+        <h2 class="text-2xl font-bold text-navy-900 mb-4">
+          Software war teuer. Das hat sich ge&auml;ndert.
+        </h2>
+        <p class="text-navy-700 leading-relaxed">
+          KI-natives Development bedeutet, dass ein einzelner erfahrener Builder
+          liefern kann, wof&uuml;r fr&uuml;her ein Team von f&uuml;nf
+          n&ouml;tig war. Das ver&auml;ndert die Rechnung: Interne Tools,
+          Workflow-Automatisierung, kundenorientierte Apps und KI-Agenten lohnen
+          sich jetzt f&uuml;r Anwendungsf&auml;lle, die bisher zu klein oder zu
+          nischig waren.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold text-navy-900 mb-4">
+          Aber schnell bauen ohne richtig zu bauen schafft Risiken.
+        </h2>
+        <p class="text-navy-700 leading-relaxed">
+          Der Engpass hat sich verschoben. Die Frage ist nicht mehr &bdquo;K&ouml;nnen
+          wir das bauen?&ldquo; sondern &bdquo;Sollten wir das bauen, und wird
+          es tats&auml;chlich funktionieren?&ldquo; Schlecht definierte Software
+          verschwendet Geld. KI-Agenten, die 99% der Zeit funktionieren, aber
+          bei Grenzf&auml;llen versagen, schaffen Haftung. Unsichere Setups in
+          regulierten Branchen schaffen echte Probleme. Der Wert liegt nicht im
+          Code. Er liegt im Urteilsverm&ouml;gen drum herum.
+        </p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- What I Build -->
+  <SectionWrapper background="navy-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Was ich baue
+    </h2>
+    <div class="max-w-[780px] space-y-6">
+      <div class="border-b border-navy-200 pb-6">
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          Individuelle Applikationen
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Web-Apps, SaaS-Plattformen, interne Tools, Dashboards. F&uuml;r
+          Probleme, bei denen Standardsoftware nicht passt und der ROI einen
+          individuellen Build rechtfertigt.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-navy-900 mb-1">
+          KI-Agenten und Automatisierung
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          Autonome Agenten, die Workflows abwickeln, Dokumente verarbeiten,
+          Fragen beantworten und sich in deine bestehenden Systeme integrieren.
+          Gebaut f&uuml;r Zuverl&auml;ssigkeit in Produktion, nicht nur
+          f&uuml;r Demos.
+        </p>
+      </div>
+    </div>
+  </SectionWrapper>
 
   <!-- How I Work -->
   <SectionWrapper>
@@ -50,13 +109,12 @@ import CTABlock from "@/components/CTABlock.astro";
         >
           1
         </div>
-        <h3 class="text-xl font-bold text-navy-900 mb-3">Discovery</h3>
+        <h3 class="text-xl font-bold text-navy-900 mb-3">Scope</h3>
         <p class="text-navy-700 leading-relaxed">
-          Wir definieren, was wir bauen und warum. Ich stelle die Fragen, die
-          ein Produktverantwortlicher stellt: F&uuml;r wen ist das? Welches
-          Problem l&ouml;st es? Woran erkennen wir, dass es funktioniert? Diese
-          Phase stellt sicher, dass wir das Richtige bauen, nicht einfach
-          nur etwas.
+          Wir kl&auml;ren, ob sich das Bauen lohnt. Ich stelle die harten
+          Fragen: Welches Problem l&ouml;sen wir? Wie sieht Erfolg aus? Was
+          sind die Risiken? Die meisten Projekte scheitern, weil sie diesen
+          Schritt &uuml;berspringen, nicht weil der Code schlecht war.
         </p>
       </div>
       <!-- Step 2 -->
@@ -68,9 +126,10 @@ import CTABlock from "@/components/CTABlock.astro";
         </div>
         <h3 class="text-xl font-bold text-navy-900 mb-3">Build</h3>
         <p class="text-navy-700 leading-relaxed">
-          Ich designe und entwickle das Produkt mit modernen, produktionsreifen
-          Tools. KI-natives Development bedeutet, ich liefere schneller als ein
-          traditionelles Dev-Team, ohne Abstriche bei der Qualit&auml;t.
+          Ich designe und entwickle mit KI-nativen Tools. Das bedeutet
+          schnellere Lieferung und geringere Kosten als traditionelles
+          Development, aber mit menschlicher Pr&uuml;fung jeder Zeile. Ich
+          shippe keinen Code, den ich nicht verstehe.
         </p>
       </div>
       <!-- Step 3 -->
@@ -81,138 +140,59 @@ import CTABlock from "@/components/CTABlock.astro";
           3
         </div>
         <h3 class="text-xl font-bold text-navy-900 mb-3">
-          Launch & Weiterentwicklung
+          Ship & Support
         </h3>
         <p class="text-navy-700 leading-relaxed">
-          Wir bringen es vor echte Nutzer und iterieren. Ich baue nicht und
-          verschwinde. Der optionale monatliche Retainer h&auml;lt dein Produkt
-          am Wachsen: neue Features, Content-Updates,
-          Performance-Verbesserungen.
+          Wir launchen, messen und iterieren. Wenn dein Produkt laufende
+          Weiterentwicklung braucht, bin ich auch daf&uuml;r verf&uuml;gbar.
         </p>
       </div>
     </div>
   </SectionWrapper>
 
-  <!-- What I Build -->
-  <SectionWrapper background="navy-50">
+  <!-- Why This Works -->
+  <SectionWrapper background="teal-50">
     <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
-      Was ich baue
+      Warum das funktioniert
     </h2>
-    <div class="max-w-[780px] space-y-6 mb-10">
-      <div class="border-b border-navy-200 pb-6">
-        <h3 class="text-lg font-semibold text-navy-900 mb-1">
-          Web-Applikationen und SaaS-Plattformen
-        </h3>
-        <p class="text-navy-700 leading-relaxed">
-          Kundenprodukte, Dashboards, interne Tools.
-        </p>
-      </div>
-      <div class="border-b border-navy-200 pb-6">
-        <h3 class="text-lg font-semibold text-navy-900 mb-1">
-          Marketing-Websites und Landing Pages
-        </h3>
-        <p class="text-navy-700 leading-relaxed">
-          Schnelle, moderne Websites, die konvertieren.
-        </p>
-      </div>
-      <div class="border-b border-navy-200 pb-6">
-        <h3 class="text-lg font-semibold text-navy-900 mb-1">
-          KI-gest&uuml;tzte Features und Integrationen
-        </h3>
-        <p class="text-navy-700 leading-relaxed">
-          Chatbots, Dokumentenverarbeitung, intelligente Workflows.
-        </p>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold text-navy-900 mb-1">
-          Interne Tools und Dashboards
-        </h3>
-        <p class="text-navy-700 leading-relaxed">
-          Datenvisualisierung, Admin-Panels, Operations-Tools.
-        </p>
-      </div>
-    </div>
-    <div
-      class="bg-white border border-navy-200 rounded-xl p-6 max-w-[780px]"
-    >
-      <p class="text-navy-800">
-        <span class="font-semibold text-navy-900">Tech:</span>{" "}
-        Gebaut auf produktionsreifen Stacks: Astro, Next.js, React, Tailwind,
-        TypeScript, Supabase, Vercel.
-      </p>
-    </div>
-  </SectionWrapper>
-
-  <!-- Why Me — Not an Agency -->
-  <SectionWrapper>
-    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
-      Warum ich, nicht eine Agentur
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div class="bg-white border border-navy-100 rounded-2xl p-8">
         <h3 class="text-lg font-bold text-navy-900 mb-3">
-          Branchenexpertise
+          Produktdenken, nicht nur Code
         </h3>
         <p class="text-navy-700 leading-relaxed">
-          Ich baue seit acht Jahren Fintech-Produkte. Ich verstehe
-          Finanzdienstleistungen, Compliance-Anforderungen und wie man
-          Nutzervertrauen aufbaut. Eine generische Agentur w&uuml;rde Wochen
-          brauchen, um zu lernen, was ich bereits wei&szlig;.
+          Jeder kann jetzt schnell bauen. Die knappe Kompetenz ist zu wissen,
+          was sich zu bauen lohnt. Ich habe acht Jahre Produkte bei
+          Fintech-Startups und Finanzdienstleistern geleitet. Ich definiere den
+          Scope vor dem Bauen, und ich sage dir, wenn sich etwas nicht lohnt.
         </p>
       </div>
       <div class="bg-white border border-navy-100 rounded-2xl p-8">
         <h3 class="text-lg font-bold text-navy-900 mb-3">
-          Produkt + Code in einer Person
+          Eine Person, voller Kontext
         </h3>
         <p class="text-navy-700 leading-relaxed">
-          Du bekommst einen Produktstrategen, der den Code selbst schreibt. Kein
-          Stille-Post-Spiel zwischen PM, Designer und Entwickler.
+          Kein Hin und Her zwischen PM, Designer und Entwickler. Ich halte das
+          Gesamtbild von Strategie bis Deployment. Das bedeutet weniger
+          Missverst&auml;ndnisse und schnellere Iteration.
         </p>
       </div>
       <div class="bg-white border border-navy-100 rounded-2xl p-8">
         <h3 class="text-lg font-bold text-navy-900 mb-3">
-          KI-natives Development
+          Gebaut f&uuml;r Produktion, nicht f&uuml;r Demos
         </h3>
         <p class="text-navy-700 leading-relaxed">
-          Ich nutze Tools wie Claude Code f&uuml;r schnellere Umsetzung als
-          traditionelles Development. Gleiche Qualit&auml;t, weniger Zeit,
-          geringere Kosten.
-        </p>
-      </div>
-      <div class="bg-white border border-navy-100 rounded-2xl p-8">
-        <h3 class="text-lg font-bold text-navy-900 mb-3">
-          Transparente Preise
-        </h3>
-        <p class="text-navy-700 leading-relaxed">
-          Fester Build-Preis. Keine Stundenabrechnung, keine
-          Scope-Creep-&Uuml;berraschungen. Du wei&szlig;t genau, wof&uuml;r du
-          bezahlst, bevor wir anfangen.
-        </p>
-      </div>
-      <div class="bg-white border border-navy-100 rounded-2xl p-8">
-        <h3 class="text-lg font-bold text-navy-900 mb-3">
-          Laufende Beziehung
-        </h3>
-        <p class="text-navy-700 leading-relaxed">
-          Der optionale monatliche Retainer h&auml;lt dein Produkt am Wachsen.
-          Hosting, Content-Updates, neue Features, Performance-Verbesserungen,
-          alles abgedeckt.
-        </p>
-      </div>
-      <div class="bg-white border border-navy-100 rounded-2xl p-8">
-        <h3 class="text-lg font-bold text-navy-900 mb-3">
-          Direkter Kontakt
-        </h3>
-        <p class="text-navy-700 leading-relaxed">
-          Du arbeitest mit mir. Nicht mit einem Junior-Entwickler. Nicht mit
-          einem Projektmanager. Mit mir.
+          KI-generierter Code braucht erfahrene Pr&uuml;fung. Ich behandle
+          Sicherheit, Fehlerbehandlung und Wartbarkeit als Anforderungen, nicht
+          als Nachgedanken. Besonders wichtig, wenn du in einer regulierten
+          Branche arbeitest.
         </p>
       </div>
     </div>
   </SectionWrapper>
 
   <!-- Selected Work -->
-  <SectionWrapper background="teal-50">
+  <SectionWrapper>
     <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
       Ausgew&auml;hlte Projekte
     </h2>
@@ -230,13 +210,13 @@ import CTABlock from "@/components/CTABlock.astro";
         oneLiner="Lokale Event-Entdeckungsplattform, KI-nativer Build-Showcase"
         role="Builder"
         badge="Nebenprojekt"
-        metric="Vibe coded"
+        metric="KI-nativer Build"
         logo="/logos/rootlocaly.svg"
         href="/de/projects/rootlocaly"
       />
       <ProjectCard
         name="Digital Partners"
-        oneLiner="IoT-Beratung & Venture Building, 27 Projekte umgesetzt"
+        oneLiner="IoT-Beratung & Venture Building, 30+ Projekte umgesetzt"
         role="Gr&uuml;nder & CEO"
         badge="Venture"
         metric="7 Entwickler, 3 Partner"
@@ -258,33 +238,8 @@ import CTABlock from "@/components/CTABlock.astro";
     </div>
   </SectionWrapper>
 
-  <!-- Pricing Signal -->
-  <SectionWrapper>
-    <div class="max-w-[680px] mx-auto text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-        Preise
-      </h2>
-      <p class="text-lg text-navy-800 leading-relaxed mb-4">
-        <span class="font-semibold text-navy-900"
-          >Festpreis f&uuml;r den Build + optionaler monatlicher
-          Retainer.</span
-        >{" "}
-        Keine Stundenabrechnung, keine &Uuml;berraschungen.
-      </p>
-      <p class="text-navy-700 leading-relaxed">
-        Jedes Projekt beginnt mit einem kostenlosen Discovery Call, in dem wir
-        den Umfang gemeinsam definieren. Du bekommst ein klares Angebot, bevor
-        wir starten.
-      </p>
-    </div>
-  </SectionWrapper>
-
   <!-- CTA -->
-  <CTABlock
-    heading="Lass uns &uuml;ber dein Projekt sprechen."
-    subtext="Sag mir, was du brauchst. Wir machen einen kostenlosen Discovery Call, ich definiere den Umfang und du bekommst ein klares Angebot, unverbindlich."
-    fullBleed
-  >
+  <CTABlock fullBleed>
     <a
       href="/de/contact"
       class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
@@ -294,9 +249,9 @@ import CTABlock from "@/components/CTABlock.astro";
     </a>
     <p class="text-sm text-white/60 mt-4">
       Oder schreib mir an <a
-        href="mailto:david.ch.hamel@gmail.com"
+        href="mailto:hello@davidhamel.co"
         class="underline hover:text-white/80 transition-colors"
-        >david.ch.hamel@gmail.com</a
+        >hello@davidhamel.co</a
       >
     </p>
   </CTABlock>
