@@ -4,6 +4,7 @@ import {
   useTranslations,
   getLocalizedPath,
 } from "@/i18n/utils";
+import NewsletterSignup from "@/components/NewsletterSignup.tsx";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -155,20 +156,13 @@ const t = useTranslations(lang);
         <p class="text-sm text-white/60 mb-4">
           {t("footer.newsletter.subtext")}
         </p>
-        <form class="flex flex-col sm:flex-row gap-3" onsubmit="return false;">
-          <input
-            type="email"
-            placeholder={t("footer.newsletter.placeholder")}
-            class="flex-1 h-[52px] px-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-teal-500"
-            aria-label={t("footer.newsletter.placeholder")}
-          />
-          <button
-            type="submit"
-            class="h-[52px] px-6 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors duration-150 text-sm"
-          >
-            {t("footer.newsletter.button")}
-          </button>
-        </form>
+        <NewsletterSignup
+          client:visible
+          placeholderText={t("footer.newsletter.placeholder")}
+          buttonText={t("footer.newsletter.button")}
+          successText={t("footer.newsletter.success")}
+          errorText={t("footer.newsletter.error")}
+        />
       </div>
     </div>
 
