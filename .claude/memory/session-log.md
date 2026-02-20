@@ -818,4 +818,89 @@ src/pages/de/index.astro -- 30+ projects reference (DE)
 
 ---
 
-_Next session: Vercel deployment, Umami analytics, Resend newsletter integration_
+---
+
+## Session 11 — 2026-02-19/20 (Umami Analytics, ESLint, Resend Email Infrastructure)
+
+**Duration:** ~2.5 hours (across context continuation) | **Phase:** Phase 1 (Integrations)
+
+### What happened
+
+#### Umami Analytics (Previous context)
+
+1. Verified Umami Cloud analytics tracking script already in BaseLayout.astro
+2. Confirmed PUBLIC_UMAMI_WEBSITE_ID configured in Vercel
+
+#### ESLint Setup (Previous context)
+
+3. Created `eslint.config.mjs` with flat config for Astro + TypeScript
+4. Added eslint, @eslint/js, eslint-plugin-astro, typescript-eslint dependencies
+5. Fixed lint script: removed `--ext` flag (not supported in flat config)
+6. Ran lint and fixed issues (unused NewsletterCTA imports in contact pages)
+
+#### Resend Email Infrastructure
+
+7. Created Resend API key (`re_Ksmyhv5j_...`) with Full access permission
+8. Created Newsletter audience via Resend API (ID: `0d248b74-...`)
+9. Verified davidhamel.co domain in Resend (eu-west-1, sending enabled)
+10. Created `.env` file with all environment variables
+11. Set Vercel environment variables via dashboard "Import .env" feature
+12. Built `src/components/NewsletterSignup.tsx` React island with Zod validation
+13. Built `src/pages/api/newsletter.ts` API endpoint for Resend contacts
+14. Added newsletter signup to Footer component (EN + DE) with i18n strings
+
+#### Gmail "Send As" Configuration
+
+15. Configured `hello@davidhamel.co` as Gmail "Send as" address (Resend SMTP)
+16. Configured `dh@davidhamel.co` as Gmail "Send as" address (Resend SMTP)
+17. Both auto-confirmed via Cloudflare Email Routing forwarding
+18. Changed Gmail reply setting to "Reply from same address the message was sent to"
+
+#### Commit & Deploy
+
+19. Committed all changes: newsletter signup, ESLint, Resend integration
+20. Pushed to main (triggers automatic Vercel redeployment)
+
+### Files created
+
+```
+.env — production environment variables (gitignored)
+eslint.config.mjs — flat config for Astro + TypeScript
+src/components/NewsletterSignup.tsx — React island newsletter form
+src/pages/api/newsletter.ts — Resend API endpoint
+```
+
+### Files modified
+
+```
+.env.example — added RESEND_AUDIENCE_ID
+package.json — added resend, zod, eslint deps; fixed lint script
+pnpm-lock.yaml — dependency updates
+src/components/Footer.astro — newsletter signup integration
+src/i18n/ui.ts — newsletter translation keys
+src/pages/contact.astro — removed unused import
+src/pages/de/contact.astro — removed unused import
+```
+
+### Commits
+
+- `bd67a91` — feat: Add newsletter signup, ESLint setup, and Resend email integration
+
+### Key decisions
+
+- Resend unified for newsletters + transactional email (single API key)
+- Gmail "Send as" for both hello@ and dh@ via Resend SMTP
+- Gmail reply setting: auto-match sender address
+- Newsletter signup in footer only (removed from page bodies in Session 9)
+- ESLint flat config (eslint v10, no legacy .eslintrc)
+
+### External services configured
+
+- **Resend**: API key, Newsletter audience, domain verified
+- **Vercel**: Environment variables set (PUBLIC_SITE_URL, RESEND_API_KEY, RESEND_AUDIENCE_ID)
+- **Gmail**: Send as hello@davidhamel.co + dh@davidhamel.co (Resend SMTP)
+- **Cloudflare**: Email routing forwarding both addresses to Gmail
+
+---
+
+_Next session: Playwright E2E verification of live deployment, newsletter form testing_
