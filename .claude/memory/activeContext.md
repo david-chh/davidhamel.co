@@ -8,46 +8,45 @@
 
 ## Current State
 
-**Status**: Phase 1 Foundation COMPLETE. All pages built, integrations done. Build page copy polished. Strategic review completed — positioning changes pending.
-**Focus**: Strategic positioning refinement.
+**Status**: Phase 1 Foundation COMPLETE. Integrations done. Strategic positioning rethink in progress.
+**Focus**: Decide whether to merge Product + Build into one page.
 
-## Completed Work (Session 12 — 2026-02-21)
+## Open Decision: Merge Product + Build?
 
-### Build Page Copy Overhaul (EN + DE)
-- Hero: "Leverage AI to build and experiment faster than ever"
-- Subheading shortened to end at "integrating it operationally"
-- Removed "Why This Matters Now" section entirely
-- "Built for production" card → "Fraction of the cost of an agency"
-- "One person, full context" → "Full context, fast iteration"
-- Removed redundant lines from Scope and Build steps
+David is leaning toward merging `/product` and `/build` into a single service page. Key reasoning:
 
-### Strategic Review — Key Findings
-- **Product + Build should be more connected**: David's unique value = product leader who can also ship code. Product page doesn't mention building. Build page undersells product experience.
-- **Digital Partners consulting background undersold**: 30+ projects of scoping/discovery is the strongest proof for "I know WHAT to build"
-- **Homepage serves two different audiences equally**: expats vs. startups/SMBs need different entry points
-- **Blog needs content**: can't achieve recognition without posts
-- **Rootlocaly identity unclear**: portfolio piece vs. real venture
+**Why merge:**
+- Product management is evolving — virtually all PMs can now vibe code. "PM who can also build" is table stakes, not a differentiator.
+- Having separate pages dilutes both: Product page doesn't mention building. Build page undersells product/consulting experience.
+- The actual service IS the combination — one person who does research, strategy, design, code, and deployment.
+
+**The real differentiator (not "PM who codes"):**
+- **Scale:** 30+ client projects scoped and delivered at Digital Partners. Not one or two — dozens.
+- **Founder experience:** 4 ventures. Understands business outcomes, not just product.
+- **Domain depth:** Financial services across Ziggma, DeRisk, Alba, Impactive.
+- **Judgment first:** 8 years of product leadership BEFORE AI made building fast.
+- **Pitch:** "I'm a one-person product and engineering team. I've done this 30+ times."
+
+**Open questions:**
+- URL: `/build`, `/services`, or `/work`?
+- Homepage: three cards → two (Coaching + Product & Build)?
+- Page structure for the merged page
+- How to frame it when PM+code is no longer unique
 
 ## David's 6 Strategic Goals
 
 1. Freelance jobs for immediate cash flow
 2. Financial coaching clients for immediate cash flow
 3. Build out Alba Wealth as standalone product
-4. Build out Rootlocaly as social network
+4. Build out Rootlocaly as social network (skip for now)
 5. Blog for international recognition in fiscal/monetary economics
-6. AI development solutions for clients (retainer, financial services focus)
+6. AI-develop solutions for clients (retainer, financial services focus)
 
-## Key Differentiation Insight
+## Completed Work (Session 12 — 2026-02-21)
 
-David's AI-building capabilities should flow into the product lead positioning. As a freelancer, he can do what a 5+ person dev team could do. His Digital Partners consulting background (30+ projects, user research, business analysis) justifies his capabilities as an AI-builder who excels at figuring out WHAT to build.
-
-## Priority Next Actions
-
-1. Add building capability mention to Product page (quick win)
-2. Rewrite Build page "Why this works" around consulting/scoping angle
-3. Rethink homepage as two audience tracks (expats vs. startups/SMBs)
-4. Publish 2-3 real blog posts for authority signal
-5. Decide Rootlocaly's identity (portfolio piece or real venture)
+- Build page copy overhaul: new hero, removed sections, updated "Why this works" cards
+- Strategic review of all pages against 6 goals
+- Deep rethink of Product + Build positioning
 
 ## Previous Work Summary
 
@@ -57,4 +56,4 @@ David's AI-building capabilities should flow into the product lead positioning. 
 
 ---
 
-_Last updated: 2026-02-21 (Session 12 - Build page copy polish, strategic review)_
+_Last updated: 2026-02-21 (Session 12b - Strategic rethink of Product + Build merge)_

@@ -971,4 +971,51 @@ src/pages/de/build.astro — same changes (DE)
 
 ---
 
-_Next session: Implement strategic positioning changes (Product+Build connection, homepage two-track routing, blog content)_
+---
+
+## Session 12b — 2026-02-21 (Deep Strategic Rethink: Merging Product + Build)
+
+**Duration:** ~30 min | **Phase:** Strategy
+
+### What happened
+
+#### Deep-Dive into Product + Build Positioning
+
+1. Re-examined both pages from the buyer's perspective:
+   - **Product page** reads like every other fractional CPO pitch. "Senior product leadership, on contract" is what 500 LinkedIn profiles say. No mention of building capability.
+   - **Build page** reads like a developer with product experience. Scoping angle is underplayed. Digital Partners consulting background (30+ projects) is buried as a project card.
+   - Neither page tells the reader the one thing that makes David different: he's both of these people at the same time.
+
+2. Drafted proposed reworks for both pages as separate entities:
+   - **Product page**: "A product leader who also builds." — hero reframe, cut "What you get" from 7 items to 3 pillars (Discovery & Strategy / Team & Execution / Prototyping & Building)
+   - **Build page**: "I figure out what to build. Then I build it." — hero reframe, foreground Digital Partners 30+ project scoping experience, rewrite "Why this works" around scoping credibility / one-person delivery / cost advantage
+
+3. David's key strategic insight: **PM + code is becoming table stakes.** Product management is evolving — virtually all PMs can now vibe code and build significant things. So "PM who can also build" is NOT the differentiator.
+
+4. Reframed the actual differentiator: **depth and scale** of experience applied to the combination:
+   - 30+ client projects scoped and delivered at Digital Partners (not 1-2, dozens)
+   - 4 ventures founded — understands the founder's chair, not just the product seat
+   - Financial services domain expertise across Ziggma, DeRisk, Alba, Impactive
+   - 8 years of product leadership BEFORE AI made building fast — judgment came first, speed came second
+   - The pitch: "I'm a one-person product and engineering team. I do the research, build the strategy, design the solution, write the code, and ship it. I've done this 30+ times."
+
+5. **David is now leaning toward merging Product + Build into one page.** Reasoning: if all PMs can code, having a separate "I'm a PM" page doesn't add value. The combined offering IS the service.
+
+6. Open questions (not yet decided):
+   - What URL? `/build` (action-oriented), `/services` (reclaim from redirect), `/work` (simple)
+   - Homepage: three ServiceCards → two (Financial Coaching + Product & Build)?
+   - Page structure for the merged page
+   - How to frame the differentiator when "PM who codes" is no longer unique
+
+### No code changes this session — strategy only.
+
+### Key decisions (pending)
+
+- **Leaning toward merging Product + Build into one page** — not yet confirmed
+- The differentiator is depth/scale of experience, not the PM+code combination itself
+- Domain expertise (financial services) is an underused differentiator
+- Digital Partners consulting methodology (30+ projects of scoping/research) should be front and center
+
+---
+
+_Next session: Decide on merged page structure and implement, or keep separate with cross-references. David to confirm direction._
