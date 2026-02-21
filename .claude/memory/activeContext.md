@@ -8,69 +8,53 @@
 
 ## Current State
 
-**Status**: Phase 1 Foundation COMPLETE. All pages built, polished, copy-finalized. Integrations done (Calendly, Resend, Umami, ESLint). Email infrastructure configured.
-**Focus**: Live deployment verification and testing.
+**Status**: Phase 1 Foundation COMPLETE. All pages built, integrations done. Build page copy polished. Strategic review completed — positioning changes pending.
+**Focus**: Strategic positioning refinement.
 
-## Completed Work (Session 11 — 2026-02-19/20)
+## Completed Work (Session 12 — 2026-02-21)
 
-### Resend Email Infrastructure
-- API key created, Newsletter audience created
-- Domain verified (davidhamel.co, eu-west-1)
-- `.env` created, Vercel env vars set via dashboard
-- `NewsletterSignup.tsx` React island with Zod validation
-- `src/pages/api/newsletter.ts` API endpoint
-- Newsletter signup integrated in Footer (EN + DE)
+### Build Page Copy Overhaul (EN + DE)
+- Hero: "Leverage AI to build and experiment faster than ever"
+- Subheading shortened to end at "integrating it operationally"
+- Removed "Why This Matters Now" section entirely
+- "Built for production" card → "Fraction of the cost of an agency"
+- "One person, full context" → "Full context, fast iteration"
+- Removed redundant lines from Scope and Build steps
 
-### Gmail "Send As" Configuration
-- `hello@davidhamel.co` and `dh@davidhamel.co` configured with Resend SMTP
-- Both auto-confirmed via Cloudflare Email Routing
-- Reply setting: "Reply from same address the message was sent to"
+### Strategic Review — Key Findings
+- **Product + Build should be more connected**: David's unique value = product leader who can also ship code. Product page doesn't mention building. Build page undersells product experience.
+- **Digital Partners consulting background undersold**: 30+ projects of scoping/discovery is the strongest proof for "I know WHAT to build"
+- **Homepage serves two different audiences equally**: expats vs. startups/SMBs need different entry points
+- **Blog needs content**: can't achieve recognition without posts
+- **Rootlocaly identity unclear**: portfolio piece vs. real venture
 
-### ESLint Setup
-- Flat config (`eslint.config.mjs`) for Astro + TypeScript
-- eslint v10, typescript-eslint, eslint-plugin-astro
+## David's 6 Strategic Goals
 
-### Commit & Deploy
-- `bd67a91` — feat: Add newsletter signup, ESLint setup, and Resend email integration
-- Pushed to main (auto-deploys via Vercel)
+1. Freelance jobs for immediate cash flow
+2. Financial coaching clients for immediate cash flow
+3. Build out Alba Wealth as standalone product
+4. Build out Rootlocaly as social network
+5. Blog for international recognition in fiscal/monetary economics
+6. AI development solutions for clients (retainer, financial services focus)
 
-## Previous Work (Sessions 5-10)
+## Key Differentiation Insight
 
-- Build page rewrite, Calendly integration, copy corrections (Session 10)
-- About page rewrite, section removals, newsletter to footer only (Session 9)
-- Copy polish, real logos, hero photo centering (Session 8)
-- Three-service split: `/coaching`, `/product`, `/build` (Session 7)
-- All sub-pages built (Session 6)
-- Scaffolded Astro project, design system, i18n, layout/components (Session 5)
-- 42 pages passing build
+David's AI-building capabilities should flow into the product lead positioning. As a freelancer, he can do what a 5+ person dev team could do. His Digital Partners consulting background (30+ projects, user research, business analysis) justifies his capabilities as an AI-builder who excels at figuring out WHAT to build.
 
-## Key Decisions
+## Priority Next Actions
 
-| Decision | Choice |
-|----------|--------|
-| Framework | Astro 5 (static) |
-| i18n | Custom Astro-native (not Paraglide.js) |
-| CSS | Tailwind v4 with `@theme` |
-| Fonts | Fontsource (self-hosted, GDPR) |
-| Content | Astro Content Collections with `glob()` loader |
-| Images | sharp + Astro `<Image>` (WebP, srcset) |
-| Blog | English-only content, bilingual chrome |
-| Projects | Dynamic routes with centralized data file |
-| Services | Three separate pages: /coaching, /product, /build |
-| Calendly | https://calendly.com/david-chh/call |
-| Email | Resend unified (newsletters + transactional) |
-| Gmail | Send as hello@ + dh@ via Resend SMTP |
-| Analytics | Umami Cloud (GDPR-friendly) |
-| Terminology | "AI-native build" (not "vibe coding") |
-| CTA pattern | Button + email, no heading, centered flex-col |
+1. Add building capability mention to Product page (quick win)
+2. Rewrite Build page "Why this works" around consulting/scoping angle
+3. Rethink homepage as two audience tracks (expats vs. startups/SMBs)
+4. Publish 2-3 real blog posts for authority signal
+5. Decide Rootlocaly's identity (portfolio piece or real venture)
 
-## Next Steps
+## Previous Work Summary
 
-1. Verify live Vercel deployment works (check newsletter form, Calendly embed)
-2. Playwright E2E testing of all pages
-3. Test newsletter signup end-to-end (subscribe, check Resend audience)
-4. Send test emails from Gmail via hello@ and dh@
+- Session 11: Resend email infrastructure, Gmail Send As, ESLint, newsletter signup
+- Sessions 5-10: Full site build, three-service split, copy polish, Calendly integration
+- Sessions 1-4: Planning, IA, copy deck, design spec
 
 ---
 
-_Last updated: 2026-02-20 (Session 11 - Resend email infrastructure, Gmail Send As, ESLint, newsletter signup)_
+_Last updated: 2026-02-21 (Session 12 - Build page copy polish, strategic review)_

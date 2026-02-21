@@ -903,4 +903,72 @@ src/pages/de/contact.astro — removed unused import
 
 ---
 
-_Next session: Playwright E2E verification of live deployment, newsletter form testing_
+---
+
+## Session 12 — 2026-02-21 (Build Page Copy Polish, Strategic Review)
+
+**Duration:** ~1 hour | **Phase:** Phase 1 (Polish + Strategy)
+
+### What happened
+
+#### Build Page Copy Overhaul (EN + DE)
+
+1. **Hero heading**: "Custom software is now viable for problems that were never worth solving before" → "Leverage AI to build and experiment faster than ever"
+2. **Hero subheading**: Cut from 3 sentences (52 words) to 2 sentences — removed "I bring eight years..." ending, now ends at "knowing what to build and integrating it operationally"
+3. **"Why This Matters Now" two-column section**: Removed entirely — redundant with hero messaging
+4. **"But you still need to build the right thing" paragraph**: Heading changed, body trimmed to just the bottleneck reframe + expertise sentence ("That's where my experience as a product manager, business analyst, and venture builder comes in") — then entire section removed
+5. **"How I Work" Step 2 (Build)**: Removed "but with human review of every line. I don't ship code I don't understand."
+6. **"How I Work" Step 1 (Scope)**: Removed "Most projects fail because they skip this step, not because the code was bad."
+7. **"Why this works" card 3**: "Built for production, not for demos" → "Fraction of the cost of an agency" (AI-native tools, no overhead, no bloated timelines)
+8. **"Why this works" card 2**: "One person, full context" → "Full context, fast iteration"
+9. Meta descriptions updated to match new hero
+
+#### Strategic Review of Website + Positioning
+
+10. Performed comprehensive review of all site copy against David's 6 goals:
+    - (1) Freelance jobs for cash flow
+    - (2) Financial coaching clients for cash flow
+    - (3) Build out Alba Wealth as standalone product
+    - (4) Build out Rootlocaly as social network
+    - (5) Blog for international recognition in fiscal/monetary economics
+    - (6) AI development solutions on retainer (financial services focus)
+
+11. Key strategic findings:
+    - **Product + Build pages should be more connected** — David's unique differentiator is being a product leader who can also ship code. The Product page never mentions building capability. The Build page undersells product/consulting experience.
+    - **Digital Partners consulting background undersold** — 30+ projects, 6 years of scoping/discovery/client workshops. This is the strongest proof point for "I know WHAT to build" but it's buried as one project card.
+    - **Homepage three-card routing serves two different audiences equally** — expats (coaching) vs. startups/SMBs (product/build). They won't self-select well from the same layout.
+    - **"Why this works" cards are generic** — need to be rewritten around actual differentiators (consulting methodology, full-stack one person, AI speed + senior judgment)
+    - **Blog has no content** — can't achieve international recognition without posts
+    - **Rootlocaly identity unclear** — portfolio piece vs. real venture
+
+12. Recommended priority actions:
+    - Add building capability mention to Product page
+    - Rewrite Build page "Why this works" around consulting/scoping angle
+    - Rethink homepage as two audience tracks instead of three equal cards
+    - Publish 2-3 real blog posts for authority signal
+    - Decide Rootlocaly's identity
+
+### Files modified
+
+```
+src/pages/build.astro — hero rewrite, section removal, card updates
+src/pages/de/build.astro — same changes (DE)
+```
+
+### Commits
+
+- `939cd0d` — copy: Shorten build page hero, trim "Why This Matters" and "How I Work"
+- `541e1ad` — copy: Add expertise sentence to build page, remove redundant scope line
+- `77961e5` — copy: Remove "Why This Matters" section, replace "Built for production" card
+- `0093985` — copy: Rename "One person, full context" to "Full context, fast iteration"
+
+### Key decisions
+
+- Build page hero repositioned around experimentation/speed benefit (not cost viability)
+- "Why This Matters Now" section removed as redundant
+- "Built for production" card replaced with cost advantage card
+- Strategic direction: merge Product + Build positioning, leverage Digital Partners consulting background as AI-builder differentiator
+
+---
+
+_Next session: Implement strategic positioning changes (Product+Build connection, homepage two-track routing, blog content)_
