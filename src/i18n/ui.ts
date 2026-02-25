@@ -12,19 +12,16 @@ export const ui = {
     // Navigation
     "nav.about": "About",
     "nav.coaching": "Coaching",
-    "nav.services": "Product",
-    "nav.services.product": "Product Leadership",
-    "nav.services.build": "AI Building",
+    "nav.services": "Services",
     "nav.projects": "Projects",
     "nav.blog": "Blog",
     "nav.adventures": "Adventures",
     "nav.cta": "Book a Call",
 
     // Footer
-    "footer.col1.heading": "Product",
+    "footer.col1.heading": "Services",
     "footer.col1.coaching": "Financial Coaching",
-    "footer.col1.product": "Product Leadership",
-    "footer.col1.build": "AI Building",
+    "footer.col1.services": "Product & Build",
     "footer.col1.cta": "Book a Call",
     "footer.col2.heading": "Explore",
     "footer.col2.blog": "Blog",
@@ -81,15 +78,11 @@ export const ui = {
     "coaching.description":
       "Independent, fee-based financial planning for English-speaking professionals in Germany. No commissions, no conflicts of interest. Book a free consultation.",
 
-    // Product Leadership
-    "product.title": "Product Leadership \u2014 David Hamel",
-    "product.description":
-      "Senior product leadership, without the full-time hire. Fractional CPO, product strategy, and roadmapping for startups and scaleups.",
-
-    // Build
-    "build.title": "AI Building \u2014 David Hamel",
-    "build.description":
-      "I understand your business \u2014 and I build the software. Custom AI agents, web applications, and AI-native development for SMBs and financial services firms.",
+    // Services (Product & Build)
+    "services.title":
+      "Product Discovery, Strategy, and Development \u2014 David Hamel",
+    "services.description":
+      "From strategy to shipped product, one person. Product leadership and hands-on development for startups, SMBs, and financial services firms.",
 
     // Adventures
     "adventures.title": "Adventures \u2014 David Hamel",
@@ -134,19 +127,16 @@ export const ui = {
     // Navigation
     "nav.about": "\u00dcber mich",
     "nav.coaching": "Coaching",
-    "nav.services": "Produkt",
-    "nav.services.product": "Produktf\u00fchrung",
-    "nav.services.build": "AI Building",
+    "nav.services": "Leistungen",
     "nav.projects": "Projekte",
     "nav.blog": "Blog",
     "nav.adventures": "Abenteuer",
     "nav.cta": "Gespr\u00e4ch buchen",
 
     // Footer
-    "footer.col1.heading": "Produkt",
+    "footer.col1.heading": "Leistungen",
     "footer.col1.coaching": "Finanzcoaching",
-    "footer.col1.product": "Produktf\u00fchrung",
-    "footer.col1.build": "AI Building",
+    "footer.col1.services": "Produkt & Entwicklung",
     "footer.col1.cta": "Gespr\u00e4ch buchen",
     "footer.col2.heading": "Entdecken",
     "footer.col2.blog": "Blog",
@@ -204,15 +194,11 @@ export const ui = {
     "coaching.description":
       "Unabh\u00e4ngige, honorarbasierte Finanzplanung f\u00fcr englischsprachige Fachkr\u00e4fte in Deutschland. Keine Provisionen, keine Interessenkonflikte. Kostenloses Erstgespr\u00e4ch buchen.",
 
-    // Product Leadership
-    "product.title": "Produktf\u00fchrung \u2014 David Hamel",
-    "product.description":
-      "Erfahrene Produktf\u00fchrung, ohne die Vollzeitstelle. Fractional CPO, Produktstrategie und Roadmapping f\u00fcr Startups und Scaleups.",
-
-    // Build
-    "build.title": "AI Building \u2014 David Hamel",
-    "build.description":
-      "Ich verstehe dein Gesch\u00e4ft \u2014 und ich baue die Software. Individuelle KI-Agenten, Web-Applikationen und KI-natives Development f\u00fcr KMU und Finanzdienstleister.",
+    // Services (Product & Build)
+    "services.title":
+      "Produktentwicklung, Strategie und Umsetzung \u2014 David Hamel",
+    "services.description":
+      "Von der Strategie zum fertigen Produkt, eine Person. Produktf\u00fchrung und Entwicklung f\u00fcr Startups, KMU und Finanzdienstleister.",
 
     // Adventures
     "adventures.title": "Abenteuer \u2014 David Hamel",

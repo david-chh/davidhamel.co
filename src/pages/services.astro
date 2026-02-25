@@ -1,3 +1,292 @@
 ---
-return Astro.redirect("/", 301);
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SectionWrapper from "@/components/SectionWrapper.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import CTABlock from "@/components/CTABlock.astro";
 ---
+
+<BaseLayout
+  title="Product Discovery, Strategy, and Development — David Hamel"
+  description="From strategy to shipped product, one person. Product leadership and hands-on development for startups, SMBs, and financial services firms."
+>
+  <!-- Hero -->
+  <section class="bg-warm-white">
+    <div
+      class="mx-auto max-w-[1200px] px-5 sm:px-8 lg:px-10 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24"
+    >
+      <h1
+        class="text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.1] tracking-tight text-navy-900 mb-6"
+      >
+        Product Discovery, Strategy,<br />and Development.
+      </h1>
+      <p
+        class="text-lg sm:text-xl text-navy-700 max-w-[640px] mb-8 leading-relaxed"
+      >
+        I've led product at four ventures and delivered 30+ client projects.
+        Now I bring product strategy and hands-on building into a single
+        engagement — moving from concept to working software with fewer
+        handoffs and faster iteration.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+      >
+        Book a Discovery Call
+        <span class="ml-2">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- When to Bring Me In -->
+  <SectionWrapper>
+    <h2 class="text-2xl sm:text-3xl font-bold text-navy-900 mb-8">
+      When to bring me in
+    </h2>
+    <ul class="max-w-[780px] space-y-4">
+      <li class="flex items-start gap-3">
+        <svg
+          class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span class="text-navy-800"
+          >You need a product built but don't want to manage an agency or
+          freelance team</span
+        >
+      </li>
+      <li class="flex items-start gap-3">
+        <svg
+          class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span class="text-navy-800"
+          >You have an engineering team but no senior product leader to direct
+          it</span
+        >
+      </li>
+      <li class="flex items-start gap-3">
+        <svg
+          class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span class="text-navy-800"
+          >You're exploring a new product idea and need someone to scope,
+          validate, and prototype</span
+        >
+      </li>
+      <li class="flex items-start gap-3">
+        <svg
+          class="w-5 h-5 text-teal-600 mt-0.5 shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2.5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span class="text-navy-800"
+          >You need AI agents or automation integrated into your business</span
+        >
+      </li>
+    </ul>
+  </SectionWrapper>
+
+  <!-- What I Do -->
+  <SectionWrapper background="navy-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      What I do
+    </h2>
+    <div class="max-w-[780px] space-y-8">
+      <div class="border-b border-navy-200 pb-8">
+        <h3 class="text-xl font-bold text-navy-900 mb-2">
+          Lead your product
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          I embed with your team as a contract product leader. Discovery,
+          strategy, roadmap, stakeholder alignment, sprint execution. For
+          companies that have engineers but need senior product direction.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-navy-900 mb-2">
+          Build your product
+        </h3>
+        <p class="text-navy-700 leading-relaxed">
+          I handle the full stack: scoping, design, development, deployment.
+          Custom applications, AI agents, internal tools, SaaS platforms. For
+          companies that need a product built, not just planned.
+        </p>
+      </div>
+    </div>
+    <p class="max-w-[780px] mt-8 text-navy-600 text-sm leading-relaxed">
+      Many engagements start as strategy and evolve into building, or vice
+      versa. Both can overlap.
+    </p>
+  </SectionWrapper>
+
+  <!-- How I Work -->
+  <SectionWrapper>
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-12">
+      How I work
+    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <!-- Step 1 -->
+      <div>
+        <div
+          class="w-12 h-12 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xl mb-4"
+        >
+          1
+        </div>
+        <h3 class="text-xl font-bold text-navy-900 mb-3">Understand</h3>
+        <p class="text-navy-700 leading-relaxed">
+          I learn your business, market, users, and constraints. No playbook, no
+          assumptions. I ask the hard questions first: What problem are we
+          solving? What does success look like? Should we even build this?
+        </p>
+      </div>
+      <!-- Step 2 -->
+      <div>
+        <div
+          class="w-12 h-12 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xl mb-4"
+        >
+          2
+        </div>
+        <h3 class="text-xl font-bold text-navy-900 mb-3">Execute</h3>
+        <p class="text-navy-700 leading-relaxed">
+          Whether I'm leading your team or building directly, I ship. Product
+          strategy, design, code, deployment. Full context, fewer handoffs.
+        </p>
+      </div>
+      <!-- Step 3 -->
+      <div>
+        <div
+          class="w-12 h-12 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xl mb-4"
+        >
+          3
+        </div>
+        <h3 class="text-xl font-bold text-navy-900 mb-3">Iterate</h3>
+        <p class="text-navy-700 leading-relaxed">
+          We launch, measure, learn, and iterate. If you need ongoing
+          development or product leadership, I'm available for that too.
+        </p>
+      </div>
+    </div>
+  </SectionWrapper>
+
+  <!-- Track Record -->
+  <SectionWrapper background="teal-50">
+    <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-10">
+      Track record
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <ProjectCard
+        name="Porsche Digital Lab"
+        oneLiner="Blockchain product for classic car provenance"
+        role="Product Owner"
+        badge="Contract"
+        metric="&euro;6.5M funding secured"
+        logo="/logos/porsche-digital-lab.png"
+        href="/projects/porsche-digital-lab"
+      />
+      <ProjectCard
+        name="Ziggma"
+        oneLiner="Portfolio management for 35,000+ investors"
+        role="Co-Founder & COO"
+        badge="Venture"
+        metric="&euro;1.5bn linked assets"
+        logo="/logos/ziggma.png"
+        href="/projects/ziggma"
+      />
+      <ProjectCard
+        name="DeRisk"
+        oneLiner="Portfolio risk management for institutional investors"
+        role="Co-Founder & CPO"
+        badge="Venture"
+        metric="&euro;1.5tn AUM piloted"
+        logo="/logos/derisk.png"
+        href="/projects/derisk"
+      />
+      <ProjectCard
+        name="Digital Partners"
+        oneLiner="IoT consulting & venture building, 30+ projects delivered"
+        role="Founder & CEO"
+        badge="Venture"
+        metric="7 engineers, 3 partners"
+        logo="/logos/digital-partners.png"
+        href="/projects/digital-partners"
+      />
+      <ProjectCard
+        name="Alba Wealth"
+        oneLiner="AI-powered financial planning for expats"
+        role="Founder"
+        badge="Venture"
+        logo="/logos/alba-wealth.svg"
+        href="/projects/alba-wealth"
+      />
+      <ProjectCard
+        name="Buena"
+        oneLiner="Proptech platform for automated rental contract workflows"
+        role="Product Lead"
+        badge="Contract"
+        logo="/logos/buena.png"
+        href="/projects/buena"
+      />
+    </div>
+    <div class="mt-8 text-center">
+      <a
+        href="/projects"
+        class="text-teal-600 font-medium hover:text-teal-700 transition-colors duration-100 group"
+      >
+        View full portfolio
+        <span
+          class="inline-block ml-1 group-hover:translate-x-1 transition-transform duration-150"
+          >&rarr;</span
+        >
+      </a>
+    </div>
+  </SectionWrapper>
+
+  <!-- CTA -->
+  <CTABlock fullBleed>
+    <a
+      href="/contact"
+      class="inline-flex items-center justify-center px-7 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg hover:bg-teal-700 hover:-translate-y-px transition-all duration-150"
+    >
+      Let's Talk
+      <span class="ml-2">&rarr;</span>
+    </a>
+    <p class="text-sm text-white/60 mt-4">
+      Or email me at <a
+        href="mailto:hello@davidhamel.co"
+        class="underline hover:text-white/80 transition-colors"
+        >hello@davidhamel.co</a
+      >
+    </p>
+  </CTABlock>
+</BaseLayout>
