@@ -1018,4 +1018,49 @@ src/pages/de/build.astro — same changes (DE)
 
 ---
 
-_Next session: Decide on merged page structure and implement, or keep separate with cross-references. David to confirm direction._
+## Session 13 — 2026-02-25 (Product + Build Merge, CTA Cleanup)
+
+**Duration:** ~1 hour | **Phase:** Phase 1 (Positioning refinement)
+
+### What happened
+
+1. **Market research on "vibe coding" and PM-who-codes positioning** — Comprehensive web research confirmed:
+   - "Vibe coding" is now semi-pejorative; Karpathy moved on to "agentic engineering"
+   - PM-who-codes is becoming table stakes (LinkedIn replaced APMs with "Associate Product Builders")
+   - Top independents lead with outcomes/track record, NOT with AI tools
+   - Differentiator is judgment, scale of experience, and domain depth — not the tools
+
+2. **Merged Product + Build into single `/services` page**
+   - New page: "Product Discovery, Strategy, and Development"
+   - Sections: Hero → When to bring me in → What I do (Lead/Build split) → How I work (3 steps) → Track record (6 projects) → CTA
+   - Skipped "Why this works" section per David's feedback — USP needs more thought
+   - 301 redirects from `/product` and `/build` to `/services`
+
+3. **Homepage updated** — Three service cards → two: "Financial Coaching" + "Product & Build Services"
+
+4. **Nav simplified** — Removed Services dropdown, replaced with single "Product" link to `/services`
+
+5. **CTA standardized across entire site** — All CTAs now say "Let's Talk" (EN) / "Lass uns sprechen" (DE), including nav button, services page, coaching page hero, project pages
+
+6. **Archived previous page copy** in `docs/archive/`
+
+7. **Footer updated** — Services column now shows "Financial Coaching" and "Product & Build"
+
+8. **i18n updated** — All EN + DE translations for nav, footer, page meta
+
+### Commits
+
+- `b6ec2f8` — feat: Merge Product + Build into single /services page
+- `4faa489` — copy: Rename nav "Services" to "Product", change all CTAs to "Let's Talk"
+- `35d3dab` — copy: Change coaching page hero CTA to "Let's Talk"
+
+### Open TODOs
+
+- **USP / Competitive advantage section** — Needs deeper work on what the actual differentiator is. Research is done; positioning needs refinement.
+- **Visuals for services + coaching pages** — Both pages lack product screenshots. Discussed using Alba Wealth screenshots for coaching, DeRisk/Ziggma/Buena screenshots for services. No assets captured yet.
+- **Footer duplication** — "Financial Coaching" appears under both "Services" and "Explore" columns. Minor, not urgent.
+- **Umami self-exclusion** — David can use `localStorage.setItem('umami.disabled', 1)` in browser console. Not implemented yet.
+
+---
+
+_Next session: Work on visuals (product screenshots), USP/competitive advantage copy, or other priorities._

@@ -8,30 +8,27 @@
 
 ## Current State
 
-**Status**: Phase 1 Foundation COMPLETE. Integrations done. Strategic positioning rethink in progress.
-**Focus**: Decide whether to merge Product + Build into one page.
+**Status**: Phase 1 Foundation COMPLETE. Product + Build merged into `/services`. Live and deployed.
+**Focus**: Visuals for services + coaching pages, USP/competitive advantage copy.
 
-## Open Decision: Merge Product + Build?
+## Open TODOs
 
-David is leaning toward merging `/product` and `/build` into a single service page. Key reasoning:
+### USP / Competitive Advantage (Priority)
+The "Why this works" / competitive advantage section was intentionally skipped on the services page. Needs deeper work. Key research findings:
+- PM-who-codes is table stakes now (LinkedIn APB program, widespread AI coding adoption)
+- "Vibe coding" is pejorative; avoid the term
+- Top independents lead with outcomes/track record, not AI tools
+- David's real differentiators: 30+ shipped projects, 4 ventures, financial services domain depth, 8 years product leadership before AI
+- Framing should be: judgment + track record, with AI as the mechanism — not the headline
 
-**Why merge:**
-- Product management is evolving — virtually all PMs can now vibe code. "PM who can also build" is table stakes, not a differentiator.
-- Having separate pages dilutes both: Product page doesn't mention building. Build page undersells product/consulting experience.
-- The actual service IS the combination — one person who does research, strategy, design, code, and deployment.
+### Visuals for Key Pages
+- **Services page**: Needs product screenshots (DeRisk, Ziggma, Buena) to make track record section more compelling
+- **Coaching page**: Could use Alba Wealth screenshots to reinforce credibility
+- No product screenshots exist yet — need to capture or source them
 
-**The real differentiator (not "PM who codes"):**
-- **Scale:** 30+ client projects scoped and delivered at Digital Partners. Not one or two — dozens.
-- **Founder experience:** 4 ventures. Understands business outcomes, not just product.
-- **Domain depth:** Financial services across Ziggma, DeRisk, Alba, Impactive.
-- **Judgment first:** 8 years of product leadership BEFORE AI made building fast.
-- **Pitch:** "I'm a one-person product and engineering team. I've done this 30+ times."
-
-**Open questions:**
-- URL: `/build`, `/services`, or `/work`?
-- Homepage: three cards → two (Coaching + Product & Build)?
-- Page structure for the merged page
-- How to frame it when PM+code is no longer unique
+### Minor Items
+- Footer: "Financial Coaching" appears under both "Services" and "Explore" columns (minor duplication)
+- Umami self-exclusion: `localStorage.setItem('umami.disabled', 1)` — not yet applied
 
 ## David's 6 Strategic Goals
 
@@ -42,18 +39,21 @@ David is leaning toward merging `/product` and `/build` into a single service pa
 5. Blog for international recognition in fiscal/monetary economics
 6. AI-develop solutions for clients (retainer, financial services focus)
 
-## Completed Work (Session 12 — 2026-02-21)
+## Recent Work (Session 13 — 2026-02-25)
 
-- Build page copy overhaul: new hero, removed sections, updated "Why this works" cards
-- Strategic review of all pages against 6 goals
-- Deep rethink of Product + Build positioning
+- Merged Product + Build into single `/services` page ("Product Discovery, Strategy, and Development")
+- Homepage: 3 cards → 2 (Coaching + Product & Build Services)
+- Nav: dropdown → single "Product" link; CTA → "Let's Talk" everywhere
+- 301 redirects from `/product` and `/build`
+- Market research on vibe coding / PM positioning landscape
 
 ## Previous Work Summary
 
+- Session 12: Build page copy overhaul, strategic review, Product + Build rethink
 - Session 11: Resend email infrastructure, Gmail Send As, ESLint, newsletter signup
 - Sessions 5-10: Full site build, three-service split, copy polish, Calendly integration
 - Sessions 1-4: Planning, IA, copy deck, design spec
 
 ---
 
-_Last updated: 2026-02-21 (Session 12b - Strategic rethink of Product + Build merge)_
+_Last updated: 2026-02-25 (Session 13 - Product + Build merge)_
