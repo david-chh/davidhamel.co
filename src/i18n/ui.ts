@@ -12,11 +12,11 @@ export const ui = {
     // Navigation
     "nav.about": "About",
     "nav.coaching": "Coaching",
-    "nav.services": "Services",
+    "nav.services": "Product",
     "nav.projects": "Projects",
     "nav.blog": "Blog",
     "nav.adventures": "Adventures",
-    "nav.cta": "Book a Call",
+    "nav.cta": "Let's Talk",
 
     // Footer
     "footer.col1.heading": "Services",
@@ -127,11 +127,11 @@ export const ui = {
     // Navigation
     "nav.about": "\u00dcber mich",
     "nav.coaching": "Coaching",
-    "nav.services": "Leistungen",
+    "nav.services": "Produkt",
     "nav.projects": "Projekte",
     "nav.blog": "Blog",
     "nav.adventures": "Abenteuer",
-    "nav.cta": "Gespr\u00e4ch buchen",
+    "nav.cta": "Lass uns sprechen",
 
     // Footer
     "footer.col1.heading": "Leistungen",
